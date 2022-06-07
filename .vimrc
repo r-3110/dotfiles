@@ -161,6 +161,9 @@ set smartcase
 
 set fileformats=unix,dos,mac
 
+"" ESCタイプ後ノーマルモードに戻る速さ
+set ttimeoutlen=10
+
 if exists('$SHELL')
     set shell=$SHELL
 else
