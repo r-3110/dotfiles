@@ -350,6 +350,9 @@ augroup vimrc-make-cmake
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
+"" phpactor
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+
 set autoread
 
 "*****************************************************************************
@@ -437,6 +440,8 @@ endif
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
+
+set clipboard+=unnamed
 
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
