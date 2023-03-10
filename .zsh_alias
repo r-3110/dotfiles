@@ -1,0 +1,11 @@
+alias dceb='docker-compose exec app bash'
+
+alias gs='git status'
+
+alias gl='git log'
+
+alias chat="cd ~/desktop/workspace/chat/pwe-backend/src"
+
+alias ai="cd ~/desktop/workspace/AI/LAL/docker/PostgreSQL"
+
+alias php-run='docker run --rm -v /Users/ryo3110/Desktop/workspace/php-lesson:/php-lesson php:8.1-cli'
