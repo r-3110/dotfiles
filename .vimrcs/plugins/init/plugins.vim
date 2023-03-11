@@ -47,7 +47,10 @@ Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+"THEME
 Plug 'tomasiser/vim-code-dark'
+Plug 'wadackel/vim-dogrun'
+
 Plug 'vim-vdebug/vdebug'
 
 if isdirectory('/usr/local/opt/fzf')
@@ -102,7 +105,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 " typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
-
+Plug 'Quramy/tsuquyomi'
 
 " vuejs
 Plug 'posva/vim-vue'
