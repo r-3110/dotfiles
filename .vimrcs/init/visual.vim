@@ -6,7 +6,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-colorscheme codedark
+colorscheme dogrun
 
 
 " Better command line completion 
