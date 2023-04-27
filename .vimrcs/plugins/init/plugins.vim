@@ -115,6 +115,14 @@ Plug 'leafOfTree/vim-vue-plugin'
 " vim日本語ヘルプ
 Plug 'vim-jp/vimdoc-ja'
 
+" ddc
+Plug 'Shougo/ddc.vim'
+Plug 'vim-denops/denops.vim'
+Plug 'Shougo/ddc-ui-native'
+Plug 'Shougo/ddc-source-around'
+Plug 'Shougo/ddc-matcher_head'
+Plug 'Shougo/ddc-sorter_rank'
+
 set helplang=ja,en
 "*****************************************************************************
 "*****************************************************************************
