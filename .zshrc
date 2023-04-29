@@ -106,7 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/dotfiles/.zsh_alias
 
+BULLETTRAIN_VIRTUALENV_FG=black
+
 BULLETTRAIN_NVM_FG=black
 
 BULLETTRAIN_AWS_FG=black
 
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border --inline-info --preview 'head -100 {}'"
