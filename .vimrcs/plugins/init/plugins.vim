@@ -32,8 +32,9 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lambdalisue/fern.vim'
+Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -59,6 +60,9 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
   Plug 'junegunn/fzf.vim'
 endif
+
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
