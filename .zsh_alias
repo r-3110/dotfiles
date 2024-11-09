@@ -1,7 +1,5 @@
 alias dceb='docker-compose exec app bash'
 
-alias gs='git status'
-
 alias gl='git log'
 
 alias chat="cd ~/desktop/workspace/chat/pwe-backend/src"
