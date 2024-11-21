@@ -1,4 +1,4 @@
-scan_timeout = 10
+command_timeout = 1000
 
 format = """
 [░▒▓](#a3aed2)\
@@ -9,22 +9,89 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
-$aws\
-$docker_context\
-$nodejs\
-$rust\
-$golang\
-$php\
 [](fg:#212736 bg:#1d2230)\
-$time\
 [ ](fg:#1d2230)\
 \n$character"""
+
+right_format = """
+$singularity\
+$kubernetes\
+$vcsh\
+$fossil_branch\
+$git_commit\
+$git_state\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$crystal\
+$custom\
+$status\
+$os\
+$battery\
+$time"""
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+
+[memory_usage]
+disabled = true
+threshold = -1
+style = "bold dimmed green"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -68,8 +135,16 @@ style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [aws]
-format = 'on [$symbol($profile )(\($region\) )]($style)'
-style = "#769ff0"
+format = 'on [$symbol$profile]($style) '
+style = 'bold blue'
+symbol = '☁️ '
+[aws.profile_aliases]
+Enterprise_Naming_Scheme-voidstars = 'void**'
+
+[gcloud]
+disabled = true
+symbol = '️☁️ 🇬️ '
+format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
 
 [custom.arch]
 command = "uname -m"
