@@ -2,7 +2,7 @@
 -- @see https://wezfurlong.org/wezterm/config/lua/general.html
 
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -10,18 +10,17 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'iceberg-dark'
+config.color_scheme = "iceberg-dark"
 
 config.initial_rows = 35
 config.initial_cols = 120
 config.font_size = 18.0
-config.font = wezterm.font_with_fallback { "MesloLGS NF" }
+config.font = wezterm.font_with_fallback({ "MesloLGS NF" })
 
 -- and finally, return the configuration to wezterm
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
-
 
 local act = wezterm.action
 
@@ -72,15 +71,14 @@ config.key_tables = {
 
 		-- コピーモードを終了
 		{
-		key = "Enter",
-		mods = "NONE",
-		action = act.Multiple({ { CopyTo = "ClipboardAndPrimarySelection" }, { CopyMode = "Close" } }),
+			key = "Enter",
+			mods = "NONE",
+			action = act.Multiple({ { CopyTo = "ClipboardAndPrimarySelection" }, { CopyMode = "Close" } }),
 		},
 		{ key = "Escape", mods = "NONE", action = act.CopyMode("Close") },
 		{ key = "c", mods = "CTRL", action = act.CopyMode("Close") },
 		{ key = "q", mods = "NONE", action = act.CopyMode("Close") },
 	},
 }
-
 
 return config
