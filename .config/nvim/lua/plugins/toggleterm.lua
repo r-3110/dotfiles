@@ -1,23 +1,27 @@
 -- @see https://github.com/akinsho/toggleterm.nvim
 return {
 	{
-		'akinsho/toggleterm.nvim',
+		"akinsho/toggleterm.nvim",
 		version = "*",
-		opts = function ()
-			local Terminal  = require('toggleterm.terminal').Terminal
+		opts = function()
+			local Terminal = require("toggleterm.terminal").Terminal
 			local lazygit = Terminal:new({
 				cmd = "lazygit",
 				direction = "float",
 				hidden = true,
 			})
-			
+
 			function _lazygit_toggle()
-			  lazygit:toggle()
+				lazygit:toggle()
 			end
-			
-			vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-			
-				
+
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>lg",
+				"<cmd>lua _lazygit_toggle()<CR>",
+				{ noremap = true, silent = true }
+			)
+
 			return {
 				size = 20,
 				open_mapping = [[<leader>tt]], -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
@@ -30,25 +34,25 @@ return {
 				terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
 				persist_size = true,
 				persist_mode = true, -- if set to true (default) the previous terminal mode will be remembered
-				direction = 'float',
+				direction = "float",
 				close_on_exit = true, -- close the terminal window when the process exits
 				clear_env = false, -- use only environmental variables from `env`, passed to jobstart()
-				 -- Change the default shell. Can be a string or a function returning a string
+				-- Change the default shell. Can be a string or a function returning a string
 				shell = vim.o.shell,
 				auto_scroll = true, -- automatically scroll to the bottom on terminal output
 				-- This field is only relevant if direction is set to 'float'
 				float_opts = {
-				  border = 'curved',
-				  winblend = 3,
-				  title_pos = 'center',
+					border = "curved",
+					winblend = 3,
+					title_pos = "center",
 				},
 				winbar = {
-				  enabled = false,
-				  name_formatter = function(term) --  term: Terminal
-					return term.name
-				  end
+					enabled = false,
+					name_formatter = function(term) --  term: Terminal
+						return term.name
+					end,
 				},
 			}
-		end
-	}
+		end,
+	},
 }
