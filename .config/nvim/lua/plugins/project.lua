@@ -1,10 +1,14 @@
 -- @see https://github.com/coffebar/neovim-project
 
+vim.api.nvim_create_user_command("Pjd", "NeovimProjectDiscover", {})
+vim.api.nvim_create_user_command("Pjh", "NeovimProjectHistory", {})
+
 return {
 	"coffebar/neovim-project",
 	opts = {
 		projects = { -- define project roots
 			"~/workspace/*",
+			"~/dotfiles",
 		},
 		picker = {
 			type = "telescope", -- or "fzf-lua"
@@ -19,7 +23,7 @@ return {
 		-- optional picker
 		{ "nvim-telescope/telescope.nvim", tag = "0.1.4" },
 		-- optional picker
-		{ "ibhagwan/fzf-lua" },
+		-- { "ibhagwan/fzf-lua" },
 		{ "Shatur/neovim-session-manager" },
 	},
 	lazy = false,
