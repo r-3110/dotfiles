@@ -37,9 +37,12 @@ local function dumpTable(t, indent)
 	return result
 end
 
+local isNotVscode = vim.g.vscode == nil
+
 return {
-	{ import = "lazyvim.plugins.extras.lsp.none-ls" },
+	{ import = "lazyvim.plugins.extras.lsp.none-ls", enabled = isNotVscode },
 	{
+		enabled = isNotVscode,
 		"nvimtools/none-ls.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = function(_, opts)
@@ -61,6 +64,7 @@ return {
 		end,
 	},
 	{
+		enabled = not isVscode,
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
@@ -104,20 +108,21 @@ return {
 	},
 	-- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
 	-- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-	{ import = "lazyvim.plugins.extras.lang.typescript" },
+	{ import = "lazyvim.plugins.extras.lang.typescript", enabled = not isVscode },
 
 	-- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-	{ import = "lazyvim.plugins.extras.lang.json" },
-	{ import = "lazyvim.plugins.extras.lang.markdown" },
-	{ import = "lazyvim.plugins.extras.lang.toml" },
-	{ import = "lazyvim.plugins.extras.lang.docker" },
-	{ import = "lazyvim.plugins.extras.lang.php" },
-	{ import = "lazyvim.plugins.extras.lang.python" },
-	{ import = "lazyvim.plugins.extras.lang.sql" },
-	{ import = "lazyvim.plugins.extras.lang.yaml" },
+	{ import = "lazyvim.plugins.extras.lang.json", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.markdown", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.toml", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.docker", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.php", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.python", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.sql", enabled = isNotVscode },
+	{ import = "lazyvim.plugins.extras.lang.yaml", enabled = isNotVscode },
 
 	-- add any tools you want to have installed below
 	{
+		enabled = isNotVscode,
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
