@@ -6,5 +6,6 @@ export STARSHIP_CONFIG="$STARSHIP_CONFIG_DIR/$STARSHIP_CONFIG_THEME"
 
 eval "$(starship init bash)"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+eval "$(/usr/bin/mise activate)"
+
+source $HOME/dotfiles/.zsh_alias
