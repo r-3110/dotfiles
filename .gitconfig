@@ -11,6 +11,7 @@
 [user]
 	name = Ryo Saito
 	email = ryo.saito@ncdc.co.jp
+	signingkey = /home/ryo/.ssh/id_rsa.pub
 [credential]
     helper = !aws --profile sandbox codecommit credential-helper $@a
     ##helper = !aws --profile lifenet-stg codecommit credential-helper $@a
@@ -27,3 +28,5 @@
 
 [pull]
 	ff = only
+[gpg]
+	format = ssh
