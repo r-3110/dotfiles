@@ -1,3 +1,6 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 command_timeout = 10000
 
 format = """
@@ -135,7 +138,7 @@ style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [aws]
-format = 'on [$symbol$profile]($style) '
+format = 'on [$symbol $profile]($style) '
 style = 'bold blue'
 symbol = '☁️ '
 [aws.profile_aliases]
@@ -144,7 +147,7 @@ Enterprise_Naming_Scheme-voidstars = 'void**'
 [gcloud]
 disabled = true
 symbol = '️☁️ 🇬️ '
-format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+format = 'on [$symbol $account(@$domain)(\($project\))]($style) '
 
 [custom.arch]
 command = "uname -m"

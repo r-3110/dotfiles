@@ -1,15 +1,18 @@
-autoload -Uz compinit
-compinit
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+
+# NOTE: 冒頭で設定すること
+autoload bashcompinit && bashcompinit
+autoload -U compinit && compinit
 
 eval "$(starship init zsh)"
 
-source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
+eval "$(sheldon source)"
 
-# plugins
-# https://github.com/unixorn/awesome-zsh-plugins?tab=readme-ov-file#plugins
-zinit light zdharma/fast-syntax-highlighting
+# aws-cli completion
+complete -C '/usr/local/bin/aws_completer' aws
 
-zinit load zdharma/history-search-multi-word
+source $HOME/dotfiles/.zsh_alias
 
 zinit light zsh-users/zsh-autosuggestions
 
@@ -31,4 +34,5 @@ zinit light Aloxaf/fzf-tab
 autoload bashcompinit && bashcompinit
 complete -C '/usr/local/bin/aws_completer' aws
 
-source $HOME/dotfiles/.zsh_alias
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
