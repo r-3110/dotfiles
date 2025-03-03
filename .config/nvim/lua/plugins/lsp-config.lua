@@ -38,7 +38,48 @@ local function dumpTable(t, indent)
 end
 
 return {
-	{ import = "lazyvim.plugins.extras.lsp.none-ls" },
+	-- {
+	-- 	"mfussenegger/nvim-lint",
+	-- 	events = { "BufWritePost", "BufReadPost", "InsertLeave" },
+	-- 	config = function()
+	-- 		vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
+	-- 			callback = function()
+	-- 				require("lint").try_lint()
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- 	opts = {
+	-- 		-- Event to trigger linters
+	-- 		events = { "BufWritePost", "BufReadPost", "InsertLeave" },
+	-- 		linters_by_ft = {
+	-- 			fish = { "fish" },
+	-- 			zsh = { "zsh" },
+	-- 			cfn_lint = { "cfn-lint" },
+	-- 			markdown = { "vale" },
+	-- 			yaml = { "yamllint" },
+	-- 			["yaml.ghaction"] = { "actionlint" },
+
+	-- 			-- Use the "*" filetype to run linters on all filetypes.
+	-- 			-- ['*'] = { 'global linter' },
+	-- 			-- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
+	-- 			-- ['_'] = { 'fallback linter' },
+	-- 			-- ["*"] = { "typos" },
+	-- 		},
+	-- 		-- LazyVim extension to easily override linter options
+	-- 		-- or add custom linters.
+	-- 		---@type table<string,table>
+	-- 		linters = {
+	-- 			-- -- Example of using selene only when a selene.toml file is present
+	-- 			-- selene = {
+	-- 			--   -- `condition` is another LazyVim extension that allows you to
+	-- 			--   -- dynamically enable/disable linters based on the context.
+	-- 			--   condition = function(ctx)
+	-- 			--     return vim.fs.find({ "selene.toml" }, { path = ctx.filename, upward = true })[1]
+	-- 			--   end,
+	-- 			-- },
+	-- 		},
+	-- 	},
+	-- },
 	{
 		"nvimtools/none-ls.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -65,6 +106,7 @@ return {
 		opts = {
 			servers = {
 				yamlls = {
+					filetypes = { "yaml", "yml" },
 					settings = {
 						yaml = {
 							customTags = {
@@ -102,20 +144,6 @@ return {
 			},
 		},
 	},
-	-- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
-	-- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-	{ import = "lazyvim.plugins.extras.lang.typescript" },
-
-	-- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-	{ import = "lazyvim.plugins.extras.lang.json" },
-	{ import = "lazyvim.plugins.extras.lang.markdown" },
-	{ import = "lazyvim.plugins.extras.lang.toml" },
-	{ import = "lazyvim.plugins.extras.lang.docker" },
-	{ import = "lazyvim.plugins.extras.lang.php" },
-	{ import = "lazyvim.plugins.extras.lang.python" },
-	{ import = "lazyvim.plugins.extras.lang.sql" },
-	{ import = "lazyvim.plugins.extras.lang.yaml" },
-
 	-- add any tools you want to have installed below
 	{
 		"williamboman/mason.nvim",
@@ -125,6 +153,9 @@ return {
 				"shellcheck",
 				"shfmt",
 				"flake8",
+				"hadolint",
+				"phpcs",
+				"php-cs-fixer",
 			},
 		},
 	},

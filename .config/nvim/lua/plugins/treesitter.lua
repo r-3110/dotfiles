@@ -6,6 +6,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
 			ensure_installed = {
+				"dockerfile",
 				"bash",
 				"html",
 				"javascript",
@@ -14,6 +15,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"python",
+				"php",
 				"query",
 				"regex",
 				"tsx",
