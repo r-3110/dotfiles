@@ -25,6 +25,7 @@ config.hide_tab_bar_if_only_one_tab = true
 local act = wezterm.action
 
 config.key_tables = {
+	-- @see https://wezterm.org/copymode.html
 	copy_mode = {
 		-- 移動
 		{ key = "h", mods = "NONE", action = act.CopyMode("MoveLeft") },

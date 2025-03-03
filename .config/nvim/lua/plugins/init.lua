@@ -1,6 +1,6 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {} end
+-- if true then return {} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
@@ -23,16 +23,13 @@ return {
 	},
 
 	-- or you can return new options to override all the defaults
-	{
-		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
-		opts = function()
-			return {
-				--[[add your custom lualine config here]]
-			}
-		end,
-	},
-
-	-- use mini.starter instead of alpha
-	{ import = "lazyvim.plugins.extras.ui.mini-starter" },
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = function()
+	-- 		return {
+	-- 			--[[add your custom lualine config here]]
+	-- 		}
+	-- 	end,
+	-- },
 }
