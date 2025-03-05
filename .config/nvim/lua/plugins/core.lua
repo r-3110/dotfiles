@@ -7,6 +7,8 @@ return {
 	},
 	{
 		"LazyVim/LazyVim",
+		--- @type LazyVimConfig
+		--- @diagnostic disable-next-line
 		opts = {
 			colorscheme = "dracula",
 		},

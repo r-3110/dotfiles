@@ -5,6 +5,7 @@ vim.api.nvim_create_user_command("Pjh", "NeovimProjectHistory", {})
 
 return {
 	"coffebar/neovim-project",
+	--- @type ProjectOptions
 	opts = {
 		projects = { -- define project roots
 			"~/workspace/*",
