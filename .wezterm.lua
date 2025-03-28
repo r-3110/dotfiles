@@ -8,6 +8,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
+config.leader = {
+	key = "q",
+	mods = "CTRL",
+	timeout_milliseconds = 2000,
+}
 
 -- For example, changing the color scheme:
 config.color_scheme = "iceberg-dark"
@@ -79,6 +84,47 @@ config.key_tables = {
 		{ key = "Escape", mods = "NONE", action = act.CopyMode("Close") },
 		{ key = "c", mods = "CTRL", action = act.CopyMode("Close") },
 		{ key = "q", mods = "NONE", action = act.CopyMode("Close") },
+	},
+}
+
+config.keys = {
+	-- splitting
+	{
+		mods = "LEADER",
+		key = "-",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		mods = "LEADER",
+		key = "|",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	-- pane move
+	{
+		mods = "LEADER",
+		key = "l",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		mods = "LEADER",
+		key = "h",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		mods = "LEADER",
+		key = "j",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		mods = "LEADER",
+		key = "k",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	-- pane zoom
+	{
+		mods = "LEADER",
+		key = "z",
+		action = wezterm.action.TogglePaneZoomState,
 	},
 }
 

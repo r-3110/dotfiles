@@ -63,5 +63,13 @@ complete -C /Users/ryo/.local/share/mise/installs/aws-sso/1.17.0/aws-sso aws-sso
 
 # END_AWS_SSO_CLI
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ryo/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
