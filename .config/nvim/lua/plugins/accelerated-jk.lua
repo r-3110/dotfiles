@@ -2,4 +2,5 @@
 
 return {
 	"rainbowhxch/accelerated-jk.nvim",
+	vscode = false,
 }
