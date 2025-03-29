@@ -1,3 +1,6 @@
+-- nvim-lua-guide-ja
+--@see https://github.com/willelz/nvim-lua-guide-ja/blob/master/README.ja.md
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -25,12 +28,6 @@ require("lazy").setup({
 		-- use mini.starter instead of alpha
 		{ import = "lazyvim.plugins.extras.ui.mini-starter" },
 		-- lspconfig
-		-- TODO: nvim-lintへ移行する
-		{ import = "lazyvim.plugins.extras.lsp.none-ls" },
-		-- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
-		-- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-		-- { import = "lazyvim.plugins.extras.lang.typescript" },
-		-- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.toml" },

@@ -26,7 +26,7 @@ return {
 				augend.case.new({
 					types = { "PascalCase", "camelCase", "snake_case", "kebab-case" },
 					cyclic = true,
-				})
+				}),
 			},
 		})
 	end,
