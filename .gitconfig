@@ -1,0 +1,26 @@
+[core]
+	editor = nvim
+	quotepath = false
+    pager = delta
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
+[diff]
+	tool = vimdiff
+	prompt = false
+    colorMoved = default
+[push]
+    autoSetupRemote = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+
+[pull]
+	ff = only
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
