@@ -15,6 +15,7 @@ return {
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
+		---@type neotree.Config
 		opts = {
 			filesystem = {
 				follow_current_file = { enabled = true },

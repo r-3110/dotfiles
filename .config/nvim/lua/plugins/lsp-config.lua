@@ -8,7 +8,7 @@ return {
 		config = function()
 			local lint = require("lint")
 
-			---@types table<string, string[]>
+			---@type table<string, string[]>
 			local linters = {
 				fish = { "fish" },
 				zsh = { "zsh" },

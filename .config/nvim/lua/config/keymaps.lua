@@ -19,6 +19,9 @@ vim.api.nvim_set_keymap("n", "<Leader>mg", ":MemoGrep<CR>", { noremap = true, si
 vim.api.nvim_set_keymap("n", "<Leader>pjd", ":NeovimProjectDiscover<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pjh", ":NeovimProjectHistory<CR>", { noremap = true, silent = true })
 
+-- lazydocker keymaps
+vim.keymap.set("n", "<leader>k", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
+
 -- dial keymaps
 vim.keymap.set("n", "<C-a>", function()
 	require("dial.map").manipulate("increment", "normal")

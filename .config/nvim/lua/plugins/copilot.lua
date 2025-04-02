@@ -9,6 +9,7 @@ return {
 			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
 		},
 		build = "make tiktoken", -- Only on MacOS or Linux
+		---@type CopilotChat.config
 		opts = {
 			debug = true, -- Enable debugging
 			show_help = true,

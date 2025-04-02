@@ -1,19 +1,27 @@
 -- @see https://github.com/yetone/avante.nvim
+-- @see https://github.com/yetone/avante.nvim/blob/main/lua/avante/config.lua
 
 return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
 	lazy = false,
 	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+	---@type avante.Config
+	--- @diagnostic disable-next-line
 	opts = {
-		-- add any opts here
-		-- for example
+		---@type avante.ProviderName
 		provider = "copilot",
+		auto_suggestions_provider = "copilot",
 
+		---@type AvanteSupportedProvider
 		copilot = {
 			model = "claude-3.5-sonnet",
 			temperature = 0,
 			max_tokens = 4096,
+		},
+		behaviour = {
+			auto_suggestions = true,
+			support_paste_from_clipboard = true,
 		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
