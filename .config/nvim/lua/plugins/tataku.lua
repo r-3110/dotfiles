@@ -6,6 +6,7 @@ return {
 		dependencies = {
 			{ "vim-denops/denops.vim" },
 		},
+		event = "VeryLazy",
 		config = function()
 			vim.g.tataku_recipes = {
 				-- 翻訳 en => ja

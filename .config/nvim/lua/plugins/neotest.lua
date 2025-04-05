@@ -9,6 +9,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"marilari88/neotest-vitest",
 	},
+	event = "BufReadPre",
 	opts = {
 		adapters = {
 			["neotest-vitest"] = {},

@@ -2,4 +2,5 @@
 
 return {
 	"kkoomen/vim-doge",
+	event = "BufReadPre",
 }

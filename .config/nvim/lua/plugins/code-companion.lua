@@ -7,6 +7,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"github/copilot.vim",
 	},
+	event = "VeryLazy",
 	opts = {
 		strategies = {
 			chat = {

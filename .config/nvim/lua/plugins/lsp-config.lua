@@ -1,4 +1,5 @@
 -- @see https://github.com/mfussenegger/nvim-lint
+-- @see https://github.com/neovim/nvim-lspconfig
 -- @see https://github.com/williamboman/mason.nvim
 
 return {
