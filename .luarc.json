@@ -10,6 +10,9 @@
     ]
   },
   "diagnostics": {
-    "enable": true
+    "enable": true,
+    "globals": [
+      "vim"
+    ]
   }
 }
