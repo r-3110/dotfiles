@@ -12,10 +12,17 @@
 
 shell = "zsh"
 
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
 [plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
 
 [plugins.syntax-highlight]
 github = "zdharma/fast-syntax-highlighting"
+apply = ["defer"]
 
 # ctrl + r で起動
 [plugins.history]
@@ -27,12 +34,14 @@ github = "zsh-users/zsh-autosuggestions"
 # option + j で起動
 [plugins.zsh-navigation-tools]
 github = "reegnz/jq-zsh-plugin"
+apply = ["defer"]
 
 [plugins.anyframe]
 github = "mollifier/anyframe"
 
 [plugins.git-open]
 github = "paulirish/git-open"
+apply = ["defer"]
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
