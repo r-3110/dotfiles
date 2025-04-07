@@ -2,4 +2,5 @@
 
 return {
 	"vim-skk/skkeleton",
+	event = { "InsertEnter" },
 }

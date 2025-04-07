@@ -24,7 +24,6 @@ require("lazy").setup({
 		-- import/override with your plugins
 		{ import = "lazyvim.plugins.extras.util.octo" },
 		{ import = "lazyvim.plugins.extras.util.rest" },
-		{ import = "lazyvim.plugins.extras.ai.copilot" },
 		-- use mini.starter instead of alpha
 		{ import = "lazyvim.plugins.extras.ui.mini-starter" },
 		-- lspconfig
