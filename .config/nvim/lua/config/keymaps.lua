@@ -48,9 +48,21 @@ vim.keymap.set("v", "g<C-x>", function()
 	require("dial.map").manipulate("decrement", "gvisual")
 end)
 
+-- CodeCompanion keymaps
 vim.keymap.set(
 	"n",
 	"<leader>cca",
 	":CodeCompanionActions<CR>",
 	{ desc = "Open CodeCompanionActions", noremap = true, silent = true }
 )
+
+-- tataku-translate keymaps
+vim.keymap.set(
+	"n",
+	"<leader>tt",
+	":call tataku#call_recipe('translate')<CR>",
+	{ desc = "en => ja", noremap = true, silent = true }
+)
+
+-- skkeleton keymaps
+vim.keymap.set({ "i", "c" }, [[<C-j>]], [[<Plug>(skkeleton-enable)]], { noremap = false })
