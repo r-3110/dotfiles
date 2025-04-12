@@ -4,6 +4,7 @@ return {
 	"vim-skk/skkeleton",
 	dependencies = {
 		{ "vim-denops/denops.vim" },
+		{ "Shougo/ddc.vim" },
 	},
 	-- event = "VeryLazy",
 	config = function()
