@@ -57,6 +57,28 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
+				lua_ls = {
+					settings = {
+						Lua = {
+							runtime = {
+								version = "LuaJIT",
+							},
+							workspace = {
+								library = {
+									"lua",
+									vim.env.VIMRUNTIME,
+									"${3rd}/luv/library",
+									"${3rd}/busted/library",
+									"/Users/ryo/.local/share/mise/installs/neovim/",
+									"/Users/ryo/.local/share/nvim/",
+								},
+							},
+							diagnostics = {
+								globals = { "vim" },
+							},
+						},
+					},
+				},
 				yamlls = {
 					filetypes = { "yaml", "yml" },
 					settings = {
@@ -104,14 +126,48 @@ return {
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
-				"stylua",
-				"shellcheck",
-				"shfmt",
+				"cfn-lint",
+				"ruff",
+				"actionlint",
+				"biome",
+				"docKerCompose-language-service docker_compose_language_service",
+				"dockerfile-language-server dockerls",
+				"dotEnvLinter",
+				"eslint-d",
 				"flake8",
 				"hadolint",
+				"htmLLsp html",
+				"jsoNLsp jsonls",
+				"jsonlint",
+				"jsoNnetLanguage-server jsonnet_ls",
+				"lua-language-server lua_ls",
+				"luacheck",
+				"markdown-toc",
+				"markdownlint-cli2",
+				"marksman",
+				"php-CsFixer",
+				"phpactor",
 				"phpcs",
-				"php-cs-fixer",
+				"prettier",
+				"pyright",
+				"shellcheck",
+				"shfmt",
+				"sqlfluff",
+				"stylua",
+				"taplo",
+				"tsp-server tsp_server",
+				"typescript-language-server ts_ls",
+				"vacuum",
+				"vale",
+				"yamLLanguage-server yamlls",
+				"yamllint",
 			},
+		},
+		{
+			"pmizio/typescript-tools.nvim",
+			dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+			-- ft = { "typescript", "typescriptreact", "typescript.tsx" },
+			opts = {},
 		},
 	},
 }

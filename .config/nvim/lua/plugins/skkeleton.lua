@@ -6,6 +6,7 @@ return {
 		{ "vim-denops/denops.vim" },
 		{ "Shougo/ddc.vim" },
 	},
+	vscode = false,
 	-- event = "VeryLazy",
 	config = function()
 		vim.fn["skkeleton#config"]({
