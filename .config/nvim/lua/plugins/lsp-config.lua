@@ -21,11 +21,29 @@ return {
 				["yaml.cfn"] = { "yamllint", "cfn_lint" },
 				dotenv = { "dotenv_linter" },
 				dockerfile = { "hadolint" },
-				typescript = { "eslint_d" },
-				javascript = { "eslint_d" },
-				typescriptreact = { "eslint_d" },
+				typescript = { "eslint" },
+				javascript = { "eslint" },
+				typescriptreact = { "eslint" },
 				lua = { "luacheck" },
 				python = { "ruff" },
+			}
+
+			lint.linters.luacheck = {
+				name = "luacheck",
+				cmd = "luacheck",
+				stdin = true,
+				args = {
+					"--globals",
+					"vim",
+					"lvim",
+					"reload",
+					"--",
+				},
+				stream = "stdout",
+				ignore_exitcode = true,
+				parser = require("lint.parser").from_errorformat("%f:%l:%c: %m", {
+					source = "luacheck",
+				}),
 			}
 
 			-- Set up linters
@@ -55,30 +73,33 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		opts = {
-			servers = {
-				lua_ls = {
-					settings = {
-						Lua = {
-							runtime = {
-								version = "LuaJIT",
+		dependencies = {
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+				opts = {
+					library = {
+						-- See the configuration section for more details
+						-- Load luvit types when the `vim.uv` word is found
+						{
+							path = {
+								"lua",
+								vim.env.VIMRUNTIME,
+								"${3rd}/luv/library",
+								"/Users/ryo/.local/share/mise/installs/neovim/",
+								"/Users/ryo/.local/share/nvim/",
 							},
-							workspace = {
-								library = {
-									"lua",
-									vim.env.VIMRUNTIME,
-									"${3rd}/luv/library",
-									"${3rd}/busted/library",
-									"/Users/ryo/.local/share/mise/installs/neovim/",
-									"/Users/ryo/.local/share/nvim/",
-								},
-							},
-							diagnostics = {
-								globals = { "vim" },
-							},
+							words = { "vim%.uv" },
 						},
 					},
 				},
+			},
+		},
+		config = function()
+			require("lspconfig").lua_ls.setup({})
+		end,
+		opts = {
+			servers = {
 				yamlls = {
 					filetypes = { "yaml", "yml" },
 					settings = {
@@ -130,22 +151,22 @@ return {
 				"ruff",
 				"actionlint",
 				"biome",
-				"docKerCompose-language-service docker_compose_language_service",
-				"dockerfile-language-server dockerls",
-				"dotEnvLinter",
-				"eslint-d",
+				"docker-compose-language-service",
+				"dockerfile-language-server",
+				"dotenv-linter",
+				"eslint-lsp",
 				"flake8",
 				"hadolint",
-				"htmLLsp html",
-				"jsoNLsp jsonls",
+				"html-lsp",
+				"json-lsp",
 				"jsonlint",
-				"jsoNnetLanguage-server jsonnet_ls",
-				"lua-language-server lua_ls",
+				"jsonnet-language-server",
+				"lua-language-server",
 				"luacheck",
 				"markdown-toc",
 				"markdownlint-cli2",
 				"marksman",
-				"php-CsFixer",
+				"php-cs-fixer",
 				"phpactor",
 				"phpcs",
 				"prettier",
@@ -155,19 +176,19 @@ return {
 				"sqlfluff",
 				"stylua",
 				"taplo",
-				"tsp-server tsp_server",
-				"typescript-language-server ts_ls",
+				"tsp-server",
+				"typescript-language-server",
 				"vacuum",
 				"vale",
-				"yamLLanguage-server yamlls",
+				"yaml-language-server",
 				"yamllint",
 			},
 		},
-		{
-			"pmizio/typescript-tools.nvim",
-			dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-			-- ft = { "typescript", "typescriptreact", "typescript.tsx" },
-			opts = {},
-		},
+	},
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		-- ft = { "typescript", "typescriptreact", "typescript.tsx" },
+		opts = {},
 	},
 }

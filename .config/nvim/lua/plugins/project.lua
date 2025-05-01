@@ -9,6 +9,7 @@ return {
 	opts = {
 		projects = { -- define project roots
 			"~/workspace/*",
+			"~/workspace/playground/*",
 			"~/dotfiles",
 		},
 		picker = {

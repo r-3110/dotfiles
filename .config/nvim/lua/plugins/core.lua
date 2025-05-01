@@ -8,7 +8,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		--- @type LazyVimConfig
-		--- @diagnostic disable-next-line
+		--- @diagnostic disable-next-line: missing-fields
 		opts = {
 			colorscheme = "dracula",
 		},

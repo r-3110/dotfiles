@@ -12,8 +12,9 @@ return {
 	},
 	event = "BufReadPre",
 	---@type neotest.CoreConfig
-	---@diagnostic disable-next-line
+	--- @diagnostic disable-next-line: missing-fields
 	opts = {
+		log_level = vim.log.levels.DEBUG,
 		adapters = {
 			---@type neotest.VitestOptions
 			["neotest-vitest"] = {},
