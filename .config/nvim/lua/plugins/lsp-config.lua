@@ -2,6 +2,8 @@
 -- @see https://github.com/neovim/nvim-lspconfig
 -- @see https://github.com/williamboman/mason.nvim
 
+vim.lsp.enable({ "pyright" })
+
 return {
 	{
 		"mfussenegger/nvim-lint",
@@ -95,9 +97,6 @@ return {
 				},
 			},
 		},
-		config = function()
-			require("lspconfig").lua_ls.setup({})
-		end,
 		opts = {
 			servers = {
 				yamlls = {
