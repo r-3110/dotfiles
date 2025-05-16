@@ -1,5 +1,6 @@
 -- @see https://github.com/marilari88/neotest-vitest
 
+---@type LazyPluginSpec
 return {
 	"nvim-neotest/neotest",
 	dependencies = {
@@ -10,6 +11,7 @@ return {
 		"marilari88/neotest-vitest",
 		"nvim-neotest/neotest-python",
 	},
+	lazy = true,
 	event = "BufReadPre",
 	---@type neotest.CoreConfig
 	--- @diagnostic disable-next-line: missing-fields

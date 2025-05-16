@@ -1,8 +1,10 @@
 -- @see https://github.com/monaqa/dial.nvim
 
+---@type LazyPluginSpec
 return {
 	"monaqa/dial.nvim",
 	event = "BufReadPre",
+	lazy = true,
 	config = function()
 		local augend = require("dial.augend")
 		require("dial.config").augends:register_group({

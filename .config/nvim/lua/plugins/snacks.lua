@@ -1,5 +1,6 @@
 -- @see https://github.com/folke/snacks.nvim
 
+---@type LazyPluginSpec
 return {
 	"folke/snacks.nvim",
 	--- @type snacks.Config

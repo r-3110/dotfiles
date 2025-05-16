@@ -1,5 +1,6 @@
 --@see https://github.com/linux-cultist/venv-selector.nvim/tree/regexp
 
+---@type LazyPluginSpec
 return {
 	"linux-cultist/venv-selector.nvim",
 	dependencies = {

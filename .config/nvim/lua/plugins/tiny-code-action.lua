@@ -1,5 +1,6 @@
 -- @see https://github.com/rachartier/tiny-code-action.nvim
 
+---@type LazyPluginSpec
 return {
 	"rachartier/tiny-code-action.nvim",
 	dependencies = {

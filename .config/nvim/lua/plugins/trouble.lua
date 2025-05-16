@@ -1,5 +1,6 @@
 -- @see https://github.com/folke/trouble.nvim
 
+---@type LazyPluginSpec[]
 return {
 	-- change trouble config
 	{

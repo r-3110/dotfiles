@@ -1,7 +1,9 @@
 -- @see https://github.com/rgroli/other.nvim
 
+---@type LazyPluginSpec
 return {
 	"rgroli/other.nvim",
+	lazy = true,
 	event = "BufReadPre",
 	config = function()
 		require("other-nvim").setup({

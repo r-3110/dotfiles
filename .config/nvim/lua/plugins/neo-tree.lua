@@ -14,6 +14,7 @@ local function split(str, sep)
 	return t
 end
 
+---@type LazyPluginSpec[]
 return {
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-tree/nvim-web-devicons" },

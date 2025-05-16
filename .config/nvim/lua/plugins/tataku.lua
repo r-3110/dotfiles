@@ -1,5 +1,6 @@
 -- @see https://github.com/Omochice/tataku.vim
 
+---@type LazyPluginSpec[]
 return {
 	{
 		"Omochice/tataku.vim",
@@ -7,6 +8,7 @@ return {
 			{ "vim-denops/denops.vim" },
 		},
 		event = "VeryLazy",
+		lazy = true,
 		config = function()
 			vim.g.tataku_recipes = {
 				-- 翻訳 en => ja

@@ -1,6 +1,7 @@
 -- @see https://github.com/yetone/avante.nvim
 -- @see https://github.com/yetone/avante.nvim/blob/main/lua/avante/config.lua
 
+---@type LazyPluginSpec
 return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",

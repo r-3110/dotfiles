@@ -10,6 +10,7 @@
 -- * override the configuration of LazyVim plugins
 return {
 	-- the opts function can also be used to change the default opts:
+	---@type LazyPluginSpec
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",

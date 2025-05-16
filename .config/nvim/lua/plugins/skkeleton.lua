@@ -1,5 +1,6 @@
 -- @see https://github.com/vim-skk/skkeleton
 
+---@type LazyPluginSpec
 return {
 	"vim-skk/skkeleton",
 	dependencies = {

@@ -4,6 +4,7 @@
 
 vim.lsp.enable({ "pyright" })
 
+---@type LazyPluginSpec[]
 return {
 	{
 		"mfussenegger/nvim-lint",
@@ -76,6 +77,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
+			{ "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 			{
 				"folke/lazydev.nvim",
 				ft = "lua", -- only load on lua files

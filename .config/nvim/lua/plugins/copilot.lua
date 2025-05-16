@@ -1,6 +1,7 @@
 -- @see https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
 return {
+	---@type LazyPluginSpec
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",

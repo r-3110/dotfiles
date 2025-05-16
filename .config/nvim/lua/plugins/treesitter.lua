@@ -1,5 +1,6 @@
 -- @see https://github.com/nvim-treesitter/nvim-treesitter
 
+---@type LazyPluginSpec[]
 return {
 	-- add more treesitter parsers
 	{

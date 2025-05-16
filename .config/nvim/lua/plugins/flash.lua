@@ -1,5 +1,6 @@
 --@see https://github.com/folke/flash.nvim
---
+
+---@type LazyPluginSpec
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",

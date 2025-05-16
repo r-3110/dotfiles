@@ -1,5 +1,6 @@
 --@see https://github.com/olimorris/codecompanion.nvim
 
+---@type LazyPluginSpec
 return {
 	"olimorris/codecompanion.nvim",
 	dependencies = {
@@ -8,6 +9,7 @@ return {
 		"github/copilot.vim",
 	},
 	event = "VeryLazy",
+	lazy = true,
 	opts = {
 		strategies = {
 			chat = {

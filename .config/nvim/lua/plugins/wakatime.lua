@@ -1,5 +1,4 @@
 -- @see https://wakatime.com/neovim
 
-return {
-	{ "wakatime/vim-wakatime", lazy = false },
-}
+---@type LazyPluginSpec
+return { "wakatime/vim-wakatime", lazy = false }

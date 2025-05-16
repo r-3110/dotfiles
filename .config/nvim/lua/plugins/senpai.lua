@@ -1,8 +1,10 @@
 -- @see https://github.com/eetann/senpai.nvim
 
+---@type LazyPluginSpec
 return {
 	"eetann/senpai.nvim",
 	build = "bun install",
+	lazy = true,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"nvim-lua/plenary.nvim",

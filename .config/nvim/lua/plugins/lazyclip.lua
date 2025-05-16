@@ -1,5 +1,6 @@
 -- @see https://github.com/atiladefreitas/lazyclip
 
+---@type LazyPluginSpec
 return {
 	"atiladefreitas/lazyclip",
 	config = function()

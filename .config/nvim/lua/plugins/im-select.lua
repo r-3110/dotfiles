@@ -1,5 +1,6 @@
 -- @see https://github.com/keaising/im-select.nvim
 
+---@type LazyPluginSpec
 return {
 	"keaising/im-select.nvim",
 	vscode = true,

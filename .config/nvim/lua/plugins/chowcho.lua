@@ -1,5 +1,6 @@
 -- @see https://github.com/tkmpypy/chowcho.nvim
 
+---@type LazyPluginSpec
 return {
 	"tkmpypy/chowcho.nvim",
 	config = function()

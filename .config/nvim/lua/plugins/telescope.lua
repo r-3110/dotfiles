@@ -1,5 +1,6 @@
 -- @see https://github.com/nvim-telescope/telescope.nvim
 
+---@type LazyPluginSpec[]
 return {
 	-- change some telescope options and a keymap to browse plugin files
 	{
