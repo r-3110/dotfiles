@@ -1,18 +1,16 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
-  "workspace": {
-    "library": [
-      "lua",
-      "$VIMRUNTIME",
-      "${3rd}/luv/library",
-      "/Users/ryo/.local/share/mise/installs/neovim/",
-      "/Users/ryo/.local/share/nvim/"
-    ]
-  },
-  "diagnostics": {
-    "enable": true,
-    "globals": [
-      "vim"
-    ]
-  }
+	"$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+	"workspace": {
+		"library": [
+			"lua",
+			"$VIMRUNTIME",
+			"${3rd}/luv/library",
+			"/Users/ryo/.local/share/mise/installs/neovim/",
+			"/Users/ryo/.local/share/nvim/"
+		]
+	},
+	"diagnostics": {
+		"enable": true,
+		"globals": ["vim"]
+	}
 }
