@@ -14,15 +14,20 @@ return {
 		provider = "copilot",
 		auto_suggestions_provider = "copilot",
 
-		---@type AvanteSupportedProvider
-		copilot = {
-			model = "claude-3.5-sonnet",
-			temperature = 0,
-			max_tokens = 4096,
-		},
-		behaviour = {
-			auto_suggestions = true,
-			support_paste_from_clipboard = true,
+		---@type {[string]: AvanteProvider}
+		providers = {
+			---@type AvanteSupportedProvider
+			copilot = {
+				model = "claude-3.5-sonnet",
+				extra_request_body = {
+					max_tokens = 4096,
+					temperature = 0,
+				},
+			},
+			behaviour = {
+				auto_suggestions = true,
+				support_paste_from_clipboard = true,
+			},
 		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
