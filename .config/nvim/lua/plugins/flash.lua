@@ -4,6 +4,7 @@
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
+	lazy = true,
 	---@type Flash.Config
 	---@diagnostic disable-next-line: missing-fields
 	opts = {},

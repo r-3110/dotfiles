@@ -4,6 +4,8 @@
 return {
 	"keaising/im-select.nvim",
 	vscode = true,
+	event = "VeryLazy",
+	lazy = true,
 	config = function()
 		require("im_select").setup({
 			-- IM will be set to `default_im_select` in `normal` mode

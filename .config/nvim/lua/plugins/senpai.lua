@@ -4,6 +4,7 @@
 return {
 	"eetann/senpai.nvim",
 	build = "bun install",
+	event = "VeryLazy",
 	lazy = true,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
