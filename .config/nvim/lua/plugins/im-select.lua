@@ -1,5 +1,15 @@
 -- @see https://github.com/keaising/im-select.nvim
 
+local default_im_select
+local default_command
+if vim.fn.has("mac") == 1 then
+	default_im_select = "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman"
+	default_command = "macism"
+elseif vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
+	default_im_select = "keyboard-us"
+	default_command = "/mnt/c/Users/Ryo/bin/im-select.exe"
+end
+
 ---@type LazyPluginSpec
 return {
 	"keaising/im-select.nvim",
@@ -16,7 +26,7 @@ return {
 			--               "1" for Fcitx
 			--               "xkb:us::eng" for ibus
 			-- You can use `im-select` or `fcitx5-remote -n` to get the IM's name
-			default_im_select = "com.apple.inputmethod.Kotoeri.RomajiTyping.Roman",
+			default_im_select = default_im_select,
 
 			-- Can be binary's name, binary's full path, or a table, e.g. 'im-select',
 			-- '/usr/local/bin/im-select' for binary without extra arguments,
@@ -24,7 +34,7 @@ return {
 			-- For Windows/WSL, default: "im-select.exe"
 			-- For macOS, default: "macism"
 			-- For Linux, default: "fcitx5-remote" or "fcitx-remote" or "ibus""
-			default_command = "macism",
+			default_command = default_command,
 
 			-- Restore the default input method state when the following events are triggered
 			set_default_events = { "VimEnter", "FocusGained", "InsertLeave", "CmdlineLeave" },
