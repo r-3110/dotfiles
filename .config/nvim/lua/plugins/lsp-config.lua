@@ -92,6 +92,8 @@ return {
 								"${3rd}/luv/library",
 								"/Users/ryo/.local/share/mise/installs/neovim/",
 								"/Users/ryo/.local/share/nvim/",
+								"/home/ryo/.local/share/mise/installs/neovim/",
+								"/home/ryo/.local/share/nvim/",
 							},
 							words = { "vim%.uv" },
 						},
