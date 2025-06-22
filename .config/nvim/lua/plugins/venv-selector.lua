@@ -15,6 +15,6 @@ return {
 	opts = {
 		-- Your settings go here
 	},
-	{ "mfussenegger/nvim-dap", enabled = false },
+	{ "mfussenegger/nvim-dap" },
 	{ "mfussenegger/nvim-dap-python", enabled = false },
 }

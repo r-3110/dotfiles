@@ -6,6 +6,6 @@ return {
 	lazy = false,
 	event = "VeryLazy",
 	opts = {
-		enabled = true,
+		enabled = false,
 	},
 }

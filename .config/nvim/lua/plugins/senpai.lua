@@ -3,11 +3,12 @@
 ---@type LazyPluginSpec
 return {
 	"eetann/senpai.nvim",
-	build = "bun install",
-	event = "VeryLazy",
-	lazy = true,
+	build = "bun install --frozen-lockfile",
+	-- event = "VeryLazy",
+	-- lazy = true,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
+		"grapp-dev/nui-components.nvim",
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
 	},

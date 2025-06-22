@@ -6,7 +6,8 @@ return {
 	dependencies = {
 		"olimorris/codecompanion.nvim",
 	},
-	lazy = true,
+	-- lazy trueだと使えないので注意
+	-- lazy = true,
 	config = function()
 		vim.keymap.set("n", "<leader>ai", function()
 			require("aibou.codecompanion").start()
