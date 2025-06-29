@@ -79,3 +79,22 @@ vim.keymap.set("n", "<Leader>du", function()
 end, { desc = "Toggle DAP UI" })
 
 vim.keymap.set("n", "<Leader>db", ":DapToggleBreakpoint<CR>", { desc = "Toggle DAP Breakpoint" })
+
+-- jumpcursor keymaps
+vim.keymap.set(
+	"n",
+	"[j",
+	"<Plug>(jumpcursor-jump)",
+	{ desc = "Jump to previous cursor position", noremap = false, silent = true }
+)
+
+-- vim-doge keymaps
+vim.keymap.set("n", "<Leader>dog", ":DogeGenerate<CR>")
+
+-- Interactive mode comment todo-jumping
+-- vim.keymap.set("n", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+-- vim.keymap.set("n", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
+-- vim.keymap.set("i", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+-- vim.keymap.set("i", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
+-- vim.keymap.set("x", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+-- vim.keymap.set("x", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
