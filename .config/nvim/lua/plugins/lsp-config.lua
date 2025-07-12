@@ -191,7 +191,9 @@ return {
 	{
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		-- ft = { "typescript", "typescriptreact", "typescript.tsx" },
+		ft = { "typescript", "typescriptreact", "typescript.tsx" },
+		---@type Settings
+		--- @diagnostic disable-next-line: missing-fields
 		opts = {},
 	},
 }
