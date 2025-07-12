@@ -37,6 +37,8 @@ zoxide = "latest"
 "aqua:jez/as-tree" = "latest"
 tmux = "latest"
 rust = "latest"
+yazi = "latest"
+zellij = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]

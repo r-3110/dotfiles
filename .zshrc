@@ -14,6 +14,8 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 source $HOME/dotfiles/.zsh_alias
 
+source $HOME/dotfiles/.zsh_functions
+
 # BEGIN_AWS_SSO_CLI
 
 # AWS SSO requires `bashcompinit` which needs to be enabled once and
