@@ -98,3 +98,8 @@ vim.keymap.set("n", "<Leader>dog", ":DogeGenerate<CR>")
 -- vim.keymap.set("i", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
 -- vim.keymap.set("x", "<TAB>", "<Plug>(doge-comment-jump-forward)")
 -- vim.keymap.set("x", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
+
+-- notion keymaps
+vim.keymap.set("n", "<leader>no", function()
+	require("notion").openMenu()
+end, { desc = "Open Notion Menu" })
