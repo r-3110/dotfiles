@@ -25,7 +25,6 @@ act = "latest"
 uv = "latest"
 ruby = "latest"
 "aqua:jesseduffield/lazydocker" = "latest"
-"aqua:cli/cli" = "latest"
 "aqua:aws/copilot-cli" = "latest"
 "aqua:rossmacarthur/sheldon" = "latest"
 cloudflared = "latest"
@@ -39,6 +38,7 @@ tmux = "latest"
 rust = "latest"
 yazi = "latest"
 zellij = "latest"
+gh = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
