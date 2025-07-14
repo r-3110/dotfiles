@@ -6,7 +6,6 @@ flutter = "latest"
 jq = "latest"
 yq = "latest"
 maven = "latest"
-rye = "latest"
 node = "22.16.0"
 python = "3.13.5"
 lazygit = "latest"
@@ -39,6 +38,7 @@ rust = "latest"
 yazi = "latest"
 zellij = "latest"
 gh = "latest"
+"aqua:k1LoW/runn" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
