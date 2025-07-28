@@ -10,5 +10,7 @@ end
 ---@type LazyPluginSpec
 return {
 	enabled = enabled,
+	event = "VeryLazy",
+	lazy = true,
 	"ActivityWatch/aw-watcher-vim",
 }
