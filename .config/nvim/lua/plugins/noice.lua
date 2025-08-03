@@ -24,6 +24,7 @@ return {
 						stages = "fade_in_slide_out",
 						timeout = 1500,
 						background_colour = "#1e1e2e",
+						top_down = false,
 					}
 
 					notify.setup(notifyConfig)
