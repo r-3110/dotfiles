@@ -28,4 +28,7 @@ vim.filetype.add({
 		["dockerfile.*"] = "dockerfile",
 		["dockerfile"] = "dockerfile",
 	},
+	filename = {
+		["venv-selector.lua"] = "lua",
+	},
 })

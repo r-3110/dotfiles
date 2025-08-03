@@ -13,34 +13,36 @@ return {
 			--   If not available, we use `mini` as the fallback
 			{
 				"rcarriga/nvim-notify",
-				lazy = true,
+				lazy = false,
+				config = function()
+					---@type notify
+					local notify = require("notify")
+
+					---@type notify.Config
+					---@diagnostic disable-next-line: missing-fields
+					local notifyConfig = {
+						stages = "fade_in_slide_out",
+						timeout = 1500,
+						background_colour = "#1e1e2e",
+					}
+
+					notify.setup(notifyConfig)
+
+					vim.notify = notify
+
+					-- 通知を強制的に閉じる
+					vim.keymap.set("n", "<leader>dn", function()
+						notify.dismiss({ silent = true, pending = false })
+					end, { desc = "Dismiss notifications" })
+				end,
 			},
 		},
 		config = function()
-			---@type notify
-			local notify = require("notify")
-
-			---@type notify.Config
-			---@diagnostic disable-next-line: missing-fields
-			local notifyConfig = {
-				stages = "fade_in_slide_out",
-				timeout = 1500,
-				background_colour = "#1e1e2e",
-			}
-
-			notify.setup(notifyConfig)
-
-			vim.notify = notify
-
-			-- 通知を強制的に閉じる
-			vim.keymap.set("n", "<leader>dn", function()
-				notify.dismiss({ silent = true, pending = false })
-			end, { desc = "Dismiss notifications" })
-
 			local noice = require("noice")
 
 			---@type NoiceConfig
 			local noiceConfig = {
+				---@type NoicePresets
 				presets = {
 					bottom_search = true,
 					command_palette = true,

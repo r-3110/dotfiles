@@ -9,9 +9,6 @@ return {
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
-			config = function()
-				vim.notify("nvim-dap loaded")
-			end,
 		},
 		"nvim-neotest/nvim-nio",
 		"theHamsta/nvim-dap-virtual-text",
