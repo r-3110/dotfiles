@@ -9,6 +9,8 @@ return {
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
+			-- なぜかconfigがないとsetupエラーになる
+			config = function() end,
 		},
 		"nvim-neotest/nvim-nio",
 		"theHamsta/nvim-dap-virtual-text",
