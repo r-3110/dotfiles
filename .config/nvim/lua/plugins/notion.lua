@@ -1,5 +1,6 @@
 --@see https://github.com/Al0den/notion.nvim
 
+---@type LazyPluginSpec
 return {
 	"Al0den/notion.nvim",
 	lazy = false, --Should work when lazy loaded, not tested
