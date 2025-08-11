@@ -103,6 +103,16 @@ return {
 		},
 		opts = {
 			servers = {
+				--- typescript-toolsを使用するため無効に
+				tsserver = {
+					enabled = false,
+				},
+				ts_ls = {
+					enabled = false,
+				},
+				vtsls = {
+					enabled = false,
+				},
 				yamlls = {
 					filetypes = { "yaml", "yml" },
 					settings = {
