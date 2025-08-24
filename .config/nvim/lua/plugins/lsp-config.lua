@@ -4,6 +4,9 @@
 
 vim.lsp.enable({ "pyright" })
 
+-- vtslsの再起動コマンド monorepoだと最初にアタッチされたtsconfigを参照し続けるため
+vim.keymap.set("n", "<leader>tr", ":LspRestart vtsls<CR>", { desc = "vtsls Restart" })
+
 ---@type LazyPluginSpec[]
 return {
 	{
@@ -111,7 +114,7 @@ return {
 					enabled = false,
 				},
 				vtsls = {
-					enabled = false,
+					enabled = true,
 				},
 				yamlls = {
 					filetypes = { "yaml", "yml" },
@@ -190,7 +193,7 @@ return {
 				"stylua",
 				"taplo",
 				"tsp-server",
-				"typescript-language-server",
+				"vtsls",
 				"vacuum",
 				"vale",
 				"yaml-language-server",
@@ -198,12 +201,13 @@ return {
 			},
 		},
 	},
-	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		ft = { "typescript", "typescriptreact", "typescript.tsx" },
-		---@type Settings
-		--- @diagnostic disable-next-line: missing-fields
-		opts = {},
-	},
+	-- {
+	--
+	-- 	"pmizio/typescript-tools.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	-- 	ft = { "typescript", "typescriptreact", "typescript.tsx" },
+	-- 	---@type Settings
+	-- 	--- @diagnostic disable-next-line: missing-fields
+	-- 	opts = {},
+	-- },
 }
