@@ -1,9 +1,15 @@
 --@see https://github.com/epwalsh/obsidian.nvim
 
+local enabled = true
+if vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
+	enabled = false
+end
+
 ---@type LazyPluginSpec
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
+	enabled = enabled,
 	lazy = true,
 	ft = "markdown",
 	-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
