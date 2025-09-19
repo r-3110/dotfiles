@@ -50,7 +50,7 @@ return {
 		},
 	},
 	vscode = false,
-	-- event = "VeryLazy",
+	event = "VeryLazy",
 	config = function()
 		vim.fn["skkeleton#config"]({
 			globalDictionaries = { default_dictionary },

@@ -1,13 +1,15 @@
 -- @see https://github.com/numToStr/Comment.nvim
 -- @see https://github.com/folke/ts-comments.nvim
 
----@type LazyPluginSpec
+---@type LazyPluginSpec[]
 return {
-	"numToStr/Comment.nvim",
-	event = "VeryLazy",
-	lazy = true,
-	opts = {
-		-- add any options here
+	{
+		"numToStr/Comment.nvim",
+		event = "VeryLazy",
+		lazy = true,
+		opts = {
+			-- add any options here
+		},
 	},
 	{
 		"folke/ts-comments.nvim",

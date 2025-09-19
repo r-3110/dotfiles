@@ -6,6 +6,15 @@ return {
 		"Omochice/tataku.vim",
 		dependencies = {
 			{ "vim-denops/denops.vim" },
+			{
+				"Omochice/tataku-collector-current_line",
+			},
+			{
+				"Omochice/tataku-processor-google_translate",
+			},
+			{
+				"Omochice/tataku-emitter-echo",
+			},
 		},
 		event = "VeryLazy",
 		lazy = true,
@@ -21,14 +30,5 @@ return {
 				},
 			}
 		end,
-	},
-	{
-		"Omochice/tataku-collector-current_line",
-	},
-	{
-		"Omochice/tataku-processor-google_translate",
-	},
-	{
-		"Omochice/tataku-emitter-echo",
 	},
 }
