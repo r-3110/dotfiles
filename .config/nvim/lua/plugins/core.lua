@@ -7,6 +7,8 @@ return {
 	dependencies = {
 		"ellisonleao/gruvbox.nvim",
 		"cocopon/iceberg.vim",
+		"rebelot/kanagawa.nvim",
+		"folke/tokyonight.nvim",
 		"Mofiqul/dracula.nvim",
 		{
 			"scottmckendry/cyberdream.nvim",
@@ -16,9 +18,19 @@ return {
 			opts = {},
 		},
 	},
-	--- @type LazyVimConfig
+	--- @type LazyVimConfig | PluginOpts
 	--- @diagnostic disable-next-line: missing-fields
-	opts = {
-		colorscheme = "dracula",
-	},
+	--- @param opts LazyVimConfig
+	opts = function(_, opts)
+		-- 候補のcolorscheme一覧
+		local themes = { "gruvbox", "iceberg", "kanagawa", "tokyonight", "dracula", "cyberdream" }
+
+		-- ランダム選択
+		math.randomseed(os.time())
+		local choice = themes[math.random(#themes)]
+
+		opts.colorscheme = choice
+
+		return opts
+	end,
 }
