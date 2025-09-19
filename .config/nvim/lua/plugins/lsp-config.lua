@@ -84,6 +84,9 @@ return {
 			{
 				"folke/lazydev.nvim",
 				ft = "lua", -- only load on lua files
+				dependencies = {
+					{ "DrKJeff16/wezterm-types", lazy = true },
+				},
 				opts = {
 					library = {
 						-- See the configuration section for more details
@@ -100,6 +103,7 @@ return {
 							},
 							words = { "vim%.uv" },
 						},
+						{ path = "wezterm-types", mods = { "wezterm" } },
 					},
 				},
 			},

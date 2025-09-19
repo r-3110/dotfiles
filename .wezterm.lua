@@ -1,10 +1,11 @@
 -- @see https://wezfurlong.org/wezterm/config/files.html
 -- @see https://wezfurlong.org/wezterm/config/lua/general.html
 
--- Pull in the wezterm API
+---@type Wezterm
 local wezterm = require("wezterm")
 
 -- This will hold the configuration.
+---@type Config
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
