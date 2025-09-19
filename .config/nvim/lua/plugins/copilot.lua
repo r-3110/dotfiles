@@ -12,7 +12,7 @@ return {
 		build = "make tiktoken", -- Only on MacOS or Linux
 		---@type CopilotChat.config
 		opts = {
-			debug = true, -- Enable debugging
+			debug = false, -- Enable debugging
 			show_help = true,
 			-- See Configuration section for rest
 			prompts = {

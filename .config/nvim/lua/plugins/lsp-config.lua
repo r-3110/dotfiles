@@ -80,7 +80,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
+			{ "mason-org/mason-lspconfig.nvim", version = "^2.0.0" },
 			{
 				"folke/lazydev.nvim",
 				ft = "lua", -- only load on lua files
@@ -160,7 +160,7 @@ return {
 	},
 	-- add any tools you want to have installed below
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {
 			ensure_installed = {
 				"cfn-lint",
