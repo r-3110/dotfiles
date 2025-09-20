@@ -10,11 +10,9 @@ return {
 	},
 	event = "VeryLazy",
 	lazy = false,
-	branch = "regexp", -- This is the regexp branch, use this for the new version
-	---@type venv-selector.Config
+	---@module "venv-selector"
+	---@type venv-selector.Options
 	opts = {
 		-- Your settings go here
 	},
-	{ "mfussenegger/nvim-dap" },
-	{ "mfussenegger/nvim-dap-python", enabled = false },
 }

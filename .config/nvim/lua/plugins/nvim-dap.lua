@@ -9,11 +9,14 @@ return {
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
+			dependencies = {
+				{ "mfussenegger/nvim-dap-python", enabled = false },
+				{ "theHamsta/nvim-dap-virtual-text" },
+			},
 			-- なぜかconfigがないとsetupエラーになる
 			config = function() end,
 		},
 		"nvim-neotest/nvim-nio",
-		"theHamsta/nvim-dap-virtual-text",
 		{
 			"microsoft/vscode-js-debug",
 			build = "npm install --legacy-peer-deps && npx gulp dapDebugServer",
