@@ -1,6 +1,6 @@
 -- @see https://github.com/mfussenegger/nvim-lint
 -- @see https://github.com/neovim/nvim-lspconfig
--- @see https://github.com/williamboman/mason.nvim
+-- @see https://github.com/mason-org/mason.nvim
 
 vim.lsp.enable({ "pyright" })
 
@@ -87,15 +87,14 @@ return {
 				dependencies = {
 					{ "DrKJeff16/wezterm-types", lazy = true },
 				},
+				---@type lazydev.Config
 				opts = {
 					library = {
 						-- See the configuration section for more details
 						-- Load luvit types when the `vim.uv` word is found
 						{
 							path = {
-								"lua",
-								vim.env.VIMRUNTIME,
-								"${3rd}/luv/library",
+								-- "${3rd}/luv/library",
 								"/Users/ryo/.local/share/mise/installs/neovim/",
 								"/Users/ryo/.local/share/nvim/",
 								"/home/ryo/.local/share/mise/installs/neovim/",
@@ -103,8 +102,17 @@ return {
 							},
 							words = { "vim%.uv" },
 						},
+						"lazy.nvim",
+						"LazyVim",
+						{ path = "LazyVim", words = { "LazyVim" } },
 						{ path = "wezterm-types", mods = { "wezterm" } },
 					},
+					-- nvimではluarc.jsonを無効化。
+					-- nvimで開くとlazyvimで型が読み込まれるが、vscodeだとlazyvimは起動しないためluarc.jsonで型を指定するために必要
+					enabled = function(root_dir)
+						local isVsCode = vim.g.vscode
+						return not isVsCode
+					end,
 				},
 			},
 		},
