@@ -1,10 +1,13 @@
 -- @see https://github.com/vim-skk/skkeleton
 
 local default_dictionary
+local user_dictionary
 if vim.fn.has("mac") == 1 then
 	default_dictionary = "~/Library/Application Support/AquaSKK/SKK-JISYO.L"
+	user_dictionary = "~/.skkeleton"
 elseif vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
 	default_dictionary = "/mnt/c/Users/Ryo/SKK-JISYO.L"
+	user_dictionary = "/mnt/f/mydata/google-drive-share/skk/.userdict"
 end
 
 ---@type LazyPluginSpec
@@ -55,6 +58,8 @@ return {
 		vim.fn["skkeleton#config"]({
 			globalDictionaries = { default_dictionary },
 			-- globalDictionaries = { "~/SKK-JISYO.L" },
+			sources = { "skk_dictionary", "google_japanese_input" },
+			userDictionary = user_dictionary,
 			eggLikeNewline = true,
 			-- completionRankFile = "~/.skk/rank.json",
 			debug = true,
