@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Zhengqbbb/cz-git/refs/tags/v1.12.0/docs/public/schema/cz-git.json",
+  "alias": { "fd": "docs: fix typos" },
+  "messages": {
+    "type": "コミットする変更の種類を選んでください:",
+    "scope": "この変更のスコープを入力してください（任意）:",
+    "customScope": "カスタムスコープを入力してください:",
+    "subject": "タイトル: 変更内容を簡潔に書いてください (命令形・短め):",
+    "body": "本文: 変更の詳細を入力してください（任意・改行は「|」）:",
+    "breaking": "破壊的変更があれば入力してください（任意・改行は「|」）:",
+    "footerPrefixesSelect": "関連する課題の種類を選択してください（任意）:",
+    "customFooterPrefix": "課題の接頭辞を入力してください:",
+    "footer": "関連する課題番号を入力してください（例: #31, #34）:",
+    "generatingByAI": "AI によってコミットメッセージを生成しています...",
+    "generatedSelectByAI": "AI が生成した候補から選んでください:",
+    "confirmCommit": "上記の内容でコミットします。よろしいですか？"
+  },
+  "types": [
+    {
+      "value": "feat",
+      "name": "feat:     A new feature",
+      "emoji": ":sparkles:"
+    },
+    { "value": "fix", "name": "fix:      A bug fix", "emoji": ":bug:" },
+    {
+      "value": "docs",
+      "name": "docs:     Documentation only changes",
+      "emoji": ":memo:"
+    },
+    {
+      "value": "style",
+      "name": "style:    Changes that do not affect the meaning of the code",
+      "emoji": ":lipstick:"
+    },
+    {
+      "value": "refactor",
+      "name": "refactor: A code change that neither fixes a bug nor adds a feature",
+      "emoji": ":recycle:"
+    },
+    {
+      "value": "perf",
+      "name": "perf:     A code change that improves performance",
+      "emoji": ":zap:"
+    },
+    {
+      "value": "test",
+      "name": "test:     Adding missing tests or correcting existing tests",
+      "emoji": ":white_check_mark:"
+    },
+    {
+      "value": "build",
+      "name": "build:    Changes that affect the build system or external dependencies",
+      "emoji": ":package:"
+    },
+    {
+      "value": "ci",
+      "name": "ci:       Changes to our CI configuration files and scripts",
+      "emoji": ":ferris_wheel:"
+    },
+    {
+      "value": "chore",
+      "name": "chore:    Other changes that don't modify src or test files",
+      "emoji": ":hammer:"
+    },
+    {
+      "value": "revert",
+      "name": "revert:   Reverts a previous commit",
+      "emoji": ":rewind:"
+    }
+  ],
+  "useEmoji": false,
+  "emojiAlign": "center",
+  "useAI": false,
+  "aiNumber": 1,
+  "themeColorCode": "",
+  "scopes": [
+    { "value": "ui", "name": "ui: ユーザーインターフェース関連" },
+    { "value": "api", "name": "api: サーバー/API まわり" },
+    { "value": "auth", "name": "auth: 認証・認可機能" },
+    { "value": "db", "name": "db: データベース変更" },
+    { "value": "build", "name": "build: ビルド・CI 設定" },
+    { "value": "deps", "name": "deps: 依存ライブラリ" },
+    { "value": "config", "name": "config: 設定ファイル変更" },
+    { "value": "docs", "name": "docs: ドキュメント" },
+    { "value": "test", "name": "test: テストコード" },
+    { "value": "perf", "name": "perf: パフォーマンス改善" },
+    { "value": "chore", "name": "chore: 雑多な変更" }
+  ],
+  "allowCustomScopes": true,
+  "allowEmptyScopes": true,
+  "customScopesAlign": "bottom",
+  "customScopesAlias": "custom",
+  "emptyScopesAlias": "empty",
+  "upperCaseSubject": null,
+  "markBreakingChangeMode": false,
+  "allowBreakingChanges": ["feat", "fix"],
+  "breaklineNumber": 100,
+  "breaklineChar": "|",
+  "skipQuestions": [],
+  "issuePrefixes": [
+    { "value": "closed", "name": "closed:   ISSUES has been processed" }
+  ],
+  "customIssuePrefixAlign": "top",
+  "emptyIssuePrefixAlias": "skip",
+  "customIssuePrefixAlias": "custom",
+  "allowCustomIssuePrefix": true,
+  "allowEmptyIssuePrefix": true,
+  "confirmColorize": true,
+  "minSubjectLength": 0,
+  "defaultBody": "",
+  "defaultIssues": "",
+  "defaultScope": "",
+  "defaultSubject": ""
+}
