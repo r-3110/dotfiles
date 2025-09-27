@@ -51,6 +51,14 @@ return {
 				vim.fn["ddc#enable"]()
 			end,
 		},
+		{
+			"NI57721/skkeleton-henkan-highlight",
+			config = function()
+				vim.cmd([[
+          highlight SkkeletonHenkan gui=reverse term=reverse cterm=reverse
+        ]])
+			end,
+		},
 	},
 	vscode = false,
 	event = "VeryLazy",
