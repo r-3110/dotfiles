@@ -12,6 +12,7 @@ return {
 		build = "make tiktoken", -- Only on MacOS or Linux
 		---@type CopilotChat.config
 		opts = {
+			model = "gpt-5-codex",
 			debug = false, -- Enable debugging
 			show_help = true,
 			-- See Configuration section for rest

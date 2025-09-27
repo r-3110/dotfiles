@@ -13,20 +13,20 @@ return {
 		---@type avante.ProviderName
 		provider = "copilot",
 		auto_suggestions_provider = "copilot",
-
+		behaviour = {
+			auto_suggestions = true,
+		},
 		---@type {[string]: AvanteProvider}
 		providers = {
 			---@type AvanteSupportedProvider
 			copilot = {
-				model = "claude-3.5-sonnet",
+				model = "claude-sonnet-4",
+				-- まだavanteでは未サポート
+				-- model = "gpt-5-codex",
 				extra_request_body = {
 					max_tokens = 4096,
 					temperature = 0,
 				},
-			},
-			behaviour = {
-				auto_suggestions = true,
-				support_paste_from_clipboard = true,
 			},
 		},
 	},
