@@ -14,7 +14,8 @@ return {
 		provider = "copilot",
 		auto_suggestions_provider = "copilot",
 		behaviour = {
-			auto_suggestions = true,
+			-- トークンかなり消費するので使用しない
+			auto_suggestions = false,
 		},
 		---@type {[string]: AvanteProvider}
 		providers = {
