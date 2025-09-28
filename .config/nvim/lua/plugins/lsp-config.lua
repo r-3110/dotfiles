@@ -1,6 +1,8 @@
 -- @see https://github.com/mfussenegger/nvim-lint
 -- @see https://github.com/neovim/nvim-lspconfig
 -- @see https://github.com/mason-org/mason.nvim
+-- @see https://github.com/bassamsdata/namu.nvim
+-- @see https://github.com/dnlhc/glance.nvim
 
 vim.lsp.enable({ "pyright" })
 
@@ -55,7 +57,7 @@ return {
 			-- Set up linters
 			lint.linters_by_ft = linters
 
-			vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
+			vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
 				callback = function()
 					lint.try_lint()
 				end,
@@ -212,6 +214,23 @@ return {
 				"yamllint",
 			},
 		},
+	},
+	{
+		"bassamsdata/namu.nvim",
+		event = "VeryLazy",
+		lazy = true,
+		opts = {
+			global = {},
+			namu_symbols = { -- Specific Module options
+				options = {},
+			},
+		},
+	},
+	{
+		"dnlhc/glance.nvim",
+		event = "VeryLazy",
+		lazy = true,
+		cmd = "Glance",
 	},
 	-- {
 	--
