@@ -23,7 +23,6 @@ require("lazy").setup({
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 		-- import/override with your plugins
 		{ import = "lazyvim.plugins.extras.util.octo" },
-		{ import = "lazyvim.plugins.extras.util.rest" },
 		-- use mini.starter instead of alpha
 		{ import = "lazyvim.plugins.extras.ui.mini-starter" },
 		-- lspconfig

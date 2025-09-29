@@ -1,14 +1,5 @@
----@param path string
----@param bufnr integer
----@return string
-local checkCfn = function(path, bufnr)
-	for _, line in ipairs(vim.api.nvim_buf_get_lines(bufnr, 0, 10, false)) do
-		if line:match("AWSTemplateFormatVersion") then
-			return "yaml.cfn"
-		end
-	end
-	return "yaml"
-end
+---@type FiletypeUtils
+local file_type = require("utils.filetype")
 
 vim.filetype.add({
 	extension = {
@@ -16,13 +7,13 @@ vim.filetype.add({
 	},
 	pattern = {
 		["%.env.*"] = "dotenv",
-		[".*/.github/workflows/.*%.ya?ml"] = "yaml.ghaction",
-		[".*compose.*%.ya?ml"] = "yaml.docker-compose",
-		[".*/.*tsconfig.*%.json"] = "json.tsconfig",
-		[".*%.yml"] = checkCfn,
-		[".*%.yaml"] = checkCfn,
+		[file_type.my_filetype_rules[file_type.my_filetypes.gh].regex] = file_type.my_filetypes.gh,
+		[file_type.my_filetype_rules[file_type.my_filetypes["docker-compose"]].regex] = file_type.my_filetypes["docker-compose"],
+		[file_type.my_filetype_rules[file_type.my_filetypes.dockerfile].regex] = file_type.my_filetypes.dockerfile,
+		[file_type.my_filetype_rules[file_type.my_filetypes.tsconfig].regex] = file_type.my_filetypes.tsconfig,
+		[".*%.yml"] = file_type.checkCfn,
+		[".*%.yaml"] = file_type.checkCfn,
 		["%w+%.yml"] = "yaml",
-		["[Dd]ockerfile.*"] = "dockerfile",
 	},
 	filename = {
 		["venv-selector.lua"] = "lua",
