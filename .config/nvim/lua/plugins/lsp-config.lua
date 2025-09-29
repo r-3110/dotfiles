@@ -26,7 +26,7 @@ return {
 				json = { "jsonlint" },
 				cfn = { "cfn_lint" },
 				["yaml.ghaction"] = { "actionlint" },
-				["yaml.cfn"] = { "yamllint", "cfn_lint" },
+				["yaml.cfn"] = { "cfn_lint" },
 				dotenv = { "dotenv_linter" },
 				dockerfile = { "hadolint" },
 				typescript = { "eslint" },
@@ -34,6 +34,9 @@ return {
 				typescriptreact = { "eslint" },
 				lua = { "luacheck" },
 				python = { "ruff" },
+				sql = { "sqlfluff" },
+				css = { "stylelint" },
+				scss = { "stylelint" },
 			}
 
 			lint.linters.luacheck = {
@@ -57,7 +60,7 @@ return {
 			-- Set up linters
 			lint.linters_by_ft = linters
 
-			vim.api.nvim_create_autocmd({ "BufReadPost", "InsertLeave" }, {
+			vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost", "InsertLeave" }, {
 				callback = function()
 					lint.try_lint()
 				end,
@@ -203,6 +206,7 @@ return {
 				"pyright",
 				"shellcheck",
 				"shfmt",
+				"stylelint",
 				"sqlfluff",
 				"stylua",
 				"taplo",
