@@ -21,7 +21,7 @@ return {
 		providers = {
 			---@type AvanteSupportedProvider
 			copilot = {
-				model = "claude-sonnet-4",
+				model = "claude-sonnet-4.5",
 				-- まだavanteでは未サポート
 				-- model = "gpt-5-codex",
 				extra_request_body = {
