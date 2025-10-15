@@ -6,7 +6,7 @@ flutter = "latest"
 jq = "latest"
 yq = "latest"
 maven = "latest"
-node = "22.16.0"
+node = "22.15.0"
 python = "3.13.5"
 lazygit = "latest"
 lua = "latest"
@@ -39,6 +39,8 @@ yazi = "latest"
 zellij = "latest"
 gh = "latest"
 "aqua:k1LoW/runn" = "latest"
+aws-cli = "latest"
+azure-cli = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
