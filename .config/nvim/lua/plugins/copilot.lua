@@ -12,7 +12,9 @@ return {
 		build = "make tiktoken", -- Only on MacOS or Linux
 		---@type CopilotChat.config
 		opts = {
-			model = "gpt-5-codex",
+			-- copilotchatだとcodexが対応していない？
+			-- model = "gpt-5-codex",
+			model = "claude-sonnet-4.5",
 			debug = false, -- Enable debugging
 			show_help = true,
 			-- See Configuration section for rest
@@ -60,18 +62,16 @@ return {
 					prompt = "実装差分に対するコミットメッセージを日本語で記述してください。",
 					mapping = "<leader>cco",
 					description = "コミットメッセージの作成をお願いする",
-					---@param source CopilotChat.source
-					selection = function(source)
-						return require("CopilotChat.select").gitdiff(source)
+					selection = function()
+						return require("CopilotChat.select").gitdiff()
 					end,
 				},
 				CommitStaged = {
 					prompt = "ステージ済みの変更に対するコミットメッセージを日本語で記述してください。",
 					mapping = "<leader>cs",
 					description = "ステージ済みのコミットメッセージの作成をお願いする",
-					---@param source CopilotChat.source
-					selection = function(source)
-						return require("CopilotChat.select").gitdiff(source, true)
+					selection = function()
+						return require("CopilotChat.select").gitdiff()
 					end,
 				},
 			},
