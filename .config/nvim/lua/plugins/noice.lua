@@ -53,6 +53,14 @@ return {
 					inc_rename = false,
 					lsp_doc_border = true,
 				},
+				views = {
+					hover = {
+						size = {
+							--- 内容が大きすぎると邪魔なのでmax_heightを設定
+							max_height = 10,
+						},
+					},
+				},
 			}
 			noice.setup(noiceConfig)
 		end,
