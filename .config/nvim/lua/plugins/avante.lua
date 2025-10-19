@@ -7,6 +7,7 @@ return {
 	event = "VeryLazy",
 	lazy = false,
 	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+	---@module "avante"
 	---@type avante.Config
 	--- @diagnostic disable-next-line: missing-fields
 	opts = {
@@ -65,6 +66,7 @@ return {
 		{
 			-- Make sure to set this up properly if you have lazy=true
 			"MeanderingProgrammer/render-markdown.nvim",
+			---@module "render-markdown"
 			---@type render.md.UserConfig
 			opts = {
 				file_types = { "markdown", "Avante" },

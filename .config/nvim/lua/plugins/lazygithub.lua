@@ -3,6 +3,7 @@ return {
 	"georgesnoe/lazygithub.nvim",
 	dependencies = { "akinsho/toggleterm.nvim" },
 	config = function()
+		---@module "lazygithub"
 		require("lazygithub").setup({
 			border = "single", -- valid options are "single" | "double" | "shadow" | "curved"
 		})

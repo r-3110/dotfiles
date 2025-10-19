@@ -14,6 +14,7 @@ return {
 			"scottmckendry/cyberdream.nvim",
 			lazy = false,
 			priority = 1000,
+			---@module "cyberdream"
 			---@type cyberdream.Config
 			opts = {},
 		},

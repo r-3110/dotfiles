@@ -24,10 +24,12 @@ return {
 	},
 	lazy = true,
 	config = function()
+		---@module "dapui"
 		local dapui = require("dapui")
 
 		dapui.setup()
 
+		---@module "dap"
 		local dap = require("dap")
 
 		dap.adapters["pwa-node"] = {

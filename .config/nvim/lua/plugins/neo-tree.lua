@@ -121,6 +121,7 @@ return {
 				},
 				commands = {
 					git_move = function(state)
+						---@module "nui.tree"
 						---@type NuiTree
 						local tree = state.tree
 						local node = tree:get_node()

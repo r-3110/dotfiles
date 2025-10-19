@@ -6,7 +6,9 @@ return {
 	event = "BufReadPre",
 	lazy = true,
 	config = function()
+		---@module "dial.augend"
 		local augend = require("dial.augend")
+		---@module "dial.config"
 		require("dial.config").augends:register_group({
 			default = {
 				augend.date.alias["%d/%m/%Y"],

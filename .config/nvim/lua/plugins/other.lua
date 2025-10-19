@@ -6,6 +6,7 @@ return {
 	lazy = true,
 	event = "BufReadPre",
 	config = function()
+		---@module "other-nvim"
 		require("other-nvim").setup({
 			mappings = {
 				"livewire",

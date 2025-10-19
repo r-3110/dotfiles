@@ -10,6 +10,7 @@ return {
 	-- lazy = true,
 	config = function()
 		vim.keymap.set("n", "<leader>ai", function()
+			---@module "aibou.codecompanion"
 			require("aibou.codecompanion").start()
 		end, { desc = "Start aibou" })
 	end,

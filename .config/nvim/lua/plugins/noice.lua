@@ -15,6 +15,7 @@ return {
 				"rcarriga/nvim-notify",
 				lazy = false,
 				config = function()
+					---@module "notify"
 					---@type notify
 					local notify = require("notify")
 
@@ -39,6 +40,7 @@ return {
 			},
 		},
 		config = function()
+			---@module "noice"
 			local noice = require("noice")
 
 			---@type NoiceConfig

@@ -9,6 +9,7 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	config = function()
+		---@module "notion"
 		require("notion").setup()
 	end,
 }

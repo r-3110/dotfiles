@@ -15,12 +15,15 @@ return {
 			version = "v2.*",
 			build = "make install_jsregexp",
 			config = function()
+				---@module "luasnip.loaders.from_vscode"
 				require("luasnip.loaders.from_vscode").lazy_load()
+				---@module "luasnip.loaders.from_lua"
 				require("luasnip.loaders.from_lua").load({ paths = { "~/dotfiles/.config/nvim/snippet" } })
 			end,
 		},
 		-- ... Other dependencies
 	},
+	---@module "blink.cmp"
 	---@type blink.cmp.Config
 	opts = {
 		sources = {

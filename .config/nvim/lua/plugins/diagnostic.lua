@@ -6,6 +6,7 @@ return {
 	{
 		"folke/trouble.nvim",
 		-- opts will be merged with the parent spec
+		---@module "trouble"
 		---@type trouble.Config
 		opts = {},
 	},

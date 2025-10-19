@@ -34,6 +34,7 @@ return {
 				end,
 			})
 
+			---@module "nvim-treesitter"
 			local treesitter = require("nvim-treesitter")
 
 			---@type TSConfig

@@ -4,6 +4,7 @@
 return {
 	"atiladefreitas/lazyclip",
 	config = function()
+		---@module "lazyclip"
 		require("lazyclip").setup({
 			-- your custom config here (optional)
 		})

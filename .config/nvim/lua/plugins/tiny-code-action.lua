@@ -9,6 +9,7 @@ return {
 	},
 	event = "LspAttach",
 	config = function()
-		require("tiny-code-action").setup()
+		---@module "tiny-code-action"
+		require("tiny-code-action").setup({})
 	end,
 }

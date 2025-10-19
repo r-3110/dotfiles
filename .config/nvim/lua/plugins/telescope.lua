@@ -20,6 +20,7 @@ return {
 			{
 				"<leader>fl",
 				function()
+          ---@module "telescope"
           require("telescope").extensions.live_grep_args.live_grep_args()
 				end,
 				desc = "Live Grep",
@@ -45,7 +46,9 @@ return {
 			},
 		},
 		config = function()
+			---@module "telescope"
 			local telescope = require("telescope")
+			---@module "telescope-live-grep-args.actions"
 			local lga_actions = require("telescope-live-grep-args.actions")
 
 			telescope.setup({

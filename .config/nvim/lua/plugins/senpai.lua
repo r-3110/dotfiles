@@ -12,6 +12,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
 	},
+	---@module "senpai"
 	--- @type senpai.Config
 	opts = {
 		providers = {

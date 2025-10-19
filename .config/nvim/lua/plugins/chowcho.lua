@@ -4,6 +4,7 @@
 return {
 	"tkmpypy/chowcho.nvim",
 	config = function()
+		---@module "chowcho"
 		local chowcho = require("chowcho")
 		chowcho.setup({})
 

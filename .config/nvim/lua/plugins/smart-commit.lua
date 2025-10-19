@@ -9,6 +9,7 @@ return {
 		"CopilotC-Nvim/CopilotChat.nvim", -- Optional: Required for commit message generation
 	},
 	config = function()
+		---@module "smart-commit"
 		require("smart-commit").setup(
 			---@type SmartCommitConfig
 			{

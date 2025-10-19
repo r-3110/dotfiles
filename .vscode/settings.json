@@ -1,0 +1,9 @@
+{
+  "Lua.workspace.library": [
+    "lua",
+    "$VIMRUNTIME",
+    "${3rd}/luv/library",
+    "$HOME/.local/share/mise/installs/neovim/",
+    "$HOME/.local/share/nvim/",
+  ]
+}

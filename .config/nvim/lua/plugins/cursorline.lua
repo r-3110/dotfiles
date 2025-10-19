@@ -5,6 +5,7 @@
 return {
 	"ya2s/nvim-cursorline",
 	config = function()
+		---@module "nvim-cursorline"
 		require("nvim-cursorline").setup({
 			cursorline = {
 				enable = true,

@@ -7,6 +7,7 @@ return {
 	lazy = true,
 	dependencies = { "MunifTanjim/nui.nvim" },
 	config = function()
+		---@module "package-info"
 		require("package-info").setup()
 	end,
 }

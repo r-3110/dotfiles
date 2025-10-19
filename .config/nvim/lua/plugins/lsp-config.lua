@@ -15,6 +15,7 @@ return {
 		"mfussenegger/nvim-lint",
 		events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 		config = function()
+			---@module "lint"
 			local lint = require("lint")
 
 			---@type table<string, string[]>
@@ -92,18 +93,16 @@ return {
 				dependencies = {
 					{ "DrKJeff16/wezterm-types", lazy = true },
 				},
+				---@module "lazydev"
 				---@type lazydev.Config
 				opts = {
+					debug = false,
 					library = {
 						-- See the configuration section for more details
 						-- Load luvit types when the `vim.uv` word is found
 						{
 							path = {
-								-- "${3rd}/luv/library",
-								"/Users/ryo/.local/share/mise/installs/neovim/",
-								"/Users/ryo/.local/share/nvim/",
-								"/home/ryo/.local/share/mise/installs/neovim/",
-								"/home/ryo/.local/share/nvim/",
+								"${3rd}/luv/library",
 							},
 							words = { "vim%.uv" },
 						},
@@ -112,12 +111,11 @@ return {
 						{ path = "LazyVim", words = { "LazyVim" } },
 						{ path = "wezterm-types", mods = { "wezterm" } },
 					},
-					-- nvimではluarc.jsonを無効化。
-					-- nvimで開くとlazyvimで型が読み込まれるが、vscodeだとlazyvimは起動しないためluarc.jsonで型を指定するために必要
-					enabled = function(root_dir)
-						local isVsCode = vim.g.vscode
-						return not isVsCode
-					end,
+					-- luarc.jsonによるlibraryの読み込みだとlsp attach時に読み込みが巨大になってしまう。
+					-- nvimではlazyvimで必要な時に必要なファイルだけ読むように。
+					-- vscodeではあまり編集しないので妥協として.settings.jsonで有効化することで対応している。
+					---@type boolean|(fun(root:string):boolean?)
+					enabled = true,
 				},
 			},
 		},

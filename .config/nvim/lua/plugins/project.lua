@@ -6,6 +6,7 @@ vim.api.nvim_create_user_command("Pjh", "NeovimProjectHistory", {})
 ---@type LazyPluginSpec
 return {
 	"coffebar/neovim-project",
+	---@module "neovim-project"
 	--- @type ProjectOptions
 	opts = {
 		projects = { -- define project roots

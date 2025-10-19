@@ -13,13 +13,16 @@ return {
 	},
 	lazy = true,
 	event = "BufReadPre",
+	---@module "neotest"
 	---@type neotest.CoreConfig
 	--- @diagnostic disable-next-line: missing-fields
 	opts = {
 		log_level = vim.log.levels.DEBUG,
 		adapters = {
+			---@module "neotest-vitest"
 			---@type neotest.VitestOptions
 			["neotest-vitest"] = {},
+			---@module "neotest-python"
 			---@type neotest-python.AdapterConfig
 			["neotest-python"] = {},
 		},
