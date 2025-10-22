@@ -18,7 +18,18 @@ return {
 		{
 			"Shougo/ddc.vim",
 			dependencies = {
-				"Shougo/ddc-ui-native",
+				-- "Shougo/ddc-ui-native",
+				{
+					"Shougo/pum.vim",
+					config = function()
+						vim.keymap.set({ "i", "c" }, [[<C-p>]], "<cmd>call pum#map#insert_relative(-1)<CR>")
+						vim.keymap.set({ "i", "c" }, [[<C-y>]], "<cmd>call pum#map#confirm()<CR>")
+						vim.keymap.set({ "i", "c" }, [[<C-e>]], "<cmd>call pum#map#cancel()<CR>")
+						vim.keymap.set({ "i", "c" }, [[<PageDown>]], "<cmd>call pum#map#insert_relative_page(+1)<CR>")
+						vim.keymap.set({ "i", "c" }, [[<PageUp>]], "<cmd>call pum#map#insert_relative_page(-1)<CR>")
+					end,
+				},
+				"Shougo/ddc-ui-pum",
 			},
 			config = function()
 				vim.fn["ddc#custom#patch_global"]("sources", { "skkeleton", "skkeleton_okuri" })
@@ -46,7 +57,8 @@ return {
 					},
 				})
 
-				vim.fn["ddc#custom#patch_global"]("ui", "native")
+				-- vim.fn["ddc#custom#patch_global"]("ui", "native")
+				vim.fn["ddc#custom#patch_global"]("ui", "pum")
 
 				vim.fn["ddc#enable"]()
 			end,
@@ -70,7 +82,7 @@ return {
 			userDictionary = user_dictionary,
 			eggLikeNewline = true,
 			-- completionRankFile = "~/.skk/rank.json",
-			debug = true,
+			debug = false,
 		})
 	end,
 }
