@@ -1,8 +1,5 @@
 -- @see https://github.com/coffebar/neovim-project
 
-vim.api.nvim_create_user_command("Pjd", "NeovimProjectDiscover", {})
-vim.api.nvim_create_user_command("Pjh", "NeovimProjectHistory", {})
-
 ---@type LazyPluginSpec
 return {
 	"coffebar/neovim-project",
