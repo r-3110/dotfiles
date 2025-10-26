@@ -21,7 +21,9 @@ config.color_scheme = "iceberg-dark"
 config.initial_rows = 35
 config.initial_cols = 120
 config.font_size = 16.0
-config.font = wezterm.font_with_fallback({ "MesloLGS NF", "Ricty Diminished for Powerline" })
+config.font = wezterm.font_with_fallback({
+	"HackGen35 Console NF",
+})
 
 -- and finally, return the configuration to wezterm
 config.macos_window_background_blur = 20
