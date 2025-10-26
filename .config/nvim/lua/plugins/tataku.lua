@@ -13,7 +13,7 @@ return {
 				"Omochice/tataku-processor-google_translate",
 			},
 			{
-				"Omochice/tataku-emitter-echo",
+				"Omochice/tataku-emitter-nvim_floatwin",
 			},
 		},
 		event = "VeryLazy",
@@ -26,7 +26,7 @@ return {
 					processor = {
 						{ name = "google_translate", options = { source = "en", target = "ja" } },
 					},
-					emitter = { name = "echo" },
+					emitter = { name = "nvim_floatwin" },
 				},
 			}
 		end,
