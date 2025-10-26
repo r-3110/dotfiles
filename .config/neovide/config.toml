@@ -1,5 +1,6 @@
 maximized = true
 
 [font]
-normal = ["MesloLGS NF"]
-size = 18
+normal = ["HackGen35 Console NF"]
+size = 16
+
