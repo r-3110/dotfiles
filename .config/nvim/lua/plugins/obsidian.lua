@@ -26,15 +26,14 @@ return {
 
 		-- see below for full list of optional dependencies 👇
 	},
+	---@module "obsidian"
+	---@type obsidian.config.ClientOpts
+	---@diagnostic disable: missing-fields
 	opts = {
 		workspaces = {
 			{
-				name = "personal",
-				path = "~/vaults/personal",
-			},
-			{
 				name = "work",
-				path = "~/vaults/work",
+				path = "$HOME/Documents/Obsidian Vault/",
 			},
 		},
 
