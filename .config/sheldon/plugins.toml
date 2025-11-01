@@ -27,9 +27,11 @@ apply = ["defer"]
 # ctrl + r で起動
 [plugins.history]
 github = "zdharma/history-search-multi-word"
+apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
 
 # option + j で起動
 [plugins.zsh-navigation-tools]
@@ -45,7 +47,6 @@ apply = ["defer"]
 
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
-# For example:
-#
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
+
+[plugins.zsh-vi-mode]
+github = "jeffreytse/zsh-vi-mode"
