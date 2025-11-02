@@ -40,6 +40,8 @@ gh = "latest"
 "aqua:k1LoW/runn" = "latest"
 aws-cli = "latest"
 azure-cli = "latest"
+"npm:zenn-cli" = "latest"
+"npm:editprompt" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
