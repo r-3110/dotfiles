@@ -1,6 +1,8 @@
 # Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 
+export XDG_DATA_HOME="$HOME/.local/share"
+
 # NOTE: 冒頭で設定すること
 autoload bashcompinit && bashcompinit
 autoload -U compinit && compinit
@@ -17,6 +19,11 @@ complete -C '/usr/local/bin/aws_completer' aws
 source $HOME/dotfiles/.zsh_alias
 
 source $HOME/dotfiles/.zsh_functions
+
+# source $HOME/dotfiles/zeno.sh
+# keychainでSSHエージェントを管理
+# keychain -q --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$(hostname)-sh
 
 # BEGIN_AWS_SSO_CLI
 

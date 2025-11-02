@@ -21,7 +21,7 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 github = "romkatv/zsh-defer"
 
 [plugins.syntax-highlight]
-github = "zdharma/fast-syntax-highlighting"
+github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
 
 # ctrl + r で起動
@@ -29,17 +29,39 @@ apply = ["defer"]
 github = "zdharma/history-search-multi-word"
 apply = ["defer"]
 
+[plugins.zeno]
+github = "yuki-yano/zeno.zsh"
+hooks.pre = """
+export ZENO_GIT_CAT="bat --color=always"
+export ZENO_GIT_TREE="eza --tree"
+"""
+hooks.post = """
+__zeno_bindkey() {
+  bindkey ' ' zeno-auto-snippet
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+  bindkey '^i' zeno-completion
+  
+  bindkey '^x '  zeno-insert-space
+  bindkey '^x^m' accept-line
+  bindkey '^x^z' zeno-toggle-auto-snippet
+
+  bindkey '^r' zeno-history-selection
+  bindkey '^x^l' zeno-insert-snippet
+  bindkey '^x^g' zeno-ghq-cd
+}
+zsh-defer -a -t0.01 __zeno_bindkey
+"""
+apply = ["defer"]
+
+# deferにするとzenoが動かない
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-apply = ["defer"]
+# apply = ["defer"]
 
 # option + j で起動
 [plugins.zsh-navigation-tools]
 github = "reegnz/jq-zsh-plugin"
 apply = ["defer"]
-
-[plugins.anyframe]
-github = "mollifier/anyframe"
 
 [plugins.git-open]
 github = "paulirish/git-open"
@@ -61,5 +83,7 @@ apply = ["defer"]
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 
+# deferにするとzenoが動かない
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
+# apply = ["defer"]
