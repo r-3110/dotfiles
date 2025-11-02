@@ -16,9 +16,11 @@ eval "$(sheldon source)"
 # aws-cli completion
 complete -C '/usr/local/bin/aws_completer' aws
 
-source $HOME/dotfiles/.zsh_alias
+DOTFILES_PATH="$HOME/dotfiles/.config/zsh"
 
-source $HOME/dotfiles/.zsh_functions
+source $DOTFILES_PATH/.zsh_alias
+
+source $DOTFILES_PATH/.zsh_functions
 
 # source $HOME/dotfiles/zeno.sh
 # keychainでSSHエージェントを管理
