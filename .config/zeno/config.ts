@@ -1,5 +1,6 @@
 import { defineConfig } from "@yuki-yano/zeno";
 
+// deno-lint-ignore no-unused-vars
 export default defineConfig(({ projectRoot, currentDirectory }) => ({
   snippets: [
     {
