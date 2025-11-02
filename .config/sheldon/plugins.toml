@@ -45,6 +45,19 @@ github = "mollifier/anyframe"
 github = "paulirish/git-open"
 apply = ["defer"]
 
+[plugins.gh-fzf]
+github = "atusy/gh-fzf"
+apply = ["defer"]
+
+[plugins.cd-gitroot]
+github = "mollifier/cd-gitroot"
+hooks.post = """
+fpath=($XDG_DATA_HOME/sheldon/repos/github.com/mollifier/cd-gitroot(N-/) $fpath)
+
+autoload -Uz cd-gitroot
+"""
+apply = ["defer"]
+
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 
