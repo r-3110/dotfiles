@@ -85,6 +85,7 @@ return {
 			default_component_configs = {
 				---@diagnostic disable-next-line: missing-fields
 				icon = {
+					-- luacheck: ignore state
 					provider = function(icon, node, state) -- default icon provider utilizes nvim-web-devicons if available
 						if node.type == "file" or node.type == "terminal" then
 							local success, web_devicons = pcall(require, "nvim-web-devicons")

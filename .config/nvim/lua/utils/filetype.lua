@@ -40,7 +40,7 @@ M.my_filetype_rules = {
 ---@param path string
 ---@param bufnr integer
 ---@return string
-M.checkCfn = function(path, bufnr)
+M.checkCfn = function(path, bufnr) -- luacheck: ignore path
 	for _, line in ipairs(vim.api.nvim_buf_get_lines(bufnr, 0, 10, false)) do
 		if line:match("AWSTemplateFormatVersion") then
 			return "yaml.cfn"
