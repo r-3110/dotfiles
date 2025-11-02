@@ -1,10 +1,12 @@
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
-
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+gui:
+ language: ja
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
-
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
 customCommands:
   - key: "C"
     command: 'git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'
