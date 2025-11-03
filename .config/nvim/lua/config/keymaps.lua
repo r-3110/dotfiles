@@ -2,6 +2,13 @@
 -- Set leader key
 vim.g.mapleader = " "
 
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>ln",
+	":set relativenumber!<CR>",
+	{ desc = "ライン番号トグル", noremap = true, silent = true }
+)
+
 -- vscodeでは設定が効かず、定義されていると支障が出るものを除外
 if not vim.g.vscode then
 	print("This is not vscode")
