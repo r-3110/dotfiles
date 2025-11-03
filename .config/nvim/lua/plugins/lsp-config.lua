@@ -86,7 +86,46 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "mason-org/mason-lspconfig.nvim", version = "^2.0.0" },
+			{
+				"mason-org/mason-lspconfig.nvim",
+				version = "^2.0.0",
+				dependencies = {
+					{
+						"mason-org/mason.nvim",
+						---@module "mason"
+						---@type MasonSettings
+						opts = {},
+					},
+				},
+				---@module "mason-lspconfig"
+				---@type MasonLspconfigSettings
+				opts = {
+					ensure_installed = {
+						"bashls",
+						"biome",
+						"copilot",
+						"denols",
+						"docker_compose_language_service",
+						"dockerls",
+						"eslint",
+						"gh_actions_ls",
+						"gopls",
+						"html",
+						"jsonls",
+						"jsonnet_ls",
+						"lua_ls",
+						"marksman",
+						"phpactor",
+						"pyright",
+						"ruff",
+						"stylua",
+						"taplo",
+						"tsp_server",
+						"vtsls",
+						"yamlls",
+					},
+				},
+			},
 			{
 				"folke/lazydev.nvim",
 				ft = "lua", -- only load on lua files
@@ -171,50 +210,6 @@ return {
 						},
 					},
 				},
-			},
-		},
-	},
-	-- add any tools you want to have installed below
-	{
-		"mason-org/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"cfn-lint",
-				"ruff",
-				"actionlint",
-				"biome",
-				"docker-compose-language-service",
-				"dockerfile-language-server",
-				"dotenv-linter",
-				"eslint-lsp",
-				"flake8",
-				"hadolint",
-				"html-lsp",
-				"json-lsp",
-				"jsonlint",
-				"jsonnet-language-server",
-				"lua-language-server",
-				"luacheck",
-				"markdown-toc",
-				"markdownlint-cli2",
-				"marksman",
-				"php-cs-fixer",
-				"phpactor",
-				"phpcs",
-				"prettier",
-				"pyright",
-				"shellcheck",
-				"shfmt",
-				"stylelint",
-				"sqlfluff",
-				"stylua",
-				"taplo",
-				"tsp-server",
-				"vtsls",
-				"vacuum",
-				"vale",
-				"yaml-language-server",
-				"yamllint",
 			},
 		},
 	},
