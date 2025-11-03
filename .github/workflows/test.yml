@@ -1,0 +1,39 @@
+name: test
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  mise:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: jdx/mise-action@v3
+        with:
+          working_directory: .config/mise
+  nvim:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+      - name: Setup Config
+        run: |
+          mkdir -p "$HOME"/.config
+          ln -s "$GITHUB_WORKSPACE"/.config/nvim "$HOME"/.config/nvim
+      - name: Test Neovim config
+        run: |
+          nvim --headless +qall
