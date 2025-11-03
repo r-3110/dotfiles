@@ -1,0 +1,14 @@
+[[mgr.prepend_keymap]]
+on = ["g", "r"]
+run = "plugin cd-git-root"
+desc = "Go to git repo root"
+
+[[mgr.prepend_keymap]]
+on = "<C-d>"
+run = "plugin diff"
+desc = "Diff the selected with the hovered file"
+
+[[mgr.prepend_keymap]]
+on = ["g", "c"]
+run = "plugin git-files"
+desc = "Show Git file changes"
