@@ -8,6 +8,8 @@
 	tool = vimdiff
 	prompt = false
     colorMoved = default
+[include]
+  path = ~/.gitconfig.global
 [push]
     autoSetupRemote = true
 [interactive]
@@ -17,7 +19,6 @@
     side-by-side = true
 [merge]
     conflictstyle = diff3
-
 [pull]
 	ff = only
 [gpg]
