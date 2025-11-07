@@ -12,6 +12,7 @@ return {
 	enabled = enabled,
 	lazy = true,
 	ft = "markdown",
+	cmd = { "ObsidianSearch", "ObsidianDailies" },
 	-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
 	-- event = {
 	--   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.

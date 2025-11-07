@@ -5,7 +5,8 @@ return {
 	-- change some telescope options and a keymap to browse plugin files
 	{
 		"nvim-telescope/telescope.nvim",
-		branch = "master",
+		-- branch = "master",
+		version = "0.1.9",
 		dependencies = {
 			{ "tsakirist/telescope-lazy.nvim" },
 			{
