@@ -24,6 +24,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "cd-gitroot",
     },
     {
+      name: "lazygit",
+      keyword: "lg",
+      snippet: "lazygit",
+    },
+    {
       name: "branch",
       keyword: "B",
       snippet: "git symbolic-ref --short HEAD",
@@ -34,6 +39,24 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       name: "cd there",
       keyword: "CD",
       snippet: "&& cd $_",
+      context: { lbuffer: ".+\\s" },
+    },
+    {
+      name: "copy by mac",
+      keyword: "CC",
+      snippet: "| pbcopy",
+      context: { lbuffer: ".+\\s" },
+    },
+    {
+      name: "grep",
+      keyword: "G",
+      snippet: "| grep",
+      context: { lbuffer: ".+\\s" },
+    },
+    {
+      name: "fzf",
+      keyword: "F",
+      snippet: "| fzf",
       context: { lbuffer: ".+\\s" },
     },
     {
