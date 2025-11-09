@@ -70,7 +70,15 @@ return {
 			---@type render.md.UserConfig
 			opts = {
 				file_types = { "markdown", "Avante" },
+				completions = { lsp = { enabled = true } },
 			},
+			config = function()
+				--@see https://github.com/MeanderingProgrammer/render-markdown.nvim?tab=readme-ov-file#obsidiannvim
+				local ok, obsidian = pcall(require, "obsidian")
+				if ok then
+					obsidian.get_client().opts.ui.enable = false
+				end
+			end,
 			ft = { "markdown", "Avante" },
 		},
 	},
