@@ -15,7 +15,7 @@ return {
 	},
 	lazy = true,
 	event = "BufReadPre",
-	config = function(_, opts)
+	config = function()
 		---@module "neotest"
 		---@type neotest.Config
 		--- @diagnostic disable-next-line: missing-fields
