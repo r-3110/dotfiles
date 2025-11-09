@@ -1,4 +1,6 @@
+-- @see https://github.com/nvim-neotest/neotest
 -- @see https://github.com/marilari88/neotest-vitest
+-- @see https://github.com/nvim-neotest/neotest-python
 
 ---@type LazyPluginSpec
 return {
@@ -13,18 +15,17 @@ return {
 	},
 	lazy = true,
 	event = "BufReadPre",
-	---@module "neotest"
-	---@type neotest.CoreConfig
-	--- @diagnostic disable-next-line: missing-fields
-	opts = {
-		log_level = vim.log.levels.DEBUG,
-		adapters = {
-			---@module "neotest-vitest"
-			---@type neotest.VitestOptions
-			["neotest-vitest"] = {},
-			---@module "neotest-python"
-			---@type neotest-python.AdapterConfig
-			["neotest-python"] = {},
-		},
-	},
+	config = function(_, opts)
+		---@module "neotest"
+		---@type neotest.Config
+		--- @diagnostic disable-next-line: missing-fields
+		require("neotest").setup({
+			adapters = {
+				---@module "neotest-vitest"
+				require("neotest-vitest"),
+				---@module "neotest-python"
+				require("neotest-python"),
+			},
+		})
+	end,
 }
