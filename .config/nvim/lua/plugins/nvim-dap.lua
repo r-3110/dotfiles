@@ -3,26 +3,31 @@
 --@see https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript
 --@see https://github.com/mxsdev/nvim-dap-vscode-js/issues/58#issuecomment-2582575821
 --@see https://github.com/mfussenegger/nvim-dap/issues/1411#issuecomment-2566396879
+--@see https://github.com/jbyuki/one-small-step-for-vimkind
 
+---@type LazyPluginSpec
 return {
 	"rcarriga/nvim-dap-ui",
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
 			dependencies = {
-				{ "mfussenegger/nvim-dap-python", enabled = false },
+				{
+					"mfussenegger/nvim-dap-python",
+					config = function()
+						---@module "dap-python"
+						require("dap-python").setup("uv")
+					end,
+				},
+				{ "jbyuki/one-small-step-for-vimkind" },
 				{ "theHamsta/nvim-dap-virtual-text" },
 			},
 			-- なぜかconfigがないとsetupエラーになる
 			config = function() end,
 		},
 		"nvim-neotest/nvim-nio",
-		{
-			"microsoft/vscode-js-debug",
-			build = "npm install --legacy-peer-deps && npx gulp dapDebugServer",
-		},
 	},
-	lazy = true,
+
 	config = function()
 		---@module "dapui"
 		local dapui = require("dapui")
@@ -39,7 +44,10 @@ return {
 			executable = {
 				command = "node",
 				-- 💀 Make sure to update this path to point to your installation
-				args = { vim.fn.stdpath("data") .. "/lazy/vscode-js-debug/dist/src/dapDebugServer.js", "${port}" },
+				args = {
+					vim.fn.expand("~/.local/share/nvim/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js"),
+					"${port}",
+				},
 			},
 		}
 
@@ -64,5 +72,32 @@ return {
 				cwd = "${workspaceFolder}",
 			},
 		}
+
+		dap.configurations.python = {
+			{
+				type = "debugpy",
+				request = "launch",
+				name = "Launch file",
+				program = "${file}",
+			},
+		}
+
+		dap.configurations.lua = {
+			{
+				type = "nlua",
+				request = "attach",
+				name = "Attach to running Neovim instance",
+			},
+		}
+
+		dap.adapters.nlua = function(callback, config)
+			callback({ type = "server", host = config.host or "127.0.0.1", port = config.port or 8086 })
+		end
+
+		vim.keymap.set("n", "<leader>dl", function()
+			---@module "osv"
+			---@diagnostic disable-next-line: assign-type-mismatch
+			require("osv").launch({ port = 8086 })
+		end, { desc = "launch lua debugger in neovim", noremap = true })
 	end,
 }
