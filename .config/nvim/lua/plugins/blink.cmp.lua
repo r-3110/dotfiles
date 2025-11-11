@@ -4,6 +4,7 @@
 ---@type LazyPluginSpec
 return {
 	"saghen/blink.cmp",
+	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		"Kaiser-Yang/blink-cmp-avante",
 		"alexandre-abrioux/blink-cmp-npm.nvim",
