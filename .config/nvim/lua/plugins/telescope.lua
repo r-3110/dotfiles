@@ -2,7 +2,6 @@
 
 ---@type LazyPluginSpec[]
 return {
-	-- change some telescope options and a keymap to browse plugin files
 	{
 		"nvim-telescope/telescope.nvim",
 		-- branch = "master",
@@ -15,6 +14,9 @@ return {
 				-- For major updates, this must be adjusted manually.
 				version = "^1.0.0",
 			},
+			{
+				"nvim-telescope/telescope-project.nvim",
+			},
 		},
 		keys = {
       -- add a keymap to browse plugin files
@@ -26,6 +28,14 @@ return {
           require("telescope").extensions.live_grep_args.live_grep_args()
 				end,
 				desc = "Live Grep",
+			},
+			{
+				"<leader>fp",
+				function()
+					---@module "telescope"
+					require("telescope").extensions.project.project({})
+				end,
+				desc = "Projects",
 			},
 		},
 		-- change some options
@@ -73,11 +83,19 @@ return {
 						-- theme = { }, -- use own theme spec
 						-- layout_config = { mirror=true }, -- mirror preview pane
 					},
+					project = {
+						---@type BaseDirSpec
+						base_dirs = {
+							"~/dotfiles",
+							{ "~/workspace", max_depth = 3 },
+						},
+					},
 				},
 			})
 
 			telescope.load_extension("lazy")
 			telescope.load_extension("live_grep_args")
+			telescope.load_extension("project")
 		end,
 	},
 }
