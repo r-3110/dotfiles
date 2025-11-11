@@ -17,25 +17,6 @@ if not vim.g.vscode then
 	vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 end
 
--- memolist keymaps
-vim.api.nvim_set_keymap("n", "<Leader>mn", ":MemoNew<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>ml", ":MemoList<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>mg", ":MemoGrep<CR>", { noremap = true, silent = true })
-
--- neovim-project keymaps
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>pjd",
-	":NeovimProjectDiscover<CR>",
-	{ desc = "プロジェクト検索", noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>pjh",
-	":NeovimProjectHistory<CR>",
-	{ desc = "プロジェクト履歴", noremap = true, silent = true }
-)
-
 -- lazydocker keymaps
 vim.keymap.set("n", "<leader>k", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
 
@@ -96,14 +77,6 @@ vim.keymap.set("n", "<Leader>du", function()
 end, { desc = "Toggle DAP UI" })
 
 vim.keymap.set("n", "<Leader>db", ":DapToggleBreakpoint<CR>", { desc = "Toggle DAP Breakpoint" })
-
--- jumpcursor keymaps
-vim.keymap.set(
-	"n",
-	"[j",
-	"<Plug>(jumpcursor-jump)",
-	{ desc = "Jump to previous cursor position", noremap = false, silent = true }
-)
 
 -- vim-doge keymaps
 vim.keymap.set("n", "<Leader>dog", ":DogeGenerate<CR>")
