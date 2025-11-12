@@ -8,6 +8,15 @@ local wezterm = require("wezterm")
 ---@type Config
 local config = wezterm.config_builder()
 
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function(cmd)
+	---@diagnostic disable-next-line: unused-local
+	-- luacheck: ignore 211
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
+end)
+
 -- This is where you actually apply your config choices
 config.leader = {
 	key = "q",
