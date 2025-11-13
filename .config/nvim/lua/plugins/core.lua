@@ -1,11 +1,10 @@
--- @type https://github.com/scottmckendry/cyberdream.nvim
+-- @see https://github.com/scottmckendry/cyberdream.nvim
 
 -- themeの設定
 ---@type LazyPluginSpec
 return {
 	"LazyVim/LazyVim",
 	dependencies = {
-		"ellisonleao/gruvbox.nvim",
 		"cocopon/iceberg.vim",
 		"rebelot/kanagawa.nvim",
 		"folke/tokyonight.nvim",
@@ -19,12 +18,11 @@ return {
 			opts = {},
 		},
 	},
-	--- @type LazyVimConfig | PluginOpts
-	--- @diagnostic disable-next-line: missing-fields
-	--- @param opts LazyVimConfig
+	---@module "lazyvim"
+	---@param opts LazyVimOptions
 	opts = function(_, opts)
 		-- 候補のcolorscheme一覧
-		local themes = { "gruvbox", "iceberg", "kanagawa", "tokyonight", "dracula", "cyberdream" }
+		local themes = { "iceberg", "kanagawa", "tokyonight", "dracula", "cyberdream" }
 
 		-- ランダム選択
 		math.randomseed(os.time())
