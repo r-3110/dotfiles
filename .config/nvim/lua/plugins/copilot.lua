@@ -1,10 +1,12 @@
 -- @see https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
+---@type LazyPluginSpec[]
 return {
-	---@type LazyPluginSpec
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",
+		event = "VeryLazy",
+		lazy = true,
 		dependencies = {
 			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
 			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper

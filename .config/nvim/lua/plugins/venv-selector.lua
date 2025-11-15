@@ -8,6 +8,7 @@ return {
 		-- "mfussenegger/nvim-dap", "mfussenegger/nvim-dap-python", --optional
 		{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	},
+	ft = { "python" },
 	event = "VeryLazy",
 	lazy = false,
 	---@module "venv-selector"
