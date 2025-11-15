@@ -1,42 +1,60 @@
 --@see https://github.com/olimorris/codecompanion.nvim
+--@see https://github.com/atusy/aibou.nvim
 
----@type LazyPluginSpec
+---@type LazyPluginSpec[]
 return {
-	"olimorris/codecompanion.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-treesitter/nvim-treesitter",
-		"github/copilot.vim",
-	},
-	event = "VeryLazy",
-	lazy = true,
-	opts = {
-		strategies = {
-			chat = {
-				adapter = "copilot",
-			},
-			inline = {
-				adapter = "copilot",
-			},
-			cmd = {
-				adapter = "copilot",
-			},
+	{
+		"olimorris/codecompanion.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"github/copilot.vim",
 		},
-		display = {
-			action_palette = {
-				width = 300,
-				height = 20,
-				prompt = "Prompt ",
-				provider = "default",
-				opts = {
-					show_default_actions = true,
-					show_default_prompt_library = true,
+		event = "VeryLazy",
+		lazy = true,
+		opts = {
+			strategies = {
+				chat = {
+					adapter = "copilot",
+				},
+				inline = {
+					adapter = "copilot",
+				},
+				cmd = {
+					adapter = "copilot",
 				},
 			},
+			display = {
+				action_palette = {
+					width = 300,
+					height = 20,
+					prompt = "Prompt ",
+					provider = "default",
+					opts = {
+						show_default_actions = true,
+						show_default_prompt_library = true,
+					},
+				},
+			},
+			opts = {
+				log_level = "DEBUG",
+				language = "Japanese",
+			},
 		},
-		opts = {
-			log_level = "DEBUG",
-			language = "Japanese",
+		{
+			"atusy/aibou.nvim",
+			dependencies = {
+				"olimorris/codecompanion.nvim",
+			},
+			-- fileを開いたときでないと起動しないので注意(start画面では動かない)
+			event = "VeryLazy",
+			lazy = true,
+			config = function()
+				vim.keymap.set("n", "<leader>ai", function()
+					---@module "aibou.codecompanion"
+					require("aibou.codecompanion").start()
+				end, { desc = "Start aibou" })
+			end,
 		},
 	},
 }
