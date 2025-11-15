@@ -6,6 +6,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		-- branch = "master",
 		version = "0.1.9",
+		cmd = { "Telescope" },
 		dependencies = {
 			{ "tsakirist/telescope-lazy.nvim" },
 			{
