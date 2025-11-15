@@ -3,7 +3,8 @@
 ---@type LazyPluginSpec
 return {
 	"kboshold/smart-commit.nvim",
-	lazy = false,
+	event = "VeryLazy",
+	lazy = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"CopilotC-Nvim/CopilotChat.nvim", -- Optional: Required for commit message generation
@@ -23,8 +24,9 @@ return {
 	end,
 	keys = {
 		{
-			"<leader>sc",
+			"<leader>smc",
 			function()
+				---@module "smart-commit"
 				require("smart-commit").toggle()
 			end,
 			desc = "Toggle Smart Commit",
