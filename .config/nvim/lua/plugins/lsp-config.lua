@@ -75,7 +75,6 @@ return {
 						"LazyVim",
 						{ path = "LazyVim", words = { "LazyVim" } },
 						{ path = "wezterm-types", mods = { "wezterm" } },
-						{ path = "snacks.nvim/lua/snacks" },
 					},
 					-- luarc.jsonによるlibraryの読み込みだとlsp attach時に読み込みが巨大になってしまう。
 					-- nvimではlazyvimで必要な時に必要なファイルだけ読むように。

@@ -9,8 +9,6 @@ return {
 		{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	},
 	ft = { "python" },
-	event = "VeryLazy",
-	lazy = false,
 	---@module "venv-selector"
 	---@type venv-selector.Options
 	opts = {

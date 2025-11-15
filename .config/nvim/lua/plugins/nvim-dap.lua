@@ -8,12 +8,31 @@
 ---@type LazyPluginSpec
 return {
 	"rcarriga/nvim-dap-ui",
+	keys = {
+		{
+			"<Leader>du",
+			function()
+				---@module "dapui"
+				require("dapui").toggle()
+			end,
+			desc = "Toggle DAP UI",
+		},
+		{
+			"<Leader>db",
+			function()
+				---@module "dap"
+				require("dap").toggle_breakpoint()
+			end,
+			desc = "Toggle DAP Breakpoint",
+		},
+	},
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
 			dependencies = {
 				{
 					"mfussenegger/nvim-dap-python",
+					ft = "python",
 					config = function()
 						---@module "dap-python"
 						require("dap-python").setup("uv")

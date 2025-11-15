@@ -3,11 +3,24 @@
 ---@type LazyPluginSpec
 return {
 	"folke/snacks.nvim",
-  -- stylua: ignore
-  keys = {
-    { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
-    { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
-  },
+	keys = {
+		{
+			"<leader>.",
+			function()
+				---@module "snacks"
+				require("snacks").scratch()
+			end,
+			desc = "Toggle Scratch Buffer",
+		},
+		{
+			"<leader>S",
+			function()
+				---@module "snacks"
+				require("snacks").scratch.select()
+			end,
+			desc = "Select Scratch Buffer",
+		},
+	},
 	---@module "snacks"
 	--- @type snacks.Config
 	opts = {

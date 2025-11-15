@@ -65,18 +65,8 @@ vim.keymap.set(
 -- skkeleton keymaps
 vim.keymap.set({ "i", "c" }, [[<C-j>]], [[<Plug>(skkeleton-enable)]], { noremap = false })
 
--- senpai keymaps
-vim.keymap.set("n", "<Leader>sp", ":Senpai toggleChat<CR>", { desc = "Open Senpai", noremap = true, silent = true })
-
 -- venv-selector keymaps
 vim.keymap.set("n", "<Leader>ve", ":VenvSelect<CR>", { desc = "Open VenvSelect", noremap = true, silent = true })
-
--- nvim-dap keymaps
-vim.keymap.set("n", "<Leader>du", function()
-	require("dapui").toggle()
-end, { desc = "Toggle DAP UI" })
-
-vim.keymap.set("n", "<Leader>db", ":DapToggleBreakpoint<CR>", { desc = "Toggle DAP Breakpoint" })
 
 -- vim-doge keymaps
 vim.keymap.set("n", "<Leader>dog", ":DogeGenerate<CR>")

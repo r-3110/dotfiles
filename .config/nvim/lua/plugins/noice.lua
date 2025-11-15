@@ -13,10 +13,8 @@ return {
 			--   If not available, we use `mini` as the fallback
 			{
 				"rcarriga/nvim-notify",
-				lazy = false,
 				config = function()
 					---@module "notify"
-					---@type notify
 					local notify = require("notify")
 
 					---@type notify.Config
@@ -52,6 +50,9 @@ return {
 					long_message_to_split = true,
 					inc_rename = false,
 					lsp_doc_border = true,
+				},
+				notify = {
+					enabled = false,
 				},
 				views = {
 					hover = {
