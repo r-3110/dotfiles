@@ -1,22 +1,13 @@
---@see https://github.com/ya2s/nvim-cursorline
+--@see https://github.com/nvim-mini/mini.cursorword
 
---- 同期で読み込まないと動かない
----@type LazyPluginSpec
+---@type LazyPluginSpec[]
 return {
-	"ya2s/nvim-cursorline",
-	config = function()
-		---@module "nvim-cursorline"
-		require("nvim-cursorline").setup({
-			cursorline = {
-				enable = true,
-				timeout = 1000,
-				number = false,
-			},
-			cursorword = {
-				enable = true,
-				min_length = 1,
-				hl = { underline = true },
-			},
-		})
-	end,
+	{
+		"nvim-mini/mini.cursorword",
+		version = "*",
+		config = function()
+			---@module "mini.cursorword"
+			require("mini.cursorword").setup({})
+		end,
+	},
 }
