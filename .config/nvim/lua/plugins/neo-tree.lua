@@ -179,16 +179,84 @@ return {
 	{
 		"s1n7ax/nvim-window-picker",
 		version = "2.*",
+		keys = {
+			{
+				"<Leader>ww",
+				function()
+					local wins = vim.api.nvim_list_wins()
+
+					-- 現在のウィンドウ
+					local current = vim.api.nvim_get_current_win()
+
+					-- 2 ウィンドウなら picker を使わず自動で反対へ
+					if #wins == 2 then
+						for _, w in ipairs(wins) do
+							if w ~= current then
+								vim.api.nvim_set_current_win(w)
+								return
+							end
+						end
+					end
+
+					-- 3つ以上なら picker を使う
+					local window_id = require("window-picker").pick_window()
+					if window_id then
+						vim.api.nvim_set_current_win(window_id)
+					end
+				end,
+				desc = "Change Window",
+			},
+		},
 		config = function()
 			---@module "window-picker"
 			require("window-picker").setup({
+				-- type of hints you want to get
+				-- following types are supported
+				-- 'statusline-winbar' | 'floating-big-letter' | 'floating-letter'
+				-- 'statusline-winbar' draw on 'statusline' if possible, if not 'winbar' will be
+				-- 'floating-big-letter' draw big letter on a floating window
+				-- 'floating-letter' draw letter on a floating window
+				-- used
+				---@type "statusline-winbar" | "floating-big-letter" | "floating-letter"
+				hint = "floating-big-letter",
+
+				-- This section contains picker specific configurations
+				picker_config = {
+					-- whether should select window by clicking left mouse button on it
+					handle_mouse_click = false,
+
+					floating_big_letter = {
+						-- window picker plugin provides bunch of big letter fonts
+						-- fonts will be lazy loaded as they are being requested
+						-- additionally, user can pass in a table of fonts in to font
+						-- property to use instead
+						font = "ansi-shadow", -- ansi-shadow |
+					},
+				},
+
+				-- whether to show 'Pick window:' prompt
+				show_prompt = true,
+
+				-- prompt message to show to get the user input
+				prompt_message = "Pick window: ",
+
+				-- if you want to manually filter out the windows, pass in a function that
+				-- takes two parameters. You should return window ids that should be
+				-- included in the selection
+				-- EX:-
+				-- function(window_ids, filters)
+				--    -- folder the window_ids
+				--    -- return only the ones you want to include
+				--    return {1000, 1001}
+				-- end
+				filter_func = nil,
 				filter_rules = {
 					include_current_win = false,
-					autoselect_one = true,
+					autoselect_one = false,
 					-- filter using buffer options
 					bo = {
 						-- if the file type is one of following, the window will be ignored
-						filetype = { "neo-tree", "neo-tree-popup", "notify" },
+						filetype = { "neo-tree-popup", "notify" },
 						-- if the buffer type is one of following, the window will be ignored
 						buftype = { "terminal", "quickfix" },
 					},
