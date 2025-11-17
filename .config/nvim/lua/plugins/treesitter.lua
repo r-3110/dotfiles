@@ -51,6 +51,7 @@ return {
 				"css",
 				"scss",
 				"csv",
+				"go",
 				"javascript",
 				"json",
 				"jsonnet",
