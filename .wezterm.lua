@@ -138,6 +138,21 @@ config.keys = {
 		key = "z",
 		action = wezterm.action.TogglePaneZoomState,
 	},
+	{
+		mods = "CTRL",
+		key = "=",
+		action = wezterm.action.IncreaseFontSize,
+	},
+	{
+		mods = "CTRL",
+		key = "-",
+		action = wezterm.action.DecreaseFontSize,
+	},
+	{
+		mods = "CTRL",
+		key = "0",
+		action = wezterm.action.ResetFontSize,
+	},
 }
 
 return config
