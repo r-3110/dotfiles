@@ -86,4 +86,7 @@ github = "Aloxaf/fzf-tab"
 # deferにするとzenoが動かない
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
-# apply = ["defer"]
+
+[plugins.by]
+git = "https://github.com/atusy/by-binds-yourself"
+apply = ["defer"]
