@@ -153,6 +153,14 @@ config.keys = {
 		key = "0",
 		action = wezterm.action.ResetFontSize,
 	},
+	-- 画面最大化。画面サイズが変わった際にfitにも使える
+	{
+		key = "f",
+		mods = "SHIFT|META",
+		action = wezterm.action_callback(function(win)
+			win.maximize(win)
+		end),
+	},
 }
 
 return config
