@@ -7,7 +7,7 @@ local M = {}
 M.my_filetypes = {
 	dockerfile = "dockerfile",
 	["docker-compose"] = "yaml.docker-compose",
-	gh = "yaml.ghaction",
+	gh = "yaml.github",
 	tsconfig = "tsconfig",
 }
 

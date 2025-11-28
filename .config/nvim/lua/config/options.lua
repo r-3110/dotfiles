@@ -13,7 +13,6 @@ vim.filetype.add({
 		[file_type.my_filetype_rules[file_type.my_filetypes.tsconfig].regex] = file_type.my_filetypes.tsconfig,
 		[".*%.yml"] = file_type.checkCfn,
 		[".*%.yaml"] = file_type.checkCfn,
-		["%w+%.yml"] = "yaml",
 	},
 	filename = {
 		["venv-selector.lua"] = "lua",

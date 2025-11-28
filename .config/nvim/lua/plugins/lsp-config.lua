@@ -2,6 +2,8 @@
 -- @see https://github.com/bassamsdata/namu.nvim
 -- @see https://github.com/dnlhc/glance.nvim
 
+local file_types = require("utils.filetype")
+
 -- vtslsの再起動コマンド monorepoだと最初にアタッチされたtsconfigを参照し続けるため
 vim.keymap.set("n", "<leader>tr", ":LspRestart vtsls<CR>", { desc = "vtsls Restart" })
 
@@ -59,9 +61,6 @@ return {
 							filetypes = { "yaml", "yml" },
 							settings = {
 								yaml = {
-									schemas = {
-										["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-									},
 									customTags = {
 										"!And",
 										"!And sequence",
@@ -93,6 +92,9 @@ return {
 									},
 								},
 							},
+						},
+						gh_actions_ls = {
+							filetypes = { file_types.my_filetypes.gh },
 						},
 					}
 

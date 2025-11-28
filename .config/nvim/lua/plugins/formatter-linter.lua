@@ -1,6 +1,8 @@
 --@see https://github.com/stevearc/conform.nvim
 --@see https://github.com/mfussenegger/nvim-lint
 
+local file_types = require("utils.filetype")
+
 ---@type LazyPluginSpec[]
 return {
 	{
@@ -24,7 +26,7 @@ return {
 				markdown = { "markdownlint-cli2" },
 				json = { "jsonlint" },
 				cfn = { "cfn_lint" },
-				["yaml.ghaction"] = { "actionlint" },
+				[file_types.my_filetypes.gh] = { "actionlint" },
 				["yaml.cfn"] = { "cfn_lint" },
 				dotenv = { "dotenv_linter" },
 				dockerfile = { "hadolint" },

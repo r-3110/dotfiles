@@ -9,30 +9,10 @@ return {
 		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
+		dependencies = { "Hdoc1509/gh-actions.nvim" },
 		config = function()
-			vim.api.nvim_create_autocmd("User", {
-				pattern = "TSUpdate",
-				callback = function()
-					local tree_sitter_parsers = require("nvim-treesitter.parsers")
-
-					---@type ParserInfo
-					---@diagnostic disable-next-line: missing-fields
-					local gh_actions_expressions = {
-						---@diagnostic disable-next-line: missing-fields
-						install_info = {
-							url = "https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions",
-							revision = "ad64d630d386894e57b836d9f0c1d1d948a3a8cc",
-							branch = "release",
-							-- location = "src/parser.c",
-							-- generate = false,
-							-- generate_from_json = false,
-							-- queries = "queries/neovim",
-						},
-					}
-
-					tree_sitter_parsers.ghaction = gh_actions_expressions
-				end,
-			})
+			---@module "gh-actions.tree-sitter"
+			require("gh-actions.tree-sitter").setup()
 
 			---@module "nvim-treesitter"
 			local treesitter = require("nvim-treesitter")
@@ -68,7 +48,7 @@ return {
 				"vim",
 				"yaml",
 				"gitignore",
-				"ghaction",
+				"gh_actions_expressions",
 			}
 
 			---@type InstallOptions
