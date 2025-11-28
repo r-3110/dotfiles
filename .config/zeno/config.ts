@@ -41,6 +41,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "git log --oneline --graph --decorate",
     },
     {
+      name: "ghq cd",
+      keyword: "ghql",
+      snippet: 'cd "$(ghq list --full-path | fzf)"',
+    },
+    {
       name: "cd gitroot",
       keyword: "cdg",
       snippet: "cd-gitroot",

@@ -25,3 +25,6 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[ghq]
+  root = ~/workspace
+	root = ~/dotfiles
