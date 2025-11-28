@@ -7,7 +7,20 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
 		---@module "oil"
 		---@type oil.SetupOpts
-		opts = {},
+		opts = {
+			git = {
+				-- Return true to automatically git add/mv/rm files
+				add = function()
+					return false
+				end,
+				mv = function()
+					return true
+				end,
+				rm = function()
+					return false
+				end,
+			},
+		},
 	},
 	{
 		"benomahony/oil-git.nvim",
