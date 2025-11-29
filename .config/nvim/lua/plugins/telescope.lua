@@ -8,6 +8,13 @@ return {
 		version = "0.1.9",
 		cmd = { "Telescope" },
 		dependencies = {
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			{ "crispgm/telescope-heading.nvim" },
+			{ "paopaol/telescope-git-diffs.nvim" },
+			{ "nvim-telescope/telescope-ghq.nvim" },
+			{ "LinArcX/telescope-changes.nvim" },
+			{ "LinArcX/telescope-env.nvim" },
+			{ "nvim-telescope/telescope-frecency.nvim" },
 			{ "tsakirist/telescope-lazy.nvim" },
 			{
 				"nvim-telescope/telescope-live-grep-args.nvim",
@@ -52,11 +59,6 @@ return {
 					},
 				},
 			},
-			extensions = {
-				---@module "telescope._extensions.lazy"
-				---@type TelescopeLazy.Config
-				lazy = {},
-			},
 		},
 		config = function()
 			---@module "telescope"
@@ -85,11 +87,19 @@ return {
 						-- layout_config = { mirror=true }, -- mirror preview pane
 					},
 					project = {
+						---@module "telescope._extensions.project"
 						---@type BaseDirSpec
 						base_dirs = {
 							"~/dotfiles",
 							{ "~/workspace", max_depth = 3 },
 						},
+					},
+					---@module "telescope._extensions.lazy"
+					---@type TelescopeLazy.Config
+					lazy = {},
+					---@module "telescope._extensions.fzf"
+					fzf = {
+						fuzzy = true,
 					},
 				},
 			})
@@ -97,6 +107,13 @@ return {
 			telescope.load_extension("lazy")
 			telescope.load_extension("live_grep_args")
 			telescope.load_extension("project")
+			telescope.load_extension("fzf")
+			telescope.load_extension("heading")
+			telescope.load_extension("git_diffs")
+			telescope.load_extension("ghq")
+			telescope.load_extension("changes")
+			telescope.load_extension("env")
+			telescope.load_extension("frecency")
 		end,
 	},
 }
