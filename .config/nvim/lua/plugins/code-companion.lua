@@ -8,8 +8,13 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		event = "VeryLazy",
-		lazy = true,
+		version = "17.33.0",
+		cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionChat" },
+		keys = {
+			{ "<Leader>ccct", "<Cmd>CodeCompanionChat Toggle<CR>", mode = { "n" } },
+			{ "<Leader>ccc", "<Cmd>CodeCompanionChat<CR>", mode = { "v" } },
+			{ "<Leader>cca", "<Cmd>CodeCompanionActions<CR>", desc = "Open CodeCompanionActions", mode = { "n", "x" } },
+		},
 		opts = {
 			strategies = {
 				chat = {
@@ -39,20 +44,21 @@ return {
 				language = "Japanese",
 			},
 		},
-		{
-			"atusy/aibou.nvim",
-			dependencies = {
-				"olimorris/codecompanion.nvim",
-			},
-			-- fileを開いたときでないと起動しないので注意(start画面では動かない)
-			event = "VeryLazy",
-			lazy = true,
-			config = function()
-				vim.keymap.set("n", "<leader>ai", function()
-					---@module "aibou.codecompanion"
-					require("aibou.codecompanion").start()
-				end, { desc = "Start aibou" })
-			end,
-		},
+		-- {
+		-- 	"atusy/aibou.nvim",
+		-- 	dependencies = {
+		-- 		"olimorris/codecompanion.nvim",
+		-- 	},
+		-- 	enable = false,
+		-- 	-- fileを開いたときでないと起動しないので注意(start画面では動かない)
+		-- 	event = "VeryLazy",
+		-- 	lazy = true,
+		-- 	config = function()
+		-- 		vim.keymap.set("n", "<leader>ai", function()
+		-- 			---@module "aibou.codecompanion"
+		-- 			require("aibou.codecompanion").start()
+		-- 		end, { desc = "Start aibou" })
+		-- 	end,
+		-- },
 	},
 }

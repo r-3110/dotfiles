@@ -39,6 +39,7 @@ return {
 			model = "claude-sonnet-4.5",
 			debug = false, -- Enable debugging
 			show_help = true,
+			language = "Japanese",
 			-- See Configuration section for rest
 			prompts = {
 				Explain = {

@@ -14,6 +14,7 @@ return {
 		---@type avante.ProviderName
 		provider = "copilot",
 		auto_suggestions_provider = "copilot",
+		system_prompt = "すべて日本語で応答してください。",
 		behaviour = {
 			-- トークンかなり消費するので使用しない
 			auto_suggestions = false,
