@@ -22,9 +22,6 @@ source $DOTFILES_PATH/.zsh_alias
 source $DOTFILES_PATH/.zsh_functions
 
 # source $HOME/dotfiles/zeno.sh
-# keychainでSSHエージェントを管理
-# keychain -q --nogui $HOME/.ssh/id_rsa
-source $HOME/.keychain/$(hostname)-sh
 
 # RooやClineのシェル統合用
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
