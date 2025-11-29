@@ -7,7 +7,6 @@ return {
 		"olimorris/codecompanion.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"github/copilot.vim",
 		},
 		event = "VeryLazy",
 		lazy = true,

@@ -1,7 +1,27 @@
+-- @see https://github.com/zbirenbaum/copilot.lua
 -- @see https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
 ---@type LazyPluginSpec[]
 return {
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		---@module "copilot"
+		---@type CopilotConfig
+		---@diagnostic disable-next-line: missing-fields
+		opts = {
+			---@diagnostic disable-next-line: missing-fields
+			suggestion = { enabled = false },
+			---@diagnostic disable-next-line: missing-fields
+			panel = { enabled = false },
+			filetypes = {
+				markdown = true,
+				gitcommit = true,
+				help = true,
+			},
+		},
+	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",

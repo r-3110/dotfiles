@@ -13,7 +13,7 @@ return {
 	---@type LazyPluginSpec
 	{
 		"nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { "nvim-tree/nvim-web-devicons", "AndreM222/copilot-lualine" },
 		event = "VeryLazy",
 		opts = function(_, opts)
       local icons = LazyVim.config.icons
@@ -66,7 +66,8 @@ return {
         },
         "encoding",
         "fileformat",
-        "filetype"
+        "filetype",
+        "copilot"
       }
 
       opts.sections.lualine_z = {
