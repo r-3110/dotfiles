@@ -87,6 +87,9 @@ github = "Aloxaf/fzf-tab"
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
 
+[plugins.zsh-vi-man]
+github = "TunaCuma/zsh-vi-man"
+
 [plugins.by]
 git = "https://github.com/atusy/by-binds-yourself"
 apply = ["defer"]
