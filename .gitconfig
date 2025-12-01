@@ -26,5 +26,5 @@
 [commit]
 	gpgsign = true
 [ghq]
-  root = ~/workspace
 	root = ~/dotfiles
+	root = ~/workspace
