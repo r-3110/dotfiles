@@ -37,7 +37,7 @@ yazi = "latest"
 zellij = "latest"
 gh = "latest"
 "aqua:k1LoW/runn" = "latest"
-aws-cli = "latest"
+aws-cli = { version = "latest", symlink_bins = "true" }
 "npm:zenn-cli" = "latest"
 "npm:editprompt" = "latest"
 "pipx:darrenburns/posting" = "latest"
