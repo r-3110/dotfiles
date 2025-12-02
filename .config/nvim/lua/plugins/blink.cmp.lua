@@ -10,7 +10,6 @@ return {
 		"alexandre-abrioux/blink-cmp-npm.nvim",
 		"junkblocker/blink-cmp-wezterm",
 		"moyiz/blink-emoji.nvim",
-		"fang2hou/blink-copilot",
 		{
 			"L3MON4D3/LuaSnip",
 			dependencies = { "rafamadriz/friendly-snippets" },
@@ -30,7 +29,7 @@ return {
 	opts = {
 		sources = {
 			-- Add 'avante' to the list
-			default = { "avante", "npm", "wezterm", "lazydev", "emoji", "copilot", "lsp", "path", "buffer" },
+			default = { "avante", "npm", "wezterm", "lazydev", "emoji", "lsp", "path", "buffer" },
 			providers = {
 				avante = {
 					module = "blink-cmp-avante",
@@ -93,12 +92,6 @@ return {
 							vim.o.filetype
 						)
 					end,
-				},
-				copilot = {
-					name = "copilot",
-					module = "blink-copilot",
-					score_offset = 100,
-					async = true,
 				},
 			},
 		},

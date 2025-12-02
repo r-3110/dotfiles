@@ -10,9 +10,38 @@ return {
 		---@module "copilot"
 		---@type CopilotConfig
 		---@diagnostic disable-next-line: missing-fields
+		keys = {
+			{
+				"<C-a>",
+				mode = { "i" },
+				function()
+					---@module "copilot.suggestion"
+					require("copilot.suggestion").accept()
+				end,
+				desc = "Accept Copilot suggestion",
+			},
+			{
+				"<C-]>",
+				mode = { "i" },
+				function()
+					---@module "copilot.suggestion"
+					require("copilot.suggestion").next()
+				end,
+				desc = "next Copilot suggestion",
+			},
+			{
+				"<C-[",
+				mode = { "i" },
+				function()
+					---@module "copilot.suggestion"
+					require("copilot.suggestion").prev()
+				end,
+				desc = "previous Copilot suggestion",
+			},
+		},
 		opts = {
 			---@diagnostic disable-next-line: missing-fields
-			suggestion = { enabled = false },
+			suggestion = { enabled = true, auto_trigger = true },
 			---@diagnostic disable-next-line: missing-fields
 			panel = { enabled = false },
 			filetypes = {
