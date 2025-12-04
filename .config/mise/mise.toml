@@ -46,6 +46,8 @@ gitui = "latest"
 "npm:@github/copilot" = "latest"
 "npm:@google/gemini-cli" = "latest"
 ghq = "latest"
+"npm:mdjanai" = "latest"
+"ubi:sst/opencode" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
