@@ -24,3 +24,6 @@ vim.g.neovide_cursor_animation_length = 0.1
 vim.g.neovide_cursor_short_animation_length = 0.04
 vim.g.neovide_cursor_trail_size = 0.5
 vim.g.neovide_cursor_vfx_mode = "railgun"
+
+-- ヘルプファイルの言語設定
+vim.o.helplang = "ja,en"
