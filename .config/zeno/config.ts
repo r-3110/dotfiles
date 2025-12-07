@@ -92,6 +92,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: ">/dev/null 2>&1",
       context: { lbuffer: ".+\\s" },
     },
+    {
+      name: "ov-exec",
+      keyword: "OVE",
+      snippet: "ov --follow-all --exec --",
+    },
   ],
   completions: [
     {
