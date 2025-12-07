@@ -1,4 +1,5 @@
 -- @see https://github.com/nvim-treesitter/nvim-treesitter
+-- @see https://github.com/Hdoc1509/gh-actions.nvim
 
 ---@type LazyPluginSpec[]
 return {
@@ -9,11 +10,14 @@ return {
 		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
-		dependencies = { "Hdoc1509/gh-actions.nvim" },
+		dependencies = {
+			"Hdoc1509/gh-actions.nvim",
+			config = function()
+				---@module "gh-actions.tree-sitter"
+				require("gh-actions.tree-sitter").setup()
+			end,
+		},
 		config = function()
-			---@module "gh-actions.tree-sitter"
-			require("gh-actions.tree-sitter").setup()
-
 			---@module "nvim-treesitter"
 			local treesitter = require("nvim-treesitter")
 
