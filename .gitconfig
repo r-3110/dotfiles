@@ -1,24 +1,38 @@
 [core]
-	editor = nvim
+  editor = nvim
 	quotepath = false
-    pager = delta
+  pager = delta --pager='ov -F'
+[pager]
+  # overload delta pager for some commands
+  show = delta --pager='ov -F --header 3'
+
+  # We are now overloading some commands via "delta features"
+  # This allows us to use different pager per git command
+  # It allows to maintain a simpler config file and avoid escaping quotes
+  # diff = delta --features ov-diff
+  log  = delta --features ov-log
+[delta]
+  navigate = true
+  side-by-side = true
+  file-style = yellow
+[delta "ov-log"]
+  # the idea is to overload the pager used by delta when using git log
+  # using ov section feature brings a better experience
+  pager=ov -F --section-delimiter '^commit' --section-header-num 3
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
 [diff]
 	tool = vimdiff
 	prompt = false
-    colorMoved = default
+  colorMoved = default
 [include]
   path = ~/.gitconfig.global
 [push]
-    autoSetupRemote = true
+  autoSetupRemote = true
 [interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true
-    side-by-side = true
+  diffFilter = delta --color-only
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 [pull]
 	ff = only
 [gpg]

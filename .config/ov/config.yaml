@@ -1,0 +1,7 @@
+---
+StyleOverStrike:
+  Foreground: "aqua"
+  Bold: true
+StyleOverLine:
+  Foreground: "red"
+  Underline: true

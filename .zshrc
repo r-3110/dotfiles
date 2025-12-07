@@ -1,6 +1,12 @@
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
-export XDG_DATA_HOME="$HOME/.local/share"
+
+DOTFILES_PATH="$HOME/dotfiles"
+
+ZSH_PATH="$DOTFILES_PATH/.config/zsh"
+
+source "$ZSH_PATH/.zsh_env"
+source "$ZSH_PATH/.zsh_alias"
 
 # NOTE: 冒頭で設定すること
 autoload bashcompinit && bashcompinit
@@ -15,12 +21,7 @@ eval "$(sheldon source)"
 # aws-cli completion
 complete -C '/usr/local/bin/aws_completer' aws
 
-DOTFILES_PATH="$HOME/dotfiles/.config/zsh"
-
-source $DOTFILES_PATH/.zsh_alias
-
-source $DOTFILES_PATH/.zsh_functions
-
+source "$ZSH_PATH/.zsh_functions"
 # source $HOME/dotfiles/zeno.sh
 
 # RooやClineのシェル統合用

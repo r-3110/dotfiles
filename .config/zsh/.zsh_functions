@@ -7,8 +7,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-export EDITOR=nvim
-
 # BEGIN_AWS_SSO_CLI
 
 # AWS SSO requires `bashcompinit` which needs to be enabled once and
