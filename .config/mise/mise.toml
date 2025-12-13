@@ -49,6 +49,8 @@ ghq = "latest"
 "npm:mdjanai" = "latest"
 "ubi:sst/opencode" = "latest"
 "github:noborus/ov" = "latest"
+android-sdk = "latest"
+java = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
