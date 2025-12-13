@@ -23,6 +23,14 @@ return {
 				---@module "lspconfig"
 				---@param opts PluginLspOpts
 				opts = function(_, opts)
+					---dartls
+					vim.lsp.config.dartls = {
+						cmd = { "dart", "language-server", "--protocol=lsp" },
+						filetypes = { "dart" },
+					}
+
+					vim.lsp.enable({ "dartls" })
+
 					local root_pattern = require("lspconfig.util").root_pattern
 
 					---@type table<string, lazyvim.lsp.Config|boolean>
