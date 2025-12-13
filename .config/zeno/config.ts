@@ -41,9 +41,9 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "git log --oneline --graph --decorate",
     },
     {
-      name: "ghq cd",
-      keyword: "ghql",
-      snippet: 'cd "$(ghq list --full-path | fzf)"',
+      name: "git remote prune",
+      keyword: "grp",
+      snippet: "git remote prune origin",
     },
     {
       name: "cd gitroot",
