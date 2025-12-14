@@ -29,6 +29,7 @@ return {
 
 			---@type string[]
 			local languages = {
+				"dart",
 				"dockerfile",
 				"bash",
 				"html",
