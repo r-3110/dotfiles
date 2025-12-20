@@ -3,7 +3,6 @@
 
 ---@type LazyPluginSpec[]
 return {
-	-- add more treesitter parsers
 	{
 		"nvim-treesitter/nvim-treesitter",
 		-- lazyvim15からmainに変更されている
@@ -60,6 +59,14 @@ return {
 			local options = {}
 
 			treesitter.install(languages, options)
+
+			-- ハイライトを有効化
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = languages,
+				callback = function()
+					vim.treesitter.start()
+				end,
+			})
 		end,
 	},
 }
