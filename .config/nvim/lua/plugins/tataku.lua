@@ -7,6 +7,11 @@ return {
 		dependencies = {
 			{ "vim-denops/denops.vim" },
 			{
+				dir = "~/workspace/tataku-collector-v_range",
+				dependencies = { "vim-denops/denops.vim" },
+				lazy = false,
+			},
+			{
 				"Omochice/tataku-collector-current_line",
 			},
 			{
@@ -31,6 +36,13 @@ return {
 						{ name = "split_by_displaywidth", options = { width = vim.o.columns } },
 					},
 					emitter = { name = "nvim_floatwin" },
+				},
+				translate_v_range = {
+					collector = { name = "v_range" },
+					processor = {
+						{ name = "google_translate", options = { source = "en", target = "ja" } },
+						{ name = "split_by_displaywidth", options = { width = vim.o.columns } },
+					},
 				},
 			}
 		end,

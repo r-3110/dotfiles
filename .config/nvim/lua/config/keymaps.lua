@@ -53,6 +53,12 @@ vim.keymap.set(
 	":call tataku#call_recipe('translate')<CR>",
 	{ desc = "en => ja", noremap = true, silent = true }
 )
+vim.keymap.set(
+	"v",
+	"<leader>tt",
+	":call tataku#call_recipe('translate_v_range')<CR>",
+	{ desc = "en => ja", noremap = true, silent = true }
+)
 
 -- skkeleton keymaps
 vim.keymap.set({ "i", "c" }, [[<C-j>]], [[<Plug>(skkeleton-enable)]], { noremap = false })
