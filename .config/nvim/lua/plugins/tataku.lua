@@ -13,6 +13,9 @@ return {
 				"Omochice/tataku-processor-google_translate",
 			},
 			{
+				"Omochice/tataku-processor-split_by_displaywidth",
+			},
+			{
 				"Omochice/tataku-emitter-nvim_floatwin",
 			},
 		},
@@ -25,6 +28,7 @@ return {
 					collector = { name = "current_line" },
 					processor = {
 						{ name = "google_translate", options = { source = "en", target = "ja" } },
+						{ name = "split_by_displaywidth", options = { width = vim.o.columns } },
 					},
 					emitter = { name = "nvim_floatwin" },
 				},
