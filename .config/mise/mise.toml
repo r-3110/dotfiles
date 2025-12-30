@@ -53,6 +53,7 @@ android-sdk = "latest"
 java = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 pulumi = "latest"
+gcloud = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
