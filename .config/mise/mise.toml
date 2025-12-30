@@ -47,13 +47,13 @@ gitui = "latest"
 "npm:@google/gemini-cli" = "latest"
 ghq = "latest"
 "npm:mdjanai" = "latest"
-"ubi:sst/opencode" = "latest"
 "github:noborus/ov" = "latest"
 android-sdk = "latest"
 java = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 pulumi = "latest"
 gcloud = "latest"
+"github:sst/opencode" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python"]
