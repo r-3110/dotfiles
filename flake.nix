@@ -113,6 +113,19 @@
               enable = true;
               enableCompletion = true;
 
+              envExtra = ''
+                export XDG_DATA_HOME="$HOME/.local/share"
+
+                export MANPAGER=ov
+
+                export EDITOR=nvim
+              '';
+
+              shellAliases = {
+                ls = "eza --color=always --long --git --icons=always";
+                vim = "nvim";
+              };
+
               initContent = ''
                 # Nix
                 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
@@ -134,6 +147,8 @@
 
                 # FZF
                 eval "$(fzf --zsh)"
+
+                source $HOME/.zsh_functions
               '';
             };
 
@@ -141,6 +156,7 @@
             home.file = {
               ".wezterm.lua".source = ./.config/wezterm/.wezterm.lua;
               ".gitconfig".source = ./.gitconfig;
+              ".zsh_functions".source = ./.config/zsh/.zsh_functions;
             };
 
             # XDG Config files
