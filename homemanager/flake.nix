@@ -3,98 +3,109 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        isDarwin = pkgs.stdenv.isDarwin;
-      in
-      {
-        homeManagerModules.default = { config, lib, pkgs, ... }:
-        {
-          home.packages = with pkgs; [
-            # Programming Languages
-            bun
-            deno
-            go
-            jdk
-            lua5_4
-            maven
-            nodejs_22
-            python313
-            ruby_3_4
-            rustc
-            cargo
+  outputs = { nixpkgs, home-manager, ... }:
+    let
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      isDarwin = pkgs.stdenv.isDarwin;
+    in
+    {
+      homeConfigurations."ryo" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-            # CLI Tools
-            act
-            aws-sso-cli
-            awscli2
-            bat
-            cloudflared
-            delta
-            ecspresso
-            eza
-            fd
-            fzf
-            gh
-            ghq
-            git-open
-            gitui
-            jq
-            lazydocker
-            lazygit
-            neovim
-            pulumi-bin
-            ripgrep
-            sheldon
-            starship
-            tmux
-            uv
-            yazi
-            yq-go
-            zellij
-            zoxide
-            google-cloud-sdk
-            flutter
-            android-tools
-            jujutsu
-            ov
-            zsh
-          ] ++ pkgs.lib.optionals isDarwin [
-            # macOS only
-            macskk
-            wezterm
-          ];
+        modules = [
+          {
+            home.username = "ryo";
+            home.homeDirectory = "/Users/ryo";
+            home.stateVersion = "24.05";
 
-          programs.zsh = {
-            enable = true;
-            enableCompletion = true;
+            home.packages = with pkgs; [
+              # Programming Languages
+              bun
+              deno
+              go
+              jdk
+              lua5_4
+              maven
+              nodejs_22
+              python313
+              ruby_3_4
+              rustc
+              cargo
 
-            initExtra = ''
-              # Sheldon plugin manager (manages all zsh plugins)
-              eval "$(sheldon source)"
+              # CLI Tools
+              act
+              aws-sso-cli
+              awscli2
+              bat
+              cloudflared
+              delta
+              ecspresso
+              eza
+              fd
+              fzf
+              gh
+              ghq
+              git-open
+              gitui
+              jq
+              lazydocker
+              lazygit
+              neovim
+              pulumi-bin
+              ripgrep
+              sheldon
+              starship
+              tmux
+              uv
+              yazi
+              yq-go
+              zellij
+              zoxide
+              google-cloud-sdk
+              flutter
+              android-tools
+              jujutsu
+              ov
+              zsh
+            ] ++ pkgs.lib.optionals isDarwin [
+              # macOS only
+              macskk
+              wezterm
+            ];
 
-              # Zoxide
-              eval "$(zoxide init zsh)"
+            programs.zsh = {
+              enable = true;
+              enableCompletion = true;
 
-              # Starship
-              eval "$(starship init zsh)"
+              initExtra = ''
+                # Sheldon plugin manager (manages all zsh plugins)
+                eval "$(sheldon source)"
 
-              # FZF
-              eval "$(fzf --zsh)"
-            '';
-          };
+                # Zoxide
+                eval "$(zoxide init zsh)"
 
-          # Copy sheldon configuration
-          xdg.configFile."sheldon/plugins.toml".source = ../config/sheldon/plugins.toml;
-        };
-      }
-    );
+                # Starship
+                eval "$(starship init zsh)"
+
+                # FZF
+                eval "$(fzf --zsh)"
+              '';
+            };
+
+            # Copy sheldon configuration
+            xdg.configFile."sheldon/plugins.toml".source = ../config/sheldon/plugins.toml;
+          }
+        ];
+      };
+    };
 }
