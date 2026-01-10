@@ -88,6 +88,15 @@
               enableCompletion = true;
 
               initContent = ''
+                # Nix
+                if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+                  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+                fi
+                # End Nix
+
+                # Home Manager session variables
+                . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
                 # Sheldon plugin manager (manages all zsh plugins)
                 eval "$(sheldon source)"
 
