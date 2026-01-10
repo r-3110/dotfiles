@@ -145,7 +145,9 @@
 
             # XDG Config files
             xdg.configFile = {
-              "nvim".source = ./.config/nvim;
+              "nvim/init.lua".source = ./.config/nvim/init.lua;
+              "nvim/lua".source = ./.config/nvim/lua;
+              "nvim/snippet".source = ./.config/nvim/snippet;
 
               "wezterm".source = ./.config/wezterm;
 
