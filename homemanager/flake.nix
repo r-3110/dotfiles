@@ -36,7 +36,7 @@
               jdk
               lua5_4
               maven
-              nodejs_22
+              nodejs_24
               python313
               ruby_3_4
               rustc
@@ -87,7 +87,7 @@
               enable = true;
               enableCompletion = true;
 
-              initExtra = ''
+              initContent = ''
                 # Sheldon plugin manager (manages all zsh plugins)
                 eval "$(sheldon source)"
 
@@ -103,7 +103,7 @@
             };
 
             # Copy sheldon configuration
-            xdg.configFile."sheldon/plugins.toml".source = ../config/sheldon/plugins.toml;
+            xdg.configFile."sheldon/plugins.toml".source = ../.config/sheldon/plugins.toml;
           }
         ];
       };

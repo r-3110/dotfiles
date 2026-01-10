@@ -2,6 +2,12 @@
 
 mise設定をNixで再現した開発環境設定です。
 
+## 初回インストール
+```zsh
+cd homemanager
+nix run home-manager/master -- switch --flake .#ryo -b backup
+```
+
 ## 使い方
 
 ### 方法1: nix develop (推奨)
