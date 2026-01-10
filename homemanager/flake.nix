@@ -113,8 +113,41 @@
               '';
             };
 
-            # Copy sheldon configuration
-            xdg.configFile."sheldon/plugins.toml".source = ../.config/sheldon/plugins.toml;
+            # Config files
+            xdg.configFile = {
+              # Sheldon
+              "sheldon/plugins.toml".source = ../.config/sheldon/plugins.toml;
+
+              # Neovim
+              "nvim".source = ../.config/nvim;
+
+              # Wezterm
+              "wezterm".source = ../.config/wezterm;
+
+              # Starship
+              "starship.toml".source = ../.config/starship.toml;
+
+              # Yazi
+              "yazi".source = ../.config/yazi;
+
+              # LazyGit
+              "lazygit".source = ../.config/lazygit;
+
+              # GH Dash
+              "gh-dash".source = ../.config/gh-dash;
+
+              # Ov
+              "ov".source = ../.config/ov;
+
+              # Zeno
+              "zeno".source = ../.config/zeno;
+
+              # Mise (optional - if you want to manage with Home Manager)
+              # "mise".source = ../.config/mise;
+
+              # Neovide
+              "neovide".source = ../.config/neovide;
+            };
           }
         ];
       };
