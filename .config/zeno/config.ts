@@ -103,7 +103,7 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       name: "aws cli completer",
       patterns: ["^\\s*aws(?:$|\\s.*)$"],
       sourceCommand:
-        'COMP_LINE="${LBUFFER}${RBUFFER}" COMP_POINT=${#LBUFFER} /usr/local/bin/aws_completer 2>/dev/null',
+        'COMP_LINE="${LBUFFER}${RBUFFER}" COMP_POINT=${#LBUFFER} aws_completer 2>/dev/null',
       options: {
         "--prompt": "'aws > '",
       },

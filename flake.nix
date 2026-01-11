@@ -119,6 +119,8 @@
                 export MANPAGER=ov
 
                 export EDITOR=nvim
+
+                export ZENO_HOME="$HOME/.config/zeno"
               '';
 
               shellAliases = {
@@ -135,6 +137,13 @@
 
                 # Home Manager session variables
                 . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+                # Enable bash compatibility for some plugins
+                autoload bashcompinit && bashcompinit
+                autoload -Uz compinit && compinit
+
+                complete -C aws_completer aws
+
 
                 # Sheldon plugin manager (manages all zsh plugins)
                 eval "$(sheldon source)"
