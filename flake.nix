@@ -122,6 +122,8 @@
                 export EDITOR=nvim
 
                 export ZENO_HOME="$HOME/.config/zeno"
+
+                export PATH="$PATH:$HOME/.local/share/nvim/mason/bin/"
               '';
 
               shellAliases = {
