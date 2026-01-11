@@ -94,7 +94,7 @@
                 ov
                 zsh
                 posting
-                nixfmt-rfc-style
+                nixfmt
                 opencode
                 claude-code
 
