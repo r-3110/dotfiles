@@ -72,6 +72,7 @@ return {
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
+		enabled = false,
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -167,6 +168,7 @@ return {
 	},
 	{
 		"antosha417/nvim-lsp-file-operations",
+		enabled = false,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-neo-tree/neo-tree.nvim", -- makes sure that this loads after Neo-tree.
