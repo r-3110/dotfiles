@@ -95,6 +95,7 @@
                 zsh
                 posting
                 nixfmt
+                tree-sitter
                 opencode
                 claude-code
 
