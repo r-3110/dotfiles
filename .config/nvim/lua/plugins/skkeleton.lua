@@ -3,10 +3,36 @@
 local default_dictionary
 local user_dictionary
 if vim.fn.has("mac") == 1 then
-	default_dictionary = "~/Library/Application Support/AquaSKK/SKK-JISYO.L"
+	default_dictionary = {
+		"~/.skk/share/skk/SKK-JISYO.L",
+
+		"~/.skk/share/skk/SKK-JISYO.jinmei",
+		"~/.skk/share/skk/SKK-JISYO.fullname",
+		"~/.skk/share/skk/SKK-JISYO.propernoun",
+
+		"~/.skk/share/skk/SKK-JISYO.geo",
+		"~/.skk/share/skk/SKK-JISYO.station",
+		"~/.skk/share/skk/SKK-JISYO.zipcode",
+		"~/.skk/share/skk/SKK-JISYO.office.zipcode",
+		"~/.skk/share/skk/SKK-JISYO.okinawa",
+
+		"~/.skk/share/skk/SKK-JISYO.law",
+		"~/.skk/share/skk/SKK-JISYO.edict",
+		"~/.skk/share/skk/SKK-JISYO.pinyin",
+		"~/.skk/share/skk/SKK-JISYO.china_taiwan",
+
+		"~/.skk/share/skk/SKK-JISYO.emoji",
+		"~/.skk/share/skk/SKK-JISYO.mazegaki",
+
+		"~/.skk/share/skk/SKK-JISYO.itaiji",
+		"~/.skk/share/skk/SKK-JISYO.itaiji.JIS3_4",
+		"~/.skk/share/skk/SKK-JISYO.JIS2",
+		"~/.skk/share/skk/SKK-JISYO.JIS3_4",
+		"~/.skk/share/skk/SKK-JISYO.JIS2004",
+	}
 	user_dictionary = "~/.skkeleton"
 elseif vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
-	default_dictionary = "/mnt/c/Users/Ryo/SKK-JISYO.L"
+	default_dictionary = { "/mnt/c/Users/Ryo/SKK-JISYO.L" }
 	user_dictionary = "/mnt/f/mydata/google-drive-share/skk/.userdict"
 end
 
@@ -76,7 +102,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		vim.fn["skkeleton#config"]({
-			globalDictionaries = { default_dictionary },
+			globalDictionaries = default_dictionary,
 			-- globalDictionaries = { "~/SKK-JISYO.L" },
 			sources = { "skk_dictionary", "google_japanese_input" },
 			userDictionary = user_dictionary,
