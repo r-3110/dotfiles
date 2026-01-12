@@ -169,6 +169,17 @@
               ".wezterm.lua".source = ./.config/wezterm/.wezterm.lua;
               ".gitconfig".source = ./.gitconfig;
               ".zsh_functions".source = ./.config/zsh/.zsh_functions;
+              ".skk".source = pkgs.symlinkJoin {
+                name = "skk-dicts";
+                paths = builtins.filter (
+                  drv:
+                  !(builtins.elem (drv.pname or "") [
+                    "skk-jisyo-s"
+                    "skk-jisyo-m"
+                    "skk-jisyo-ml"
+                  ])
+                ) (builtins.filter pkgs.lib.isDerivation (builtins.attrValues pkgs.skkDictionaries));
+              };
             };
 
             # XDG Config files
