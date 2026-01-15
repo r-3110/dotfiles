@@ -20,6 +20,14 @@ return {
 			end,
 			desc = "Select Scratch Buffer",
 		},
+		{
+			"<leader>e",
+			function()
+				---@module "snacks"
+				require("snacks").explorer()
+			end,
+			desc = "Toggle Snacks Explorer",
+		},
 	},
 	---@module "snacks"
 	--- @type snacks.Config
@@ -33,10 +41,14 @@ return {
 		notifier = {
 			enabled = false,
 		},
-		picker = {
+		explorer = {
 			enabled = true,
+		},
+		picker = {
 			sources = {
-				explorer = { hidden = true },
+				explorer = {
+					hidden = true,
+				},
 			},
 		},
 	},
