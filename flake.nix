@@ -150,7 +150,7 @@
 
                   # Enable bash compatibility for some plugins
                   # nixによりcompinitは読み込まれる
-                  autoload bashcompinit && bashcompinit
+                  # autoload bashcompinit && bashcompinit
 
                   # Sheldon plugin manager (manages all zsh plugins)
                   eval "$(sheldon source)"

@@ -52,6 +52,6 @@ aws-sso-clear() {
 }
 
 compdef __aws_sso_profile_complete aws-sso-profile
-complete -C $XDG_DATA_HOME/mise/installs/aws-sso/1.17.0/aws-sso aws-sso
+# complete -C $XDG_DATA_HOME/mise/installs/aws-sso/1.17.0/aws-sso aws-sso
 
 # END_AWS_SSO_CLI
