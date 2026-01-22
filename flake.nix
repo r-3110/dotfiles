@@ -46,7 +46,7 @@
             {
               home.username = "ryo";
               home.homeDirectory = "/Users/ryo";
-              home.stateVersion = "24.05";
+              home.stateVersion = "26.05";
 
               home.packages =
                 with pkgs;
@@ -149,11 +149,8 @@
                   . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
                   # Enable bash compatibility for some plugins
+                  # nixによりcompinitは読み込まれる
                   autoload bashcompinit && bashcompinit
-                  autoload -Uz compinit && compinit
-
-                  complete -C aws_completer aws
-
 
                   # Sheldon plugin manager (manages all zsh plugins)
                   eval "$(sheldon source)"
