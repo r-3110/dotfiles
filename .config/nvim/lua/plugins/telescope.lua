@@ -30,13 +30,92 @@ return {
 			},
 		},
 		keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
+			-- add a keymap to browse plugin files
+			-- Buffers
+			{
+				"<leader>fb",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").buffers({
+						sort_mru = true,
+					})
+				end,
+				desc = "Buffers",
+			},
+			{
+				"<leader>fB",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").buffers({
+						show_all_buffers = true,
+						sort_mru = true,
+					})
+				end,
+				desc = "Buffers (all)",
+			},
+			-- Config files
+			{
+				"<leader>fc",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").find_files({
+						cwd = vim.fn.stdpath("config"),
+					})
+				end,
+				desc = "Find Config File",
+			},
+			-- Files
+			{
+				"<leader>fC",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").find_files({
+						cwd = require("lazyvim.util").root(),
+					})
+				end,
+				desc = "Find Files (Root Dir)",
+			},
+			{
+				"<leader>ff",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").find_files({
+						find_command = { "rg", "--files", "--hidden", "--ignore" },
+					})
+				end,
+				desc = "Find Files",
+			},
+			{
+				"<leader>fF",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").find_files({
+						hidden = true,
+					})
+				end,
+				desc = "Find Files (cwd)",
+			},
+			{
+				"<leader>fg",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").git_files()
+				end,
+				desc = "Find Files (git-files)",
+			},
+			{
+				"<leader>gs",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").git_status()
+				end,
+				desc = "Git Modified Files",
+			},
 			{
 				"<leader>fl",
 				function()
-          ---@module "telescope"
-          require("telescope").extensions.live_grep_args.live_grep_args()
+					---@module "telescope"
+					require("telescope").extensions.live_grep_args.live_grep_args()
 				end,
 				desc = "Live Grep",
 			},
