@@ -1,9 +1,6 @@
 --@see https://github.com/epwalsh/obsidian.nvim
 
-local enabled = true
-if vim.fn.has("linux") == 1 or vim.fn.has("wsl") == 1 then
-	enabled = false
-end
+local enabled = vim.env.USE_OBSIDIAN ~= nil
 
 ---@type LazyPluginSpec
 return {
