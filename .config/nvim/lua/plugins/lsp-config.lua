@@ -29,7 +29,12 @@ return {
 						filetypes = { "dart" },
 					}
 
-					vim.lsp.enable({ "dartls" })
+					vim.lsp.config.nixd = {
+						cmd = { "nixd" },
+						filetypes = { "nix" },
+					}
+
+					vim.lsp.enable({ "dartls", "nixd" })
 
 					local root_pattern = require("lspconfig.util").root_pattern
 

@@ -102,6 +102,7 @@
                   zsh
                   posting
                   nixfmt
+                  nixd
                   tree-sitter
                   opencode
                   claude-code
