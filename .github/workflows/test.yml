@@ -40,3 +40,15 @@ jobs:
       - name: Test Neovim config
         run: |
           nvim --headless +qall
+  nix:
+    strategy:
+      matrix:
+        os: [macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup Nix
+        uses: cachix/install-nix-action@v31
+      - name: nix run
+        run: |
+          nix run home-manager/master -- build --flake .#ryo
