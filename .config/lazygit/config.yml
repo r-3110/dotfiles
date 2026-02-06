@@ -8,6 +8,12 @@ git:
     - colorArg: always
       pager: delta --dark --paging=never
 customCommands:
+  - key: "D"
+    context: "localBranches"
+    command: >
+      git fetch origin &&
+      git rebase $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+    description: "Rebase onto default branch"
   - key: "C"
     command: 'git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'
     description: "commit with commitizen"
