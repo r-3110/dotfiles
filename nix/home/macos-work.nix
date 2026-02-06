@@ -14,6 +14,7 @@
     raycast
     shortcat
     zoom-us
+    obsidian
     podman
 
     github-copilot-cli
