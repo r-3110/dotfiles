@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   pull_request:
   push:
-    branches-ignore:
-      - main
+    branches:
+      - testing
 
 permissions:
   contents: read
@@ -43,7 +43,11 @@ jobs:
   nix:
     strategy:
       matrix:
-        os: [macos-latest]
+        include:
+          - os: macos-latest
+            profile: macos
+          - os: macos-latest
+            profile: macos-work
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
@@ -51,4 +55,4 @@ jobs:
         uses: cachix/install-nix-action@v31
       - name: nix run
         run: |
-          nix run home-manager/master -- build --flake .#ryo
+          nix run home-manager/master -- build --flake .#${{ matrix.profile }}

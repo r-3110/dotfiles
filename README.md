@@ -8,8 +8,10 @@
 
 3. home-managerでインストール
 
+- macOS
+
 ```zsh
-nix run home-manager/master -- switch --flake .#ryo -b backup
+nix run home-manager/master -- switch --flake .#macos -b backup
 ```
 
 ## 使い方
