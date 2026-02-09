@@ -2,6 +2,8 @@
   config,
   lib,
   pkgs,
+  arto,
+  system,
   ...
 }:
 
@@ -15,6 +17,7 @@
     shortcat
     zoom-us
     obsidian
+    arto.packages.${system}.default
     podman
 
     github-copilot-cli

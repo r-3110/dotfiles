@@ -11,6 +11,10 @@
       url = "github:sadjow/claude-code-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    arto = {
+      url = "github:arto-app/Arto";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -18,6 +22,7 @@
       nixpkgs,
       home-manager,
       claude-code-nix,
+      arto,
       ...
     }:
     let
@@ -40,6 +45,9 @@
             {
               home.username = username;
               home.homeDirectory = homeDirectory;
+              _module.args = {
+                inherit system arto;
+              };
             }
           ]
           ++ extraModules;
