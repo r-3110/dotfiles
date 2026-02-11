@@ -60,11 +60,9 @@
       ];
 
       # Linux (x86_64)
-      # homeConfigurations."ryo@x86_64-linux" = mkHomeConfiguration
-      #   "x86_64-linux"
-      #   "ryo"
-      #   "/home/ryo"
-      #   [ ./nix/home/linux.nix ];
+      homeConfigurations."linux" = mkHomeConfiguration "x86_64-linux" "ryo" "/home/ryo" [
+        ./nix/home/linux.nix
+      ];
 
       # デフォルト設定（macOS Apple Silicon）
       homeConfigurations."macos" = mkHomeConfiguration "aarch64-darwin" "ryo" "/Users/ryo" [

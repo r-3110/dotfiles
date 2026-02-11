@@ -48,6 +48,8 @@ jobs:
             profile: macos
           - os: macos-latest
             profile: macos-work
+          - os: ubuntu-latest
+            profile: linux
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
