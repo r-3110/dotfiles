@@ -9,7 +9,6 @@
 
 {
   home.packages = with pkgs; [
-    # macOS only
     macskk
     wezterm
     neovide
@@ -18,7 +17,10 @@
     zoom-us
     obsidian
     arto.packages.${system}.default
-    podman
+    colima
+    docker-buildx
+    dbeaver-bin
+    vscode
 
     github-copilot-cli
     gemini-cli
