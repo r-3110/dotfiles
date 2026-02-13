@@ -40,7 +40,7 @@ jobs:
       - name: Test Neovim config
         run: |
           nvim --headless +qall
-  nix:
+  nix-home-manager:
     strategy:
       matrix:
         include:
@@ -58,3 +58,17 @@ jobs:
       - name: nix run
         run: |
           nix run home-manager/master -- build --flake .#${{ matrix.profile }}
+  nix-darwin:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            profile: macos-work
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup Nix
+        uses: cachix/install-nix-action@v31
+      - name: nix run
+        run: |
+          sudo nix run nix-darwin -- build --flake .#${{ matrix.profile }}

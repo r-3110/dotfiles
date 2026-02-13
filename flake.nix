@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,14 +16,20 @@
       url = "github:arto-app/Arto";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
+      nix-darwin,
       claude-code-nix,
       arto,
+      determinate,
       ...
     }:
     let
@@ -68,5 +75,14 @@
       homeConfigurations."macos" = mkHomeConfiguration "aarch64-darwin" "ryo" "/Users/ryo" [
         ./nix/home/macos.nix
       ];
+
+      # nix-darwin configuration (macOS for work)
+      darwinConfigurations."macos-work" = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          determinate.darwinModules.default
+          ./nix/darwin/configuration.nix
+        ];
+      };
     };
 }
