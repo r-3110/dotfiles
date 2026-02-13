@@ -35,5 +35,9 @@
       "ovim"
       "google-chrome"
     ];
+    # https://apps.apple.com/jp
+    masApps = {
+      kindle = 302584613;
+    };
   };
 }
