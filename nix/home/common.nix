@@ -71,6 +71,19 @@
 
   programs.home-manager.enable = true;
 
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+
+    matchBlocks."*" = {
+      addKeysToAgent = "yes";
+      identityFile = "~/.ssh/id_ed25519";
+      extraOptions = {
+        UseKeychain = "yes";
+      };
+    };
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
