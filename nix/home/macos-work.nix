@@ -18,6 +18,8 @@
     obsidian
     arto.packages.${system}.default
     colima
+    docker
+    docker-compose
     docker-buildx
     dbeaver-bin
     vscode
