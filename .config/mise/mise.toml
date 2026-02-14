@@ -1,15 +1,15 @@
 [tools]
 node = "22"
+python = "3.13"
+pipx = "latest"
 "aqua:orangekame3/stree" = "latest"
 "aqua:k1LoW/runn" = "latest"
 "npm:editprompt" = "latest"
 "npm:mdjanai" = "latest"
 "npm:@aws-amplify/cli" = "latest"
 "npm:difit" = "latest"
-"github:2ykwang/mac-cleanup-go" = "latest"
 "github:shubh-io/DockMate" = "latest"
 "pipx:awsui" = "latest"
-"pipx:sqlit-tui" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

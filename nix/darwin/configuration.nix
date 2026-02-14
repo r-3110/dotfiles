@@ -24,7 +24,13 @@
       upgrade = true;
       cleanup = "uninstall";
     };
-    brews = [ ];
+    brews = [
+      "mac-cleanup-go"
+    ];
+    taps = [
+      "clawscli/tap"
+      "elva-labs/elva"
+    ];
     casks = [
       "activitywatch"
       "aquaskk"
@@ -34,6 +40,8 @@
       "notion"
       "ovim"
       "google-chrome"
+      "claws"
+      "awsesh-beta"
     ];
     # https://apps.apple.com/jp
     masApps = {

@@ -41,5 +41,7 @@
     resterm
     stu
     regex-tui
+    mcat
+    lstr
   ];
 }
