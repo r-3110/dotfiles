@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +28,7 @@
       nixpkgs,
       home-manager,
       nix-darwin,
+      nix-homebrew,
       claude-code-nix,
       arto,
       determinate,
@@ -81,6 +83,7 @@
         system = "aarch64-darwin";
         modules = [
           determinate.darwinModules.default
+          nix-homebrew.darwinModules.nix-homebrew
           ./nix/darwin/configuration.nix
         ];
       };

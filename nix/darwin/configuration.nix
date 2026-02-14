@@ -16,6 +16,17 @@
   # Disable nix management (using Determinate instead)
   nix.enable = false;
 
+  nix-homebrew = {
+    # Install Homebrew under the default prefix
+    enable = true;
+
+    # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+    enableRosetta = false;
+
+    # User owning the Homebrew prefix
+    user = "ryo";
+  };
+
   # Homebrew configuration
   homebrew = {
     enable = true;
@@ -26,10 +37,12 @@
     };
     brews = [
       "mac-cleanup-go"
+      "awsesh-beta"
     ];
     taps = [
       "clawscli/tap"
       "elva-labs/elva"
+      "tonisives/tap"
     ];
     casks = [
       "activitywatch"
@@ -38,10 +51,9 @@
       "box-drive"
       "macskk"
       "notion"
-      "ovim"
+      "tonisives/tap/ovim"
       "google-chrome"
-      "claws"
-      "awsesh-beta"
+      "clawscli/tap/claws"
     ];
     # https://apps.apple.com/jp
     masApps = {
