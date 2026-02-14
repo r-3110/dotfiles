@@ -54,6 +54,7 @@
       "tonisives/tap/ovim"
       "google-chrome"
       "clawscli/tap/claws"
+      "slack"
     ];
     # https://apps.apple.com/jp
     masApps = {
