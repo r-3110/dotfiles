@@ -127,6 +127,14 @@ return {
 				end,
 				desc = "Projects",
 			},
+			{
+				"<leader>fo",
+				function()
+					---@module "telescope.builtin"
+					require("telescope.builtin").current_buffer_fuzzy_find()
+				end,
+				desc = "Find Current Buffer",
+			},
 		},
 		-- change some options
 		opts = {
