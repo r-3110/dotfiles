@@ -21,7 +21,6 @@
     ruby_3_4
     rustc
     cargo
-    clang
 
     # CLI Tools
     gnumake
