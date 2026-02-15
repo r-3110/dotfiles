@@ -55,6 +55,7 @@
       "google-chrome"
       "clawscli/tap/claws"
       "slack"
+      "ghostty"
     ];
     # https://apps.apple.com/jp
     masApps = {
