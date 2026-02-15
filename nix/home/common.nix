@@ -23,6 +23,7 @@
     cargo
 
     # CLI Tools
+    luajitPackages.luacheck
     gnumake
     act
     aws-sso-cli
