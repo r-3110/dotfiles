@@ -56,6 +56,9 @@
       "clawscli/tap/claws"
       "slack"
       "ghostty"
+      "microsoft-word"
+      "microsoft-excel"
+      "microsoft-powerpoint"
     ];
     # https://apps.apple.com/jp
     masApps = {
