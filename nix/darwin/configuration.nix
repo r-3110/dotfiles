@@ -37,7 +37,7 @@
     };
     brews = [
       "mac-cleanup-go"
-      "awsesh-beta"
+      "awsesh"
     ];
     taps = [
       "clawscli/tap"
