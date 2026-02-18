@@ -1,5 +1,6 @@
 [mgr]
 show_hidden = true
+linemode = "size"
 
 [plugin]
 prepend_previewers = [{ name = "*.md", run = "mdcat" }]
