@@ -2,7 +2,12 @@
 
 ## 初回にインストール
 
-1. [nix-installer](https://github.com/DeterminateSystems/nix-installer)でnixをインストール
+1. 下記のいずれかでnixをインストール
+
+- macos
+  - [nix-installer](https://github.com/DeterminateSystems/nix-installer)
+- wsl2(ubuntu)
+  - [nix](https://nix.dev/install-nix)
 
 ## 各種インストール
 
