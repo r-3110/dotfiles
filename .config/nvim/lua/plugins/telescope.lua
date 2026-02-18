@@ -28,6 +28,9 @@ return {
 			{
 				"Allianaab2m/telescope-kensaku.nvim",
 			},
+			{
+				"nvim-telescope/telescope-frecency.nvim",
+			},
 		},
 		keys = {
 			-- add a keymap to browse plugin files
@@ -205,6 +208,7 @@ return {
 			telescope.load_extension("env")
 			telescope.load_extension("frecency")
 			telescope.load_extension("kensaku")
+			telescope.load_extension("frecency")
 		end,
 	},
 }
