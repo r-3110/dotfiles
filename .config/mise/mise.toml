@@ -10,6 +10,7 @@ pipx = "latest"
 "npm:difit" = "latest"
 "github:shubh-io/DockMate" = "latest"
 "pipx:awsui" = "latest"
+"cargo:octorus" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
