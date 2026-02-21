@@ -34,6 +34,7 @@
    ```
 
 2. home-managerインストール
+
    ```zsh
    nix run home-manager/master -- switch --flake .#<output> -b backup
    ```

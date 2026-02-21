@@ -12,7 +12,7 @@ return {
 		---@diagnostic disable-next-line: missing-fields
 		keys = {
 			{
-				"<C-a>",
+				"<Tab>",
 				mode = { "i" },
 				function()
 					---@module "copilot.suggestion"
@@ -45,9 +45,7 @@ return {
 			---@diagnostic disable-next-line: missing-fields
 			panel = { enabled = false },
 			filetypes = {
-				markdown = true,
-				gitcommit = true,
-				help = true,
+				["*"] = true,
 			},
 		},
 	},
