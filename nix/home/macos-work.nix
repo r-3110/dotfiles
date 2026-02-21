@@ -24,8 +24,6 @@
     dbeaver-bin
     vscode
 
-    github-copilot-cli
-    gemini-cli
     flutter
     libyaml
     nkf

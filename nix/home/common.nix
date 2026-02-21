@@ -23,6 +23,7 @@
     cargo
 
     # CLI Tools
+    luajitPackages.luarocks
     luajitPackages.luacheck
     gnumake
     act
@@ -64,6 +65,8 @@
     tree-sitter
     opencode
     claude-code
+    github-copilot-cli
+    gemini-cli
 
     # Font
     hackgen-nf-font
