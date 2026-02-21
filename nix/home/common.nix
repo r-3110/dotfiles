@@ -60,13 +60,14 @@
     ov
     zsh
     posting
-    nixfmt
+    nixfmt-tree
+    nix-output-monitor
     nixd
     tree-sitter
     opencode
-    claude-code
-    github-copilot-cli
-    gemini-cli
+    llm-agents.claude-code
+    llm-agents.copilot-cli
+    llm-agents.gemini-cli
 
     # Font
     hackgen-nf-font

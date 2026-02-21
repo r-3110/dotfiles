@@ -9,10 +9,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    claude-code-nix = {
-      url = "github:sadjow/claude-code-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    llm-agents.url = "github:numtide/llm-agents.nix";
     arto = {
       url = "github:arto-app/Arto";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +26,7 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
-      claude-code-nix,
+      llm-agents,
       arto,
       determinate,
       ...
@@ -43,7 +40,7 @@
             inherit system;
             config.allowUnfree = true;
             overlays = [
-              claude-code-nix.overlays.default
+              llm-agents.overlays.default
             ];
           };
         in
