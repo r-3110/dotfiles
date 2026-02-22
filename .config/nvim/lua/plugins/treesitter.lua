@@ -38,6 +38,7 @@ return {
 				"go",
 				"javascript",
 				"json",
+				"json5",
 				"jsonnet",
 				"lua",
 				"markdown",
