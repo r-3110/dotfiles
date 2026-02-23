@@ -5,7 +5,7 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		-- branch = "master",
-		version = "0.1.9",
+		version = "0.2.1",
 		cmd = { "Telescope" },
 		dependencies = {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -83,7 +83,7 @@ return {
 				function()
 					---@module "telescope.builtin"
 					require("telescope.builtin").find_files({
-						find_command = { "rg", "--files", "--hidden", "--ignore" },
+						find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*" },
 					})
 				end,
 				desc = "Find Files",
