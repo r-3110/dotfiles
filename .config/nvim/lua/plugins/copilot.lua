@@ -63,7 +63,7 @@ return {
 		opts = {
 			-- copilotchatだとcodexが対応していない？
 			-- model = "gpt-5-codex",
-			model = "claude-sonnet-4.5",
+			model = "claude-sonnet-4.6",
 			debug = false, -- Enable debugging
 			show_help = true,
 			language = "Japanese",

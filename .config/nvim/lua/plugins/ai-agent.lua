@@ -115,7 +115,7 @@ return {
 			providers = {
 				---@type AvanteSupportedProvider
 				copilot = {
-					model = "claude-sonnet-4.5",
+					model = "claude-sonnet-4.6",
 					-- まだavanteでは未サポート
 					-- model = "gpt-5-codex",
 					extra_request_body = {
@@ -181,7 +181,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		version = "17.33.0",
+		version = "*",
 		cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionChat" },
 		keys = {
 			{ "<Leader>ccct", "<Cmd>CodeCompanionChat Toggle<CR>", mode = { "n" } },
