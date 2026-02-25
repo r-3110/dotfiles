@@ -1,5 +1,6 @@
 --@see https://github.com/MagicDuck/grug-far.nvim
 
+---@type LazyPluginSpec
 return {
 	"MagicDuck/grug-far.nvim",
 	-- Note (lazy loading): grug-far.lua defers all it's requires so it's lazy by default
@@ -10,6 +11,7 @@ return {
 		---@type grug.far.OptionsOverride
 		local options = {}
 
+		---@module "grug-far"
 		require("grug-far").setup(options)
 	end,
 }
