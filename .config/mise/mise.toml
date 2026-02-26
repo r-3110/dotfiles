@@ -12,6 +12,7 @@ pipx = "latest"
 "pipx:awsui" = "latest"
 "cargo:octorus" = "latest"
 "cargo:atusy/kakehashi" = "latest"
+"npm:gut-cli" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
