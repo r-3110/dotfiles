@@ -2,6 +2,7 @@
 -- @see https://github.com/esmuellert/nvim-eslint
 -- @see https://github.com/bassamsdata/namu.nvim
 -- @see https://github.com/dnlhc/glance.nvim
+-- @see https://github.com/atusy/kakehashi
 
 local file_types = require("utils.filetype")
 
@@ -135,6 +136,37 @@ return {
 						filetypes = { file_types.my_filetypes.gh },
 					}
 
+					vim.lsp.config.kakehashi = {
+						cmd = { "kakehashi" },
+						init_options = {
+							autoInstall = true,
+							-- LSP Bridge configuration (optional)
+							languageServers = {
+								pyright = {
+									cmd = { "pyright-langserver", "--stdio" },
+									languages = { "python" },
+								},
+								["lua-language-server"] = {
+									cmd = { "lua-language-server" },
+									languages = { "lua" },
+								},
+								vtsls = {
+									cmd = { "vtsls", "--stdio" },
+									languages = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+								},
+							},
+							languages = {
+								markdown = {
+									bridge = {
+										python = { enabled = true },
+										lua = { enabled = true },
+										typescript = { enabled = true },
+									},
+								},
+							},
+						},
+					}
+
 					vim.lsp.enable({
 						"dartls",
 						"nixd",
@@ -143,6 +175,7 @@ return {
 						"vtsls",
 						"yamlls",
 						"gh_actions_ls",
+						"kakehashi",
 					})
 
 					return opts
@@ -185,6 +218,11 @@ return {
 		config = function()
 			require("nvim-eslint").setup({})
 		end,
+	},
+	{
+		"atusy/kakehashi",
+		lazy = true,
+		event = "VeryLazy",
 	},
 	{
 		"folke/lazydev.nvim",
