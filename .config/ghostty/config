@@ -3,3 +3,7 @@ font-size = 16
 
 window-height = 3000
 window-width = 3000
+
+window-padding-x = 10
+
+background-opacity = 0.95
