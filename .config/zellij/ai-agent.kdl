@@ -1,0 +1,20 @@
+layout {
+    pane size=1 split_direction="vertical" {
+        pane size="70%" borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane size="30%" borderless=true {
+            plugin location="https://github.com/pirafrank/zellij-what-time/releases/download/0.1.1/zellij-what-time.wasm"
+        }
+    }
+    pane command="copilot" size="50%"
+    pane command="gemini"
+    pane size=2 split_direction="vertical" {
+        pane size="70%" borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        pane size="30%" borderless=true {
+            plugin location="https://github.com/Christian-Prather/zellij-load/releases/download/v0.1.1/zellij-load-plugin.wasm"
+        }
+    }
+}

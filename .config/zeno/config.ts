@@ -4,6 +4,22 @@ import { defineConfig } from "@yuki-yano/zeno";
 export default defineConfig(({ projectRoot, currentDirectory }) => ({
   snippets: [
     {
+      name: "open ai-agents with zellij",
+      keyword: "zai",
+      snippet: `zellij --layout ${projectRoot}/.config/zellij/ai-agent.kdl`,
+    },
+    {
+      name: "open editor with term with zellij",
+      keyword: "zet",
+      snippet:
+        `zellij --layout ${projectRoot}/.config/zellij/editor-with-term.kdl`,
+    },
+    {
+      name: "open lazy with zellij",
+      keyword: "zl",
+      snippet: `zellij --layout ${projectRoot}/.config/zellij/lazy.kdl`,
+    },
+    {
       name: "open file with nvim",
       keyword: "NV",
       snippet: 'nvim "$(fzf)"',

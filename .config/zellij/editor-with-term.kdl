@@ -1,0 +1,12 @@
+layout {
+    pane command="nvim" size="80%"
+    pane
+    pane size=2 split_direction="vertical" {
+        pane size="70%" borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        pane size="30%" borderless=true {
+            plugin location="https://github.com/Christian-Prather/zellij-load/releases/download/v0.1.1/zellij-load-plugin.wasm"
+        }
+    }
+}
