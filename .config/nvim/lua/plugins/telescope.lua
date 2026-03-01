@@ -39,9 +39,7 @@ return {
 				"<leader>fb",
 				function()
 					---@module "telescope.builtin"
-					require("telescope.builtin").buffers({
-						sort_mru = true,
-					})
+					require("telescope.builtin").buffers()
 				end,
 				desc = "Buffers",
 			},
@@ -82,9 +80,7 @@ return {
 				"<leader>ff",
 				function()
 					---@module "telescope.builtin"
-					require("telescope.builtin").find_files({
-						find_command = { "rg", "--files", "--hidden", "--glob", "!.git/*" },
-					})
+					require("telescope.builtin").find_files()
 				end,
 				desc = "Find Files",
 			},
@@ -92,9 +88,7 @@ return {
 				"<leader>fF",
 				function()
 					---@module "telescope.builtin"
-					require("telescope.builtin").find_files({
-						hidden = true,
-					})
+					require("telescope.builtin").find_files()
 				end,
 				desc = "Find Files (cwd)",
 			},
@@ -139,20 +133,6 @@ return {
 				desc = "Find Current Buffer",
 			},
 		},
-		-- change some options
-		opts = {
-			defaults = {
-				layout_strategy = "horizontal",
-				layout_config = { prompt_position = "top" },
-				sorting_strategy = "ascending",
-				winblend = 0,
-				mappings = {
-					i = {
-						["<esc>"] = require("telescope.actions").close,
-					},
-				},
-			},
-		},
 		config = function()
 			---@module "telescope"
 			local telescope = require("telescope")
@@ -160,6 +140,31 @@ return {
 			local lga_actions = require("telescope-live-grep-args.actions")
 
 			telescope.setup({
+				defaults = {
+					layout_strategy = "horizontal",
+					layout_config = { prompt_position = "bottom" },
+					sorting_strategy = "ascending",
+					path_display = {
+						filename_first = {
+							reverse_directories = false,
+						},
+					},
+					file_ignore_patterns = { "%.git/" },
+					winblend = 0,
+					mappings = {
+						i = {
+							["<esc>"] = require("telescope.actions").close,
+						},
+					},
+				},
+				pickers = {
+					buffers = {
+						sort_mru = true,
+					},
+					find_files = {
+						hidden = true,
+					},
+				},
 				extensions = {
 					live_grep_args = {
 						auto_quoting = true, -- enable/disable auto-quoting
