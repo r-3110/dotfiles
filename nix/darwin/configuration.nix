@@ -43,12 +43,14 @@
       "clawscli/tap"
       "elva-labs/elva"
       "tonisives/tap"
+      "manaflow-ai/cmux"
     ];
     casks = [
       "activitywatch"
       "aquaskk"
       "blackhole-16ch"
       "box-drive"
+      "cmux"
       "macskk"
       "notion"
       "tonisives/tap/ovim"
