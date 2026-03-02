@@ -143,10 +143,10 @@ return {
 				defaults = {
 					layout_strategy = "horizontal",
 					layout_config = { prompt_position = "bottom" },
-					sorting_strategy = "ascending",
+					sorting_strategy = "descending",
 					path_display = {
 						filename_first = {
-							reverse_directories = false,
+							reverse_directories = true,
 						},
 					},
 					file_ignore_patterns = { "%.git/" },
