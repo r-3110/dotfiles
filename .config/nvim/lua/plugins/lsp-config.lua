@@ -36,14 +36,17 @@ return {
 					vim.lsp.config.dartls = {
 						cmd = { "dart", "language-server", "--protocol=lsp" },
 						filetypes = { "dart" },
+						detached = false,
 					}
 
 					vim.lsp.config.nixd = {
 						cmd = { "nixd" },
 						filetypes = { "nix" },
+						detached = false,
 					}
 
 					vim.lsp.config.jsonls = {
+						detached = false,
 						-- lazy-load schemastore when needed
 						before_init = function(_, new_config)
 							---@diagnostic disable-next-line: inject-field
@@ -64,6 +67,7 @@ return {
 					local root_pattern = require("lspconfig.util").root_pattern
 
 					vim.lsp.config.denols = {
+						detached = false,
 						mason = false,
 						root_dir = function(bufnr, on_dir)
 							local fname = vim.api.nvim_buf_get_name(bufnr)
@@ -79,6 +83,7 @@ return {
 					}
 
 					vim.lsp.config.vtsls = {
+						detached = false,
 						mason = false,
 						root_dir = function(bufnr, on_dir)
 							local fname = vim.api.nvim_buf_get_name(bufnr)
@@ -97,6 +102,7 @@ return {
 
 					vim.lsp.config.yamlls = {
 						filetypes = { "yaml", "yml" },
+						detached = false,
 						settings = {
 							yaml = {
 								customTags = {
@@ -138,6 +144,7 @@ return {
 
 					vim.lsp.config.kakehashi = {
 						cmd = { "kakehashi" },
+						detached = false,
 						init_options = {
 							autoInstall = true,
 							-- LSP Bridge configuration (optional)
