@@ -33,6 +33,11 @@ return {
 					types = { "PascalCase", "camelCase", "snake_case", "kebab-case" },
 					cyclic = true,
 				}),
+				augend.constant.new({
+					elements = { "public", "protected", "private" },
+					word = true, -- 単語単位でマッチ
+					cyclic = true, -- 最後までいったら先頭に戻る
+				}),
 			},
 		})
 	end,
