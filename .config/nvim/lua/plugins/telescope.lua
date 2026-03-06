@@ -151,11 +151,6 @@ return {
 					},
 					file_ignore_patterns = { "%.git/" },
 					winblend = 0,
-					mappings = {
-						i = {
-							["<esc>"] = require("telescope.actions").close,
-						},
-					},
 				},
 				pickers = {
 					buffers = {
