@@ -1,5 +1,3 @@
--- @see https://github.com/scottmckendry/cyberdream.nvim
-
 -- themeの設定
 ---@type LazyPluginSpec
 return {
@@ -8,20 +6,12 @@ return {
 		"rebelot/kanagawa.nvim",
 		"folke/tokyonight.nvim",
 		"Mofiqul/dracula.nvim",
-		{
-			"scottmckendry/cyberdream.nvim",
-			lazy = false,
-			priority = 1000,
-			---@module "cyberdream"
-			---@type cyberdream.Config
-			opts = {},
-		},
 	},
 	---@module "lazyvim"
 	---@param opts LazyVimOptions
 	opts = function(_, opts)
 		-- 候補のcolorscheme一覧
-		local themes = { "kanagawa", "tokyonight", "dracula", "cyberdream" }
+		local themes = { "kanagawa", "tokyonight", "dracula" }
 
 		-- ランダム選択
 		math.randomseed(os.time())
