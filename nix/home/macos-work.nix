@@ -43,5 +43,6 @@
     regex-tui
     mcat
     lstr
+    ollama
   ];
 }
