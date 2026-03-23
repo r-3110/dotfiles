@@ -11,12 +11,10 @@
   home.packages = with pkgs; [
     # Programming Languages
     bun
-    deno
     go
     jdk
     lua5_4
     maven
-    nodejs_24
     python313
     ruby_3_4
     rustc
