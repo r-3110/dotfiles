@@ -10,6 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
+    skills = {
+      url = "path:./nix/skills";
+    };
     arto = {
       url = "github:arto-app/Arto";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +30,7 @@
       nix-darwin,
       nix-homebrew,
       llm-agents,
+      skills,
       arto,
       determinate,
       ...
@@ -62,6 +66,7 @@
     {
       # macOS for work
       homeConfigurations."macos-work" = mkHomeConfiguration "aarch64-darwin" "ryo" "/Users/ryo" [
+        skills.homeManagerModules.default
         ./nix/home/macos-work.nix
       ];
 
