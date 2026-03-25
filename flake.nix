@@ -72,6 +72,7 @@
 
       # Linux (x86_64)
       homeConfigurations."linux" = mkHomeConfiguration "x86_64-linux" "ryo" "/home/ryo" [
+        skills.homeManagerModules.default
         ./nix/home/linux.nix
       ];
 
