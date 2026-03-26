@@ -17,9 +17,6 @@ if not vim.g.vscode then
 	vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 end
 
--- lazydocker keymaps
-vim.keymap.set("n", "<leader>k", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
-
 -- dial keymaps
 vim.keymap.set("n", "<C-a>", function()
 	require("dial.map").manipulate("increment", "normal")
