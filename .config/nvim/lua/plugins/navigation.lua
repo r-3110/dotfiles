@@ -4,6 +4,7 @@
 return {
 	{
 		"stevearc/aerial.nvim",
+		cmd = "AerialOpen",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
