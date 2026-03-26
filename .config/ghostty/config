@@ -7,3 +7,5 @@ window-width = 3000
 window-padding-x = 10
 
 background-opacity = 0.95
+
+macos-option-as-alt = left
