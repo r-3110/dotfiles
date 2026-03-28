@@ -20,6 +20,21 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: `zellij --layout ${projectRoot}/.config/zellij/lazy.kdl`,
     },
     {
+      name: "open copilot with tmux",
+      keyword: "tac",
+      snippet: "tmux new-session -A -s copilot copilot",
+    },
+    {
+      name: "open gemini with tmux",
+      keyword: "tag",
+      snippet: "tmux new-session -A -s gemini gemini",
+    },
+    {
+      name: "open claude with tmux",
+      keyword: "tacc",
+      snippet: "tmux new-session -A -s claude claude",
+    },
+    {
       name: "open file with nvim",
       keyword: "NV",
       snippet: 'nvim "$(fzf)"',
