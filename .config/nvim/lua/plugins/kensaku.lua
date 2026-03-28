@@ -2,10 +2,17 @@
 
 ---@type LazyPluginSpec[]
 return {
-	{ "lambdalisue/kensaku.vim", dependencies = { "vim-denops/denops.vim" } },
+	-- searchやcommand時の遅延読み込みだと動作が遅くなるため、起動時に読み込む
+	{
+		"lambdalisue/kensaku.vim",
+		dependencies = { "vim-denops/denops.vim" },
+	},
 	{
 		"lambdalisue/kensaku-search.vim",
 		dependencies = { "lambdalisue/kensaku.vim" },
+		keys = {
+			{ "/", mode = "n" },
+		},
 		config = function()
 			vim.api.nvim_set_keymap(
 				"c",
@@ -18,5 +25,6 @@ return {
 	{
 		"lambdalisue/kensaku-command.vim",
 		dependencies = { "lambdalisue/kensaku.vim" },
+		event = "CmdlineEnter",
 	},
 }

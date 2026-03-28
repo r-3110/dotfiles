@@ -1,10 +1,12 @@
 --@see https://github.com/subnut/nvim-ghost.nvim
 --@see https://github.com/TheNoeTrevino/haunt.nvim
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
 	{
 		"subnut/nvim-ghost.nvim",
+		event = "VeryLazy",
 		init = function()
 			vim.g.nvim_ghost_autostart = 0
 		end,
