@@ -193,6 +193,7 @@ return {
 		---@type MasonLspconfigSettings
 		opts = {
 			automatic_enable = true,
+			-- おそらく命名はsnake_case
 			ensure_installed = {
 				"bashls",
 				"copilot",
@@ -205,8 +206,9 @@ return {
 				"html",
 				"jsonls",
 				"jsonnet_ls",
+				"kakehashi",
 				"lua_ls",
-				"marksman",
+				"markdown_oxide",
 				"oxfmt",
 				"phpactor",
 				"pyright",
