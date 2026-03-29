@@ -11,6 +11,11 @@
     macskk
     wezterm
     raycast
-    podman
+
+    mise
+    colima
+    docker
+    docker-compose
+    docker-buildx
   ];
 }

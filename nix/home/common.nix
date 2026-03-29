@@ -19,18 +19,15 @@
     ruby_3_4
     rustc
     cargo
+    gcc
 
     # CLI Tools
     luajitPackages.luarocks
     luajitPackages.luacheck
     gnumake
-    act
-    aws-sso-cli
     awscli2
     bat
-    cloudflared
     delta
-    ecspresso
     eza
     fd
     fzf

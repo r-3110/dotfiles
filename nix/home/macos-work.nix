@@ -44,5 +44,9 @@
     mcat
     lstr
     ollama
+    cloudflared
+    ecspresso
+    act
+    aws-sso-cli
   ];
 }
