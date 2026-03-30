@@ -12,6 +12,7 @@ pipx = "latest"
 "cargo:octorus" = "latest"
 "cargo:atusy/kakehashi" = "latest"
 "npm:gut-cli" = "latest"
+"npm:@hummer98/cmux-team" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
