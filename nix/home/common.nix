@@ -36,6 +36,7 @@
     git
     git-open
     gitui
+    worktrunk
     jq
     lazydocker
     lazygit
@@ -55,6 +56,7 @@
     ov
     zsh
     posting
+    nixfmt
     nixfmt-tree
     nix-output-monitor
     nixd
