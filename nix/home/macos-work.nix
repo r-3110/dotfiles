@@ -48,5 +48,6 @@
     ecspresso
     act
     aws-sso-cli
+    pngpaste
   ];
 }
