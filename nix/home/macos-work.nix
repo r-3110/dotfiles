@@ -16,7 +16,7 @@
     shortcat
     zoom-us
     obsidian
-    arto.packages.${system}.default
+    # arto.packages.${system}.default
     colima
     docker
     docker-compose
@@ -30,7 +30,6 @@
     pkgconf
     skopeo
     translate-shell
-    nodePackages.aws-cdk
     zenn-cli
     tree
     gtree
