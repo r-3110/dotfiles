@@ -1,7 +1,9 @@
 --@see https://github.com/akinsho/git-conflict.nvim
 --@see https://github.com/linrongbin16/gitlinker.nvim
 --@see https://github.com/sindrets/diffview.nvim
+--@see https://github.com/h3pei/trace-pr.nvim
 
+---@module "lazynvim"
 ---@type LazyPluginSpec[]
 return {
 	{
@@ -27,4 +29,5 @@ return {
 		event = "VeryLazy",
 		lazy = true,
 	},
+	{ "h3pei/trace-pr.nvim", event = "VeryLazy", config = true },
 }
