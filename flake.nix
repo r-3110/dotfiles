@@ -13,6 +13,9 @@
     skills = {
       url = "path:./nix/skills";
     };
+    mcp = {
+      url = "path:./nix/mcp";
+    };
     arto = {
       url = "github:arto-app/Arto";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,6 +34,7 @@
       nix-homebrew,
       llm-agents,
       skills,
+      mcp,
       arto,
       determinate,
       ...
@@ -73,6 +77,7 @@
       # Linux (x86_64)
       homeConfigurations."linux" = mkHomeConfiguration "x86_64-linux" "ryo" "/home/ryo" [
         skills.homeManagerModules.default
+        mcp.homeManagerModules.default
         ./nix/home/linux.nix
       ];
 
