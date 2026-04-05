@@ -197,6 +197,7 @@ return {
 			ensure_installed = {
 				"bashls",
 				"copilot",
+				"cssls",
 				"denols",
 				"docker_compose_language_service",
 				"dockerls",
