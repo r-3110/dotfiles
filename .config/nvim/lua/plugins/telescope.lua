@@ -1,11 +1,12 @@
 -- @see https://github.com/nvim-telescope/telescope.nvim
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
 	{
 		"nvim-telescope/telescope.nvim",
 		-- branch = "master",
-		version = "0.2.1",
+		version = "^0.2.x",
 		cmd = { "Telescope" },
 		dependencies = {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
