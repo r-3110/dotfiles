@@ -17,5 +17,6 @@
     docker
     docker-compose
     docker-buildx
+    gcc
   ];
 }

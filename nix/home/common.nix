@@ -19,7 +19,6 @@
     ruby_3_4
     rustc
     cargo
-    gcc
 
     # CLI Tools
     luajitPackages.luarocks
