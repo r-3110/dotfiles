@@ -38,12 +38,14 @@
     brews = [
       "mac-cleanup-go"
       "awsesh"
+      "mo"
     ];
     taps = [
       "clawscli/tap"
       "elva-labs/elva"
       "tonisives/tap"
       "manaflow-ai/cmux"
+      "k1LoW/tap"
     ];
     casks = [
       "activitywatch"
