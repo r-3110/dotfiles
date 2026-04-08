@@ -16,10 +16,6 @@
     mcp = {
       url = "path:./nix/mcp";
     };
-    arto = {
-      url = "github:arto-app/Arto";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,7 +31,6 @@
       llm-agents,
       skills,
       mcp,
-      arto,
       determinate,
       ...
     }:
@@ -59,9 +54,6 @@
             {
               home.username = username;
               home.homeDirectory = homeDirectory;
-              _module.args = {
-                inherit system arto;
-              };
             }
           ]
           ++ extraModules;
