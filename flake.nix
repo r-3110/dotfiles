@@ -63,6 +63,7 @@
       # macOS for work
       homeConfigurations."macos-work" = mkHomeConfiguration "aarch64-darwin" "ryo" "/Users/ryo" [
         skills.homeManagerModules.default
+        mcp.homeManagerModules.default
         ./nix/home/macos-work.nix
       ];
 
@@ -75,6 +76,8 @@
 
       # デフォルト設定（macOS Apple Silicon）
       homeConfigurations."macos" = mkHomeConfiguration "aarch64-darwin" "ryo" "/Users/ryo" [
+        skills.homeManagerModules.default
+        mcp.homeManagerModules.default
         ./nix/home/macos.nix
       ];
 

@@ -27,11 +27,27 @@
         "AWS_REGION=us-west-2"
       ];
     };
+    markitdown-mcp = {
+      command = "markitdown-mcp";
+      args = [
+        "--http"
+        "--host"
+        "localhost"
+        "--port"
+        "3100"
+      ];
+    };
   };
 
   # each program consumes shared servers via enablemcpintegration
-  programs.opencode = {
-    enable = true;
-    enableMcpIntegration = true;
+  programs = {
+    claude-code = {
+      enable = false;
+      enableMcpIntegration = true;
+    };
+    opencode = {
+      enable = true;
+      enableMcpIntegration = true;
+    };
   };
 }
