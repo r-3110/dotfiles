@@ -12,7 +12,6 @@
 
   mcp-servers.programs = {
     context7.enable = true;
-    github.enable = true;
     nixos.enable = true;
   };
 
