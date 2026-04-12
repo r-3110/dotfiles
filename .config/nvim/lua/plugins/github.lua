@@ -1,28 +1,8 @@
---@see https://github.com/georgesnoe/lazygithub.nvim
 --@see https://github.com/skanehira/github-actions.nvim
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
-	{
-		"georgesnoe/lazygithub.nvim",
-		dependencies = { "akinsho/toggleterm.nvim" },
-		config = function()
-			---@module "lazygithub"
-			require("lazygithub").setup({
-				border = "single", -- valid options are "single" | "double" | "shadow" | "curved"
-			})
-		end,
-		event = "VeryLazy",
-		keys = {
-			{
-				"<leader>lg",
-				function()
-					require("lazygithub").open()
-				end,
-				desc = "Open Lazygithub",
-			},
-		},
-	},
 	{
 		"skanehira/github-actions.nvim",
 		dependencies = {
