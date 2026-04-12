@@ -5,7 +5,7 @@
     "jsr:@db/sqlite@0.12.0": "0.12.0",
     "jsr:@denosaurs/plug@1": "1.1.0",
     "jsr:@std/assert@0.217": "0.217.0",
-    "jsr:@std/assert@^1.0.18": "1.0.18",
+    "jsr:@std/assert@^1.0.19": "1.0.19",
     "jsr:@std/encoding@1": "1.0.10",
     "jsr:@std/fmt@1": "1.0.8",
     "jsr:@std/fmt@1.0.8": "1.0.8",
@@ -20,7 +20,7 @@
     "jsr:@std/path@^1.1.0": "1.1.0",
     "jsr:@std/ulid@1.0.0": "1.0.0",
     "jsr:@std/yaml@1.0.8": "1.0.8",
-    "jsr:@yuki-yano/zeno@0.3": "0.3.0",
+    "jsr:@yuki-yano/zeno@~0.4.1": "0.4.1",
     "npm:yargs-parser@21.1.1": "21.1.1"
   },
   "jsr": {
@@ -49,8 +49,8 @@
     "@std/assert@0.217.0": {
       "integrity": "c98e279362ca6982d5285c3b89517b757c1e3477ee9f14eb2fdf80a45aaa9642"
     },
-    "@std/assert@1.0.18": {
-      "integrity": "270245e9c2c13b446286de475131dc688ca9abcd94fc5db41d43a219b34d1c78",
+    "@std/assert@1.0.19": {
+      "integrity": "eaada96ee120cb980bc47e040f82814d786fe8162ecc53c91d8df60b8755991e",
       "dependencies": [
         "jsr:@std/internal"
       ]
@@ -88,8 +88,8 @@
     "@std/yaml@1.0.8": {
       "integrity": "90b8aab62995e929fa0ea5f4151c287275b63e321ac375c35ff7406ca60c169d"
     },
-    "@yuki-yano/zeno@0.3.0": {
-      "integrity": "6d014c93458aa6e450e57c8d7201cd349113fef8f9c22a5596a30441fbb01a28",
+    "@yuki-yano/zeno@0.4.1": {
+      "integrity": "34656a1cbf1f77d11e938424ef88c101592b6398d291d7b4f8f20ce1b08392f1",
       "dependencies": [
         "jsr:@404wolf/xdg-portable",
         "jsr:@db/sqlite",
@@ -110,8 +110,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/assert@^1.0.18",
-      "jsr:@yuki-yano/zeno@0.3"
+      "jsr:@std/assert@^1.0.19",
+      "jsr:@yuki-yano/zeno@~0.4.1"
     ]
   }
 }
