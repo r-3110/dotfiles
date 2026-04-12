@@ -46,3 +46,9 @@ jobs:
       - uses: actions/checkout@v6
       - name: Check Oxfmt Format
         uses: oxc-project/oxfmt-action@v0.0.1
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check Renovate Config
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v2.1.0
