@@ -11,8 +11,7 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
     {
       name: "open editor with term with zellij",
       keyword: "zet",
-      snippet:
-        `zellij --layout ${projectRoot}/.config/zellij/editor-with-term.kdl`,
+      snippet: `zellij --layout ${projectRoot}/.config/zellij/editor-with-term.kdl`,
     },
     {
       name: "open lazy with zellij",

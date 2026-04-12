@@ -2,6 +2,4 @@ experimental_editor = false
 vim_mode = true
 
 [global]
-key_bindings = [
-  { key = "e", command = "exec:nvim %note_path" },
-]
+key_bindings = [{ key = "e", command = "exec:nvim %note_path" }]

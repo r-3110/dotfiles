@@ -30,16 +30,6 @@ jobs:
       - uses: actions/checkout@v6
       - name: Luacheck linter
         uses: lunarmodules/luacheck@v1
-  deno-fmt:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: ${{ env.DENO_VERSION }}
-      - name: Check Deno Format
-        run: deno fmt --check
   deno-lint:
     runs-on: ubuntu-latest
     steps:
@@ -50,3 +40,9 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
       - name: Check Deno Lint
         run: deno lint
+  oxfmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check Oxfmt Format
+        uses: oxc-project/oxfmt-action@v0.0.1
