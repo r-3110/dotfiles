@@ -9,6 +9,7 @@ local file_types = require("utils.filetype")
 -- vtslsの再起動コマンド monorepoだと最初にアタッチされたtsconfigを参照し続けるため
 vim.keymap.set("n", "<leader>tr", ":LspRestart vtsls<CR>", { desc = "vtsls Restart" })
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
 	-- lspconfigはマニュアルで設定するため、lazyvimのlspは無効化する。
@@ -220,6 +221,72 @@ return {
 				"vtsls",
 				"yamlls",
 			},
+		},
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason-org/mason.nvim" },
+		---@module "mason-tool-installer"
+		---@type MasonToolInstallerSettings
+		opts = {
+			ensure_installed = {
+				-- Linters
+				"actionlint",
+				"dotenv-linter",
+				"golangci-lint",
+				"hadolint",
+				"jsonlint",
+				"markdownlint-cli2",
+				"phpcs",
+				"shellcheck",
+				"sqlfluff",
+				"stylelint",
+				"vacuum",
+				"vale",
+				"yamllint",
+				-- Formatters
+				"gci",
+				"markdown-toc",
+				"nixfmt",
+				"oxfmt",
+				"php-cs-fixer",
+				"prettierd",
+				"shfmt",
+				"stylua",
+				-- DAP
+				"debugpy",
+				"js-debug-adapter",
+				-- LSPs (mason-tool-installer can also manage these by package name)
+				"bash-language-server",
+				"buf",
+				"copilot-language-server",
+				"css-lsp",
+				"deno",
+				"docker-compose-language-service",
+				"dockerfile-language-server",
+				"eslint-lsp",
+				"gh-actions-language-server",
+				"gopls",
+				"html-lsp",
+				"json-lsp",
+				"jsonnet-language-server",
+				"kakehashi",
+				"lua-language-server",
+				"markdown-oxide",
+				"marksman",
+				"phpactor",
+				"pyright",
+				"ruff",
+				"taplo",
+				"tsp-server",
+				"vtsls",
+				"yaml-language-server",
+				-- Others
+				"tree-sitter-cli",
+				"mpls",
+			},
+			auto_update = true,
+			run_on_start = true,
 		},
 	},
 	{
