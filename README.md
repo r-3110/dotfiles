@@ -1,5 +1,12 @@
 # dotfiles
 
+<div align="center">
+
+![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Maintained-informational?style=flat-square)
+
+</div>
+
 ## 初回にインストール
 
 1. 下記のいずれかでnixをインストール
