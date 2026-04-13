@@ -247,7 +247,6 @@ return {
 				-- Formatters
 				"gci",
 				"markdown-toc",
-				"nixfmt",
 				"oxfmt",
 				"php-cs-fixer",
 				"prettierd",
