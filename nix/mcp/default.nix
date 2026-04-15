@@ -28,13 +28,7 @@
     };
     markitdown-mcp = {
       command = "markitdown-mcp";
-      args = [
-        "--http"
-        "--host"
-        "localhost"
-        "--port"
-        "3100"
-      ];
+      args = [ ];
     };
   };
 
