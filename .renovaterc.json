@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "dependencyDashboard": false,
-  "baseBranchPatterns": ["renovate"],
+  "baseBranchPatterns": ["renovate-pr"],
   "timezone": "Asia/Tokyo",
   "description": "Run on weekdays (Mon-Fri)",
   "schedule": ["* * * * 1-5"],
