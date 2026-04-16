@@ -15,6 +15,14 @@
       url = "github:hummer98/using-cmux";
       flake = false;
     };
+    cmux-team = {
+      url = "github:hummer98/cmux-team";
+      flake = false;
+    };
+    gh-stack = {
+      url = "github:github/gh-stack";
+      flake = false;
+    };
   };
 
   outputs =
@@ -30,6 +38,8 @@
               vercel-skills
               github-awesome-copilot-skills
               using-cmux
+              cmux-team
+              gh-stack
               ;
           }
         );

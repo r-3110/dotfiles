@@ -4,6 +4,8 @@
   vercel-skills,
   github-awesome-copilot-skills,
   using-cmux,
+  cmux-team,
+  gh-stack,
   ...
 }:
 {
@@ -29,12 +31,22 @@
         path = using-cmux;
         subdir = "skills/using-cmux";
       };
+      cmux-team = {
+        path = cmux-team;
+        subdir = "skills";
+      };
+      gh-stack = {
+        path = gh-stack;
+        subdir = "skills/gh-stack";
+      };
     };
     skills.enable = [
       "find-skills"
       "conventional-commit"
       "create-github-pull-request-from-specification"
       "using-cmux"
+      "cmux-team"
+      "gh-stack"
     ];
     skills.enableAll = [ "personal" ];
     targets = {
