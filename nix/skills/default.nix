@@ -3,6 +3,7 @@
   agent-skills,
   vercel-skills,
   github-awesome-copilot-skills,
+  using-cmux,
   ...
 }:
 {
@@ -24,11 +25,16 @@
         path = github-awesome-copilot-skills;
         subdir = "skills";
       };
+      using-cmux = {
+        path = using-cmux;
+        subdir = "skills/using-cmux";
+      };
     };
     skills.enable = [
       "find-skills"
       "conventional-commit"
       "create-github-pull-request-from-specification"
+      "using-cmux"
     ];
     skills.enableAll = [ "personal" ];
     targets = {

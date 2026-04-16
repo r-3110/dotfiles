@@ -11,6 +11,10 @@
       url = "github:github/awesome-copilot";
       flake = false;
     };
+    using-cmux = {
+      url = "github:hummer98/using-cmux";
+      flake = false;
+    };
   };
 
   outputs =
@@ -25,6 +29,7 @@
               agent-skills
               vercel-skills
               github-awesome-copilot-skills
+              using-cmux
               ;
           }
         );
