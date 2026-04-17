@@ -39,6 +39,7 @@
       "mac-cleanup-go"
       "awsesh"
       "mo"
+      "microsoft/apm/apm"
     ];
     taps = [
       "clawscli/tap"
