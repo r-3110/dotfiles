@@ -37,6 +37,10 @@
       command = "markitdown-mcp";
       args = [ ];
     };
+    deepwiki-mcp = {
+      type = "http";
+      url = "https://mcp.deepwiki.com/mcp";
+    };
   };
 
   # each program consumes shared servers via enablemcpintegration
