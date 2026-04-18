@@ -15,7 +15,6 @@
     jdk
     lua5_4
     maven
-    python313
     ruby_3_4
     rustc
     cargo
@@ -30,7 +29,6 @@
     eza
     fd
     fzf
-    gh
     ghq
     git
     git-open
@@ -138,6 +136,22 @@
 
       source $HOME/.zsh_functions
     '';
+  };
+
+  programs.gh = {
+    enable = true;
+
+    settings = {
+      git_protocol = "ssh";
+      prompt = "enabled";
+      prefer_editor_prompt = "enabled";
+      pager = "ov";
+      color_labels = "enabled";
+    };
+
+    extensions = [
+      pkgs.gh-dash
+    ];
   };
 
   # Home directory
