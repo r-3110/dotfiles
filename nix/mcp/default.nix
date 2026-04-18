@@ -4,6 +4,13 @@
 }:
 
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      opencode = inputs.llm-agents.packages.${prev.stdenv.hostPlatform.system}.opencode;
+      claude-code = inputs.llm-agents.packages.${prev.stdenv.hostPlatform.system}.claude-code;
+    })
+  ];
+
   imports = [
     inputs.mcp-servers.homeManagerModules.default
   ];
@@ -35,7 +42,7 @@
   # each program consumes shared servers via enablemcpintegration
   programs = {
     claude-code = {
-      enable = false;
+      enable = true;
       enableMcpIntegration = true;
     };
     opencode = {

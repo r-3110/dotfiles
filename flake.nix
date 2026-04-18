@@ -15,6 +15,7 @@
     };
     mcp = {
       url = "path:./nix/mcp";
+      inputs.llm-agents.follows = "llm-agents";
     };
     nix-darwin = {
       url = "github:LnL7/nix-darwin";

@@ -58,8 +58,6 @@
     nix-output-monitor
     nixd
     tree-sitter
-    opencode
-    llm-agents.claude-code
     llm-agents.copilot-cli
     llm-agents.gemini-cli
 

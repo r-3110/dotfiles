@@ -3,6 +3,7 @@
 
   inputs = {
     mcp-servers.url = "github:natsukium/mcp-servers-nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs =
