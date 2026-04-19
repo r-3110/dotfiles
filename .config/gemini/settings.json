@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/schemas/settings.schema.json",
+  "general": {
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d"
+    },
+    "vimMode": true
+  },
+  "experimental": {
+    "worktrees": true,
+    "generalistProfile": true,
+    "contextManagement": true
+  },
+  "mcpServers": {
+    "aws-mcp": {
+      "command": "uvx",
+      "args": [
+        "mcp-proxy-for-aws@latest",
+        "https://aws-mcp.us-east-1.api.aws/mcp",
+        "--metadata",
+        "AWS_REGION=us-west-2"
+      ]
+    },
+    "markitdown-mcp": {
+      "command": "markitdown-mcp",
+      "args": []
+    },
+    "deepwiki-mcp": {
+      "httpUrl": "https://mcp.deepwiki.com/mcp"
+    },
+    "ddg-search": {
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
+}

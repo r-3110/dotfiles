@@ -181,6 +181,8 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
     ".copilot/copilot-instructions.md".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
+    ".gemini/settings.json".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/gemini/settings.json";
   };
 
   # XDG Config files
