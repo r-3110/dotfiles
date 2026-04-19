@@ -183,6 +183,10 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
     ".gemini/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/gemini/settings.json";
+    ".copilot/lsp-config.json".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/lsp-config.json";
+    ".copilot/mcp-config.json".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/mcp-config.json";
   };
 
   # XDG Config files

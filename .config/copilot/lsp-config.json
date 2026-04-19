@@ -1,0 +1,40 @@
+{
+  "lspServers": {
+    "typescript": {
+      "command": "vtsls",
+      "args": ["--stdio"],
+      "fileExtensions": {
+        ".ts": "typescript",
+        ".tsx": "typescriptreact",
+        ".js": "javascript",
+        ".jsx": "javascriptreact",
+        ".mjs": "javascript",
+        ".cjs": "javascript",
+        ".mts": "typescript",
+        ".cts": "typescript"
+      }
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "fileExtensions": {
+        ".py": "python",
+        ".pyw": "python",
+        ".pyi": "python"
+      }
+    },
+    "go": {
+      "command": "gopls",
+      "args": ["serve"],
+      "fileExtensions": {
+        ".go": "go"
+      }
+    },
+    "lua": {
+      "command": "lua-language-server",
+      "fileExtensions": {
+        ".lua": "lua"
+      }
+    }
+  }
+}

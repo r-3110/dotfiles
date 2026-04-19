@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "markitdown-mcp": {
+      "type": "local",
+      "command": "markitdown-mcp",
+      "args": []
+    },
+    "deepwiki-mcp": {
+      "type": "http",
+      "url": "https://mcp.deepwiki.com/mcp"
+    },
+    "ddg-search": {
+      "type": "local",
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"]
+    },
+    "fetch": {
+      "type": "local",
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    }
+  }
+}
