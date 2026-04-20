@@ -23,6 +23,10 @@
       url = "github:github/gh-stack";
       flake = false;
     };
+    mizchi = {
+      url = "github:mizchi/chezmoi-dotfiles";
+      flake = false;
+    };
   };
 
   outputs =
@@ -40,6 +44,7 @@
               using-cmux
               cmux-team
               gh-stack
+              mizchi
               ;
           }
         );

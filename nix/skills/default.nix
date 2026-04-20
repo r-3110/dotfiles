@@ -6,6 +6,7 @@
   using-cmux,
   cmux-team,
   gh-stack,
+  mizchi,
   ...
 }:
 {
@@ -39,6 +40,10 @@
         path = gh-stack;
         subdir = "skills/gh-stack";
       };
+      mizchi = {
+        path = mizchi;
+        subdir = "dot_claude/skills";
+      };
     };
     skills.enable = [
       "find-skills"
@@ -47,6 +52,7 @@
       "using-cmux"
       "cmux-team"
       "gh-stack"
+      "empirical-prompt-tuning"
     ];
     skills.enableAll = [ "personal" ];
     targets = {

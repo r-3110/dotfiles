@@ -401,6 +401,22 @@
         "type": "github"
       }
     },
+    "mizchi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776587857,
+        "narHash": "sha256-BqJSjTBVZwTie9UQPavEN33LtHlJKALeA0IY8Cy5Krw=",
+        "owner": "mizchi",
+        "repo": "chezmoi-dotfiles",
+        "rev": "aa1638480f64b9d742cda267b71800b3c9da2ceb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mizchi",
+        "repo": "chezmoi-dotfiles",
+        "type": "github"
+      }
+    },
     "nix": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -602,6 +618,7 @@
         "cmux-team": "cmux-team",
         "gh-stack": "gh-stack",
         "github-awesome-copilot-skills": "github-awesome-copilot-skills",
+        "mizchi": "mizchi",
         "using-cmux": "using-cmux",
         "vercel-skills": "vercel-skills"
       },
