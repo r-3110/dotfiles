@@ -13,6 +13,12 @@
     "contextManagement": true
   },
   "mcpServers": {
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_MCP_PAT}"
+      }
+    },
     "aws-mcp": {
       "command": "uvx",
       "args": [

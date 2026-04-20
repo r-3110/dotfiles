@@ -24,6 +24,14 @@
 
   # Add custom MCP servers
   mcp-servers.settings.servers = {
+    github = {
+      type = "http";
+      url = "https://api.githubcopilot.com/mcp/";
+      headers = {
+        # 変数展開はクライアントの対応次第
+        Authorization = "Bearer \${GITHUB_MCP_PAT}";
+      };
+    };
     aws-mcp = {
       command = "uvx";
       args = [
