@@ -99,11 +99,11 @@
     "cmux-team": {
       "flake": false,
       "locked": {
-        "lastModified": 1776735434,
-        "narHash": "sha256-aLcdk5EVvm8zIkM5IDmOOOKE69Nh97aKFLhdc5xcvUI=",
+        "lastModified": 1776758631,
+        "narHash": "sha256-Oo1T0st6z4Mky/ZBEf0VorQM7Cm5yHTLTJMPlmYmNDc=",
         "owner": "hummer98",
         "repo": "cmux-team",
-        "rev": "cb4108a571a2631f578d43c3d2160a88b1f216dc",
+        "rev": "2d7ff837e791d5a8bff6c6c8b66b4ce0b5eed65d",
         "type": "github"
       },
       "original": {
@@ -353,11 +353,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1776744385,
-        "narHash": "sha256-R1A1JkAHF59JeBqVCHYoV7IJEx6MsBV41cH4jZhuNHo=",
+        "lastModified": 1776761469,
+        "narHash": "sha256-BatEItZry4ZzjLPYhak+G7sydpYaPxMRXLgmJ0s3+Vc=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "92de4ace99ea70a24146f7c2b71ff65e4ce358a8",
+        "rev": "fe8991eb26b03e7559807c260d978cc0a987fa9e",
         "type": "github"
       },
       "original": {
