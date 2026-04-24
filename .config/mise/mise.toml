@@ -13,6 +13,7 @@ pipx = "latest"
 "npm:gut-cli" = "latest"
 "npm:@hummer98/cmux-team" = "latest"
 "aqua:erikjuhani/basalt" = "latest"
+flutter = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
