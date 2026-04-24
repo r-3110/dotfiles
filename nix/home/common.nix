@@ -48,7 +48,6 @@
     yq-go
     zellij
     zoxide
-    google-cloud-sdk
     jujutsu
     ov
     zsh
