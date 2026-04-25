@@ -59,6 +59,7 @@
     tree-sitter
     llm-agents.copilot-cli
     llm-agents.gemini-cli
+    rtk
 
     # Font
     hackgen-nf-font
