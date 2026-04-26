@@ -57,6 +57,15 @@
             "command": "context-mode hook gemini-cli beforetool"
           }
         ]
+      },
+      {
+        "matcher": "run_shell_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.gemini/hooks/rtk-hook-gemini.sh"
+          }
+        ]
       }
     ],
     "AfterTool": [
