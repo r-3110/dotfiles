@@ -49,6 +49,9 @@
       type = "http";
       url = "https://mcp.deepwiki.com/mcp";
     };
+    context-mode = {
+      command = "context-mode";
+    };
   };
 
   # each program consumes shared servers via enablemcpintegration

@@ -25,6 +25,11 @@
       "type": "local",
       "command": "uvx",
       "args": ["mcp-server-fetch"]
+    },
+    "context-mode": {
+      "type": "local",
+      "command": "context-mode",
+      "args": []
     }
   }
 }
