@@ -15,6 +15,7 @@ pipx = "latest"
 "aqua:erikjuhani/basalt" = "latest"
 flutter = "latest"
 "npm:context-mode" = "latest"
+"pipx:graphifyy" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

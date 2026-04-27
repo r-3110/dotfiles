@@ -57,6 +57,16 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /Users/ryo/.claude/hooks/context-mode-cache-heal.mjs"
+          }
+        ]
+      }
     ]
   }
 }
