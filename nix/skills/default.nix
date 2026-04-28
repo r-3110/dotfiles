@@ -42,7 +42,6 @@
       };
       mizchi = {
         path = mizchi;
-        subdir = "dot_claude/skills";
       };
     };
     skills.enable = [

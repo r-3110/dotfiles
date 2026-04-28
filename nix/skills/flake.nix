@@ -24,7 +24,7 @@
       flake = false;
     };
     mizchi = {
-      url = "github:mizchi/chezmoi-dotfiles";
+      url = "github:mizchi/skills";
       flake = false;
     };
   };

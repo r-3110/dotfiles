@@ -99,11 +99,11 @@
     "cmux-team": {
       "flake": false,
       "locked": {
-        "lastModified": 1776784676,
-        "narHash": "sha256-TIFDUl6qxBeLo/4X89KAGtiD34iOuGYqmD2Pl5ZMT5E=",
+        "lastModified": 1777287819,
+        "narHash": "sha256-kHtWN6RtZhVxMPGFvU71D/2VaQgWgaqvT3TsgJqeGs4=",
         "owner": "hummer98",
         "repo": "cmux-team",
-        "rev": "0ba5643a25d70695633bc6974955f94951148c80",
+        "rev": "e20c5356f5ab9263623741eb51a403b35ecdcdaa",
         "type": "github"
       },
       "original": {
@@ -231,11 +231,11 @@
     "gh-stack": {
       "flake": false,
       "locked": {
-        "lastModified": 1776698427,
-        "narHash": "sha256-2mtQKrUvYkRQbxSaTCPt05Ld5jzdSrjckEiJlxalIUI=",
+        "lastModified": 1776961303,
+        "narHash": "sha256-auLu1weeBEz4Ao50ByofBSw8GMbtev8ffGY7AFxhrWg=",
         "owner": "github",
         "repo": "gh-stack",
-        "rev": "7af17b55dc256856b6581f45275d360c77f03356",
+        "rev": "ad21053fe913c29f8542f20685f773076ca09cb6",
         "type": "github"
       },
       "original": {
@@ -404,16 +404,16 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1776705842,
-        "narHash": "sha256-XCk4UKUtSNRUips5XrCxNhvHo+FDKAwVhi99Tcm9Caw=",
+        "lastModified": 1777217457,
+        "narHash": "sha256-swhJpPNOltOl+YcqeoTNBVPCgsc95iqgTkhVw2BjU5c=",
         "owner": "mizchi",
-        "repo": "chezmoi-dotfiles",
-        "rev": "c7845a843b54f349113435e8f5f48705ce59acf2",
+        "repo": "skills",
+        "rev": "a0ebf680f62836f64d7e9b741ee212f55b108f88",
         "type": "github"
       },
       "original": {
         "owner": "mizchi",
-        "repo": "chezmoi-dotfiles",
+        "repo": "skills",
         "type": "github"
       }
     },
@@ -671,11 +671,11 @@
     "using-cmux": {
       "flake": false,
       "locked": {
-        "lastModified": 1775758497,
-        "narHash": "sha256-BEMLHk4v2Dsk3WKAvfHuHoOM0WoXCVimz86eMchWGF4=",
+        "lastModified": 1777332323,
+        "narHash": "sha256-5Jea6OufG0RAc60V0K70dvwDuP1SHlK06InHA7JK8D0=",
         "owner": "hummer98",
         "repo": "using-cmux",
-        "rev": "eec744b8a4606e1035cad1132c79df5f0c55b428",
+        "rev": "a3d0b18b88af29be282e2e5128c37283fbf4822a",
         "type": "github"
       },
       "original": {
@@ -687,11 +687,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1776452881,
-        "narHash": "sha256-JVJeottMyjxdiGPS7O4QsshKdbwbYcKMvwe/PB7I/Zw=",
+        "lastModified": 1777329451,
+        "narHash": "sha256-jQf2w3YElUVROmDZM8sX7lH5ZGm3AkHelpNBQPneUl8=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "bc21a37a12b90fcb5aec051c91baf5b227b704b1",
+        "rev": "57f3351d91095f68dafd57d024ef4004bce5bd23",
         "type": "github"
       },
       "original": {
