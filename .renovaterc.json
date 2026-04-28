@@ -23,6 +23,11 @@
     {
       "matchManagers": ["nix"],
       "automerge": true
+    },
+    {
+      "matchManagers": ["mise"],
+      "matchPackageNames": ["python"],
+      "enabled": false
     }
   ]
 }
