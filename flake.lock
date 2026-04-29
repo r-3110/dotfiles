@@ -169,6 +169,22 @@
         "url": "https://install.determinate.systems/determinate-nixd/tag/v3.18.1/x86_64-linux"
       }
     },
+    "difit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777116572,
+        "narHash": "sha256-R7uN5VkZJutsoW/u//3JUvoywNAmdqlIlpS7U5sCCFw=",
+        "owner": "yoshiko-pg",
+        "repo": "difit",
+        "rev": "9e46744bd881914bc84240c38ce17e74c2a1876a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yoshiko-pg",
+        "repo": "difit",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -600,6 +616,7 @@
       "inputs": {
         "agent-skills": "agent-skills",
         "cmux-team": "cmux-team",
+        "difit": "difit",
         "gh-stack": "gh-stack",
         "github-awesome-copilot-skills": "github-awesome-copilot-skills",
         "mizchi": "mizchi",

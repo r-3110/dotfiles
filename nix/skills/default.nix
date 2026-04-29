@@ -7,6 +7,7 @@
   cmux-team,
   gh-stack,
   mizchi,
+  difit,
   ...
 }:
 {
@@ -43,6 +44,10 @@
       mizchi = {
         path = mizchi;
       };
+      difit = {
+        path = difit;
+        subdir = "skills";
+      };
     };
     skills.enable = [
       "find-skills"
@@ -52,6 +57,8 @@
       "cmux-team"
       "gh-stack"
       "empirical-prompt-tuning"
+      "difit-review"
+      "difit"
     ];
     skills.enableAll = [ "personal" ];
     targets = {

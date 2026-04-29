@@ -27,6 +27,10 @@
       url = "github:mizchi/skills";
       flake = false;
     };
+    difit = {
+      url = "github:yoshiko-pg/difit";
+      flake = false;
+    };
   };
 
   outputs =
@@ -45,6 +49,7 @@
               cmux-team
               gh-stack
               mizchi
+              difit
               ;
           }
         );
