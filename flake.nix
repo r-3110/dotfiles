@@ -45,6 +45,15 @@
             config.allowUnfree = true;
             overlays = [
               llm-agents.overlays.default
+
+              (final: prev: {
+                python3Packages = prev.python3Packages // {
+                  # fastmcpのテストが遅いため、テスト除外
+                  fastmcp = prev.python3Packages.fastmcp.overridePythonAttrs (old: {
+                    doCheck = false;
+                  });
+                };
+              })
             ];
           };
         in
