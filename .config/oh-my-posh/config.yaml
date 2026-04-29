@@ -1,0 +1,133 @@
+# yaml-language-server: $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+blocks:
+  - type: prompt
+    alignment: left
+    segments:
+      - type: text
+        style: powerline
+        foreground: "#090c0c"
+        background: "#a3aed2"
+        template: "  "
+
+      - type: path
+        style: powerline
+        foreground: "#e3e5e5"
+        background: "#769ff0"
+        options:
+          style: agnoster
+          max_depth: 3
+
+      - type: git
+        style: powerline
+        foreground: "#769ff0"
+        background: "#394260"
+        options:
+          branch_icon: " "
+          fetch_status: true
+
+  - type: prompt
+    alignment: right
+    segments:
+      - type: node
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#6CA35E"
+        template: "  {{ .Full }} "
+
+      - type: deno
+        style: plain
+        foreground: "#3C82F6"
+        template: "  {{ .Full }} "
+
+      - type: bun
+        style: plain
+        foreground: "#3C82F6"
+        template: "  {{ .Full }} "
+
+      - type: nix-shell
+        style: powerline
+        foreground: blue
+        background: transparent
+        template: (󱄅-{{ .Type }})
+
+      - type: go
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#7FD5EA"
+        template: "  {{ .Full }} "
+
+      - type: lua
+        style: powerline
+        powerline_symbol: 
+        foreground: white
+        background: blue
+        template: "  {{ .Full }} "
+
+      - type: php
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#4063D8"
+        template: "  {{ .Full }} "
+
+      - type: python
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffd43b"
+        background: "#306998"
+        template: "  {{ .Full }} "
+
+      - type: flutter
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#06A4CE"
+        template: "  {{ .Full }} "
+
+      - type: docker
+        style: powerline
+        powerline_symbol: 
+        foreground: "#000000"
+        background: "#0B59E7"
+        template: "  {{ .Context }} "
+
+      - type: aws
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#FFA400"
+        template: "  {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+
+      - type: gcp
+        style: powerline
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#47888d"
+        template: " 󱇶 {{.Project}} :: {{.Account}} "
+
+      - type: pulumi
+        style: diamond
+        powerline_symbol: 
+        foreground: "#ffffff"
+        background: "#662d91"
+        template: " {{ .Stack }}{{if .User }} :: {{ .User }}@{{ end }}{{ if
+          .URL}}{{.URL }}{{ end }}"
+
+      - type: time
+        style: powerline
+        foreground: "#a0a9cb"
+        background: "#1d2230"
+        options:
+          time_format: "15:04"
+
+  - type: prompt
+    alignment: left
+    newline: true
+    segments:
+      - type: text
+        style: plain
+        foreground: "#ffffff"
+        template: "❯"

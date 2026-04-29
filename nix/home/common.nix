@@ -41,7 +41,7 @@
     pulumi-bin
     ripgrep
     sheldon
-    starship
+    oh-my-posh
     tmux
     uv
     yazi
@@ -126,8 +126,8 @@
       # Zoxide
       eval "$(zoxide init zsh)"
 
-      # Starship
-      eval "$(starship init zsh)"
+      # oh-my-posh
+      source <($HOME/.nix-profile/bin/oh-my-posh init zsh --config $HOME/dotfiles/.config/oh-my-posh/config.yaml)
 
       # FZF
       eval "$(fzf --zsh)"
@@ -202,9 +202,6 @@
 
     "wezterm".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/wezterm";
-
-    "starship.toml".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/starship/tokyo-night.toml";
 
     "sheldon".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/sheldon";
