@@ -172,11 +172,11 @@
     "difit": {
       "flake": false,
       "locked": {
-        "lastModified": 1777500445,
-        "narHash": "sha256-xfWCKmVcniZ+5wQB3DwM52KZyvpq1lFVSRh8+nLUiDI=",
+        "lastModified": 1777507886,
+        "narHash": "sha256-l7Vc9cekNtZbWIPhwxk3sFyM3P+/k+CJwoP+GE4hbbc=",
         "owner": "yoshiko-pg",
         "repo": "difit",
-        "rev": "21cf45e8c6a814589bf89a45e521d067874f8ae2",
+        "rev": "2d200605f25529448837602be7eaa3da2cfe4a2d",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1777442620,
-        "narHash": "sha256-tN7lMBJ7sLOAmuIFayVZGM/EBl2MpKHK8E3Tr54xZ7U=",
+        "lastModified": 1777508991,
+        "narHash": "sha256-mK3jS1LYjk3+b0wMDV76JkLpoma3O0KTv6utrAek9WE=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "4e1bed268d704dda5d0f865e794ee2e94252ba2f",
+        "rev": "deffc46f9047f538ff7b4f6736bbe918e9f02ff4",
         "type": "github"
       },
       "original": {
@@ -353,11 +353,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1777499052,
-        "narHash": "sha256-rY2SMqiKC7cqwTN0ZZvl+m6dgtEqUOcXUqsZh9PlLKM=",
+        "lastModified": 1777510602,
+        "narHash": "sha256-YKfi/cu+OpIUILj/3F8+RhPw2QjiBFpJk6deeDPx3Ok=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "a20b082977f6f456908a29239ecd73eb1a863768",
+        "rev": "07f492cce7c0f2e216316307ea50c232a9abf368",
         "type": "github"
       },
       "original": {
