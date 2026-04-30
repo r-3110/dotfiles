@@ -16,6 +16,7 @@ pipx = "latest"
 flutter = "latest"
 "npm:context-mode" = "latest"
 "pipx:graphifyy" = "latest"
+"pipx:markitdown-mcp" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
