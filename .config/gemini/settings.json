@@ -10,7 +10,8 @@
   "experimental": {
     "worktrees": true,
     "generalistProfile": true,
-    "contextManagement": true
+    "contextManagement": true,
+    "enableAgents": true
   },
   "mcpServers": {
     "github": {
