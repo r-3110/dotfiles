@@ -76,6 +76,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "git remote prune origin",
     },
     {
+      name: "ghq jump",
+      keyword: "gcd",
+      snippet: "cd `ghq list --full-path | roots | fzf`",
+    },
+    {
       name: "cd gitroot",
       keyword: "cdg",
       snippet: "cd-gitroot",
