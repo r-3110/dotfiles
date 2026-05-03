@@ -9,7 +9,24 @@ return {
 		"stevearc/conform.nvim",
 		---@module "conform"
 		---@type conform.setupOpts
-		opts = {},
+		opts = {
+			-- Map of filetype to formatters
+			formatters_by_ft = {
+				lua = { "stylua" },
+				typescript = { "oxfmt" },
+				typescriptreact = { "oxfmt" },
+				javascript = { "oxfmt" },
+				javascriptreact = { "oxfmt" },
+				python = { "ruff" },
+				nix = { "nixfmt" },
+				json = { "oxfmt" },
+				yaml = { "oxfmt" },
+				markdown = { "oxfmt" },
+			},
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+		},
 	},
 	{
 		"mfussenegger/nvim-lint",
