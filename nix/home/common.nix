@@ -33,6 +33,7 @@
     git
     git-open
     gitui
+    mergiraf
     worktrunk
     jq
     lazydocker
@@ -173,8 +174,6 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/wezterm/.wezterm.lua";
     ".tmux.conf".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.tmux.conf";
-    ".gitconfig".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.gitconfig";
     ".zsh_functions".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/zsh/.zsh_functions";
     ".skk".source = pkgs.symlinkJoin {
@@ -214,6 +213,12 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/nvim/lua";
     "nvim/snippet".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/nvim/snippet";
+
+    "git/config".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/git/.gitconfig";
+
+    "git/attributes".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/git/.gitattributes";
 
     "wezterm".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/wezterm";

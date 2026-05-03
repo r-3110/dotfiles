@@ -25,14 +25,15 @@
 	tool = vimdiff
 	prompt = false
   colorMoved = default
-[include]
-  path = ~/.gitconfig.global
 [push]
   autoSetupRemote = true
 [interactive]
   diffFilter = delta --color-only
 [merge]
   conflictstyle = diff3
+[merge "mergiraf"]
+  name = mergiraf
+  driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [pull]
 	ff = only
 [gpg]
