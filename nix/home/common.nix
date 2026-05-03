@@ -50,12 +50,14 @@
     zoxide
     jujutsu
     ov
+    treemd
     zsh
     posting
     nixfmt
     nixfmt-tree
     nix-output-monitor
     nixd
+    nix-search-tv
     tree-sitter
     llm-agents.copilot-cli
     llm-agents.gemini-cli
@@ -66,6 +68,19 @@
   ];
 
   programs.home-manager.enable = true;
+
+  programs.nix-search-tv = {
+    enable = true;
+
+    settings = {
+      experimental = {
+        render_docs_indexes = {
+          home-manager-docs = "https://nix-community.github.io/home-manager/options.xhtml";
+          nix-darwin-docs = "https://nix-darwin.github.io/nix-darwin/manual/index.html";
+        };
+      };
+    };
+  };
 
   programs.ssh = {
     enable = true;
