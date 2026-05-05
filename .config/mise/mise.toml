@@ -18,6 +18,7 @@ flutter = "latest"
 "pipx:graphifyy" = "latest"
 "pipx:markitdown-mcp" = "latest"
 "aqua:k1LoW/roots" = "latest"
+fnox = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

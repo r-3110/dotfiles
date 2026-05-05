@@ -1,0 +1,9 @@
+[providers]
+my-ps = { type = "aws-ps", region = "ap-northeast-1", prefix = "/dotfiles/" }
+
+[secrets]
+SSH_PRIVATE_KEY = { provider = "my-ps", value = "ssh/private-key" }
+SSH_PUBLIC_KEY = { provider = "my-ps", value = "ssh/public-key" }
+GITCONFIG_PERSONAL_LINUX = { provider = "my-ps", value = "personal/linux/gitconfig" }
+GITCONFIG_PERSONAL_MACOS = { provider = "my-ps", value = "personal/macos/gitconfig" }
+GITCONFIG_WORK_MACOS = { provider = "my-ps", value = "work/macos/gitconfig" }

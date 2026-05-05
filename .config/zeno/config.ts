@@ -34,6 +34,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "tmux new-session -A -s claude claude",
     },
     {
+      name: "list dotfiles secrets",
+      keyword: "dfs",
+      snippet: `fnox tui --config ~/dotfiles/.config/fnox/fnox.toml`,
+    },
+    {
       name: "open file with nvim",
       keyword: "NV",
       snippet: 'nvim "$(fzf)"',
