@@ -52,6 +52,17 @@
     context-mode = {
       command = "context-mode";
     };
+    dbhub = {
+      command = "npx";
+      args = [
+        "@bytebase/dbhub@latest"
+        "--config"
+        "~/dotfiles/.config/dbhub/dbhub.toml"
+        "--transport"
+        "stdio"
+      ];
+    };
+
   };
 
   # each program consumes shared servers via enablemcpintegration

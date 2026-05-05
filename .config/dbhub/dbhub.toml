@@ -1,0 +1,49 @@
+# https://dbhub.ai/config/toml
+
+[[sources]]
+id = "remote_postgres"
+dsn = "postgres://${REMOTE_PG_USER}:${REMOTE_PG_PASSWORD}@:${REMOTE_PG_HOST}:${REMOTE_PG_PORT}/${REMOTE_PG_DB}"
+lazy = true
+connection_timeout = 60
+query_timeout = 30
+
+# Production SSH tunnel through bastion
+# ssh_host = "bastion.prod.example.com"
+# ssh_user = "deploy"
+# ssh_key = "~/.ssh/prod_key"
+
+[[sources]]
+id = "local_postgres"
+dsn = "postgres://postgres:postgres@localhost:5432/${LOCAL_PG_DB}"
+lazy = true
+
+# Production tool - read-only with row limits
+[[tools]]
+name = "execute_sql"
+source = "remote_postgres"
+readonly = true
+max_rows = 1000
+
+# Local tool - full access, unlimited rows
+[[tools]]
+name = "execute_sql"
+source = "local_postgres"
+readonly = false
+
+# Custom tool - search employees with parameters
+# [[tools]]
+# name = "search_employees"
+# description = "Search employees by name with configurable result limit"
+# source = "production"
+# statement = "SELECT emp_no, first_name, last_name FROM employee WHERE first_name ILIKE '%' || $1 || '%' LIMIT $2"
+#
+# [[tools.parameters]]
+# name = "search_term"
+# type = "string"
+# description = "Name to search for (case-insensitive partial match)"
+#
+# [[tools.parameters]]
+# name = "limit"
+# type = "integer"
+# description = "Maximum number of results"
+# default = 10

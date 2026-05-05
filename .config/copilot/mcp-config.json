@@ -30,6 +30,17 @@
       "type": "local",
       "command": "context-mode",
       "args": []
+    },
+    "dbhub": {
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "@bytebase/dbhub@latest",
+        "--config",
+        "~/dotfiles/.config/dbhub/dbhub.toml",
+        "--transport",
+        "stdio"
+      ]
     }
   }
 }
