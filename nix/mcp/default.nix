@@ -9,7 +9,7 @@ let
   baseConfig = {
     programs = {
       context7.enable = true;
-      nixos.enable = true;
+      # nixos.enable = true;
     };
 
     settings.servers = {
