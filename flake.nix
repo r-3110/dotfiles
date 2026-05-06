@@ -15,7 +15,6 @@
     };
     mcp = {
       url = "path:./nix/mcp";
-      inputs.llm-agents.follows = "llm-agents";
     };
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -43,26 +42,13 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [
-              llm-agents.overlays.default
-
-              (final: prev: {
-                python3Packages = prev.python3Packages // {
-                  # fastmcpのテストが遅いため、テスト除外
-                  fastmcp = prev.python3Packages.fastmcp.overridePythonAttrs (old: {
-                    doCheck = false;
-                  });
-                };
-
-                direnv = prev.direnv.overrideAttrs (_: {
-                  doCheck = false;
-                });
-              })
-            ];
           };
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = {
+            inherit llm-agents;
+          };
           modules = [
             ./nix/home/common.nix
             {
