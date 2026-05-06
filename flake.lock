@@ -288,11 +288,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1778025975,
-        "narHash": "sha256-CIM/R/4Fw2uNq/3t7dO0STrATna3LN5+I2pXwPii8rc=",
+        "lastModified": 1778041009,
+        "narHash": "sha256-RIUI3BPNfDH9a3TmCanMTuT9+ibkMpeQvZHn2JPDWLg=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "a2f63bf7e4025f1f9e360b6b433494a02db45516",
+        "rev": "9ca2b128f5a2d5288d1afe4a99356a0ecc264333",
         "type": "github"
       },
       "original": {
@@ -385,11 +385,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1777555748,
-        "narHash": "sha256-RvKwvF868YY6HCfVC3K1kVrlUOnn4ynWxAi5PujhFXo=",
+        "lastModified": 1778041263,
+        "narHash": "sha256-m8nwc+cGQeyFSaOuc6+wiupieX8MIBaT8fFcpXri0n0=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "39253ce656ff86527a060148c40901bbbde6a4c2",
+        "rev": "b6cd205b7ed52ba1b3cee4b1c6ad8d86ba0c09b5",
         "type": "github"
       },
       "original": {
