@@ -2,6 +2,8 @@
   description = "Agent Skills";
 
   inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     agent-skills.url = "github:Kyure-A/agent-skills-nix";
     vercel-skills = {
       url = "github:vercel-labs/skills";

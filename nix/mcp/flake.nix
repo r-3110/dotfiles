@@ -2,6 +2,7 @@
   description = "mcp";
 
   inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     mcp-servers.url = "github:natsukium/mcp-servers-nix";
   };
 

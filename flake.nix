@@ -12,9 +12,11 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
     skills = {
       url = "path:./nix/skills";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     mcp = {
       url = "path:./nix/mcp";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -46,14 +48,17 @@
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = {
-            inherit llm-agents;
-          };
           modules = [
             ./nix/home/common.nix
             {
               home.username = username;
               home.homeDirectory = homeDirectory;
+              home.packages = [
+                llm-agents.packages.${system}.copilot-cli
+                llm-agents.packages.${system}.gemini-cli
+                llm-agents.packages.${system}.claude-code
+                llm-agents.packages.${system}.opencode
+              ];
             }
           ]
           ++ extraModules;

@@ -2,77 +2,69 @@
   config,
   lib,
   pkgs,
-  llm-agents,
   ...
 }:
 
 {
   home.stateVersion = "26.05";
 
-  home.packages =
-    (with pkgs; [
-      # Programming Languages
-      bun
-      go
-      jdk
-      lua5_4
-      maven
-      ruby_3_4
-      rustc
-      cargo
+  home.packages = with pkgs; [
+    # Programming Languages
+    bun
+    go
+    jdk
+    lua5_4
+    maven
+    ruby_3_4
+    rustc
+    cargo
 
-      # CLI Tools
-      luajitPackages.luarocks
-      luajitPackages.luacheck
-      gnumake
-      awscli2
-      bat
-      delta
-      eza
-      fd
-      fzf
-      ghq
-      git
-      git-open
-      gitui
-      mergiraf
-      worktrunk
-      jq
-      lazydocker
-      lazygit
-      neovim
-      pulumi-bin
-      ripgrep
-      sheldon
-      oh-my-posh
-      tmux
-      uv
-      yazi
-      yq-go
-      zellij
-      zoxide
-      jujutsu
-      ov
-      treemd
-      zsh
-      posting
-      nixfmt
-      nixfmt-tree
-      nix-output-monitor
-      nixd
-      nix-search-tv
-      tree-sitter
-      rtk
+    # CLI Tools
+    luajitPackages.luarocks
+    luajitPackages.luacheck
+    gnumake
+    awscli2
+    bat
+    delta
+    eza
+    fd
+    fzf
+    ghq
+    git
+    git-open
+    gitui
+    mergiraf
+    worktrunk
+    jq
+    lazydocker
+    lazygit
+    neovim
+    pulumi-bin
+    ripgrep
+    sheldon
+    oh-my-posh
+    tmux
+    uv
+    yazi
+    yq-go
+    zellij
+    zoxide
+    jujutsu
+    ov
+    treemd
+    zsh
+    posting
+    nixfmt
+    nixfmt-tree
+    nix-output-monitor
+    nixd
+    nix-search-tv
+    tree-sitter
+    rtk
 
-      # Font
-      hackgen-nf-font
-    ])
-    ++ [
-      llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.copilot-cli
-      llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.gemini-cli
-      llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.claude-code
-      llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.opencode
-    ];
+    # Font
+    hackgen-nf-font
+  ];
 
   programs.home-manager.enable = true;
 
