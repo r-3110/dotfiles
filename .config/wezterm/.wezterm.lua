@@ -36,6 +36,10 @@ config.font = wezterm.font_with_fallback({
 
 -- and finally, return the configuration to wezterm
 config.macos_window_background_blur = 20
+
+---@diagnostic disable-next-line: assign-type-mismatch
+config.macos_forward_to_ime_modifier_mask = "SHIFT|CTRL"
+
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 
