@@ -46,5 +46,6 @@
     act
     aws-sso-cli
     pngpaste
+    markitdown-mcp
   ];
 }
