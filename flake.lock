@@ -172,11 +172,11 @@
     "difit": {
       "flake": false,
       "locked": {
-        "lastModified": 1778411544,
-        "narHash": "sha256-4eOAyHIvDpgg5iKZwivmDb6ooH7bZyvnaLTqwaJT8N8=",
+        "lastModified": 1778430214,
+        "narHash": "sha256-1NmzsqbT4mTIC7W8C7filSLWLtQdAlsoJt7gRnxVMkI=",
         "owner": "yoshiko-pg",
         "repo": "difit",
-        "rev": "8c74c1101284eaa67ad5574112c7193bdc7d94c1",
+        "rev": "b1602a8d47c9fce1daad5dd5e54d7ac2887d2a64",
         "type": "github"
       },
       "original": {
@@ -388,11 +388,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1778403764,
-        "narHash": "sha256-gd36mORa0YWx8Jh3DvRwnjnt3enU3ytipm7b8lyWtYk=",
+        "lastModified": 1778422450,
+        "narHash": "sha256-n7VUuHNKE7PWDSOOOuTFqpZApTpS7nF3UzqG+bGViyo=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "e11a63194445100c4de8343224240a4ab28ef69b",
+        "rev": "f0102ee8ea5288dc264ab1d583d736a57eb62014",
         "type": "github"
       },
       "original": {
@@ -404,11 +404,11 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1778415747,
-        "narHash": "sha256-1xocq5UFljHGCWSDq8SB6btPru1b8UkrHjr9jM01u1U=",
+        "lastModified": 1778423808,
+        "narHash": "sha256-YXjtvyYv+UdHAPiR08HcuDun9dwaoiMTeRjRqreMn2s=",
         "owner": "mizchi",
         "repo": "skills",
-        "rev": "1e40906d470624f60cfbff7895ba5c7e68893a00",
+        "rev": "548f9b7a1ffe83cff467a7836c3fd391c50fc431",
         "type": "github"
       },
       "original": {
