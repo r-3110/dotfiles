@@ -73,6 +73,12 @@ let
     }
   );
 
+  # codexConfig = mcp.mkConfig pkgs (
+  #   pkgs.lib.recursiveUpdate baseConfig {
+  #     flavor = "codex";
+  #   }
+  # );
+
 in
 {
   imports = [

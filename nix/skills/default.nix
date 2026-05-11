@@ -62,7 +62,7 @@
     ];
     skills.enableAll = [ "personal" ];
     targets = {
-      # geminiは~/.agentsをサポート
+      # geminiとcodexは~/.agentsをサポート
       agents = {
         dest = ".agents/skills";
         structure = "copy-tree";
