@@ -288,11 +288,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1778221427,
-        "narHash": "sha256-a4lS1f6/M2R2AlvE9zTlPvw0s7zewMJMypDTz1AWc7c=",
+        "lastModified": 1778456144,
+        "narHash": "sha256-arO6DAY/b77XvWHcIwXXootpe5Vp8jx00nFgC4w5T3E=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "65b20ad912305cb9ac6e3cf2b0e65ea35db2d1f7",
+        "rev": "12d7da51ae6c65f5a9f9803edc68738cfa4348a9",
         "type": "github"
       },
       "original": {
