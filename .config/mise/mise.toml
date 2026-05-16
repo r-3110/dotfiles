@@ -6,7 +6,6 @@ pipx = "latest"
 "aqua:k1LoW/runn" = "latest"
 "npm:editprompt" = "latest"
 "npm:mdjanai" = "latest"
-"npm:@aws-amplify/cli" = "latest"
 "npm:difit" = "latest"
 "cargo:octorus" = "latest"
 "cargo:atusy/kakehashi" = "latest"
@@ -19,7 +18,6 @@ flutter = "latest"
 "aqua:k1LoW/roots" = "latest"
 fnox = "latest"
 "go:github.com/myuron/lazycwl" = "latest"
-"pipx:markitdown-mcp" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
