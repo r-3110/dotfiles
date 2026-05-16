@@ -13,8 +13,8 @@
     "enabled": true,
     "automerge": true,
     "rebaseWhen": "behind-base-branch",
-    "description": "Run on every minute",
-    "schedule": ["* * * * *"]
+    "description": "Run daily at 8am",
+    "schedule": ["* 8 * * *"]
   },
   "ignoreDeps": ["nixpkgs"],
   "packageRules": [
