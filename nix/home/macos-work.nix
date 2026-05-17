@@ -20,7 +20,7 @@
     docker-compose
     docker-buildx
     dbeaver-bin
-    vscode
+    zed-editor
 
     flutter
     libyaml
