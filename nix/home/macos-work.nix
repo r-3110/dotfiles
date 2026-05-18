@@ -48,4 +48,6 @@
     pngpaste
     # markitdown-mcp
   ];
+
+  programs.nix-index-database.comma.enable = true;
 }
