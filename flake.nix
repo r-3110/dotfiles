@@ -61,8 +61,8 @@
               home.packages = [
                 llm-agents.packages.${system}.copilot-cli
                 llm-agents.packages.${system}.gemini-cli
+                llm-agents.packages.${system}.antigravity
                 llm-agents.packages.${system}.claude-code
-                llm-agents.packages.${system}.codex
                 llm-agents.packages.${system}.opencode
               ];
             }
