@@ -72,6 +72,10 @@
         dest = ".claude/skills";
         structure = "copy-tree";
       };
+      antigravity = {
+        dest = ".gemini/antigravity-cli/skills";
+        structure = "copy-tree";
+      };
     };
   };
 }
