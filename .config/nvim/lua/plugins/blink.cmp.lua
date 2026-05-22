@@ -1,12 +1,11 @@
 --@see https://cmp.saghen.dev/
---@see https://github.com/Kaiser-Yang/blink-cmp-avante
 
+---@module "lazy"
 ---@type LazyPluginSpec
 return {
 	"saghen/blink.cmp",
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
-		"Kaiser-Yang/blink-cmp-avante",
 		"alexandre-abrioux/blink-cmp-npm.nvim",
 		"junkblocker/blink-cmp-wezterm",
 		"moyiz/blink-emoji.nvim",
@@ -28,16 +27,11 @@ return {
 	---@type blink.cmp.Config
 	opts = {
 		sources = {
-			-- Add 'avante' to the list
-			default = { "avante", "npm", "wezterm", "lazydev", "emoji", "lsp", "path", "buffer" },
+			default = { "npm", "wezterm", "lazydev", "emoji", "lsp", "path", "buffer" },
+			per_filetype = {
+				codecompanion = { "codecompanion" },
+			},
 			providers = {
-				avante = {
-					module = "blink-cmp-avante",
-					name = "Avante",
-					opts = {
-						-- options for blink-cmp-avante
-					},
-				},
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",

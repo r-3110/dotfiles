@@ -1,5 +1,6 @@
 --@see https://github.com/jaswdr/nvim-auto-save
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
 	{

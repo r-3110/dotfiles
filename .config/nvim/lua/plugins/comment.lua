@@ -1,6 +1,7 @@
 -- @see https://github.com/numToStr/Comment.nvim
 -- @see https://github.com/folke/ts-comments.nvim
 
+---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
 	{
