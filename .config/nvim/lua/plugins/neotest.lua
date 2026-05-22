@@ -1,7 +1,9 @@
 -- @see https://github.com/nvim-neotest/neotest
 -- @see https://github.com/marilari88/neotest-vitest
 -- @see https://github.com/nvim-neotest/neotest-python
+-- @see https://github.com/fredrikaverpil/neotest-golang
 
+---@module "lazy"
 ---@type LazyPluginSpec
 return {
 	"nvim-neotest/neotest",
@@ -12,9 +14,19 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"marilari88/neotest-vitest",
 		"nvim-neotest/neotest-python",
+		"fredrikaverpil/neotest-golang",
 	},
 	lazy = true,
 	event = "BufReadPre",
+	keys = {
+		{
+			"<leader>ts",
+			function()
+				vim.cmd("Neotest summary")
+			end,
+			desc = "Toggle test summary",
+		},
+	},
 	config = function()
 		---@module "neotest"
 		---@type neotest.Config
@@ -25,6 +37,8 @@ return {
 				require("neotest-vitest"),
 				---@module "neotest-python"
 				require("neotest-python"),
+				---@module "neotest-golang"
+				require("neotest-golang"),
 			},
 		})
 	end,

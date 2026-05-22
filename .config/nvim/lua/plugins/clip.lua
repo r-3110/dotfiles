@@ -16,7 +16,9 @@ return {
 		keys = {
 			{
 				"<leader>lc",
-				":LazyClip<CR>",
+				function()
+					vim.cmd("LazyClip")
+				end,
 				desc = "Open Clipboard Manager",
 			},
 		},
@@ -26,6 +28,15 @@ return {
 	{
 		"h3pei/copy-file-path.nvim",
 		event = "BufRead",
+		keys = {
+			{
+				"<leader>cfp",
+				function()
+					vim.cmd("CopyRelativeFilePath")
+				end,
+				desc = "Copy relative file path to the clipboard",
+			},
+		},
 	},
 	{
 		"HakonHarnes/img-clip.nvim",

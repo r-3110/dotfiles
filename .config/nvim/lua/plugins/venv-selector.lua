@@ -9,6 +9,17 @@ return {
 		{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	},
 	ft = { "python" },
+	keys = {
+		{
+			"<Leader>ve",
+			function()
+				vim.cmd("VenvSelect")
+			end,
+			desc = "Open VenvSelect",
+			noremap = true,
+			silent = true,
+		},
+	},
 	---@module "venv-selector"
 	---@type venv-selector.Options
 	opts = {

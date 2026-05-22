@@ -43,27 +43,5 @@ vim.keymap.set("v", "g<C-x>", function()
 	require("dial.map").manipulate("decrement", "gvisual")
 end)
 
--- tataku-translate keymaps
-vim.keymap.set(
-	"n",
-	"<leader>tt",
-	":call tataku#call_recipe('translate')<CR>",
-	{ desc = "en => ja", noremap = true, silent = true }
-)
-
 -- skkeleton keymaps
 vim.keymap.set({ "i", "c" }, [[<C-j>]], [[<Plug>(skkeleton-enable)]], { noremap = false })
-
--- venv-selector keymaps
-vim.keymap.set("n", "<Leader>ve", ":VenvSelect<CR>", { desc = "Open VenvSelect", noremap = true, silent = true })
-
--- vim-doge keymaps
-vim.keymap.set("n", "<Leader>dog", ":DogeGenerate<CR>")
-
--- Interactive mode comment todo-jumping
--- vim.keymap.set("n", "<TAB>", "<Plug>(doge-comment-jump-forward)")
--- vim.keymap.set("n", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
--- vim.keymap.set("i", "<TAB>", "<Plug>(doge-comment-jump-forward)")
--- vim.keymap.set("i", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
--- vim.keymap.set("x", "<TAB>", "<Plug>(doge-comment-jump-forward)")
--- vim.keymap.set("x", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")

@@ -21,6 +21,17 @@ return {
 		},
 		event = "VeryLazy",
 		lazy = true,
+		keys = {
+			{
+				"<leader>tt",
+				function()
+					vim.fn["tataku#call_recipe"]("translate")
+				end,
+				desc = "en => ja",
+				noremap = true,
+				silent = true,
+			},
+		},
 		config = function()
 			vim.g.tataku_recipes = {
 				-- 翻訳 en => ja
