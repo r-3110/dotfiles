@@ -14,7 +14,7 @@
     "automerge": true,
     "rebaseWhen": "behind-base-branch",
     "description": "Run daily at 8am",
-    "schedule": ["* 8 * * *"]
+    "schedule": ["before 8am"]
   },
   "ignoreDeps": ["nixpkgs"],
   "packageRules": [
