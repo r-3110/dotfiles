@@ -73,11 +73,12 @@ let
     }
   );
 
-  # codexConfig = mcp.mkConfig pkgs (
-  #   pkgs.lib.recursiveUpdate baseConfig {
-  #     flavor = "codex";
-  #   }
-  # );
+  codexConfig = mcp.mkConfig pkgs (
+    pkgs.lib.recursiveUpdate baseConfig {
+      flavor = "codex";
+      format = "toml";
+    }
+  );
 
 in
 {
@@ -95,4 +96,8 @@ in
   home.activation.claude = ''
     cp -f ${claudeConfig} $HOME/.claude.json
   '';
+
+  home.file = {
+    ".codex/config.toml".source = builtins.toPath codexConfig;
+  };
 }
