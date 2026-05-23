@@ -32,6 +32,14 @@ return {
 			{
 				"nvim-telescope/telescope-frecency.nvim",
 			},
+			{
+				"fdschmidt93/telescope-egrepify.nvim",
+				dependencies = { "nvim-lua/plenary.nvim" },
+			},
+			{
+				"nvim-telescope/telescope-file-browser.nvim",
+				dependencies = { "nvim-lua/plenary.nvim" },
+			},
 		},
 		keys = {
 			-- add a keymap to browse plugin files
@@ -137,13 +145,54 @@ return {
 		config = function()
 			---@module "telescope"
 			local telescope = require("telescope")
+			---@module "telescope.actions.state"
+			local action_state = require("telescope.actions.state")
 			---@module "telescope-live-grep-args.actions"
 			local lga_actions = require("telescope-live-grep-args.actions")
 
+			---@class SmartQuoteOpts
+			---@field postfix? string オプションとして追加する文字列 (例: " --iglob ")
+
+			---クォート済みか判定し、適切に postfix を追加する高階関数
+			---@param opts? SmartQuoteOpts オプション設定
+			---@return fun(prompt_bufnr: integer): nil Telescopeのマッピング用関数
+			local smart_quote_prompt = function(opts)
+				opts = opts or {}
+				local postfix = opts.postfix or ""
+				local postfix_trimmed = vim.trim(postfix)
+
+				-- telescope のマッピングが実行する実際の関数を返す
+				return function(prompt_bufnr)
+					local current_picker = action_state.get_current_picker(prompt_bufnr)
+					local prompt = current_picker:_get_prompt()
+					local trimmed_prompt = vim.trim(prompt)
+					local is_quoted_head = trimmed_prompt:match('^"[^"]*"') ~= nil
+
+					local append_postfix = function(base)
+						if postfix_trimmed == "" then
+							return base
+						end
+						if base:find(postfix_trimmed, 1, true) then
+							return base
+						end
+						return base .. " " .. postfix_trimmed
+					end
+
+					-- 先頭の検索語がダブルクォート済みなら、クォートを重ねずにオプションだけ追加
+					if is_quoted_head then
+						local new_prompt = append_postfix(trimmed_prompt)
+						current_picker:set_prompt(new_prompt)
+					else
+						-- クォートされていない場合は、通常の元の挙動（クォートしてpostfix追加）
+						lga_actions.quote_prompt(opts)(prompt_bufnr)
+					end
+				end
+			end
+
 			telescope.setup({
 				defaults = {
-					layout_strategy = "horizontal",
-					layout_config = { prompt_position = "bottom" },
+					layout_strategy = "vertical",
+					layout_config = { prompt_position = "bottom", vertical = { width = 0.9 }, preview_cutoff = 0 },
 					sorting_strategy = "descending",
 					path_display = {
 						filename_first = {
@@ -168,9 +217,9 @@ return {
 						mappings = { -- extend mappings
 							i = {
 								["<C-k>"] = lga_actions.quote_prompt(),
-								["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
-								["<C-g>"] = lga_actions.quote_prompt({ postfix = " --no-ignore" }),
-								["<C-a>"] = lga_actions.quote_prompt({ postfix = " --hidden" }),
+								["<C-i>"] = smart_quote_prompt({ postfix = " --iglob " }),
+								["<C-g>"] = smart_quote_prompt({ postfix = " --no-ignore" }),
+								["<C-a>"] = smart_quote_prompt({ postfix = " --hidden" }),
 								-- freeze the current list and start a fuzzy search in the frozen list
 								["<C-space>"] = lga_actions.to_fuzzy_refine,
 							},
@@ -195,6 +244,10 @@ return {
 					fzf = {
 						fuzzy = true,
 					},
+					---@module "telescope._extensions.egrepify"
+					egrepify = {
+						permutations = true,
+					},
 				},
 			})
 
@@ -210,6 +263,8 @@ return {
 			telescope.load_extension("frecency")
 			telescope.load_extension("kensaku")
 			telescope.load_extension("frecency")
+			telescope.load_extension("egrepify")
+			telescope.load_extension("file_browser")
 		end,
 	},
 }
