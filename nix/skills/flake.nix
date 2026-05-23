@@ -33,6 +33,10 @@
       url = "github:yoshiko-pg/difit";
       flake = false;
     };
+    my-skills = {
+      url = "path:.";
+      flake = false;
+    };
   };
 
   outputs =
@@ -52,6 +56,7 @@
               gh-stack
               mizchi
               difit
+              my-skills
               ;
           }
         );

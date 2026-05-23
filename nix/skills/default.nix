@@ -8,6 +8,7 @@
   gh-stack,
   mizchi,
   difit,
+  my-skills,
   ...
 }:
 {
@@ -48,6 +49,9 @@
         path = difit;
         subdir = "skills";
       };
+      my-skills = {
+        path = my-skills;
+      };
     };
     skills.enable = [
       "find-skills"
@@ -59,6 +63,12 @@
       "empirical-prompt-tuning"
       "difit-review"
       "difit"
+      "drawio"
+      "draw-io-diagram-generator"
+      "sql-optimization"
+      "suggest-awesome-github-copilot-instructions"
+      "suggest-awesome-github-copilot-skills"
+      "suggest-awesome-github-copilot-agents"
     ];
     skills.enableAll = [ "personal" ];
     targets = {

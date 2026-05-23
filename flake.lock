@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1777875835,
-        "narHash": "sha256-+ghBYIh477YxDPd0sKeD4AwnKJSOXKT0nHuAAGHL1cQ=",
+        "lastModified": 1779439121,
+        "narHash": "sha256-GAjLtdB7+eqtrP+3u5jSSHoKvjLRvBzyCevBOLkA12k=",
         "owner": "Kyure-A",
         "repo": "agent-skills-nix",
-        "rev": "c6cb03f84cda0dc3f5daa05bf4d49f56c182f690",
+        "rev": "53b899d6f8377a22f2394d150cc227775980fd09",
         "type": "github"
       },
       "original": {
@@ -171,11 +171,11 @@
     "difit": {
       "flake": false,
       "locked": {
-        "lastModified": 1778944772,
-        "narHash": "sha256-IV7SuTTLfZkS/pEpXOCMYwPLDNHdQJ71jJjYYjD1c6I=",
+        "lastModified": 1779297248,
+        "narHash": "sha256-nqQuy14KJxB25TQU4Be2C7dwd0C98UNhwABOYFrFx3Y=",
         "owner": "yoshiko-pg",
         "repo": "difit",
-        "rev": "e726bccef72d070a8cecf3d37923548a1fbe4149",
+        "rev": "14581fe9ff522dcf9ad22e10617e55bc0e0a851b",
         "type": "github"
       },
       "original": {
@@ -245,11 +245,11 @@
     "gh-stack": {
       "flake": false,
       "locked": {
-        "lastModified": 1778868064,
-        "narHash": "sha256-sC8QQ4H2WsEVf4FjaWlPvMlVlVc3J6IVmdlqNbJ3M6I=",
+        "lastModified": 1779467077,
+        "narHash": "sha256-J+Jy4dx68WOj/OWRnBwKMmTM1rlLUPJEJt8+CFpbFfM=",
         "owner": "github",
         "repo": "gh-stack",
-        "rev": "d3be1b577ecd52ae7f6b01e1da31c7a8d999c999",
+        "rev": "54aa630be994d94c136df685436be572e35dfa9a",
         "type": "github"
       },
       "original": {
@@ -287,11 +287,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1778826955,
-        "narHash": "sha256-7ALd8ukZbyvupnK6QL7rLxX9KU/Cvi2OsLgOWLomzyE=",
+        "lastModified": 1779411813,
+        "narHash": "sha256-Mmldu0JvQ2IPhdi7vaR9lrQCbnK7qUF7YkG9+whmyqY=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "4e4b34c48d3f50934a7a073aed0d05fd46e99b09",
+        "rev": "5b049e4e196c10aab8ddfd9e492323d08cf985b0",
         "type": "github"
       },
       "original": {
@@ -329,11 +329,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777852249,
-        "narHash": "sha256-XdbGWnFlX4McOEG5NioVsp35Ic6XL/rXnp8as71cu6o=",
+        "lastModified": 1779075347,
+        "narHash": "sha256-ZqttlFPw0meQMdABi8/vgle14OWQ3FkIqUkb4/Mrc+0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c909892de502b4de9e92838a503c09a9c8ebe4aa",
+        "rev": "08c9d01457badce151aa4a983c475042d9dec018",
         "type": "github"
       },
       "original": {
@@ -403,11 +403,11 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1778566519,
-        "narHash": "sha256-nkXEGr5AbY/Ig3UNhUhtSHEi7tHzF8eHrP8UBl99WEo=",
+        "lastModified": 1779204966,
+        "narHash": "sha256-Z25m9V1K6ufbaIZXUQ78FvaaJPT4Td+N7HwXFON13lA=",
         "owner": "mizchi",
         "repo": "skills",
-        "rev": "5d7db224283b87a37dae0e4c9ec50750254aed65",
+        "rev": "f74212c0e3c2e1cf420d27c6418af1a10f697f4b",
         "type": "github"
       },
       "original": {
@@ -415,6 +415,20 @@
         "repo": "skills",
         "type": "github"
       }
+    },
+    "my-skills": {
+      "flake": false,
+      "locked": {
+        "path": ".",
+        "type": "path"
+      },
+      "original": {
+        "path": ".",
+        "type": "path"
+      },
+      "parent": [
+        "skills"
+      ]
     },
     "nix": {
       "inputs": {
@@ -605,11 +619,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1777578337,
-        "narHash": "sha256-Ad49moKWeXtKBJNy2ebiTQUEgdLyvGmTeykAQ9xM+Z4=",
+        "lastModified": 1778869304,
+        "narHash": "sha256-30sZNZoA1cqF5JNO9fVX+wgiQYjB7HJqqJ4ztCDeBZE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "15f4ee454b1dce334612fa6843b3e05cf546efab",
+        "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
         "type": "github"
       },
       "original": {
@@ -640,6 +654,7 @@
         "gh-stack": "gh-stack",
         "github-awesome-copilot-skills": "github-awesome-copilot-skills",
         "mizchi": "mizchi",
+        "my-skills": "my-skills",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -711,11 +726,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1778774027,
-        "narHash": "sha256-Dzp0Gx+EcO7daxLTZ0QpMu4EEYdDWWEE8b5RF4Fv9QM=",
+        "lastModified": 1779416251,
+        "narHash": "sha256-cbgZqwho7AVY/0P6+quNLrCbrdc6SWf7wgPCbY7YYxM=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "c5ad3a85b4d16666974b161131413d08bfef3f7e",
+        "rev": "d23509536baf5adadd53f707cd8d6fd287dea581",
         "type": "github"
       },
       "original": {
