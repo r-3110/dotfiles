@@ -1,6 +1,7 @@
 -- @see https://github.com/atiladefreitas/lazyclip
 -- @see https://github.com/h3pei/copy-file-path.nvim
---@see https://github.com/HakonHarnes/img-clip.nvim
+-- @see https://github.com/cajames/copy-reference.nvim
+-- @see https://github.com/HakonHarnes/img-clip.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -37,6 +38,22 @@ return {
 				desc = "Copy relative file path to the clipboard",
 			},
 		},
+	},
+	{
+		"cajames/copy-reference.nvim",
+		event = "BufRead",
+		keys = {
+			{
+				"<leader>cfl",
+				function()
+					vim.cmd("CopyReference line")
+				end,
+				mode = { "n", "v" },
+				desc = "Copy file:line reference",
+			},
+		},
+		---@module "copy-reference"
+		opts = {}, -- optional configuration
 	},
 	{
 		"HakonHarnes/img-clip.nvim",
