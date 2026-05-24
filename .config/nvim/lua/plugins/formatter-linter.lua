@@ -13,15 +13,23 @@ return {
 			-- Map of filetype to formatters
 			formatters_by_ft = {
 				lua = { "stylua" },
-				typescript = { "oxfmt" },
-				typescriptreact = { "oxfmt" },
-				javascript = { "oxfmt" },
-				javascriptreact = { "oxfmt" },
+				typescript = { "prettier", "oxfmt", stop_after_first = true },
+				typescriptreact = { "prettier", "oxfmt", stop_after_first = true },
+				javascript = { "prettier", "oxfmt", stop_after_first = true },
+				javascriptreact = { "prettier", "oxfmt", stop_after_first = true },
 				python = { "ruff" },
 				nix = { "nixfmt" },
-				json = { "oxfmt" },
-				yaml = { "oxfmt" },
-				markdown = { "oxfmt" },
+				json = { "prettier", "oxfmt", stop_after_first = true },
+				yaml = { "prettier", "oxfmt", stop_after_first = true },
+				markdown = { "prettier", "oxfmt", stop_after_first = true },
+			},
+			formatters = {
+				prettier = {
+					require_cwd = true,
+				},
+				ruff = {
+					require_cwd = true,
+				},
 			},
 			default_format_opts = {
 				lsp_format = "fallback",
