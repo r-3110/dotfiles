@@ -98,6 +98,11 @@ return {
 
 							on_dir(root_pattern("tsconfig.json", "package.json")(fname))
 						end,
+						settings = {
+							vtsls = {
+								autoUseWorkspaceTsdk = true,
+							},
+						},
 						-- root_markers = { "tsconfig.json", "package.json" },
 					}
 
