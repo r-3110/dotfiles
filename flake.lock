@@ -245,11 +245,11 @@
     "gh-stack": {
       "flake": false,
       "locked": {
-        "lastModified": 1779467077,
-        "narHash": "sha256-J+Jy4dx68WOj/OWRnBwKMmTM1rlLUPJEJt8+CFpbFfM=",
+        "lastModified": 1779831579,
+        "narHash": "sha256-pOITDAVt+ZrsumCWWUS30SQDCO6FrQloFBYL+RX5BB8=",
         "owner": "github",
         "repo": "gh-stack",
-        "rev": "54aa630be994d94c136df685436be572e35dfa9a",
+        "rev": "bf2358bf126d63d51f4ad0443b761ad692237999",
         "type": "github"
       },
       "original": {
@@ -287,11 +287,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1779672893,
-        "narHash": "sha256-+cFRaAmHfsDOG1HzhFaUy/4wG4VcoOoH5rzGXU293Ck=",
+        "lastModified": 1779756302,
+        "narHash": "sha256-JOK6taWBqvPTQoZ3uSXIAVGVicL1syW+FZ1ldxPiPHA=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "a360749d762d7a86fd49d536651ebe0ca54b608a",
+        "rev": "f8c986079ede8a4caa788330ec7a97776a1b7d1d",
         "type": "github"
       },
       "original": {
@@ -403,11 +403,11 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1779204966,
-        "narHash": "sha256-Z25m9V1K6ufbaIZXUQ78FvaaJPT4Td+N7HwXFON13lA=",
+        "lastModified": 1779802704,
+        "narHash": "sha256-bh9eR4S1eXfT4QR86NKwq539sUzPresVkPTNr1bpZnE=",
         "owner": "mizchi",
         "repo": "skills",
-        "rev": "f74212c0e3c2e1cf420d27c6418af1a10f697f4b",
+        "rev": "69818f27ba2f16aba1abdc515168657ba54e0673",
         "type": "github"
       },
       "original": {

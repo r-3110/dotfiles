@@ -60,7 +60,7 @@
       "using-cmux"
       "cmux-team"
       "gh-stack"
-      "empirical-prompt-tuning"
+      "meta/empirical-prompt-tuning"
       "difit-review"
       "difit"
       "drawio"
