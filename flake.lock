@@ -287,11 +287,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1779844236,
-        "narHash": "sha256-nJYxNRlZIpAICoBwRKvZGETXSc2MW9On0h+x5eaH9dQ=",
+        "lastModified": 1779912582,
+        "narHash": "sha256-GKr5AVVR4aOCCg2BE5nvPP2mNsC2URB+zpXKqgTHJB8=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "2e7c43b1f5bdf3695a79e0f2fd92648bcf4a389f",
+        "rev": "d147bbb20cb9206d308e8e1020ce963713a0594d",
         "type": "github"
       },
       "original": {
@@ -726,11 +726,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1779577875,
-        "narHash": "sha256-+1t7o4bqH95o1mDLZm73BaS4N3ZZR00NSfG9cfhlCNk=",
+        "lastModified": 1779914463,
+        "narHash": "sha256-RdhVq2DTYsnxy4qpiR8raZ8fryj382K54uxCUnbr3PY=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "e4243fbf7d9398722024f62850ece90fa0d5c693",
+        "rev": "7ce3b3d383b1bf1778c1d9a01fde6a6af303ba7f",
         "type": "github"
       },
       "original": {
