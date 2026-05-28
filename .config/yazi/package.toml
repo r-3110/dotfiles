@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "GrzegorzKozub/mdcat"
-rev = "7b7380a"
-hash = "40c20e6c1085d1f45309b9f148bf4f6e"
-
-[[plugin.deps]]
 use = "ciarandg/cd-git-root"
 rev = "a0e0f4b"
 hash = "b84a85f3b513bd9c0a0ab93cc7c8e4c3"
@@ -22,6 +17,11 @@ hash = "82376c3381ae915fd799d40f4dd4c6cd"
 use = "ktunprasert/git-files"
 rev = "c7289ad"
 hash = "cdb1a69bed63211c75b72521bbab875d"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "7d616ad"
+hash = "d64feec9761392cbc250d199ab4b8a3a"
 
 [flavor]
 deps = []
