@@ -353,6 +353,37 @@ return {
 		lazy = true,
 		cmd = "Glance",
 	},
+	{
+		"r4ppz/lspeek.nvim",
+		keys = {
+			{
+				"gdd",
+				function()
+					---@module "lspeek"
+					require("lspeek").peek_definition()
+				end,
+				desc = "Peek Definition (lspeek)",
+			},
+		},
+		---@type lspeek.Config
+		opts = {
+			window = {
+				width = 70,
+				height = 15,
+				border = "single",
+			},
+			-- Limits the number of stack preview windows.
+			stack_limit = 7,
+			-- Preview window is read-only.
+			-- To edit the file, open it in a split or a new buffer
+			keymaps = {
+				close = "q",
+				split = "s",
+				vsplit = "v",
+				enter = "<CR>",
+			},
+		},
+	},
 	-- {
 	--
 	-- 	"pmizio/typescript-tools.nvim",
