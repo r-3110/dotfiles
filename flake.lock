@@ -245,11 +245,11 @@
     "gh-stack": {
       "flake": false,
       "locked": {
-        "lastModified": 1779831579,
-        "narHash": "sha256-pOITDAVt+ZrsumCWWUS30SQDCO6FrQloFBYL+RX5BB8=",
+        "lastModified": 1780071920,
+        "narHash": "sha256-NyBA7TFsJeV+0NfPSIX7i4nowrJ6JgbsOX8FATIiEzU=",
         "owner": "github",
         "repo": "gh-stack",
-        "rev": "bf2358bf126d63d51f4ad0443b761ad692237999",
+        "rev": "5ed5693ed6fcfa34228312abb09553e2580b6670",
         "type": "github"
       },
       "original": {
@@ -403,11 +403,11 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1780065309,
-        "narHash": "sha256-lxSGCqF+6PXZSX14sS8Q8hUqcbt9RFL5fExG9BWU/to=",
+        "lastModified": 1780073399,
+        "narHash": "sha256-EbrNaTfP++pdDutmuG+iLaknZxoEjSia5Od4dNXcOdg=",
         "owner": "mizchi",
         "repo": "skills",
-        "rev": "769c7fd4c814559f84108183766499dab0577a4a",
+        "rev": "89c1b34018ba0d85a770c065ba22f83a8d004d34",
         "type": "github"
       },
       "original": {
