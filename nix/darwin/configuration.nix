@@ -49,7 +49,6 @@
       "k1LoW/tap"
     ];
     casks = [
-      "activitywatch"
       "aquaskk"
       "blackhole-16ch"
       "box-drive"
