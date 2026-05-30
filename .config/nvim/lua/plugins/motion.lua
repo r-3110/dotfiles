@@ -7,19 +7,38 @@
 ---@type LazyPluginSpec[]
 return {
 	{
+		"vim-denops/denops.vim",
+		lazy = false,
+	},
+	{
 		"nekowasabi/hellshake-yano.vim",
-		event = "VeryLazy",
-		lazy = true,
+		dependencies = { "vim-denops/denops.vim" },
 		init = function()
 			vim.g.hellshake_yano = {
+				enabled = true,
+				debugMode = false,
 				useJapanese = true,
-				useTinySegmenter = true,
+				defaultMinWordLength = 2,
+				maxHints = 400,
+				japaneseMergeThreshold = 3,
+				useTinySegmenter = false,
+				segmenterThreshold = 6,
+				enableHighlight = true,
+				minWordLength = 2,
+				useHintGroups = true,
+				motionTimeout = 4000,
+				cacheSize = 2000,
+				perKeyMotionCount = {
+					v = 1,
+					w = 2,
+					e = 2,
+					b = 2,
+				},
 				perKeyMinLength = {
 					v = 1,
-					w = 3,
-					e = 2,
+					w = 4,
+					e = 3,
 				},
-				enableHighlight = true,
 			}
 		end,
 	},
