@@ -10,6 +10,7 @@
 -- * override the configuration of LazyVim plugins
 return {
 	-- the opts function can also be used to change the default opts:
+	---@module "lazy"
 	---@type LazyPluginSpec
 	{
 		"nvim-lualine/lualine.nvim",
@@ -64,9 +65,15 @@ return {
             end
           end,
         },
-        "encoding",
         "fileformat",
-        "filetype",
+        {
+          "filetype",
+           icon_only = true,
+        },
+        {
+          "lsp_status",
+          show_name = false
+        },
         "copilot"
       }
 
