@@ -13,6 +13,7 @@
     skills = {
       url = "path:./nix/skills";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.agent-skills.inputs.home-manager.follows = "home-manager";
     };
     mcp = {
       url = "path:./nix/mcp";
@@ -61,7 +62,7 @@
               home.packages = [
                 llm-agents.packages.${system}.copilot-cli
                 llm-agents.packages.${system}.gemini-cli
-                llm-agents.packages.${system}.antigravity
+                llm-agents.packages.${system}.antigravity-cli
                 llm-agents.packages.${system}.claude-code
                 llm-agents.packages.${system}.opencode
               ];
