@@ -39,7 +39,6 @@
     lazydocker
     lazygit
     neovim
-    pulumi-bin
     ripgrep
     sheldon
     oh-my-posh
