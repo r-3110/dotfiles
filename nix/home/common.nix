@@ -97,6 +97,28 @@
     enable = true;
     enableCompletion = true;
 
+    profileExtra = ''
+      # Nix shell setup
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+      elif [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
+        . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+      fi
+
+      if command -v mise >/dev/null 2>&1; then
+        eval "$(mise activate zsh)"
+      fi
+
+      # keychainでSSHエージェントを管理
+      if command -v keychain >/dev/null 2>&1 && [ -f "$HOME/.ssh/id_ed25519" ]; then
+        eval "$(keychain --quiet --eval --agents ssh "$HOME/.ssh/id_ed25519")"
+      fi
+
+      if [ -f "$HOME/.zprofile.private" ]; then
+        . "$HOME/.zprofile.private"
+      fi
+    '';
+
     envExtra = ''
       export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -110,6 +132,8 @@
 
       # masonを優先に
       export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"
+
+      export PATH="$HOME/.cargo/bin:$PATH"
     '';
 
     shellAliases = {
@@ -118,15 +142,6 @@
     };
 
     initContent = ''
-      # Nix
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
-      # End Nix
-
-      # Home Manager session variables
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-
       # Enable bash compatibility for some plugins
       # nixによりcompinitは読み込まれる
       # autoload bashcompinit && bashcompinit
