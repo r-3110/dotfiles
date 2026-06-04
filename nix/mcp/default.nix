@@ -17,6 +17,8 @@ let
         enable = true;
         type = "http";
         url = "https://api.githubcopilot.com/mcp/";
+        # Codex uses bearer_token_env_var in ~/.codex/config.toml.
+        bearer_token_env_var = "GITHUB_MCP_PAT";
         headers = {
           Authorization = "Bearer \${GITHUB_MCP_PAT}";
         };

@@ -139,6 +139,9 @@
     shellAliases = {
       ls = "eza --color=always --long --git --icons=always";
       vim = "nvim";
+      cl = "fnox x -- claude";
+      co = "fnox x -- codex";
+      ant = "fnox x -- agy";
     };
 
     initContent = ''
@@ -270,5 +273,8 @@
 
     "basalt".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/basalt";
+
+    "fnox/config.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/fnox/fnox.toml";
   };
 }
