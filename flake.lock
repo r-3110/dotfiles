@@ -289,11 +289,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1780602830,
-        "narHash": "sha256-apiGv/qJEyAKOwKx7oUrbMp56iw31LBGtf9WppjjAwQ=",
+        "lastModified": 1780699421,
+        "narHash": "sha256-nCLvGXMptomkuMTeAYiig9iuQXH6KXGAWiOpnTSHVeA=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "880b059b6203fd209cd6f0c25fdb77d9279fcce0",
+        "rev": "07b34ec9cf66c55c1deae1f1ac7248dca6d3fa9e",
         "type": "github"
       },
       "original": {
@@ -332,11 +332,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1780640554,
-        "narHash": "sha256-dgnL2gTgRoO1D4z6wkARGCO/gimq3/UE/mVFcQcWBn8=",
+        "lastModified": 1780697194,
+        "narHash": "sha256-puccQgXtwSjcRVJTTwto+V0Fmylm0Bfn2evHZFgM6qw=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "f764eba1fdd162a1f2bc923f7e7034b894a22b4a",
+        "rev": "1401b0c31c8d0020ec3ade38e483870275b0a18a",
         "type": "github"
       },
       "original": {
