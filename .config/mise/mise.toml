@@ -8,7 +8,6 @@ pipx = "latest"
 "npm:mdjanai" = "latest"
 "npm:difit" = "latest"
 "cargo:octorus" = "latest"
-"cargo:atusy/kakehashi" = "latest"
 "npm:gut-cli" = "latest"
 "npm:@hummer98/cmux-team" = "latest"
 "aqua:erikjuhani/basalt" = "latest"
@@ -20,6 +19,7 @@ fnox = "latest"
 "go:github.com/myuron/lazycwl" = "latest"
 "npm:@openai/codex" = "latest"
 pulumi = "latest"
+"github:atusy/kakehashi" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
