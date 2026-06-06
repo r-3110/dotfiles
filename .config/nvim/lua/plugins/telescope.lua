@@ -97,9 +97,11 @@ return {
 				"<leader>fF",
 				function()
 					---@module "telescope.builtin"
-					require("telescope.builtin").find_files()
+					require("telescope.builtin").find_files({
+						cwd = vim.fn.expand("%:p:h"),
+					})
 				end,
-				desc = "Find Files (cwd)",
+				desc = "Find Files in current buffer directory",
 			},
 			{
 				"<leader>fg",

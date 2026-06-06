@@ -30,3 +30,6 @@ vim.o.helplang = "ja,en"
 
 -- スペルチェックの言語設定
 vim.opt.spelllang = { "en", "cjk" }
+
+--- LazyVimのピッカーをtelescopeに設定
+vim.g.lazyvim_picker = "telescope"
