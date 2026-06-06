@@ -178,6 +178,8 @@
 
     extensions = [
       pkgs.gh-dash
+      pkgs.gh-notify
+      pkgs.gh-markdown-preview
     ];
   };
 
