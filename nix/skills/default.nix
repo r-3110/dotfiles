@@ -42,8 +42,9 @@
         path = gh-stack;
         subdir = "skills/gh-stack";
       };
-      mizchi = {
+      mizchi-meta = {
         path = mizchi;
+        subdir = "meta";
       };
       difit = {
         path = difit;
@@ -60,7 +61,7 @@
       "using-cmux"
       "cmux-team"
       "gh-stack"
-      "meta/empirical-prompt-tuning"
+      "empirical-prompt-tuning"
       "difit-review"
       "difit"
       "drawio"
