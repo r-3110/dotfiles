@@ -301,11 +301,6 @@ return {
 		end,
 	},
 	{
-		"atusy/kakehashi",
-		lazy = true,
-		event = "VeryLazy",
-	},
-	{
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
 		dependencies = {
