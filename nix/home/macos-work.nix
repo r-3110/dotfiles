@@ -40,7 +40,6 @@
     regex-tui
     mcat
     lstr
-    ollama
     cloudflared
     ecspresso
     act
