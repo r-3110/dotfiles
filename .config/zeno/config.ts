@@ -4,6 +4,11 @@ import { defineConfig } from "@yuki-yano/zeno";
 export default defineConfig(({ projectRoot, currentDirectory }) => ({
   snippets: [
     {
+      name: "zellij restore session",
+      keyword: "zr",
+      snippet: `zellij attach "$(zellij list-sessions --short | fzf --prompt='zellij session: ' --height=40% --reverse)"`,
+    },
+    {
       name: "open ai-agents with zellij",
       keyword: "zai",
       snippet: `zellij --layout ${projectRoot}/.config/zellij/ai-agent.kdl`,

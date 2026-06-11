@@ -7,6 +7,20 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# zellij
+zj() {
+  local session
+
+  if git rev-parse --show-toplevel >/dev/null 2>&1; then
+    session="$(basename "$(git rev-parse --show-toplevel)")"
+  else
+    session="$(basename "$(dirname "$PWD")")-$(basename "$PWD")"
+  fi
+
+  zellij attach "$session" -c
+}
+
+
 # BEGIN_AWS_SSO_CLI
 
 # AWS SSO requires `bashcompinit` which needs to be enabled once and
