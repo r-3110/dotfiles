@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }:
 let
@@ -94,12 +95,16 @@ in
     "opencode/opencode.json".source = builtins.toPath opencodeConfig;
   };
 
-  # readonlyだとclaudeが起動しないめ、単純に上書きする
-  home.activation.claude = ''
-    cp -f ${claudeConfig} $HOME/.claude.json
+  # readonlyだとclaudeが起動しないめ、symlinkではなく書き込み可能なコピーを置く
+  home.activation.claude = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+    run install -m 600 ${claudeConfig} $HOME/.claude.json
   '';
 
-  home.file = {
-    ".codex/config.toml".source = builtins.toPath codexConfig;
-  };
+  # codexもconfig.tomlへ書き込むため、symlinkではなくコピーする
+  # 旧世代のsymlinkが残っているとcpがsrc/dest同一と判定して空振りするため、rmしてからinstallする
+  home.activation.codex = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+    run mkdir -p $HOME/.codex
+    run rm -f $HOME/.codex/config.toml
+    run install -m 600 ${codexConfig} $HOME/.codex/config.toml
+  '';
 }
