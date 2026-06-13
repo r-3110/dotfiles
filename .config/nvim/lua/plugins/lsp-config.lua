@@ -3,6 +3,7 @@
 -- @see https://github.com/bassamsdata/namu.nvim
 -- @see https://github.com/dnlhc/glance.nvim
 -- @see https://github.com/atusy/kakehashi
+-- @see https://github.com/r4ppz/lspeek.nvim
 
 local file_types = require("utils.filetype")
 
@@ -376,6 +377,7 @@ return {
 				split = "s",
 				vsplit = "v",
 				enter = "<CR>",
+				tab = "t",
 			},
 		},
 	},

@@ -1,5 +1,6 @@
 -- @see https://github.com/nvim-treesitter/nvim-treesitter
 -- @see https://github.com/Hdoc1509/gh-actions.nvim
+-- @see https://github.com/nvim-treesitter/nvim-treesitter-context
 
 ---@type LazyPluginSpec[]
 return {
@@ -69,5 +70,9 @@ return {
 				end,
 			})
 		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "VeryLazy",
 	},
 }
