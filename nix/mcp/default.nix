@@ -80,6 +80,19 @@ let
     pkgs.lib.recursiveUpdate baseConfig {
       flavor = "codex";
       format = "toml";
+      settings.features = {
+        plugin_hooks = true;
+        hooks = true;
+      };
+      # keyはmanifest.jsonのnameに対応する
+      settings.marketplaces.sisyphuslabs = {
+        source_type = "git";
+        source = "https://github.com/code-yeongyu/lazycodex.git";
+      };
+      settings.marketplaces.context-mode = {
+        source_type = "git";
+        source = "https://github.com/mksglu/context-mode.git";
+      };
     }
   );
 

@@ -39,8 +39,7 @@
     "gopls-lsp@claude-plugins-official": true,
     "superpowers@superpowers-marketplace": true,
     "everything-claude-code@everything-claude-code": true,
-    "context-mode@context-mode": true,
-    "claude-mem@thedotmack": true
+    "context-mode@context-mode": true
   },
   "extraKnownMarketplaces": {
     "superpowers": {
@@ -59,12 +58,6 @@
       "source": {
         "source": "github",
         "repo": "mksglu/context-mode"
-      }
-    },
-    "claude-mem": {
-      "source": {
-        "source": "github",
-        "repo": "thedotmack/claude-mem"
       }
     }
   },
