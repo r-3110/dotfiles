@@ -60,6 +60,7 @@
     nix-search-tv
     tree-sitter
     rtk
+    rich-cli
 
     # Font
     hackgen-nf-font
