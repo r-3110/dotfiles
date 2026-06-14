@@ -70,6 +70,7 @@
       "suggest-awesome-github-copilot-instructions"
       "suggest-awesome-github-copilot-skills"
       "suggest-awesome-github-copilot-agents"
+      "git-lower-model"
     ];
     skills.enableAll = [ "personal" ];
     targets = {
