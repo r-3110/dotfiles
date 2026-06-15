@@ -179,6 +179,7 @@
 
     extensions = [
       pkgs.gh-dash
+      pkgs.gh-stack
       pkgs.gh-notify
       pkgs.gh-markdown-preview
     ];
