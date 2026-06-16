@@ -38,6 +38,31 @@ return {
 					word = true, -- 単語単位でマッチ
 					cyclic = true, -- 最後までいったら先頭に戻る
 				}),
+				augend.constant.new({
+					elements = { "and", "or" },
+					word = true,
+					cyclic = true,
+				}),
+				augend.constant.new({
+					elements = { "&&", "||" },
+					word = true,
+					cyclic = true,
+				}),
+				augend.constant.new({
+					elements = { "==", "!=" },
+					word = true,
+					cyclic = true,
+				}),
+				augend.constant.new({
+					elements = { "enabled", "disabled" },
+					word = true,
+					cyclic = true,
+				}),
+				augend.constant.new({
+					elements = { "on", "off" },
+					word = true,
+					cyclic = true,
+				}),
 			},
 		})
 	end,
