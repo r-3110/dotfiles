@@ -172,7 +172,7 @@
     settings = {
       git_protocol = "ssh";
       prompt = "enabled";
-      prefer_editor_prompt = "enabled";
+      prefer_editor_prompt = "disabled";
       pager = "ov";
       color_labels = "enabled";
     };
