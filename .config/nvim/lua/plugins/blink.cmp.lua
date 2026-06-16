@@ -28,9 +28,6 @@ return {
 	opts = {
 		sources = {
 			default = { "npm", "wezterm", "lazydev", "emoji", "lsp", "path", "buffer" },
-			per_filetype = {
-				codecompanion = { "codecompanion" },
-			},
 			providers = {
 				lazydev = {
 					name = "LazyDev",
