@@ -71,6 +71,7 @@
       "suggest-awesome-github-copilot-skills"
       "suggest-awesome-github-copilot-agents"
       "git-lower-model"
+      "create-readme"
     ];
     skills.enableAll = [ "personal" ];
     targets = {
