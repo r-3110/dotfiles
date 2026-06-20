@@ -33,3 +33,6 @@ vim.opt.spelllang = { "en", "cjk" }
 
 --- LazyVimのピッカーをtelescopeに設定
 vim.g.lazyvim_picker = "telescope"
+
+--- Allow local nvim config files
+vim.o.exrc = true
