@@ -14,7 +14,25 @@ wezterm.on("gui-startup", function(cmd)
 	---@diagnostic disable-next-line: unused-local
 	-- luacheck: ignore 211
 	local tab, pane, window = mux.spawn_window(cmd or {})
-	window:gui_window():maximize()
+
+	-- 起動コマンドの引数に「nvim-ime」が含まれているかチェック
+	local is_ime = false
+	if cmd and cmd.args then
+		for _, arg in ipairs(cmd.args) do
+			if arg == "nvim-ime" or arg:match("nvim_ime_buffer") then
+				is_ime = true
+				break
+			end
+		end
+	end
+
+	if is_ime then
+		-- IME用ウィンドウ：コンパクトサイズにする
+		window:gui_window():set_inner_size(1500, 500)
+	else
+		-- 通常：最大化
+		window:gui_window():maximize()
+	end
 end)
 
 -- This is where you actually apply your config choices
