@@ -7,6 +7,7 @@
   cmux-team,
   gh-stack,
   mizchi,
+  mattpocock,
   difit,
   my-skills,
   ...
@@ -46,6 +47,10 @@
         path = mizchi;
         subdir = "meta";
       };
+      mattpocock-productivity = {
+        path = mattpocock;
+        subdir = "skills/productivity";
+      };
       difit = {
         path = difit;
         subdir = "skills";
@@ -72,6 +77,7 @@
       "suggest-awesome-github-copilot-agents"
       "git-lower-model"
       "create-readme"
+      "grilling"
     ];
     skills.enableAll = [ "personal" ];
     targets = {

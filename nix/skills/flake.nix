@@ -29,6 +29,10 @@
       url = "github:mizchi/skills";
       flake = false;
     };
+    mattpocock = {
+      url = "github:mattpocock/skills";
+      flake = false;
+    };
     difit = {
       url = "github:yoshiko-pg/difit";
       flake = false;
@@ -55,6 +59,7 @@
               cmux-team
               gh-stack
               mizchi
+              mattpocock
               difit
               my-skills
               ;

@@ -202,24 +202,25 @@
         ])
       ) (builtins.filter pkgs.lib.isDerivation (builtins.attrValues pkgs.skkDictionaries));
     };
-    "AGENTS.md".source =
+    ".codex/AGENTS.md".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
+    # antigravity-cliで使う
     ".gemini/GEMINI.md".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
+    ".gemini/antigravity-cli/mcp_config.json".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/antigravity/mcp_config.json";
     ".claude/CLAUDE.md".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
     ".claude/settings.json".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/claude/settings.json";
-    ".copilot/copilot-instructions.md".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
-    ".gemini/settings.json".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/gemini/settings.json";
-    ".gemini/antigravity-cli/mcp_config.json".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/antigravity/mcp_config.json";
-    ".copilot/lsp-config.json".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/lsp-config.json";
-    ".copilot/mcp-config.json".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/mcp-config.json";
+    # ".gemini/settings.json".source =
+    #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/gemini/settings.json";
+    # ".copilot/copilot-instructions.md".source =
+    #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/agents/AGENTS.md";
+    # ".copilot/lsp-config.json".source =
+    #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/lsp-config.json";
+    # ".copilot/mcp-config.json".source =
+    #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/copilot/mcp-config.json";
   };
 
   # XDG Config files
