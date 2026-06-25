@@ -18,28 +18,24 @@ sleep 0.15
 
 # 3. 一時ファイルを作成し、コピーした内容を書き込む
 TMP_FILE="/tmp/nvim_ime_buffer.txt"
+SESSION_FILE="/tmp/nvim_ime_session.txt"
+DONE_FILE="/tmp/nvim_ime_done.txt"
+SESSION_ID="$(date +%s).$$"
+
+printf '%s\n' "$SESSION_ID" >"$SESSION_FILE"
 pbpaste >"$TMP_FILE"
 
-# 4. WezTermを「IME専用のサイズ」で起動し、Neovimを開く
-wezterm start \
-  --class "nvim-ime" \
-  --always-new-process \
-  --position 300,200 \
-  -- nvim -c "startinsert" "$TMP_FILE" &
-
-WEZTERM_PID=$!
-
-# WezTermが起動してから前面に出す
-sleep 0.3
+# 4. 常駐しているNeovim IME用のWezTermを前面に出す
 osascript -e 'tell application "WezTerm" to activate'
 
-# --- ここでNeovimが閉じられるまでスクリプトは待機します ---
-wait $WEZTERM_PID
+# --- Neovim側で保存完了するまで待機します ---
+while [ "$(cat "$DONE_FILE" 2>/dev/null)" != "$SESSION_ID" ]; do
+  sleep 0.05
+done
 
-# 5. Neovimが保存終了（:wq）されたら、ファイルをクリップボードに書き戻す
+# 5. Neovimが保存完了（<C-s> または ZZ）したら、ファイルをクリップボードに書き戻す
 if [ -f "$TMP_FILE" ]; then
   cat "$TMP_FILE" | pbcopy
-  rm "$TMP_FILE"
 fi
 
 # 6. 元のアプリにフォーカスを戻し、ペーストする
