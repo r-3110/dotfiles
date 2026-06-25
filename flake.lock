@@ -8,11 +8,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1781510879,
-        "narHash": "sha256-YE3NCJtgZVa1U2VTjwQVuAhmEJW4raVq7eJaFiX60X8=",
+        "lastModified": 1782183570,
+        "narHash": "sha256-4LrewbD02WDf0CosGP/yO1yLneTeeJM39SjFa99kSRQ=",
         "owner": "Kyure-A",
         "repo": "agent-skills-nix",
-        "rev": "5ff9039277a9d62907426d033ecf76addb2402cb",
+        "rev": "fe867fe7be3a55d939746b278194deee4814fb08",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1781815324,
-        "narHash": "sha256-5pDiPOe2tLKDOH59TkzP3MNiCCCbGxw3giDyRrSdP4E=",
+        "lastModified": 1782108802,
+        "narHash": "sha256-M+zkc/9IcncWN0Zn5knVmOG/epArpPgEpjYgEqmTRnQ=",
         "owner": "DeterminateSystems",
         "repo": "determinate",
-        "rev": "fdef7e382e042b1fe418f65770c3acda5933b155",
+        "rev": "8240cc3ac41060542b308f25becb068d0cc9059a",
         "type": "github"
       },
       "original": {
@@ -173,11 +173,11 @@
     "difit": {
       "flake": false,
       "locked": {
-        "lastModified": 1781913626,
-        "narHash": "sha256-V1tl24/EOk4gKx6bzBQEBRqoUYSnK33+mCCWVnf0YlU=",
+        "lastModified": 1782303735,
+        "narHash": "sha256-FDf15uC9KD6QNXStNfYlpjUjJSPkLTpuzgCkA3zWMDU=",
         "owner": "yoshiko-pg",
         "repo": "difit",
-        "rev": "25cc355bdcb255e447db9f45c6d2244a4982c7a6",
+        "rev": "15cb7dc558c705363496256376f39455c7177daf",
         "type": "github"
       },
       "original": {
@@ -289,11 +289,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1781829832,
-        "narHash": "sha256-+0RR1nJm/sY7to+HheeRGWyXbXg4BxWrZYEZA1UGZU8=",
+        "lastModified": 1782363178,
+        "narHash": "sha256-Phqjype2QyQeTkha1IhdUNWeOIqnIzLnHxA0uV56334=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "251f416b6d3aa12837b10536e6f9bdd67f482ff7",
+        "rev": "e9c8e3704181fa38245d101308a8527d12af6a4d",
         "type": "github"
       },
       "original": {
@@ -309,11 +309,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782051614,
-        "narHash": "sha256-xBRAhYLEXcjp8hM2tkkTTLb6PWU7VDxDoogl25g7Ezs=",
+        "lastModified": 1782358560,
+        "narHash": "sha256-vCcLh9pw3XO/+Lxk8r6xv6QnoCrTfGqiACcI7O637Wg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d1ccd0721ec599866622665f3651e19e6e2d4c6a",
+        "rev": "3a70e333f2950c302e875c44cfcfaff3f80f36bc",
         "type": "github"
       },
       "original": {
@@ -332,11 +332,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1782078509,
-        "narHash": "sha256-7+uI3P7u+tgl0ZfCusw3g9yoG74yogO/l/QLwNmNDEU=",
+        "lastModified": 1782366663,
+        "narHash": "sha256-hcxEl/eWQQaYkUqygP4ca8S7WlX9c6vqgvQCqtV3vuw=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "129d65240d8c27ab2875f415e0c0b1da8ca28552",
+        "rev": "5f9d86061f538b3f5f3568583c001fb9c0705b71",
         "type": "github"
       },
       "original": {
@@ -348,11 +348,11 @@
     "mattpocock": {
       "flake": false,
       "locked": {
-        "lastModified": 1781772093,
-        "narHash": "sha256-6T0KwZcUIIbd6kpkQXPCnnJPVY2mEjxYjed4FjKnRAw=",
+        "lastModified": 1782385034,
+        "narHash": "sha256-D5lrbZrgFqSyAkCF+oh16Gllb0bh789Qk5qxGCJLaxI=",
         "owner": "mattpocock",
         "repo": "skills",
-        "rev": "6eeb81b5fcfeeb5bd531dd47ab2f9f2bbea27461",
+        "rev": "78636f8e5c045d0d9e5731add3fdba3583e9b2af",
         "type": "github"
       },
       "original": {
@@ -383,11 +383,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1782014763,
-        "narHash": "sha256-q9vaMcXibF2Jzog5Mx8l2JYxOSzi6bp2d3PLisH3kyM=",
+        "lastModified": 1782205542,
+        "narHash": "sha256-GmD3s4qEEslKqUNK+2gFFPHMzsmJUTi1j+9KirbkUto=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "ea6feb73a131cb0c1cfca2dcce4cbcedf0455123",
+        "rev": "f4524b1ab386b574f557db05cb02bee02c4497a2",
         "type": "github"
       },
       "original": {
@@ -399,11 +399,11 @@
     "mizchi": {
       "flake": false,
       "locked": {
-        "lastModified": 1780073399,
-        "narHash": "sha256-EbrNaTfP++pdDutmuG+iLaknZxoEjSia5Od4dNXcOdg=",
+        "lastModified": 1782383356,
+        "narHash": "sha256-uBt8fBdOBuz9FdWrW4JSZFhtfWMcG4mD7qp6lE2chfk=",
         "owner": "mizchi",
         "repo": "skills",
-        "rev": "89c1b34018ba0d85a770c065ba22f83a8d004d34",
+        "rev": "d7999453cdb4e0e09df1c7f82fd23752539c546c",
         "type": "github"
       },
       "original": {
@@ -567,11 +567,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1781607440,
-        "narHash": "sha256-rxO+uc/KFbSJp+pgyXRuAX6QlG9hJdnt0BXpEQRXY+U=",
+        "lastModified": 1782118813,
+        "narHash": "sha256-BnbXO5s5EhV89lLXMAGCzPdEN5a6vNqvMk71obeTEUw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3e41b24abd260e8f71dbe2f5737d24122f972158",
+        "rev": "b3c092d3c36d91e2f61f3dfb39a159f180a56659",
         "type": "github"
       },
       "original": {
@@ -615,11 +615,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1781074563,
-        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
+        "lastModified": 1781577229,
+        "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
         "type": "github"
       },
       "original": {
@@ -723,11 +723,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1781932973,
-        "narHash": "sha256-BBN0MWqXNury3gLfm9Fmq7g+lB5ruAnCyCiTfieZcu8=",
+        "lastModified": 1782247279,
+        "narHash": "sha256-NfjEt37jfA/d0v6gXRjlvsUj0xf8h+NquVUZEKaMFL4=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "e5c075e3a84b37c5eb398ab74e581558d3fceb0e",
+        "rev": "9a7d8acfbf29f9cced7fb5a504da1d65b484aed3",
         "type": "github"
       },
       "original": {
