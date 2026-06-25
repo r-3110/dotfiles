@@ -6,7 +6,37 @@
 # @raycast.mode silent
 # @raycast.packageName Utilities
 
-export PATH="$HOME/.nix-profile/bin:$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.nix-profile/bin:$HOME/.local/share/mise/shims:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+
+TMP_FILE="/tmp/nvim_ime_buffer.txt"
+SESSION_FILE="/tmp/nvim_ime_session.txt"
+DONE_FILE="/tmp/nvim_ime_done.txt"
+TMUX_SESSION="nvim-ime"
+WEZTERM_BIN="${WEZTERM_BIN:-$(command -v wezterm || true)}"
+
+ensure_nvim_ime_tmux() {
+  if ! tmux has-session -t "$TMUX_SESSION" 2>/dev/null; then
+    tmux new-session -d -s "$TMUX_SESSION" "nvim '$TMP_FILE'"
+  fi
+}
+
+focus_nvim_ime() {
+  if ! tmux list-clients -t "$TMUX_SESSION" >/dev/null 2>&1; then
+    if [ -n "$WEZTERM_BIN" ]; then
+      "$WEZTERM_BIN" start \
+        --class "nvim-ime" \
+        --always-new-process \
+        --position 300,200 \
+        -- zsh -lc "exec tmux attach -t '$TMUX_SESSION'" nvim-ime &
+      sleep 0.3
+    else
+      osascript -e 'display notification "wezterm command not found" with title "Neovim IME"'
+      return 1
+    fi
+  fi
+
+  osascript -e 'tell application "WezTerm" to activate'
+}
 
 # 1. 現在アクティブなアプリの名前を取得
 ACTIVE_APP=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true')
@@ -17,16 +47,14 @@ osascript -e 'tell application "System Events" to keystroke "c" using command do
 sleep 0.15
 
 # 3. 一時ファイルを作成し、コピーした内容を書き込む
-TMP_FILE="/tmp/nvim_ime_buffer.txt"
-SESSION_FILE="/tmp/nvim_ime_session.txt"
-DONE_FILE="/tmp/nvim_ime_done.txt"
 SESSION_ID="$(date +%s).$$"
 
 printf '%s\n' "$SESSION_ID" >"$SESSION_FILE"
 pbpaste >"$TMP_FILE"
 
-# 4. 常駐しているNeovim IME用のWezTermを前面に出す
-osascript -e 'tell application "WezTerm" to activate'
+# 4. IME用tmuxセッションを用意して、WezTermで前面に出す
+ensure_nvim_ime_tmux
+focus_nvim_ime || exit 1
 
 # --- Neovim側で保存完了するまで待機します ---
 while [ "$(cat "$DONE_FILE" 2>/dev/null)" != "$SESSION_ID" ]; do
