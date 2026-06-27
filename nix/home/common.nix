@@ -49,6 +49,7 @@
     zellij
     zoxide
     jujutsu
+    lazyjj
     ov
     treemd
     zsh
