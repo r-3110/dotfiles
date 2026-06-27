@@ -11,6 +11,7 @@ export PATH="$HOME/.nix-profile/bin:$HOME/.local/share/mise/shims:$HOME/.local/b
 TMP_FILE="/tmp/nvim_ime_buffer.txt"
 SESSION_FILE="/tmp/nvim_ime_session.txt"
 DONE_FILE="/tmp/nvim_ime_done.txt"
+WEZTERM_PID_FILE="/tmp/nvim_ime_wezterm_pid.txt"
 TMUX_SESSION="nvim-ime"
 WEZTERM_BIN="${WEZTERM_BIN:-$(command -v wezterm || true)}"
 
@@ -20,22 +21,39 @@ ensure_nvim_ime_tmux() {
   fi
 }
 
+activate_wezterm_pid() {
+  WEZTERM_PID="$1"
+  osascript \
+    -e 'tell application "System Events"' \
+    -e "set targetProcess to first process whose unix id is $WEZTERM_PID" \
+    -e 'set frontmost of targetProcess to true' \
+    -e 'perform action "AXRaise" of first window of targetProcess' \
+    -e 'end tell'
+}
+
 focus_nvim_ime() {
-  if ! tmux list-clients -t "$TMUX_SESSION" >/dev/null 2>&1; then
-    if [ -n "$WEZTERM_BIN" ]; then
-      "$WEZTERM_BIN" start \
-        --class "nvim-ime" \
-        --always-new-process \
-        --position 300,200 \
-        -- zsh -lc "exec tmux attach -t '$TMUX_SESSION'" nvim-ime &
-      sleep 0.3
-    else
-      osascript -e 'display notification "wezterm command not found" with title "Neovim IME"'
-      return 1
+  if [ -z "$WEZTERM_BIN" ]; then
+    osascript -e 'display notification "wezterm command not found" with title "Neovim IME"'
+    return 1
+  fi
+
+  if [ -f "$WEZTERM_PID_FILE" ]; then
+    WEZTERM_PID="$(cat "$WEZTERM_PID_FILE")"
+    if [ -n "$WEZTERM_PID" ] && kill -0 "$WEZTERM_PID" 2>/dev/null && activate_wezterm_pid "$WEZTERM_PID" 2>/dev/null; then
+      return 0
     fi
   fi
 
-  osascript -e 'tell application "WezTerm" to activate'
+  "$WEZTERM_BIN" start \
+    --always-new-process \
+    --workspace "$TMUX_SESSION" \
+    --position 300,200 \
+    -- zsh -lc "exec tmux attach -t '$TMUX_SESSION'" &
+
+  WEZTERM_PID="$!"
+  printf '%s\n' "$WEZTERM_PID" >"$WEZTERM_PID_FILE"
+  sleep 0.3
+  activate_wezterm_pid "$WEZTERM_PID" || osascript -e 'tell application "WezTerm" to activate'
 }
 
 # 1. 現在アクティブなアプリの名前を取得
