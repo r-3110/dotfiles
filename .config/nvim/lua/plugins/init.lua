@@ -21,6 +21,27 @@ return {
       ---@module "snacks"
       local snacks = require("snacks")
 
+      opts.sections.lualine_c = {
+        "filename",
+        {
+          "diagnostics",
+          sources = { "nvim_diagnostic" },
+          symbols = {
+            error = icons.diagnostics.Error,
+            warn = icons.diagnostics.Warn,
+            info = icons.diagnostics.Info,
+            hint = icons.diagnostics.Hint,
+          },
+          diagnostics_color = {
+            error = { fg = snacks.util.color("DiagnosticError") },
+            warn = { fg = snacks.util.color("DiagnosticWarn") },
+            info = { fg = snacks.util.color("DiagnosticInfo") },
+            hint = { fg = snacks.util.color("DiagnosticHint") },
+          },
+        },
+        "overseer"
+      }
+
       opts.sections.lualine_x = {
         snacks.profiler.status(),
          -- stylua: ignore

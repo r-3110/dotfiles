@@ -15,16 +15,9 @@ return {
 		{
 			"<leader>to",
 			function()
-				vim.cmd("OverseerOpen")
+				vim.cmd("OverseerToggle")
 			end,
-			desc = "Open Task Runner",
-		},
-		{
-			"<leader>tc",
-			function()
-				vim.cmd("OverseerClose")
-			end,
-			desc = "Close Task Runner",
+			desc = "Toggle Task Runner",
 		},
 	},
 	---@module "overseer"
