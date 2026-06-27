@@ -238,7 +238,7 @@ return {
 				"buf",
 				"copilot-language-server",
 				"css-lsp",
-				"deno",
+				{ "deno", version = "v2.8.3" },
 				"docker-compose-language-service",
 				"dockerfile-language-server",
 				"eslint-lsp",
