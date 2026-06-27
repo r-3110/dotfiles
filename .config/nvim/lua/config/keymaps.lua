@@ -11,7 +11,6 @@ vim.api.nvim_set_keymap(
 
 -- vscodeでは設定が効かず、定義されていると支障が出るものを除外
 if not vim.g.vscode then
-	print("This is not vscode")
 	-- accelerated_jk keymaps
 	vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
 	vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
