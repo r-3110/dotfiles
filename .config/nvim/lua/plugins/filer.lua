@@ -5,6 +5,24 @@ return {
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+		keys = {
+			{
+				"<leader>go",
+				function()
+					---@module "oil"
+					require("oil").open()
+				end,
+				desc = "Open Oil Current Buffer Directory",
+			},
+			{
+				"<leader>gO",
+				function()
+					---@module "oil"
+					require("oil").open(".")
+				end,
+				desc = "Open Oil Current Working Directory",
+			},
+		},
 		---@module "oil"
 		---@type oil.SetupOpts
 		opts = {
