@@ -3,6 +3,16 @@
 ---@type LazyPluginSpec
 return {
 	"folke/snacks.nvim",
+	init = function()
+		local function set_indent_highlights()
+			vim.api.nvim_set_hl(0, "SnacksIndentChunkCustom", { fg = "#7aa2f7" })
+		end
+
+		set_indent_highlights()
+		vim.api.nvim_create_autocmd("ColorScheme", {
+			callback = set_indent_highlights,
+		})
+	end,
 	keys = {
 		{
 			"<leader>.",
@@ -49,6 +59,13 @@ return {
 				explorer = {
 					hidden = true,
 				},
+			},
+		},
+		indent = {
+			enabled = true,
+			chunk = {
+				enabled = true,
+				hl = "SnacksIndentChunkCustom",
 			},
 		},
 	},
