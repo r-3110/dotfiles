@@ -7,9 +7,6 @@
 
 local file_types = require("utils.filetype")
 
--- vtslsの再起動コマンド monorepoだと最初にアタッチされたtsconfigを参照し続けるため
-vim.keymap.set("n", "<leader>tr", ":LspRestart vtsls<CR>", { desc = "vtsls Restart" })
-
 ---@module "lazy"
 ---@type LazyPluginSpec[]
 return {
