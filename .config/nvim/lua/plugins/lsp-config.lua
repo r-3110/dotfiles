@@ -162,16 +162,28 @@ return {
 								},
 								vtsls = {
 									cmd = { "vtsls", "--stdio" },
-									languages = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
-								},
-							},
-							languages = {
-								markdown = {
-									bridge = {
-										python = { enabled = true },
-										lua = { enabled = true },
-										typescript = { enabled = true },
+									languages = {
+										"typescript",
+										"javascript",
+										"typescriptreact",
+										"javascriptreact",
+										"ts",
+										"tsx",
+										"js",
+										"jsx",
 									},
+								},
+								gopls = {
+									cmd = { "gopls" },
+									languages = { "go" },
+								},
+								["bash-language-server"] = {
+									cmd = { "bash-language-server", "start" },
+									languages = { "sh", "bash", "zsh" },
+								},
+								jsonls = {
+									cmd = { "vscode-json-language-server", "--stdio" },
+									languages = { "json", "jsonc" },
 								},
 							},
 						},
