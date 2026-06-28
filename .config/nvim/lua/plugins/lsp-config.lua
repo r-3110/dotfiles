@@ -151,7 +151,6 @@ return {
 						detached = false,
 						init_options = {
 							autoInstall = true,
-							-- LSP Bridge configuration (optional)
 							languageServers = {
 								pyright = {
 									cmd = { "pyright-langserver", "--stdio" },
@@ -251,7 +250,6 @@ return {
 				"laravel-ls",
 				"lua-language-server",
 				"markdown-oxide",
-				"marksman",
 				"phpantom_lsp",
 				"pyright",
 				"ruff",
