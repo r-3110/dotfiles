@@ -42,6 +42,7 @@ return {
 				"json5",
 				"jsonnet",
 				"lua",
+				"nix",
 				"markdown",
 				"markdown_inline",
 				"python",
