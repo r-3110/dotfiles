@@ -58,10 +58,6 @@ github = "zsh-users/zsh-autosuggestions"
 github = "reegnz/jq-zsh-plugin"
 apply = ["defer"]
 
-[plugins.git-open]
-github = "paulirish/git-open"
-apply = ["defer"]
-
 [plugins.gh-fzf]
 github = "atusy/gh-fzf"
 apply = ["defer"]
