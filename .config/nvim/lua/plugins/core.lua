@@ -4,14 +4,15 @@ return {
 	"LazyVim/LazyVim",
 	dependencies = {
 		"rebelot/kanagawa.nvim",
-		"folke/tokyonight.nvim",
+		"sainnhe/everforest",
+		"nordtheme/vim",
 		"Mofiqul/dracula.nvim",
 	},
 	---@module "lazyvim"
 	---@param opts LazyVimOptions
 	opts = function(_, opts)
 		-- 候補のcolorscheme一覧
-		local themes = { "kanagawa", "tokyonight", "dracula" }
+		local themes = { "kanagawa", "tokyonight", "dracula-soft", "catppuccin", "everforest", "nord" }
 
 		-- ランダム選択
 		math.randomseed(os.time())
