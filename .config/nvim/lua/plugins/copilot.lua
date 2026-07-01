@@ -39,7 +39,14 @@ return {
 				desc = "previous Copilot suggestion",
 			},
 		},
+		---@module "copilot"
+		---@type CopilotConfig
+		---@diagnostic disable-next-line: missing-fields
 		opts = {
+			---@diagnostic disable-next-line: missing-fields
+			nes = {
+				enabled = false,
+			},
 			---@diagnostic disable-next-line: missing-fields
 			suggestion = { enabled = true, auto_trigger = true },
 			---@diagnostic disable-next-line: missing-fields
