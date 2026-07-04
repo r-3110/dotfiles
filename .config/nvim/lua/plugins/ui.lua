@@ -1,5 +1,6 @@
 --@see https://github.com/nvim-mini/mini.cursorword
 --@see https://github.com/petertriho/nvim-scrollbar
+--@see https://github.com/catgoose/nvim-colorizer.lua
 
 ---@type LazyPluginSpec[]
 return {
@@ -20,5 +21,13 @@ return {
 			---@module "scrollbar.handlers.gitsigns"
 			require("scrollbar.handlers.gitsigns").setup()
 		end,
+	},
+	{
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		---@module "colorizer"
+		---@type colorizer.Options
+		---@diagnostic disable-next-line: missing-fields
+		opts = {},
 	},
 }
