@@ -11,7 +11,6 @@ pipx = "latest"
 "npm:gut-cli" = "latest"
 "npm:@hummer98/cmux-team" = "latest"
 "aqua:erikjuhani/basalt" = "latest"
-flutter = "latest"
 "npm:context-mode" = "latest"
 "pipx:graphifyy" = "latest"
 "aqua:k1LoW/roots" = "latest"
@@ -19,6 +18,7 @@ fnox = "latest"
 "go:github.com/myuron/lazycwl" = "latest"
 "npm:@openai/codex" = "latest"
 pulumi = "latest"
+"pipx:sqlit-tui" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
