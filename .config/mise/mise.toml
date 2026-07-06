@@ -19,6 +19,7 @@ fnox = "latest"
 "npm:@openai/codex" = "latest"
 pulumi = "latest"
 "pipx:sqlit-tui" = "latest"
+"npm:hunkdiff" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
