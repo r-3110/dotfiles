@@ -148,6 +148,7 @@ return {
 
 					vim.lsp.config.kakehashi = {
 						cmd = { "kakehashi" },
+						filetypes = { "markdown" },
 						detached = false,
 						init_options = {
 							autoInstall = true,
