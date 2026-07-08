@@ -1,0 +1,35 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+
+[ui]
+editor = "nvim"
+pager = "delta --pager='ov -F'"
+diff-formatter = ":git"
+merge-editor = "mergiraf"
+conflict-marker-style = "git"
+
+[git]
+fetch = "origin"
+push = "origin"
+sign-on-push = true
+
+[signing]
+behavior = "drop"
+backend = "ssh"
+
+[revsets]
+log = "trunk().."
+
+[revset-aliases]
+"trunk()" = "main@origin"
+
+[aliases]
+s = ["status"]
+l = ["log"]
+d = ["diff"]
+ds = ["diff", "--stat"]
+e = ["edit"]
+n = ["new"]
+sq = ["squash"]
+rb = ["rebase"]
