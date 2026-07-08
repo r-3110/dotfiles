@@ -54,6 +54,10 @@ return {
 			filetypes = {
 				["*"] = true,
 			},
+			---@diagnostic disable-next-line: missing-fields
+			logger = {
+				print_log_level = vim.log.levels.OFF,
+			},
 		},
 	},
 }
