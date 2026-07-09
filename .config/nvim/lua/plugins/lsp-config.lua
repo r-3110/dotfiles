@@ -31,18 +31,10 @@ return {
 				---@module "lspconfig"
 				---@param opts PluginLspOpts
 				opts = function(_, opts)
-					---dartls
-					vim.lsp.config.dartls = {
-						cmd = { "dart", "language-server", "--protocol=lsp" },
-						filetypes = { "dart" },
-						detached = false,
-					}
-
-					vim.lsp.config.nixd = {
-						cmd = { "nixd" },
-						filetypes = { "nix" },
-						detached = false,
-					}
+					vim.lsp.config("*", {
+						---@module "blink-cmp"
+						capabilities = require("blink.cmp").get_lsp_capabilities(),
+					})
 
 					vim.lsp.config.jsonls = {
 						detached = false,
@@ -61,47 +53,6 @@ return {
 								validate = { enable = true },
 							},
 						},
-					}
-
-					local root_pattern = require("lspconfig.util").root_pattern
-
-					vim.lsp.config.denols = {
-						detached = false,
-						mason = false,
-						root_dir = function(bufnr, on_dir)
-							local fname = vim.api.nvim_buf_get_name(bufnr)
-							local filepath = root_pattern("deno.json", "deno.jsonc")(fname)
-
-							if filepath == nil then
-								return
-							end
-
-							on_dir(root_pattern("deno.json", "deno.jsonc")(fname))
-						end,
-						-- root_markers = { "deno.json", "deno.jsonc" },
-					}
-
-					vim.lsp.config.vtsls = {
-						detached = false,
-						mason = false,
-						root_dir = function(bufnr, on_dir)
-							local fname = vim.api.nvim_buf_get_name(bufnr)
-
-							local deno_filepath = root_pattern("deno.json", "deno.jsonc")(fname)
-
-							-- deno.jsonがある場合は起動しない
-							if deno_filepath ~= nil then
-								return
-							end
-
-							on_dir(root_pattern("tsconfig.json", "package.json")(fname))
-						end,
-						settings = {
-							vtsls = {
-								autoUseWorkspaceTsdk = true,
-							},
-						},
-						-- root_markers = { "tsconfig.json", "package.json" },
 					}
 
 					vim.lsp.config.yamlls = {
@@ -208,7 +159,11 @@ return {
 		---@module "mason-lspconfig"
 		---@type MasonLspconfigSettings
 		opts = {
-			automatic_enable = true,
+			automatic_enable = {
+				exclude = {
+					"eslint",
+				},
+			},
 			-- おそらく命名はsnake_case
 			ensure_installed = {},
 		},
@@ -248,12 +203,10 @@ return {
 				-- LSPs (mason-tool-installer can also manage these by package name)
 				"bash-language-server",
 				"buf",
-				"copilot-language-server",
 				"css-lsp",
 				{ "deno", version = "v2.8.3" },
 				"docker-compose-language-service",
 				"dockerfile-language-server",
-				"eslint-lsp",
 				"gh-actions-language-server",
 				"gopls",
 				"html-lsp",
