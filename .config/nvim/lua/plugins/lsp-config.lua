@@ -362,6 +362,8 @@ return {
 				vsplit = "v",
 				enter = "<CR>",
 				tab = "t",
+				prev = "[",
+				next = "]",
 			},
 		},
 	},
