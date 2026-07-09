@@ -106,6 +106,11 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "lazygit",
     },
     {
+      name: "lazyjj",
+      keyword: "lj",
+      snippet: "lazyjj",
+    },
+    {
       name: "branch",
       keyword: "B",
       snippet: "git symbolic-ref --short HEAD",
