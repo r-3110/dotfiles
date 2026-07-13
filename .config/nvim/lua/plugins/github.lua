@@ -1,4 +1,5 @@
 --@see https://github.com/skanehira/github-actions.nvim
+--@see https://github.com/justinmk/guh.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -12,5 +13,9 @@ return {
 		event = "VeryLazy",
 		---@module "github-actions"
 		opts = {},
+	},
+	{
+		"justinmk/guh.nvim",
+		event = "VeryLazy",
 	},
 }
