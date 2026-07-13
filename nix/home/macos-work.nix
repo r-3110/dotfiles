@@ -45,6 +45,7 @@
     act
     aws-sso-cli
     pngpaste
+    mprocs
     # markitdown-mcp
   ];
 
