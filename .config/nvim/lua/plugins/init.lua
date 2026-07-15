@@ -21,6 +21,12 @@ return {
       ---@module "snacks"
       local snacks = require("snacks")
 
+      table.insert(opts.sections.lualine_b, 2, {
+        function()
+          return require("utils.jj").location()
+        end,
+      })
+
       opts.sections.lualine_c = {
         "filename",
         {
