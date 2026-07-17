@@ -2,7 +2,7 @@
 
 [[sources]]
 id = "remote_postgres"
-dsn = "postgres://${REMOTE_PG_USER}:${REMOTE_PG_PASSWORD}@:${REMOTE_PG_HOST}:${REMOTE_PG_PORT}/${REMOTE_PG_DB}"
+dsn = "postgres://${REMOTE_PG_USER}:${REMOTE_PG_PASSWORD}@${REMOTE_PG_HOST}:${REMOTE_PG_PORT}/${REMOTE_PG_DB}"
 lazy = true
 connection_timeout = 60
 query_timeout = 30
