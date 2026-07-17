@@ -12,7 +12,16 @@ return {
 	---@param opts LazyVimOptions
 	opts = function(_, opts)
 		-- 候補のcolorscheme一覧
-		local themes = { "kanagawa", "tokyonight", "dracula-soft", "catppuccin", "everforest", "nord" }
+		local themes = {
+			"kanagawa",
+			"kanagawa-dragon",
+			"kanagawa-wave",
+			"tokyonight",
+			"dracula",
+			"catppuccin",
+			"everforest",
+			"nord",
+		}
 
 		-- ランダム選択
 		math.randomseed(os.time())
