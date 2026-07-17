@@ -6,7 +6,6 @@ vim.filetype.add({
 		yml = "yaml",
 	},
 	pattern = {
-		["%.env.*"] = "dotenv",
 		[file_type.my_filetype_rules[file_type.my_filetypes.gh].regex] = file_type.my_filetypes.gh,
 		[file_type.my_filetype_rules[file_type.my_filetypes["docker-compose"]].regex] = file_type.my_filetypes["docker-compose"],
 		[file_type.my_filetype_rules[file_type.my_filetypes.dockerfile].regex] = file_type.my_filetypes.dockerfile,

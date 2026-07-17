@@ -52,7 +52,7 @@ return {
 				cfn = { "cfn_lint" },
 				[file_types.my_filetypes.gh] = { "actionlint" },
 				["yaml.cfn"] = { "cfn_lint" },
-				dotenv = { "dotenv_linter" },
+				env = { "dotenv_linter" },
 				dockerfile = { "hadolint" },
 				lua = { "luacheck" },
 				sql = { "sqlfluff" },
