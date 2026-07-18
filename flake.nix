@@ -60,7 +60,7 @@
               home.username = username;
               home.homeDirectory = homeDirectory;
               home.packages = [
-                llm-agents.packages.${system}.copilot-cli
+                # llm-agents.packages.${system}.copilot-cli
                 llm-agents.packages.${system}.antigravity-cli
                 llm-agents.packages.${system}.claude-code
                 llm-agents.packages.${system}.opencode
