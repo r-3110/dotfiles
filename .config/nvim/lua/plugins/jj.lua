@@ -1,4 +1,6 @@
+--@see https://github.com/NicolasGB/jj.nvim
 --@see https://github.com/larpios/jj-conflict.nvim
+--@see https://github.com/MrDwarf7/lazyjui.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -32,5 +34,22 @@ return {
 			"JjConflictDiff",
 		},
 		config = true,
+	},
+	{
+		"mrdwarf7/lazyjui.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		keys = {
+			{
+				"<Leader>gj",
+				function()
+					---@module "lazyjui"
+					require("lazyjui").open()
+				end,
+			},
+		},
+		---@type lazyjui.Opts
+		opts = {},
 	},
 }

@@ -50,6 +50,7 @@
     zoxide
     jujutsu
     lazyjj
+    jjui
     ov
     treemd
     zsh
