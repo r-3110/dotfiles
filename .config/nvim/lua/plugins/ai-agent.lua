@@ -1,4 +1,5 @@
 --@see https://github.com/folke/sidekick.nvim
+-- @see https://github.com/j4shu/mention.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -117,5 +118,35 @@ return {
 				},
 			},
 		},
+	},
+	{
+		"j4shu/mention.nvim",
+		event = "VeryLazy",
+		config = function()
+			---@module "mention"
+			require("mention").setup({
+				-- Module mappings. Use `''` (empty string) to disable one.
+				mappings = {
+					-- Append a mention for the current file (Normal) or the selected line
+					-- range (Visual) to the end of the mention buffer.
+					append = "<leader>zma",
+					-- Open the mention buffer in a centered float, or close it if open.
+					toggle = "<leader>zmt",
+					-- Close the float (buffer-local)
+					close = "q",
+				},
+				-- Float geometry (fractions of the editor size)
+				window = {
+					width = 0.5,
+					height = 0.6,
+					border = nil, -- Defaults to `vim.o.winborder`
+				},
+				-- Mention format: `function(path, from, to) -> string`, or `nil` for the
+				-- default `@path#L<from>-<to>`. See `:h Mention.config`.
+				format = nil,
+				-- Whether to suppress non-error feedback
+				silent = false,
+			})
+		end,
 	},
 }
