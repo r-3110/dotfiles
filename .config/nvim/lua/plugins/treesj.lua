@@ -3,13 +3,10 @@
 ---@type LazyPluginSpec
 return {
 	"Wansmer/treesj",
-	event = "VeryLazy",
-	lazy = true,
 	keys = { "<space>m", "<space>j", "<space>s" },
-	dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	config = function()
 		---@module "treesj"
-		require("treesj").setup({ --[[ your config ]]
-		})
+		require("treesj").setup({})
 	end,
 }

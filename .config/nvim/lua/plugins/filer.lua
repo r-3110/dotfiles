@@ -45,6 +45,12 @@ return {
 	},
 	{
 		"benomahony/oil-git.nvim",
+		lazy = true,
+		-- oilと一致させておく
+		keys = {
+			"<leader>go",
+			"<leader>gO",
+		},
 		dependencies = { "stevearc/oil.nvim" },
 	},
 }

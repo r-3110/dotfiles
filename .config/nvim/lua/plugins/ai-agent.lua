@@ -1,5 +1,5 @@
 --@see https://github.com/folke/sidekick.nvim
--- @see https://github.com/j4shu/mention.nvim
+--@see https://github.com/j4shu/mention.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -121,7 +121,10 @@ return {
 	},
 	{
 		"j4shu/mention.nvim",
-		event = "VeryLazy",
+		keys = {
+			{ "<leader>zma", desc = "Append mention for current file" },
+			{ "<leader>zmt", desc = "Toggle mention buffer" },
+		},
 		config = function()
 			---@module "mention"
 			require("mention").setup({

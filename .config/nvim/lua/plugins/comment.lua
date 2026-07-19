@@ -17,8 +17,7 @@ return {
 				end,
 			},
 		},
-		event = "VeryLazy",
-		lazy = true,
+		event = "BufRead",
 		config = function(_, opts)
 			local ts_context_pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()
 

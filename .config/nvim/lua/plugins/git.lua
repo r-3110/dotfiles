@@ -8,6 +8,7 @@
 return {
 	{
 		"niekdomi/conflict.nvim",
+		event = "BufReadPost",
 		config = function()
 			---@module "conflict"
 			---@type ConflictConfig
@@ -34,19 +35,19 @@ return {
 	},
 	{
 		"linrongbin16/gitlinker.nvim",
-		event = "VeryLazy",
-		lazy = true,
 		cmd = "GitLink",
-		opts = {},
 		keys = {
 			{ "<leader>gy", "<cmd>GitLink<cr>", mode = { "n", "v" }, desc = "Yank git link" },
 			{ "<leader>gY", "<cmd>GitLink!<cr>", mode = { "n", "v" }, desc = "Open git link" },
 		},
+		opts = {},
 	},
 	{
 		"sindrets/diffview.nvim",
-		event = "VeryLazy",
-		lazy = true,
+		cmd = {
+			"DiffviewOpen",
+			"DiffviewFileHistory",
+		},
 	},
-	{ "h3pei/trace-pr.nvim", event = "VeryLazy", config = true },
+	{ "h3pei/trace-pr.nvim", cmd = "TracePR", config = true },
 }

@@ -19,8 +19,6 @@ return {
 				"Omochice/tataku-emitter-nvim_floatwin",
 			},
 		},
-		event = "VeryLazy",
-		lazy = true,
 		keys = {
 			{
 				"<leader>tt",

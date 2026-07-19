@@ -8,14 +8,19 @@ return {
 		"skanehira/github-actions.nvim",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			"nvim-telescope/telescope.nvim", -- Optional: for enhanced workflow selection
+			"nvim-telescope/telescope.nvim",
 		},
-		event = "VeryLazy",
+		event = {
+			{
+				event = { "BufReadPre", "BufNewFile" },
+				pattern = "**/.github/workflows/*",
+			},
+		},
 		---@module "github-actions"
 		opts = {},
 	},
 	{
 		"justinmk/guh.nvim",
-		event = "VeryLazy",
+		cmd = "Guh",
 	},
 }

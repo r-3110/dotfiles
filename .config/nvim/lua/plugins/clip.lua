@@ -57,7 +57,7 @@ return {
 	},
 	{
 		"HakonHarnes/img-clip.nvim",
-		event = "VeryLazy",
+		ft = { "markdown", "html" },
 		opts = {
 			-- recommended settings
 			default = {

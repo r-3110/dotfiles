@@ -46,7 +46,7 @@ return {
 	{ "nvim-mini/mini.icons", enabled = false, version = false },
 	{
 		"nvim-tree/nvim-web-devicons",
-		priority = 10000,
+		lazy = true,
 		config = function()
 			---@module "nvim-web-devicons"
 			local web_devicons = require("nvim-web-devicons")
@@ -77,6 +77,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
 		lazy = false, -- neo-tree will lazily load itself

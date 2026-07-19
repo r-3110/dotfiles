@@ -164,8 +164,7 @@ return {
 	},
 	{
 		"bassamsdata/namu.nvim",
-		event = "VeryLazy",
-		lazy = true,
+		cmd = "Namu",
 		opts = {
 			global = {},
 			namu_symbols = { -- Specific Module options
@@ -175,8 +174,6 @@ return {
 	},
 	{
 		"dnlhc/glance.nvim",
-		event = "VeryLazy",
-		lazy = true,
 		cmd = "Glance",
 	},
 	{

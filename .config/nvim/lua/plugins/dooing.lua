@@ -3,8 +3,7 @@
 ---@type LazyPluginSpec
 return {
 	"atiladefreitas/dooing",
-	lazy = true,
-	event = "VeryLazy",
+	cmd = { "Dooing" },
 	config = function()
 		---@module "dooing"
 		require("dooing").setup({
