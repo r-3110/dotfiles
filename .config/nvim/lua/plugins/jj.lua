@@ -47,6 +47,7 @@ return {
 					---@module "lazyjui"
 					require("lazyjui").open()
 				end,
+				desc = "Open jjui",
 			},
 		},
 		---@type lazyjui.Opts

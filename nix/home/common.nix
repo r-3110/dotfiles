@@ -248,6 +248,12 @@
     "jj/config.toml".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/jj/config.toml";
 
+    "jjui/config.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/jjui/config.toml";
+
+    "jjui/config.lua".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/jjui/config.lua";
+
     "wezterm".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/wezterm";
 
