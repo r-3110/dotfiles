@@ -12,6 +12,7 @@ return {
 	{ "lazyvim.plugins.lsp", enabled = false },
 	{
 		"mason-org/mason-lspconfig.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			{
 				"mason-org/mason.nvim",
@@ -63,7 +64,6 @@ return {
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		dependencies = { "mason-org/mason.nvim" },
 		---@module "mason-tool-installer"
 		---@type MasonToolInstallerSettings
 		opts = {
@@ -122,6 +122,9 @@ return {
 			},
 			auto_update = true,
 			run_on_start = true,
+			integrations = {
+				["mason-lspconfig"] = false,
+			},
 		},
 	},
 	{
