@@ -18,5 +18,6 @@
     docker-compose
     docker-buildx
     gcc
+    herdr
   ];
 }
