@@ -51,6 +51,7 @@
     jujutsu
     lazyjj
     jjui
+    # hunk
     ov
     treemd
     zsh
@@ -256,6 +257,9 @@
 
     "wezterm".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/wezterm";
+
+    "herdr/config.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/herdr/config.toml";
 
     "tmux/tmux.conf".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/tmux/tmux.conf";

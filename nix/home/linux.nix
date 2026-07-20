@@ -12,6 +12,7 @@
     mise
     ecspresso
     markitdown-mcp
+    herdr
   ];
 
   # Linux固有の設定をここに追加

@@ -1,0 +1,62 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+
+[terminal]
+new_cwd = "follow"
+shell_mode = "auto"
+
+[keys]
+prefix = "ctrl+b"
+switch_workspace = "prefix+shift+1..9"
+previous_agent = "prefix+comma"
+next_agent = "prefix+period"
+last_pane = "prefix+backtick"
+
+[ui]
+sidebar_width = 28
+sidebar_collapsed_mode = "compact"
+agent_panel_sort = "priority"
+mouse_capture = true
+copy_on_select = true
+confirm_close = true
+prompt_new_tab_name = true
+pane_borders = true
+pane_gaps = true
+show_agent_labels_on_pane_borders = true
+hide_tab_bar_when_single_tab = true
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 2
+
+[ui.sound]
+enabled = false
+
+[session]
+resume_agents_on_restore = true
+
+[worktrees]
+directory = "~/.herdr/worktrees"
+
+[[keys.command]]
+key = "prefix+alt+g"
+# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
+type = "pane"
+command = "lazygit"
+description = "Open lazygit"
+
+[[keys.command]]
+key = "prefix+alt+y"
+# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
+type = "pane"
+command = "yazi"
+description = "Open yazi"
+
+[[keys.command]]
+key = "prefix+alt+j"
+# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
+type = "pane"
+command = "jjui"
+description = "Open jjui"

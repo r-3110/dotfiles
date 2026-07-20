@@ -52,7 +52,6 @@
       "aquaskk"
       "blackhole-16ch"
       "box-drive"
-      "cmux"
       "macskk"
       "notion"
       "tonisives/tap/ovim"
