@@ -32,4 +32,8 @@ return {
 			}))
 		end,
 	},
+	{
+		"folke/ts-comments.nvim",
+		enabled = false,
+	},
 }
