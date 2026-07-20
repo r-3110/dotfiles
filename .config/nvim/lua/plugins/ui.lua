@@ -7,6 +7,7 @@ return {
 	{
 		"nvim-mini/mini.cursorword",
 		version = "*",
+		event = { "CursorHold", "CursorHoldI" },
 		config = function()
 			---@module "mini.cursorword"
 			require("mini.cursorword").setup({})

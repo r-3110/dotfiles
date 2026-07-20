@@ -29,6 +29,7 @@ return {
 	dependencies = {
 		{
 			"mfussenegger/nvim-dap",
+			lazy = true,
 			dependencies = {
 				{
 					"mfussenegger/nvim-dap-python",
