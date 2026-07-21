@@ -21,6 +21,7 @@
     docker-buildx
     dbeaver-bin
     cmux
+    herdr
 
     flutter
     libyaml
