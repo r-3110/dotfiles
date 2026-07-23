@@ -97,6 +97,14 @@ return {
         ]])
 			end,
 		},
+		{
+			"delphinus/skkeleton_indicator.nvim",
+			---@module "skkeleton_indicator"
+			---@type SkkeletonIndicatorOpts
+			opts = {
+				fadeOutMs = 1500,
+			},
+		},
 	},
 	vscode = false,
 	event = "VeryLazy",
