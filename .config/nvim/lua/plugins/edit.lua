@@ -8,6 +8,20 @@ return {
 		enabled = false,
 	},
 	{
+		"nvim-mini/mini.ai",
+		event = function()
+			return { "LazyFile" }
+		end,
+		opts = {
+			mappings = {
+				around_next = "aN",
+				inside_next = "iN",
+				around_last = "aL",
+				inside_last = "iL",
+			},
+		},
+	},
+	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
@@ -19,8 +33,7 @@ return {
 	{
 		"kylechui/nvim-surround",
 		version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
-		event = "VeryLazy",
-		lazy = true,
+		event = "LazyFile",
 		config = function()
 			---@module "nvim-surround"
 			require("nvim-surround").setup({
