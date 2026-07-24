@@ -44,6 +44,7 @@ return {
 						"yamlls",
 						"gh_actions_ls",
 						"kakehashi",
+						"version_lsp",
 					})
 
 					return opts

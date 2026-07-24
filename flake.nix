@@ -27,6 +27,9 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    version-lsp = {
+      url = "github:skanehira/version-lsp";
+    };
   };
 
   outputs =
@@ -40,6 +43,7 @@
       mcp,
       determinate,
       nix-index-database,
+      version-lsp,
       ...
     }:
     let
@@ -64,6 +68,8 @@
                 llm-agents.packages.${system}.antigravity-cli
                 llm-agents.packages.${system}.claude-code
                 llm-agents.packages.${system}.opencode
+
+                version-lsp.packages.${system}.default
               ];
             }
           ]
