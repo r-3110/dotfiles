@@ -106,9 +106,9 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: "lazygit",
     },
     {
-      name: "lazyjj",
+      name: "jjui",
       keyword: "lj",
-      snippet: "lazyjj",
+      snippet: "jjui",
     },
     {
       name: "branch",
