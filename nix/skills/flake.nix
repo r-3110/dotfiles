@@ -37,6 +37,14 @@
       url = "github:yoshiko-pg/difit";
       flake = false;
     };
+    herdr = {
+      url = "github:ogulcancelik/herdr";
+      flake = false;
+    };
+    hunk = {
+      url = "github:modem-dev/hunk";
+      flake = false;
+    };
     my-skills = {
       url = "path:.";
       flake = false;
@@ -61,6 +69,8 @@
               mizchi
               mattpocock
               difit
+              herdr
+              hunk
               my-skills
               ;
           }

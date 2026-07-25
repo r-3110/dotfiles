@@ -9,6 +9,8 @@
   mizchi,
   mattpocock,
   difit,
+  herdr,
+  hunk,
   my-skills,
   ...
 }:
@@ -55,6 +57,20 @@
         path = difit;
         subdir = "skills";
       };
+      herdr = {
+        path = builtins.path {
+          path = herdr;
+          name = "herdr-skill-source";
+          filter =
+            path: type:
+            (type == "directory" && toString path == toString herdr)
+            || builtins.baseNameOf path == "SKILL.md";
+        };
+      };
+      hunk = {
+        path = hunk;
+        subdir = "skills";
+      };
       my-skills = {
         path = my-skills;
       };
@@ -62,6 +78,7 @@
     skills.enable = [
       "find-skills"
       "conventional-commit"
+      "conventional-commit-jj"
       "create-github-pull-request-from-specification"
       "using-cmux"
       "cmux-team"
@@ -78,6 +95,10 @@
       "git-lower-model"
       "create-readme"
       "grilling"
+      "herdr"
+      "hunk-review"
+      "herdr-jj-workflow"
+      "using-jj-workspaces"
     ];
     skills.enableAll = [ "personal" ];
     targets = {
