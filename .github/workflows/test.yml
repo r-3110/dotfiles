@@ -16,6 +16,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
+    env:
+      MISE_NPM_SHELL_OUT: "true"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-go@v7
