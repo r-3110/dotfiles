@@ -1,4 +1,5 @@
 --@see https://github.com/lambdalisue/vim-kensaku
+--@see https://github.com/yuki-yano/fuzzy-motion.vim
 
 ---@type LazyPluginSpec[]
 return {
@@ -26,5 +27,20 @@ return {
 		"lambdalisue/kensaku-command.vim",
 		dependencies = { "lambdalisue/kensaku.vim" },
 		event = "CmdlineEnter",
+	},
+	{
+		"yuki-yano/fuzzy-motion.vim",
+		dependencies = { "lambdalisue/kensaku.vim" },
+		event = "VeryLazy",
+		keys = {
+			{
+				"<C-j>",
+				"<Cmd>FuzzyMotion<CR>",
+				desc = "Fuzzy Motion",
+			},
+		},
+		init = function()
+			vim.g.fuzzy_motion_matchers = { "fzf", "kensaku" }
+		end,
 	},
 }
