@@ -49,6 +49,12 @@ export default defineConfig(({ projectRoot, currentDirectory }) => ({
       snippet: `fnox tui --config ~/dotfiles/.config/fnox/fnox.toml`,
     },
     {
+      name: "start MCP proxy",
+      keyword: "mcp",
+      snippet:
+        "uvx mcp-proxy --pass-environment --port 8811 --named-server-config ~/dotfiles/.config/mcp-proxy/servers.json",
+    },
+    {
       name: "open file with nvim",
       keyword: "NV",
       snippet: 'nvim "$(fzf)"',

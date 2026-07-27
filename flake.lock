@@ -71,6 +71,22 @@
         "type": "github"
       }
     },
+    "chrome-devtools-mcp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784878031,
+        "narHash": "sha256-vp4YYJh+95PvRh8WNHKS2qNjJg92Bw8r+qrIupVu+vE=",
+        "owner": "ChromeDevTools",
+        "repo": "chrome-devtools-mcp",
+        "rev": "e2c19fed80fccd6cadd3b4e45151ac661420e90a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ChromeDevTools",
+        "repo": "chrome-devtools-mcp",
+        "type": "github"
+      }
+    },
     "cmux-team": {
       "flake": false,
       "locked": {
@@ -255,11 +271,11 @@
     "gh-stack": {
       "flake": false,
       "locked": {
-        "lastModified": 1784890463,
-        "narHash": "sha256-4Jtd2oVv3mg9IBFIV5ihBl/QRnaBQOoI1iRQscrm+jg=",
+        "lastModified": 1785079564,
+        "narHash": "sha256-XpQv5V3nGM4nRVk3WH2vjm+Stc0GulrzufAWFqSBcgY=",
         "owner": "github",
         "repo": "gh-stack",
-        "rev": "6dcf9f050ae922aa0beea2027e5d456118d972b3",
+        "rev": "53ed88c2a2637ac6d037d6fae02d21c4646a7bad",
         "type": "github"
       },
       "original": {
@@ -313,11 +329,11 @@
     "herdr": {
       "flake": false,
       "locked": {
-        "lastModified": 1784942815,
-        "narHash": "sha256-sSzijwp8RjM048EaWgRH1dP6oLLPz7jd3rNKaMbzVdk=",
+        "lastModified": 1785108339,
+        "narHash": "sha256-nImtXaYzNbHdjbDOfHFB2nRcnEZckuAsBh1aJMhQPyM=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "d4e0dd3d903c50d2edb8c3cec71952a83989b310",
+        "rev": "dc2506ea8cb58fc8cde7ceb357cad03b1aba0da1",
         "type": "github"
       },
       "original": {
@@ -349,11 +365,11 @@
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1784933917,
-        "narHash": "sha256-c/bCvCe6s/NSGvA6AWKZGpkL+4zgJtwilvsNTnkk6pY=",
+        "lastModified": 1785107953,
+        "narHash": "sha256-DpN7GS22exemXfRH+65/kgaICF4lBzrhNfrtDbT2xec=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "a8a49d9df6747f664eb9b4910c551cd4b055909e",
+        "rev": "eab03fd21e1917b7a2bc605c335e5029a3d1e28d",
         "type": "github"
       },
       "original": {
@@ -734,9 +750,26 @@
         "type": "github"
       }
     },
+    "semgrep-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777138700,
+        "narHash": "sha256-SU4TwP40DqqGUcB+VQaWxPx68bXze6vvAqznVmsu1/8=",
+        "owner": "semgrep",
+        "repo": "skills",
+        "rev": "90cc990a535098a84950b18d8cf770e097da1c77",
+        "type": "github"
+      },
+      "original": {
+        "owner": "semgrep",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "skills": {
       "inputs": {
         "agent-skills": "agent-skills",
+        "chrome-devtools-mcp": "chrome-devtools-mcp",
         "cmux-team": "cmux-team",
         "difit": "difit",
         "gh-stack": "gh-stack",
@@ -749,6 +782,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
+        "semgrep-skills": "semgrep-skills",
         "using-cmux": "using-cmux",
         "vercel-skills": "vercel-skills"
       },

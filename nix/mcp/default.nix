@@ -8,12 +8,22 @@ let
   mcp = inputs.mcp-servers.lib;
 
   baseConfig = {
-    programs = {
-      context7.enable = true;
-      # nixos.enable = true;
-    };
-
     settings.servers = {
+      markitdown-mcp = {
+        type = "http";
+        url = "http://127.0.0.1:8811/servers/markitdown-mcp/mcp";
+      };
+
+      chrome-devtools = {
+        command = "npx";
+        args = [
+          "-y"
+          "chrome-devtools-mcp@latest"
+          "--slim"
+          "--headless"
+        ];
+      };
+
       github = {
         enable = true;
         type = "http";
@@ -35,11 +45,6 @@ let
         ];
       };
 
-      markitdown-mcp = {
-        command = "markitdown-mcp";
-        args = [ ];
-      };
-
       deepwiki-mcp = {
         type = "http";
         url = "https://mcp.deepwiki.com/mcp";
@@ -49,16 +54,22 @@ let
         command = "context-mode";
       };
 
-      dbhub = {
-        command = "npx";
-        args = [
-          "@bytebase/dbhub@latest"
-          "--config"
-          "~/dotfiles/.config/dbhub/dbhub.toml"
-          "--transport"
-          "stdio"
-        ];
+      # mcp-proxyで起動するmcp
+      semgrep = {
+        type = "http";
+        url = "http://127.0.0.1:8811/servers/semgrep/mcp";
       };
+
+      dbhub = {
+        type = "http";
+        url = "http://127.0.0.1:8811/servers/dbhub/mcp";
+      };
+
+      context7 = {
+        type = "http";
+        url = "https://mcp.context7.com/mcp";
+      };
+
     };
   };
 

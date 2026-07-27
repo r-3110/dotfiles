@@ -18,6 +18,7 @@ fnox = "latest"
 "npm:@openai/codex" = "latest"
 "pipx:sqlit-tui" = "latest"
 "npm:hunkdiff" = "latest"
+"pipx:markitdown-mcp" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

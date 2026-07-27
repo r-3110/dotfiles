@@ -9,6 +9,14 @@
       url = "github:vercel-labs/skills";
       flake = false;
     };
+    semgrep-skills = {
+      url = "github:semgrep/skills";
+      flake = false;
+    };
+    chrome-devtools-mcp = {
+      url = "github:ChromeDevTools/chrome-devtools-mcp";
+      flake = false;
+    };
     github-awesome-copilot-skills = {
       url = "github:github/awesome-copilot";
       flake = false;
@@ -62,6 +70,8 @@
             inherit (inputs)
               agent-skills
               vercel-skills
+              semgrep-skills
+              chrome-devtools-mcp
               github-awesome-copilot-skills
               using-cmux
               cmux-team

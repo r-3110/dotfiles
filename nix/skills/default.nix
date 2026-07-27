@@ -2,6 +2,8 @@
   lib,
   agent-skills,
   vercel-skills,
+  semgrep-skills,
+  chrome-devtools-mcp,
   github-awesome-copilot-skills,
   using-cmux,
   cmux-team,
@@ -28,6 +30,15 @@
       vercel = {
         path = vercel-skills;
         subdir = "skills";
+      };
+      semgrep = {
+        path = semgrep-skills;
+        subdir = "skills";
+      };
+      chrome-devtools = {
+        path = chrome-devtools-mcp;
+        subdir = "skills";
+        idPrefix = "chromeDevtools";
       };
       github-awesome-copilot = {
         path = github-awesome-copilot-skills;
@@ -63,8 +74,7 @@
           name = "herdr-skill-source";
           filter =
             path: type:
-            (type == "directory" && toString path == toString herdr)
-            || builtins.baseNameOf path == "SKILL.md";
+            (type == "directory" && toString path == toString herdr) || builtins.baseNameOf path == "SKILL.md";
         };
       };
       hunk = {
@@ -77,6 +87,15 @@
     };
     skills.enable = [
       "find-skills"
+      "code-security"
+      "llm-security"
+      "semgrep"
+      "chromeDevtools/a11y-debugging"
+      "chromeDevtools/chrome-devtools-cli"
+      "chromeDevtools/chrome-devtools"
+      "chromeDevtools/debug-optimize-lcp"
+      "chromeDevtools/memory-leak-debugging"
+      "chromeDevtools/troubleshooting"
       "conventional-commit"
       "conventional-commit-jj"
       "create-github-pull-request-from-specification"
