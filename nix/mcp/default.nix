@@ -91,6 +91,11 @@ let
     pkgs.lib.recursiveUpdate baseConfig {
       flavor = "codex";
       format = "toml";
+      settings.servers = {
+        markitdown-mcp.enable = false;
+        chrome-devtools.enable = false;
+        dbhub.enable = false;
+      };
       settings.features = {
         plugin_hooks = true;
         hooks = true;
