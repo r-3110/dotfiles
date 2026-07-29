@@ -47,7 +47,6 @@
     aws-sso-cli
     pngpaste
     mprocs
-    # markitdown-mcp
   ];
 
   programs.nix-index-database.comma.enable = true;

@@ -11,7 +11,6 @@
     keychain
     mise
     ecspresso
-    markitdown-mcp
     herdr
   ];
 
