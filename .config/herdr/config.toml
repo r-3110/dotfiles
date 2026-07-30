@@ -41,22 +41,25 @@ resume_agents_on_restore = true
 directory = "~/.herdr/worktrees"
 
 [[keys.command]]
+key = "prefix"
+type = "shell"
+command = 'editprompt toggle --mux herdr --target-pane "$HERDR_ACTIVE_PANE_ID" --editor nvim --always-copy --pane-rows 12'
+description = "open prompt editor"
+
+[[keys.command]]
 key = "prefix+alt+g"
-# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
-type = "pane"
+type = "popup"
 command = "lazygit"
 description = "Open lazygit"
 
 [[keys.command]]
 key = "prefix+alt+y"
-# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
-type = "pane"
+type = "popup"
 command = "yazi"
 description = "Open yazi"
 
 [[keys.command]]
 key = "prefix+alt+j"
-# TODO: Herdr 0.7.4へ更新したら type を "popup" に変更する
-type = "pane"
+type = "popup"
 command = "jjui"
 description = "Open jjui"
