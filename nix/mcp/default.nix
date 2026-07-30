@@ -92,9 +92,9 @@ let
       flavor = "codex";
       format = "toml";
       settings.servers = {
-        markitdown-mcp.enable = false;
-        chrome-devtools.enable = false;
-        dbhub.enable = false;
+        markitdown-mcp.enabled = false;
+        chrome-devtools.enabled = false;
+        dbhub.enabled = false;
       };
       settings.features = {
         plugin_hooks = true;
