@@ -40,22 +40,38 @@
       "awsesh"
       "mo"
       "microsoft/apm/apm"
+      "glab-tui"
     ];
     taps = [
-      "clawscli/tap"
-      "elva-labs/elva"
-      "tonisives/tap"
-      "manaflow-ai/cmux"
-      "k1LoW/tap"
+      {
+        name = "clawscli/tap";
+        trusted = true;
+      }
+      {
+        name = "elva-labs/elva";
+        trusted = true;
+      }
+      {
+        name = "tonisives/tap";
+        trusted = true;
+      }
+      {
+        name = "k1LoW/tap";
+        trusted = true;
+      }
+      {
+        name = "rcieri/glab-tui";
+        trusted = true;
+      }
     ];
     casks = [
-      "aquaskk"
       "blackhole-16ch"
       "box-drive"
       "macskk"
       "notion"
       "tonisives/tap/ovim"
       "google-chrome"
+      "brave-browser"
       "clawscli/tap/claws"
       "slack"
       "ghostty"
