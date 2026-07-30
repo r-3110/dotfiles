@@ -69,13 +69,8 @@
         subdir = "skills";
       };
       herdr = {
-        path = builtins.path {
-          path = herdr;
-          name = "herdr-skill-source";
-          filter =
-            path: type:
-            (type == "directory" && toString path == toString herdr) || builtins.baseNameOf path == "SKILL.md";
-        };
+        path = herdr;
+        subdir = "skills";
       };
       hunk = {
         path = hunk;
