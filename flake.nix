@@ -54,6 +54,7 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
+            overlays = [ (import ./nix/overlays/worktrunk.nix) ];
           };
         in
         home-manager.lib.homeManagerConfiguration {
