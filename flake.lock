@@ -74,11 +74,11 @@
     "chrome-devtools-mcp": {
       "flake": false,
       "locked": {
-        "lastModified": 1785495828,
-        "narHash": "sha256-efUG9E53TqLTwuggsGiZjLEMWgk8GA0JMTtbY3D0C20=",
+        "lastModified": 1785498344,
+        "narHash": "sha256-Q4mqNV1eI0/1Di22NDga1l7TCHI8RMeRakFzrChuYbU=",
         "owner": "ChromeDevTools",
         "repo": "chrome-devtools-mcp",
-        "rev": "b08c73c8d8887813fdf358e81a43925b84ef10e4",
+        "rev": "c5ebf9e2023ec37c77d2ee355a345249ac91d192",
         "type": "github"
       },
       "original": {
@@ -329,11 +329,11 @@
     "herdr": {
       "flake": false,
       "locked": {
-        "lastModified": 1785447961,
-        "narHash": "sha256-KoVAI0D42BKQzTJMqGokvQNhAKsUlXDCgY5JgDo3UfE=",
+        "lastModified": 1785510955,
+        "narHash": "sha256-JvF5Z6uM+CmJ0QVre/8xmkQiJrKPUh8zrgCaTg5Wvc8=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "b4112743cff42452b5d18558bf2d55bbbfff8c69",
+        "rev": "02fe7d7659e37d9f05eed80af382d1dcdccb6876",
         "type": "github"
       },
       "original": {
@@ -365,11 +365,11 @@
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1785432041,
-        "narHash": "sha256-9uPjFglWZjfmDZZMiNPjzIblHxOgYeKhDyFjwP5flS0=",
+        "lastModified": 1785520111,
+        "narHash": "sha256-O48l9sX7JNlCKvu7YN8hHR4UCPvi5DwMK7TJFNe+lEk=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "8e1f5fd265da3d0b45978db67350436cfaa05c05",
+        "rev": "840a504684882c8237fa76004bcf1ddd41fe74d3",
         "type": "github"
       },
       "original": {
