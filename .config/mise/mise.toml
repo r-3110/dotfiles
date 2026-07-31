@@ -18,7 +18,9 @@ fnox = "latest"
 "npm:@openai/codex" = "latest"
 "pipx:sqlit-tui" = "latest"
 "npm:hunkdiff" = "latest"
-"pipx:markitdown-mcp" = { version = "0.0.1a4", python = "3.13" }
+"pipx:markitdown-mcp" = { version = "0.0.1a4", depends = [
+  "python",
+], pipx_args = "--python python3.13" }
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
