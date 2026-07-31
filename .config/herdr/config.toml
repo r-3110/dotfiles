@@ -41,7 +41,7 @@ resume_agents_on_restore = true
 directory = "~/.herdr/worktrees"
 
 [[keys.command]]
-key = "prefix"
+key = "prefix+alt+e"
 type = "shell"
 command = 'editprompt toggle --mux herdr --target-pane "$HERDR_ACTIVE_PANE_ID" --editor nvim --always-copy --pane-rows 12'
 description = "open prompt editor"
