@@ -349,11 +349,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785496534,
-        "narHash": "sha256-EASdusMYLuPhOCrE3LmsAGOvGhX3vnKBLxFvj9lI8tU=",
+        "lastModified": 1785531816,
+        "narHash": "sha256-vkMnV0JIyw+g/NmcfoajlGaAO+9a0ezia+FZohQJrik=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e8827fbbb12015a8dd9f66285aec79d655bcb9f6",
+        "rev": "bf9ce9fec78f95f374e8dd3b503863a3ec128ebe",
         "type": "github"
       },
       "original": {
@@ -365,11 +365,11 @@
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1785520111,
-        "narHash": "sha256-O48l9sX7JNlCKvu7YN8hHR4UCPvi5DwMK7TJFNe+lEk=",
+        "lastModified": 1785535306,
+        "narHash": "sha256-DceUfLmEXxKM38F0DQwaw0bOQ3w4I+GEAO4rhxs4How=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "840a504684882c8237fa76004bcf1ddd41fe74d3",
+        "rev": "ec8fe842aedb1ef29288f0a53390c28fe21689eb",
         "type": "github"
       },
       "original": {
@@ -387,11 +387,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1785481674,
-        "narHash": "sha256-ujzuafv52VH5LJkMINYcpjWG7xpMVHTZwwdiisJhZGY=",
+        "lastModified": 1785538088,
+        "narHash": "sha256-q5YZnpoH8LhTwlf2WPbwQ50iXBFXV7eq7nvNYZ+6S04=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "a6dcbf72f6d61519cc12858176f0fdd189853b28",
+        "rev": "c73b2c00d75ce78ed58e72f7b70d72b9e45db1d1",
         "type": "github"
       },
       "original": {
@@ -438,11 +438,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1785487250,
-        "narHash": "sha256-w6WSsNitkx1y6kKYWDHZcl4U2OsgVZ8Ve57GU2QhJ2I=",
+        "lastModified": 1785525106,
+        "narHash": "sha256-bkBKfxv/xOcDmBdzX8hGg+ksdXuCJW99FYdv8Y9Jy9s=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "6740f47a2960a11b3bdc3d20acc4c3468dc0ecdc",
+        "rev": "b0c29de3f36447dcccf307cefb1d523060557ef0",
         "type": "github"
       },
       "original": {
