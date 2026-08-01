@@ -28,7 +28,6 @@
     delta
     eza
     fd
-    fzf
     ghq
     git
     git-open
@@ -41,13 +40,11 @@
     neovim
     ripgrep
     sheldon
-    oh-my-posh
     tmux
     uv
     yazi
     yq-go
     zellij
-    zoxide
     jujutsu
     lazyjj
     jjui
@@ -95,6 +92,26 @@
     // lib.optionalAttrs pkgs.stdenv.isDarwin {
       UseKeychain = "yes";
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+
+    defaultCommand = "fd --type f --hidden --exclude .git";
+    fileWidget.command = "fd --type f --hidden --exclude .git";
+    changeDirWidget.command = "fd --type d --hidden --exclude .git";
+  };
+
+  programs.oh-my-posh = {
+    enable = true;
+    enableZshIntegration = true;
+    configFile = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/oh-my-posh/config.yaml";
   };
 
   programs.zsh = {
@@ -155,15 +172,6 @@
 
       # Sheldon plugin manager (manages all zsh plugins)
       eval "$(sheldon source)"
-
-      # Zoxide
-      eval "$(zoxide init zsh)"
-
-      # oh-my-posh
-      source <($HOME/.nix-profile/bin/oh-my-posh init zsh --config $HOME/dotfiles/.config/oh-my-posh/config.yaml)
-
-      # FZF
-      eval "$(fzf --zsh)"
 
       source $HOME/.zsh_functions
     '';
