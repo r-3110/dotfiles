@@ -50,16 +50,22 @@ description = "open prompt editor"
 key = "prefix+alt+g"
 type = "popup"
 command = "lazygit"
+width = "90%"
+height = "90%"
 description = "Open lazygit"
 
 [[keys.command]]
 key = "prefix+alt+y"
 type = "popup"
 command = "yazi"
+width = "90%"
+height = "90%"
 description = "Open yazi"
 
 [[keys.command]]
 key = "prefix+alt+j"
 type = "popup"
 command = "jjui"
+width = "90%"
+height = "90%"
 description = "Open jjui"
