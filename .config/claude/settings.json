@@ -55,7 +55,8 @@
     "superpowers@superpowers-marketplace": true,
     "ecc@ecc": true,
     "context-mode@context-mode": true,
-    "deploy-on-aws@agent-plugins-for-aws": true
+    "deploy-on-aws@agent-plugins-for-aws": true,
+    "codex@openai-codex": true
   },
   "extraKnownMarketplaces": {
     "superpowers": {
@@ -80,6 +81,12 @@
       "source": {
         "source": "github",
         "repo": "awslabs/agent-plugins"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
       }
     }
   },
