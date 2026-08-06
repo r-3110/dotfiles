@@ -98,7 +98,6 @@
       "cmux-team"
       "gh-stack"
       "empirical-prompt-tuning"
-      "difit-review"
       "tuicr"
       "drawio"
       "draw-io-diagram-generator"
@@ -118,16 +117,16 @@
     targets = {
       # geminiとcodexは~/.agentsをサポート
       agents = {
-        dest = ".agents/skills";
+        dest = "$HOME/.agents/skills";
         structure = "copy-tree";
       };
       # claudeとcopilotは~/.claudeをサポート
       claude = {
-        dest = ".claude/skills";
+        dest = "$HOME/.claude/skills";
         structure = "copy-tree";
       };
       antigravity = {
-        dest = ".gemini/antigravity-cli/skills";
+        dest = "$HOME/.gemini/antigravity-cli/skills";
         structure = "copy-tree";
       };
     };
