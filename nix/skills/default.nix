@@ -98,7 +98,6 @@
       "cmux-team"
       "gh-stack"
       "empirical-prompt-tuning"
-      "difit-review"
       "tuicr"
       "drawio"
       "draw-io-diagram-generator"
