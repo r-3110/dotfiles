@@ -41,8 +41,8 @@
       url = "github:mattpocock/skills";
       flake = false;
     };
-    difit = {
-      url = "github:yoshiko-pg/difit";
+    tuicr = {
+      url = "github:agavra/tuicr";
       flake = false;
     };
     herdr = {
@@ -78,7 +78,7 @@
               gh-stack
               mizchi
               mattpocock
-              difit
+              tuicr
               herdr
               hunk
               my-skills

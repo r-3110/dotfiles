@@ -48,6 +48,7 @@
     jujutsu
     lazyjj
     jjui
+    tuicr
     # hunk
     ov
     treemd

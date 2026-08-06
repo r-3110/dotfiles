@@ -10,7 +10,7 @@
   gh-stack,
   mizchi,
   mattpocock,
-  difit,
+  tuicr,
   herdr,
   hunk,
   my-skills,
@@ -64,8 +64,8 @@
         path = mattpocock;
         subdir = "skills/productivity";
       };
-      difit = {
-        path = difit;
+      tuicr = {
+        path = tuicr;
         subdir = "skills";
       };
       herdr = {
@@ -99,7 +99,7 @@
       "gh-stack"
       "empirical-prompt-tuning"
       "difit-review"
-      "difit"
+      "tuicr"
       "drawio"
       "draw-io-diagram-generator"
       "sql-optimization"
