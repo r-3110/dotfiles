@@ -1,20 +1,37 @@
 -- @see https://github.com/kkoomen/vim-doge
 
----@modle "lazy"
+---@module "lazy"
 ---@type LazyPluginSpec
 return {
 	"kkoomen/vim-doge",
-	event = "BufReadPre",
-	lazy = true,
-	keys = {
-		{
-			"<Leader>dog",
-			function()
-				vim.cmd("DogeGenerate")
-			end,
-			desc = "Doge ドキュメント生成",
-		},
+	ft = {
+		"c",
+		"cpp",
+		"cs",
+		"groovy",
+		"html",
+		"java",
+		"javascript",
+		"javascript.jsx",
+		"javascriptreact",
+		"javascript.tsx",
+		"lua",
+		"php",
+		"python",
+		"r",
+		"ruby",
+		"rust",
+		"scala",
+		"sh",
+		"svelte",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue",
 	},
+	init = function()
+		vim.g.doge_mapping = "<leader>dg"
+	end,
 }
 
 -- Interactive mode comment todo-jumping
