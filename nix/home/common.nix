@@ -49,7 +49,6 @@
     lazyjj
     jjui
     tuicr
-    # hunk
     ov
     treemd
     zsh
@@ -271,6 +270,9 @@
 
     "herdr/config.toml".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/herdr/config.toml";
+
+    "hunk/config.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/hunk/config.toml";
 
     "tmux/tmux.conf".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/tmux/tmux.conf";

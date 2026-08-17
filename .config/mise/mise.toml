@@ -16,10 +16,10 @@ fnox = "latest"
 "go:github.com/myuron/lazycwl" = "latest"
 "npm:@openai/codex" = "latest"
 "pipx:sqlit-tui" = "latest"
-"npm:hunkdiff" = "latest"
 "pipx:markitdown-mcp" = { version = "0.0.1a4", depends = [
   "python",
 ], pipx_args = "--python python3.13" }
+hunk = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
