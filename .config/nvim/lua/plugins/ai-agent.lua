@@ -1,5 +1,6 @@
 --@see https://github.com/folke/sidekick.nvim
 --@see https://github.com/j4shu/mention.nvim
+--@see https://github.com/utahta/herdr-prompt.nvim
 
 ---@module "lazy"
 ---@type LazyPluginSpec[]
@@ -151,5 +152,19 @@ return {
 				silent = false,
 			})
 		end,
+	},
+	{
+		"utahta/herdr-prompt.nvim",
+		keys = {
+			{
+				"<leader>tp",
+				function()
+					---@module "herdr-prompt"
+					require("herdr-prompt").setup()
+				end,
+				mode = { "n", "v" },
+				desc = "Herdr Prompt",
+			},
+		},
 	},
 }
