@@ -4,7 +4,11 @@ return {
 	filetypes = { "markdown" },
 	detached = false,
 	init_options = {
-		autoInstall = true,
+		languages = {
+			_ = {
+				autoInstall = true,
+			},
+		},
 		languageServers = {
 			pyright = {
 				cmd = { "pyright-langserver", "--stdio" },
