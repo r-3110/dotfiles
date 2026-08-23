@@ -69,6 +69,7 @@ return {
 	},
 	{
 		"tominaga-h/hunk-inline.nvim",
+		cond = vim.fn.executable("hunk") == 1,
 		event = "BufReadPost",
 		config = function()
 			---@module "hunk-inline"
