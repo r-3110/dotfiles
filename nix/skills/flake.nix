@@ -41,6 +41,10 @@
       url = "github:mattpocock/skills";
       flake = false;
     };
+    humanlayer = {
+      url = "github:humanlayer/skills";
+      flake = false;
+    };
     tuicr = {
       url = "github:agavra/tuicr";
       flake = false;
@@ -78,6 +82,7 @@
               gh-stack
               mizchi
               mattpocock
+              humanlayer
               tuicr
               herdr
               hunk

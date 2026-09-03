@@ -10,6 +10,7 @@
   gh-stack,
   mizchi,
   mattpocock,
+  humanlayer,
   tuicr,
   herdr,
   hunk,
@@ -64,6 +65,10 @@
         path = mattpocock;
         subdir = "skills/productivity";
       };
+      humanlayer-show-me = {
+        path = humanlayer;
+        subdir = "plugins/show-me/skills";
+      };
       tuicr = {
         path = tuicr;
         subdir = "skills";
@@ -108,6 +113,7 @@
       "git-lower-model"
       "create-readme"
       "grilling"
+      "show-me"
       "herdr"
       "hunk-review"
       "herdr-jj-workflow"

@@ -99,11 +99,11 @@
     "chrome-devtools-mcp": {
       "flake": false,
       "locked": {
-        "lastModified": 1788375000,
-        "narHash": "sha256-9lHyRGPsX0fVbIAOuJAnX5I394zY9uG4EGLy6+S6YPQ=",
+        "lastModified": 1788450345,
+        "narHash": "sha256-B19k4QH345hc7k5yZiic10Ga70wGU5CX3ugfn+qo7x8=",
         "owner": "ChromeDevTools",
         "repo": "chrome-devtools-mcp",
-        "rev": "b2007ab86639a0ae4e4370484561158773112b93",
+        "rev": "401a1192b6e745a360c2a011a4bb69a67bf2af7a",
         "type": "github"
       },
       "original": {
@@ -318,11 +318,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1788315077,
-        "narHash": "sha256-uFwyqp8wv0+0IriiJGhT2OCLshdYiX0uv0vGWOn6Hu4=",
+        "lastModified": 1788478142,
+        "narHash": "sha256-TrW612pC4OYyizZKRhteEZfPaZeyN4b5+7/47Ag3n7g=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "6a8fa297b0fe652bd3d7c8946554dc146846b20e",
+        "rev": "fce7cf22f248fdaa03d03496673f7b617404484d",
         "type": "github"
       },
       "original": {
@@ -334,11 +334,11 @@
     "herdr": {
       "flake": false,
       "locked": {
-        "lastModified": 1788383989,
-        "narHash": "sha256-X/jVydha7LL50y/qyJWA4nQY1pqmSL2XZ2mVfTtePq8=",
+        "lastModified": 1788476735,
+        "narHash": "sha256-tMOvyjh+JAD6lnkghaGE78URt26bQuSAkkiSaLBiQdY=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "2ae8b91ca5919c26df7ce779b0e9a5dd98b769ae",
+        "rev": "3150bd92d6162ba248bc28fd4d40bd0d6238e1af",
         "type": "github"
       },
       "original": {
@@ -367,14 +367,30 @@
         "type": "github"
       }
     },
+    "humanlayer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786633530,
+        "narHash": "sha256-lJvu9CGAN/+dzmzck0CodRXn/p7GUkCbfyZxys4nIoU=",
+        "owner": "humanlayer",
+        "repo": "skills",
+        "rev": "3c2629142c5d437428269b1b722b08c0b87f574d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanlayer",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1788365094,
-        "narHash": "sha256-lNTwQUaOnND9YPZdFsAcKROiKoq6rRT00MIuct/F9j0=",
+        "lastModified": 1788399650,
+        "narHash": "sha256-hPqMdm1DuG/Glvb0ZAowBjliuHebRiNCGOAaBo7jFtQ=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "c7f91c742b20e94fb3a7e969fae3758c30805b67",
+        "rev": "2c4801b28a8f1bd541c825330ee184dcf06cdd59",
         "type": "github"
       },
       "original": {
@@ -779,6 +795,7 @@
         "gh-stack": "gh-stack",
         "github-awesome-copilot-skills": "github-awesome-copilot-skills",
         "herdr": "herdr",
+        "humanlayer": "humanlayer",
         "hunk": "hunk",
         "mattpocock": "mattpocock",
         "mizchi": "mizchi",
@@ -871,11 +888,11 @@
     "using-cmux": {
       "flake": false,
       "locked": {
-        "lastModified": 1777332323,
-        "narHash": "sha256-5Jea6OufG0RAc60V0K70dvwDuP1SHlK06InHA7JK8D0=",
+        "lastModified": 1788418072,
+        "narHash": "sha256-7FEmydehSmrEuVtV3IloUYjFoNrkyavREjYZ+wdDdnI=",
         "owner": "hummer98",
         "repo": "using-cmux",
-        "rev": "a3d0b18b88af29be282e2e5128c37283fbf4822a",
+        "rev": "a905e95678add3f932332d86a54433be8ffcf375",
         "type": "github"
       },
       "original": {
