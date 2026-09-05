@@ -69,3 +69,15 @@ command = "jjui"
 width = "90%"
 height = "90%"
 description = "Open jjui"
+
+[[keys.command]]
+key = "prefix+l"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.toggle"
+description = "nvim sidebar"
+
+[[keys.command]]
+key = "prefix+o"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.pick-file"
+description = "open file from agent output"

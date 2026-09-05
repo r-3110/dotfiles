@@ -167,4 +167,94 @@ return {
 			},
 		},
 	},
+	{
+		"makyinmars/herdr-context.nvim",
+		cond = vim.env.HERDR_ENV == "1",
+		lazy = true, -- keeps :checkhealth herdr-context discoverable before the first mapping
+		keys = {
+			{
+				"<leader>ac",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").compose()
+				end,
+				mode = { "n", "v" },
+				desc = "Compose Herdr Context",
+			},
+			{
+				"<leader>ap",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").prompt()
+				end,
+				mode = { "n", "v" },
+				desc = "Prompt Herdr with Code Context",
+			},
+			{
+				"<leader>ay",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").reference()
+				end,
+				mode = { "n", "v" },
+				desc = "Send Reference to Herdr Agent",
+			},
+			{
+				"<leader>aY",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").send()
+				end,
+				mode = { "n", "v" },
+				desc = "Send Context to Herdr Agent",
+			},
+			{
+				"<leader>ad",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").diagnostics()
+				end,
+				mode = { "n", "v" },
+				desc = "Send Diagnostics to Herdr Agent",
+			},
+			{
+				"<leader>at",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").select_target()
+				end,
+				desc = "Select Herdr Agent",
+			},
+			{
+				"<leader>aa",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").agents()
+				end,
+				desc = "Toggle Herdr Agents",
+			},
+			{
+				"<leader>ar",
+				function()
+					---@module "herdr-context"
+					require("herdr-context").refresh()
+				end,
+				desc = "Refresh Herdr Agents",
+			},
+		},
+		opts = {},
+	},
+	{
+		"ChmaraX/herdr-nvim",
+		cond = vim.env.HERDR_ENV == "1",
+		lazy = true,
+		cmd = "Herdr",
+		keys = {
+			{ "<leader>anc", "<cmd>Herdr comment<cr>", mode = { "n", "x" }, desc = "Herdr: Add comment" },
+			{ "<leader>anl", "<cmd>Herdr list<cr>", desc = "Herdr: List comments" },
+			{ "<leader>ans", "<cmd>Herdr send<cr>", desc = "Herdr: Send comments" },
+			{ "<leader>anS", "<cmd>Herdr submit<cr>", desc = "Herdr: Submit comments" },
+		},
+		opts = { keymaps = false },
+	},
 }
