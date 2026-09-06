@@ -63,6 +63,10 @@
         name = "rcieri/glab-tui";
         trusted = true;
       }
+      {
+        name = "gammons/tap";
+        trusted = true;
+      }
     ];
     casks = [
       "blackhole-16ch"
@@ -78,6 +82,8 @@
       "microsoft-word"
       "microsoft-excel"
       "microsoft-powerpoint"
+      "terminal-browser"
+      "slk"
     ];
     # https://apps.apple.com/jp
     masApps = {
