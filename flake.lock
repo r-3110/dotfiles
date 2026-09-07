@@ -22,6 +22,22 @@
         "type": "github"
       }
     },
+    "archify": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788784497,
+        "narHash": "sha256-DVMLWMVFr6qOezpb8Vk5QeYBSepcYnZXktfdFfffMes=",
+        "owner": "tt-a1i",
+        "repo": "archify",
+        "rev": "920543baa1c6137803c5b45a69d8977152773d35",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tt-a1i",
+        "repo": "archify",
+        "type": "github"
+      }
+    },
     "blueprint": {
       "inputs": {
         "nixpkgs": [
@@ -99,11 +115,11 @@
     "chrome-devtools-mcp": {
       "flake": false,
       "locked": {
-        "lastModified": 1788537693,
-        "narHash": "sha256-O46+y/c2YX4sQv1vw3fFoHq6FWDgOKb8TsZKabbvAwU=",
+        "lastModified": 1788787691,
+        "narHash": "sha256-+5sk6SD6AWvjDx+ejCpwnhFs+yYYEVnqR5TaVy5V8Xo=",
         "owner": "ChromeDevTools",
         "repo": "chrome-devtools-mcp",
-        "rev": "086299a69e6d322df43d7e54417fce25b3a2fc08",
+        "rev": "a918b7b4086bcb14105b80abab1deb882535f15e",
         "type": "github"
       },
       "original": {
@@ -318,11 +334,11 @@
     "github-awesome-copilot-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1788480488,
-        "narHash": "sha256-xR55lyARHe3R4oUnZIKgICfaCiEqW2xgcg1PonDwXsk=",
+        "lastModified": 1788824864,
+        "narHash": "sha256-Ff8XWVlbmk1XVpRfHF8rsKKwBgnArwNYlGtdpPDMAus=",
         "owner": "github",
         "repo": "awesome-copilot",
-        "rev": "7b1ebe6333397841ca918dec904d24d4695fe953",
+        "rev": "48986387f9ccbfa864399a75a662f360f0e693b3",
         "type": "github"
       },
       "original": {
@@ -334,11 +350,11 @@
     "herdr": {
       "flake": false,
       "locked": {
-        "lastModified": 1788562020,
-        "narHash": "sha256-KGhnCH0ydSKxI6dljB9ReQBsWMCPqnAfROF+wW+l0Js=",
+        "lastModified": 1788818682,
+        "narHash": "sha256-IM+okuqRYhs24ZKD4UxEM1kFaGo5KzKMxngKwqIxDU0=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "8162e26509f7b91eb8dcfd47387d43af3f348bbb",
+        "rev": "792b2baa447a3ed413cc755ea3d76582021c648a",
         "type": "github"
       },
       "original": {
@@ -386,11 +402,11 @@
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1788542752,
-        "narHash": "sha256-fSZugZ5Hu7AhPvLhteYq1SMFzMb4rQi5iFbfFYFjoKQ=",
+        "lastModified": 1788819726,
+        "narHash": "sha256-pdR31QxSWs49yX4d1v4iyqj64lAciPRQiYvLQDYYSy0=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "bfbfac8d2b3a54e1f72256d6dc24e873882d722f",
+        "rev": "99190170947c8392944f1f6c65bb79bb1d1270f9",
         "type": "github"
       },
       "original": {
@@ -790,6 +806,7 @@
     "skills": {
       "inputs": {
         "agent-skills": "agent-skills",
+        "archify": "archify",
         "chrome-devtools-mcp": "chrome-devtools-mcp",
         "cmux-team": "cmux-team",
         "gh-stack": "gh-stack",
@@ -872,11 +889,11 @@
     "tuicr": {
       "flake": false,
       "locked": {
-        "lastModified": 1788370327,
-        "narHash": "sha256-nbjvSRrbJ4LQrn8l0FJ8R5PNpq7gcQR8m78agL59zqs=",
+        "lastModified": 1788824861,
+        "narHash": "sha256-fcPGnzf66gqkaPsW6HRPgcr9LYGvQuW74+xn+IvObIs=",
         "owner": "agavra",
         "repo": "tuicr",
-        "rev": "b55e218f6d38a87ca4a6d9924a4c50b5f601dd07",
+        "rev": "f9719c88a0acd581d531ec2499eafe1590833cf5",
         "type": "github"
       },
       "original": {
@@ -904,11 +921,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1787084911,
-        "narHash": "sha256-qD+gGPYjgbArf1Nz5rtlJVCS/2KNTuspag/B079l014=",
+        "lastModified": 1788734871,
+        "narHash": "sha256-0BmVByaPFacM4Tncrs8Kq56MqDyDWrKCJmQhqEolTOs=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+        "rev": "1682051d48c34f5eb135e6475c1a965dce05e820",
         "type": "github"
       },
       "original": {

@@ -1,6 +1,7 @@
 {
   lib,
   agent-skills,
+  archify,
   vercel-skills,
   semgrep-skills,
   chrome-devtools-mcp,
@@ -28,6 +29,10 @@
   programs.agent-skills = {
     enable = true;
     sources = {
+      archify = {
+        path = archify;
+        subdir = "archify";
+      };
       vercel = {
         path = vercel-skills;
         subdir = "skills";
@@ -79,13 +84,14 @@
       };
       hunk = {
         path = hunk;
-        subdir = "skills";
+        subdir = "packages/hunk/skills";
       };
       my-skills = {
         path = my-skills;
       };
     };
     skills.enable = [
+      "archify"
       "find-skills"
       "code-security"
       "llm-security"

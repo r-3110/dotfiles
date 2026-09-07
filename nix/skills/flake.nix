@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     agent-skills.url = "github:Kyure-A/agent-skills-nix";
+    archify = {
+      url = "github:tt-a1i/archify";
+      flake = false;
+    };
     vercel-skills = {
       url = "github:vercel-labs/skills";
       flake = false;
@@ -73,6 +77,7 @@
           // {
             inherit (inputs)
               agent-skills
+              archify
               vercel-skills
               semgrep-skills
               chrome-devtools-mcp
