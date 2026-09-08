@@ -350,11 +350,11 @@
     "herdr": {
       "flake": false,
       "locked": {
-        "lastModified": 1788879119,
-        "narHash": "sha256-Ae6L/g9+/TKQ1ZNPmN0hWuR9TpRddmXZjfXhAMHk2ZQ=",
+        "lastModified": 1788903125,
+        "narHash": "sha256-ZuFQ+4hVVbEsBuex6E64otx9HLevh+DNisgfP8KWFVE=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "68c7b78ec237034cbb0e21c8666842ed7991641d",
+        "rev": "8be4cf765afddfd9cf3206602ba4dab682a29fa1",
         "type": "github"
       },
       "original": {
@@ -402,11 +402,11 @@
     "hunk": {
       "flake": false,
       "locked": {
-        "lastModified": 1788880916,
-        "narHash": "sha256-1w5rXTZu1LrLcPuERymICm0acUhPOU5e+/qv17irr0w=",
+        "lastModified": 1788902004,
+        "narHash": "sha256-e3YmoE7GKUM9Kj2X7qMUKeKOKvE/NPVJQpme6EsuRFg=",
         "owner": "modem-dev",
         "repo": "hunk",
-        "rev": "94b71186c76450e261d1ccd7b39893fa8036ec77",
+        "rev": "586f9388aaa75c8617115ae048e3a8d7fe36c24e",
         "type": "github"
       },
       "original": {
@@ -424,11 +424,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788858717,
-        "narHash": "sha256-lNh6z7qJ35S8msz4kH3xNxXTN7PLENpesL5LatpNBGA=",
+        "lastModified": 1788904120,
+        "narHash": "sha256-Xyt3LXFtZoG4nWRox5xSGg84h56QOeQD1ArIpPwZVYA=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "30e001e67438ab6ba024fa8d4f2e9be0ba7548af",
+        "rev": "a25893bc9a60fdbfa514fc701d495c66aaf02c31",
         "type": "github"
       },
       "original": {
@@ -475,11 +475,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1788882400,
-        "narHash": "sha256-sDVnen8MksfXzeavFnZdFjY3eA7G8tuPE3PIwkKex54=",
+        "lastModified": 1788899796,
+        "narHash": "sha256-Wj/lm/N6EgNkj5eBUZtRH6dkVtZm4Ek3pU3pPycGWF8=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "7775b8b23fd87e4a415e2bc6b844d657f43b22dd",
+        "rev": "93b8f2eadc45e6eaf988faab8f84ef3d11c58a14",
         "type": "github"
       },
       "original": {
@@ -889,11 +889,11 @@
     "tuicr": {
       "flake": false,
       "locked": {
-        "lastModified": 1788824861,
-        "narHash": "sha256-fcPGnzf66gqkaPsW6HRPgcr9LYGvQuW74+xn+IvObIs=",
+        "lastModified": 1788893024,
+        "narHash": "sha256-y12UDWRCDinPGLlL1yrPaqSTjP3kosyAJl0bnfi85zU=",
         "owner": "agavra",
         "repo": "tuicr",
-        "rev": "f9719c88a0acd581d531ec2499eafe1590833cf5",
+        "rev": "2ff8e283538e93a7d1b7bc2b6540fb455c5a030b",
         "type": "github"
       },
       "original": {
