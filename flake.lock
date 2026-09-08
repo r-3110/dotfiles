@@ -115,11 +115,11 @@
     "chrome-devtools-mcp": {
       "flake": false,
       "locked": {
-        "lastModified": 1788876227,
-        "narHash": "sha256-ntDSERk7NIAiGavr/T4mF/dOLLb8R0Ncdd9DWXM6iVM=",
+        "lastModified": 1788885177,
+        "narHash": "sha256-4iiSO2lVdEGGpbQLeWwwUh35s4bpYC638eXUzqYtpOw=",
         "owner": "ChromeDevTools",
         "repo": "chrome-devtools-mcp",
-        "rev": "6e53015a16423e3758a14d82c494cfcb4c07c3ea",
+        "rev": "4a3f6fc214a0ba46d1a3e68e7683208195397219",
         "type": "github"
       },
       "original": {
@@ -475,11 +475,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1788863073,
-        "narHash": "sha256-nSxo0XQWZdEhPIJS2e5OwLwZaq1chniyOIdVcd16Zqs=",
+        "lastModified": 1788882400,
+        "narHash": "sha256-sDVnen8MksfXzeavFnZdFjY3eA7G8tuPE3PIwkKex54=",
         "owner": "natsukium",
         "repo": "mcp-servers-nix",
-        "rev": "2a276867b1a8155b672178275806dec33466adb7",
+        "rev": "7775b8b23fd87e4a415e2bc6b844d657f43b22dd",
         "type": "github"
       },
       "original": {
@@ -921,11 +921,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1788879184,
-        "narHash": "sha256-ChZmaijeGbrE/meIjBkkgbNxm/SrVqGEd2XhNSsmux0=",
+        "lastModified": 1788888719,
+        "narHash": "sha256-6Wf8z3P3DM+nkSb9TSRwkYLCCivB1j4L2kyVhNxFHrs=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "3c24bb90606016163c97827bd061ef99da445e6c",
+        "rev": "80feb48868972d518436f26711509bc78595b5cb",
         "type": "github"
       },
       "original": {
