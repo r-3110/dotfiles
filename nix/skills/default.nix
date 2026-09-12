@@ -6,8 +6,7 @@
   semgrep-skills,
   chrome-devtools-mcp,
   github-awesome-copilot-skills,
-  using-cmux,
-  cmux-team,
+  ayghri,
   gh-stack,
   mizchi,
   mattpocock,
@@ -50,12 +49,8 @@
         path = github-awesome-copilot-skills;
         subdir = "skills";
       };
-      using-cmux = {
-        path = using-cmux;
-        subdir = "skills/using-cmux";
-      };
-      cmux-team = {
-        path = cmux-team;
+      ayghri = {
+        path = ayghri;
         subdir = "skills";
       };
       gh-stack = {
@@ -105,8 +100,7 @@
       "conventional-commit"
       "conventional-commit-jj"
       "create-github-pull-request-from-specification"
-      "using-cmux"
-      "cmux-team"
+      "i-have-adhd"
       "gh-stack"
       "empirical-prompt-tuning"
       "tuicr"
@@ -125,7 +119,6 @@
       "herdr-jj-workflow"
       "using-jj-workspaces"
     ];
-    skills.enableAll = [ "personal" ];
     targets = {
       # geminiとcodexは~/.agentsをサポート
       agents = {

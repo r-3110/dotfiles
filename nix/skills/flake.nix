@@ -25,14 +25,6 @@
       url = "github:github/awesome-copilot";
       flake = false;
     };
-    using-cmux = {
-      url = "github:hummer98/using-cmux";
-      flake = false;
-    };
-    cmux-team = {
-      url = "github:hummer98/cmux-team";
-      flake = false;
-    };
     gh-stack = {
       url = "github:github/gh-stack";
       flake = false;
@@ -61,6 +53,10 @@
       url = "github:modem-dev/hunk";
       flake = false;
     };
+    ayghri = {
+      url = "github:ayghri/i-have-adhd";
+      flake = false;
+    };
     my-skills = {
       url = "path:.";
       flake = false;
@@ -82,8 +78,7 @@
               semgrep-skills
               chrome-devtools-mcp
               github-awesome-copilot-skills
-              using-cmux
-              cmux-team
+              ayghri
               gh-stack
               mizchi
               mattpocock
