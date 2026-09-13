@@ -66,7 +66,8 @@
     "ecc@ecc": true,
     "context-mode@context-mode": true,
     "deploy-on-aws@agent-plugins-for-aws": true,
-    "codex@openai-codex": true
+    "codex@openai-codex": true,
+    "ponytail@ponytail": true
   },
   "extraKnownMarketplaces": {
     "superpowers": {
@@ -97,6 +98,12 @@
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
       }
     }
   },
