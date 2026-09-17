@@ -59,7 +59,6 @@
       };
       mizchi-meta = {
         path = mizchi;
-        subdir = "meta";
       };
       mattpocock-productivity = {
         path = mattpocock;
