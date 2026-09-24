@@ -28,7 +28,7 @@ let
         enable = true;
         type = "http";
         url = "https://api.githubcopilot.com/mcp/";
-        # Codex uses bearer_token_env_var in ~/.codex/config.toml.
+        # Codexでは~/.codex/config.tomlのbearer_token_env_varを使用する
         bearer_token_env_var = "GITHUB_MCP_PAT";
         headers = {
           Authorization = "Bearer \${GITHUB_MCP_PAT}";
@@ -73,6 +73,18 @@ let
     };
   };
 
+  # mcp-servers-nixの共有サーバー定義にはクライアント固有の項目も含まれる
+  # CodexはurlからHTTP接続を判定し、有効化と認証にはCodex固有の項目名を使うため、
+  # ここでCodexが対応していない項目だけを除去する
+  codexServers = lib.mapAttrs (
+    _: server:
+    removeAttrs server [
+      "type"
+      "enable"
+      "headers"
+    ]
+  ) baseConfig.settings.servers;
+
   claudeConfig = mcp.mkConfig pkgs (
     baseConfig
     // {
@@ -87,30 +99,33 @@ let
     }
   );
 
-  codexConfig = mcp.mkConfig pkgs (
-    pkgs.lib.recursiveUpdate baseConfig {
-      flavor = "codex";
-      format = "toml";
-      settings.servers = {
+  codexConfig = mcp.mkConfig pkgs {
+    flavor = "codex";
+    format = "toml";
+    settings = {
+      servers = lib.recursiveUpdate codexServers {
+        github.enabled = true;
         markitdown-mcp.enabled = false;
         chrome-devtools.enabled = false;
         dbhub.enabled = false;
       };
-      settings.features = {
+      features = {
         plugin_hooks = true;
         hooks = true;
       };
       # keyはmanifest.jsonのnameに対応する
-      settings.marketplaces.sisyphuslabs = {
-        source_type = "git";
-        source = "https://github.com/code-yeongyu/lazycodex.git";
+      marketplaces = {
+        sisyphuslabs = {
+          source_type = "git";
+          source = "https://github.com/code-yeongyu/lazycodex.git";
+        };
+        context-mode = {
+          source_type = "git";
+          source = "https://github.com/mksglu/context-mode.git";
+        };
       };
-      settings.marketplaces.context-mode = {
-        source_type = "git";
-        source = "https://github.com/mksglu/context-mode.git";
-      };
-    }
-  );
+    };
+  };
 
 in
 {
