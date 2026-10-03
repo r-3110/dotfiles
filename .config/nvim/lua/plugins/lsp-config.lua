@@ -98,7 +98,7 @@ return {
 				"bash-language-server",
 				"buf",
 				"css-lsp",
-				{ "deno", version = "v2.8.3" },
+				{ "deno", version = "v2.9.7" },
 				"docker-compose-language-service",
 				"dockerfile-language-server",
 				"gh-actions-language-server",
