@@ -10,9 +10,9 @@
       "command": "uvx",
       "args": [
         "mcp-proxy-for-aws@latest",
-        "https://aws-mcp.us-east-1.api.aws/mcp",
+        "https://aws-mcp.ap-northeast-1.api.aws/mcp",
         "--metadata",
-        "AWS_REGION=us-west-2"
+        "AWS_REGION=ap-northeast-1"
       ]
     },
     "markitdown-mcp": {

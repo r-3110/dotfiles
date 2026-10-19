@@ -39,9 +39,9 @@ let
         command = "uvx";
         args = [
           "mcp-proxy-for-aws@latest"
-          "https://aws-mcp.us-east-1.api.aws/mcp"
+          "https://aws-mcp.ap-northeast-1.api.aws/mcp"
           "--metadata"
-          "AWS_REGION=us-west-2"
+          "AWS_REGION=ap-northeast-1"
         ];
       };
 
@@ -86,9 +86,10 @@ let
   ) baseConfig.settings.servers;
 
   claudeConfig = mcp.mkConfig pkgs (
-    baseConfig
-    // {
+    pkgs.lib.recursiveUpdate baseConfig {
       flavor = "claude-code";
+      # 未指定ならdefaultプロファイルを使い、シェルにAWS_PROFILEがあればそれで上書きする
+      settings.servers.aws-mcp.env.AWS_PROFILE = "\${AWS_PROFILE:-default}";
     }
   );
 
@@ -105,6 +106,8 @@ let
     settings = {
       servers = lib.recursiveUpdate codexServers {
         github.enabled = true;
+        # Codexは${VAR}を展開しないため、シェルのAWS_PROFILEを転送する
+        aws-mcp.env_vars = [ "AWS_PROFILE" ];
         markitdown-mcp.enabled = false;
         chrome-devtools.enabled = false;
         dbhub.enabled = false;
