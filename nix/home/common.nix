@@ -47,7 +47,6 @@
     zellij
     jujutsu
     jjui
-    tuicr
     ov
     treemd
     zsh

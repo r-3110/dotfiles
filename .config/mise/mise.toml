@@ -18,6 +18,7 @@ fnox = "latest"
   "python",
 ], pipx_args = "--python python3.13" }
 hunk = "latest"
+"github:agavra/tuicr" = "latest"
 codex = "latest"
 
 [settings]
