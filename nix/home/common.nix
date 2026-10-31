@@ -129,7 +129,7 @@
 
       # keychainでSSHエージェントを管理
       if command -v keychain >/dev/null 2>&1 && [ -f "$HOME/.ssh/id_ed25519" ]; then
-        eval "$(keychain --quiet --eval "$HOME/.ssh/id_ed25519")"
+        eval "$(keychain --quiet --immediate --eval "$HOME/.ssh/id_ed25519")"
       fi
 
       if [ -f "$HOME/.zprofile.private" ]; then
