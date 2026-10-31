@@ -24,10 +24,8 @@
     herdr
 
     flutter
-    libyaml
     nkf
     pkgconf
-    skopeo
     translate-shell
     zenn-cli
     tree
@@ -36,14 +34,12 @@
     as-tree
     ssm-session-manager-plugin
     mise
-    resterm
     stu
     regex-tui
     mcat
     lstr
     cloudflared
     ecspresso
-    act
     aws-sso-cli
     pngpaste
     mprocs

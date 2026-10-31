@@ -24,6 +24,7 @@
     luajitPackages.luacheck
     gnumake
     awscli2
+    atac
     bat
     delta
     eza
@@ -31,7 +32,6 @@
     ghq
     git
     git-open
-    gitui
     mergiraf
     worktrunk
     jq
@@ -46,13 +46,11 @@
     yq-go
     zellij
     jujutsu
-    lazyjj
     jjui
     tuicr
     ov
     treemd
     zsh
-    posting
     nixfmt
     nixfmt-tree
     nix-output-monitor
