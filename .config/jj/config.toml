@@ -12,7 +12,6 @@ conflict-marker-style = "git"
 [git]
 fetch = "origin"
 push = "origin"
-sign-on-push = true
 
 [signing]
 behavior = "drop"
@@ -20,6 +19,7 @@ backend = "ssh"
 
 [revsets]
 log = "trunk().."
+git-sign-on-push = "~signed() & mine()"
 
 [revset-aliases]
 "trunk()" = "main@origin"
