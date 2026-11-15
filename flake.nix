@@ -61,6 +61,9 @@
           inherit pkgs;
           modules = [
             ./nix/home/common.nix
+            (import ./nix/agent-teams {
+              agentPackages = llm-agents.packages.${system};
+            })
             {
               home.username = username;
               home.homeDirectory = homeDirectory;

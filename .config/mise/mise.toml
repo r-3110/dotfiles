@@ -20,6 +20,7 @@ fnox = "latest"
 hunk = "latest"
 "github:agavra/tuicr" = "latest"
 codex = "latest"
+"npm:oh-my-codex" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

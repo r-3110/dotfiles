@@ -19,3 +19,7 @@
 ## safety
 
 - ファイル削除は常に確認
+
+## Herdr でのチーム開発
+
+- Herdr 内では Claude は OMC、Codex は OMX を使い、チーム開発・レビューは各ツールの標準 skill に従う。
