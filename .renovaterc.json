@@ -28,7 +28,7 @@
     },
     {
       "matchManagers": ["mise"],
-      "matchPackageNames": ["python"],
+      "matchDepNames": ["python"],
       "enabled": false
     }
   ]
