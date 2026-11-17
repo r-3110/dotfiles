@@ -52,6 +52,7 @@ let
 
       context-mode = {
         command = "context-mode";
+        args = [ "server" ];
       };
 
       # mcp-proxyで起動するmcp
@@ -85,13 +86,16 @@ let
     ]
   ) baseConfig.settings.servers;
 
-  claudeConfig = mcp.mkConfig pkgs (
-    pkgs.lib.recursiveUpdate baseConfig {
-      flavor = "claude-code";
-      # 未指定ならdefaultプロファイルを使い、シェルにAWS_PROFILEがあればそれで上書きする
-      settings.servers.aws-mcp.env.AWS_PROFILE = "\${AWS_PROFILE:-default}";
-    }
-  );
+  claudeConfig = mcp.mkConfig pkgs {
+    flavor = "claude-code";
+    # context-modeはClaudeプラグインがMCPも登録するため、共有定義からは出力しない
+    settings.servers =
+      lib.recursiveUpdate (removeAttrs baseConfig.settings.servers [ "context-mode" ])
+        {
+          # 未指定ならdefaultプロファイルを使い、シェルにAWS_PROFILEがあればそれで上書きする
+          aws-mcp.env.AWS_PROFILE = "\${AWS_PROFILE:-default}";
+        };
+  };
 
   opencodeConfig = mcp.mkConfig pkgs (
     pkgs.lib.recursiveUpdate baseConfig {
@@ -105,6 +109,11 @@ let
     format = "toml";
     settings = {
       servers = lib.recursiveUpdate codexServers {
+        context-mode.args = [
+          "server"
+          "--agent"
+          "codex"
+        ];
         github.enabled = true;
         # Codexは${VAR}を展開しないため、シェルのAWS_PROFILEを転送する
         aws-mcp.env_vars = [ "AWS_PROFILE" ];
