@@ -6,10 +6,6 @@
 ---@type LazyPluginSpec[]
 return {
 	{
-		"vim-denops/denops.vim",
-		lazy = false,
-	},
-	{
 		"rainbowhxch/accelerated-jk.nvim",
 		vscode = false,
 	},
