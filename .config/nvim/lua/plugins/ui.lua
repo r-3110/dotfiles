@@ -18,9 +18,9 @@ return {
 		event = "BufReadPost",
 		config = function()
 			---@module "scrollbar"
-			require("scrollbar").setup({})
-			---@module "scrollbar.handlers.gitsigns"
-			require("scrollbar.handlers.gitsigns").setup()
+			require("scrollbar").setup({
+				providers = { gitsigns = true },
+			})
 		end,
 	},
 	{
