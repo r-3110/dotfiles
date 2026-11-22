@@ -1,5 +1,4 @@
 -- @see https://github.com/atiladefreitas/lazyclip
--- @see https://github.com/h3pei/copy-file-path.nvim
 -- @see https://github.com/cajames/copy-reference.nvim
 -- @see https://github.com/HakonHarnes/img-clip.nvim
 
@@ -27,22 +26,25 @@ return {
 		event = { "TextYankPost" },
 	},
 	{
-		"h3pei/copy-file-path.nvim",
+		"cajames/copy-reference.nvim",
 		event = "BufRead",
+		init = function()
+			vim.api.nvim_create_user_command("CopyAbsoluteFilePath", function()
+				local path = vim.fn.expand("%:p")
+				if path == "" then
+					return
+				end
+				vim.fn.setreg("+", path)
+			end, { desc = "Copy absolute file path to the clipboard" })
+		end,
 		keys = {
 			{
 				"<leader>cfp",
 				function()
-					vim.cmd("CopyRelativeFilePath")
+					vim.cmd("CopyReference file")
 				end,
 				desc = "Copy relative file path to the clipboard",
 			},
-		},
-	},
-	{
-		"cajames/copy-reference.nvim",
-		event = "BufRead",
-		keys = {
 			{
 				"<leader>cfl",
 				function()
