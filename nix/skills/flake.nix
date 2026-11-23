@@ -9,6 +9,10 @@
       url = "github:tt-a1i/archify";
       flake = false;
     };
+    yomiyasu = {
+      url = "github:nanaism/yomiyasu";
+      flake = false;
+    };
     vercel-skills = {
       url = "github:vercel-labs/skills";
       flake = false;
@@ -74,6 +78,7 @@
             inherit (inputs)
               agent-skills
               archify
+              yomiyasu
               vercel-skills
               semgrep-skills
               chrome-devtools-mcp

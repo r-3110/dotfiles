@@ -2,6 +2,7 @@
   lib,
   agent-skills,
   archify,
+  yomiyasu,
   vercel-skills,
   semgrep-skills,
   chrome-devtools-mcp,
@@ -31,6 +32,10 @@
       archify = {
         path = archify;
         subdir = "archify";
+      };
+      yomiyasu = {
+        path = yomiyasu;
+        subdir = "skills";
       };
       vercel = {
         path = vercel-skills;
@@ -86,6 +91,7 @@
     };
     skills.enable = [
       "archify"
+      "yomiyasu"
       "find-skills"
       "code-security"
       "llm-security"
