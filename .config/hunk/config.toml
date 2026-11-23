@@ -6,7 +6,7 @@ exclude_untracked = false
 
 line_numbers = true
 tab_width = 4
-wrap_lines = false
+wrap_lines = true
 menu_bar = false
 
 agent_notes = true
