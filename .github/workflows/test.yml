@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup Nix
-        uses: cachix/install-nix-action@v31
+        uses: cachix/install-nix-action@v32
       - name: nix run
         run: |
           nix run home-manager/master -- build --flake .#${{ matrix.profile }}
@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup Nix
-        uses: cachix/install-nix-action@v31
+        uses: cachix/install-nix-action@v32
       - name: nix run
         run: |
           sudo nix run nix-darwin -- build --flake .#${{ matrix.profile }}
