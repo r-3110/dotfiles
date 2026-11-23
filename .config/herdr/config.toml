@@ -81,3 +81,9 @@ key = "prefix+o"
 type = "plugin_action"
 command = "chmarax.herdr-nvim.pick-file"
 description = "open file from agent output"
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "plugin_action"
+command = "herdr-lazy.manage"
+description = "manage Herdr plugins"

@@ -271,6 +271,9 @@
     "herdr/config.toml".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/herdr/config.toml";
 
+    "herdr/plugins/config/herdr-lazy/plugins.list".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/herdr-lazy/plugins.list";
+
     "hunk/config.toml".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/hunk/config.toml";
 
