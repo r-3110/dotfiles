@@ -121,11 +121,11 @@
     "chrome-devtools-mcp": {
       "flake": false,
       "locked": {
-        "lastModified": 1795706468,
-        "narHash": "sha256-U/oRhz62XsEQL0035r18SCbVKq5D7TJtcwyd5+fiObg=",
+        "lastModified": 1795717731,
+        "narHash": "sha256-cy3FgitlWT8Vu0+oal4c9j+cFWBByXkcclknegT1H9s=",
         "owner": "ChromeDevTools",
         "repo": "chrome-devtools-mcp",
-        "rev": "faa6c871208279c485a1fd926f92f5363435af4a",
+        "rev": "aacf611faf0d329f3c49e4a1f9828864a5c13752",
         "type": "github"
       },
       "original": {
@@ -414,11 +414,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1795702923,
-        "narHash": "sha256-OvSz3gO7ualG+RziLMyiKecxfkqVlt43YUzAbh/+UwU=",
+        "lastModified": 1795746918,
+        "narHash": "sha256-v3ruPbCzTcJEGxOsvA/k0UXsnM1WQZrltW/uv0m9U50=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "9e137fb04294426cdd3a8f97d5a6835c9124e13f",
+        "rev": "f8f2bdc8ced337b2c7d44b7b45c9442059cedfcb",
         "type": "github"
       },
       "original": {
@@ -881,11 +881,11 @@
     "vercel-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1794877081,
-        "narHash": "sha256-Mc5DOu9W6cY5YdzN4vX6UzOICyj3U3MvhHXym6S9xd0=",
+        "lastModified": 1795741674,
+        "narHash": "sha256-SXeB6YRJ08IkGRqxBWxyGT8VyIJirI/bY03I/Q3uB0k=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "57217cf86ba38148a57af9e90d14a4c049558330",
+        "rev": "c220f9249a2a8efd4e6955f1fe58c25503a8c1b1",
         "type": "github"
       },
       "original": {
