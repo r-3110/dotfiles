@@ -13,8 +13,7 @@ return {
 			{ "crispgm/telescope-heading.nvim" },
 			{ "paopaol/telescope-git-diffs.nvim" },
 			{ "nvim-telescope/telescope-ghq.nvim" },
-			{ "LinArcX/telescope-changes.nvim" },
-			{ "LinArcX/telescope-env.nvim" },
+			{ "sbulav/telescope-env.nvim" },
 			{ "nvim-telescope/telescope-frecency.nvim" },
 			{ "tsakirist/telescope-lazy.nvim" },
 			{
@@ -260,7 +259,6 @@ return {
 			telescope.load_extension("heading")
 			telescope.load_extension("git_diffs")
 			telescope.load_extension("ghq")
-			telescope.load_extension("changes")
 			telescope.load_extension("env")
 			telescope.load_extension("frecency")
 			telescope.load_extension("kensaku")
